@@ -11,5 +11,5 @@ module.exports = (resourceName, { id: ids }) => {
     );
   }
 
-  return Error('Only querying by id is supported.');
+  return new Error('Only querying by id is supported.');
 };

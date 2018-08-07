@@ -1,7 +1,6 @@
 const fetch = require('node-fetch');
 const unique = require('array-unique');
-
-const getSource = require('./get-source');
+const { where } = require('./local-resources-utilities');
 
 const buildLayerGroups = layerGroups => new Promise(async (resolve, reject) => {
   try {
@@ -30,7 +29,7 @@ const buildLayerGroups = layerGroups => new Promise(async (resolve, reject) => {
     sourceIds = unique(sourceIds);
 
     // get sources for each id
-    const sourcePromises = sourceIds.map(sourceId => getSource(sourceId));
+    const sourcePromises = where('sources', { id: sourceIds });
     const sources = await Promise.all(sourcePromises);
 
     // add all sources to the base style
