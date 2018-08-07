@@ -4,44 +4,56 @@ const loadJsonFile = require('load-json-file');
 const unique = require('array-unique');
 const getSource = require('./get-source');
 
-const buildLayerGroups = async config => new Promise(async (resolve, reject) => {
-  const { 'layer-groups': layerGroups } = config;
+const buildLayerGroups = config => new Promise(async (resolve, reject) => {
+  try {
+    const { 'layer-groups': layerGroups } = config;
 
-  // get layergroup configs from files...
-  const promises = layerGroups.map(layerGroup => loadJsonFile(path.resolve(__dirname, `../layer-groups/${layerGroup}.json`)));
-  const layerGroupConfigs = await Promise.all(promises);
+    // import the base style from labs-gl-style repo on github
+    const baseStyle = await fetch('https://raw.githubusercontent.com/NYCPlanning/labs-gl-style/master/data/style.json')
+      .then(d => d.json());
 
-  const baseStyle = await fetch('https://raw.githubusercontent.com/NYCPlanning/labs-gl-style/master/data/style.json')
-    .then(d => d.json());
+    // get layerGroup configs from files...
+    const promises = layerGroups.map(layerGroup => loadJsonFile(path.resolve(__dirname, `../layer-groups/${layerGroup}.json`)));
+    const layerGroupConfigs = await Promise.all(promises);
 
-  let layers = [];
-  let sourceIds = [];
+    // iterate over configs, pull out the layers and all required source ids
+    let layers = [];
+    let sourceIds = [];
 
-  layerGroupConfigs.forEach((layerGroupConfig) => {
-    const internalLayers = layerGroupConfig.layers.map(d => d.layer);
-    const internalSourceIds = internalLayers.map(d => d.source);
-    layers = [...layers, ...internalLayers];
-    sourceIds = [...sourceIds, ...internalSourceIds];
-  });
+    layerGroupConfigs.forEach((layerGroupConfig) => {
+      const internalLayers = layerGroupConfig.layers.map(d => d.layer);
+      const internalSourceIds = internalLayers.map(d => d.source);
+      layers = [...layers, ...internalLayers];
+      sourceIds = [...sourceIds, ...internalSourceIds];
+    });
 
-  sourceIds = unique(sourceIds);
+    // add all layers to the baseStyle
+    // TODO use the order of the layers specified in the config to determine the correct order
+    // TODO set visibility for each layer
+    // TODO insert before labels
+    baseStyle.layers = [...baseStyle.layers, ...layers];
 
-  baseStyle.layers = [...baseStyle.layers, ...layers];
+    // de-dupe source ids, many layers may require the same source
+    sourceIds = unique(sourceIds);
 
-  sourceIds.forEach(async (sourceId) => {
-    console.log(sourceId)
-    baseStyle.sources[sourceId] = await getSource(sourceId);
-    console.log(baseStyle.sources)
-  });
+    // get sources for each id
+    const sourcePromises = sourceIds.map(sourceId => getSource(sourceId));
+    const sources = await Promise.all(sourcePromises);
 
-  const sourcePromises = sourceIds.map(sourceId => getSource(sourceId));
+    // add all sources to the base style
+    sources.forEach((source) => {
+      baseStyle.sources = {
+        ...baseStyle.sources,
+        ...source,
+      };
+    });
 
-  const sources = await Promise.all(sourcePromises);
-
-  console.log('resolving')
-  resolve({
-    meta: baseStyle,
-  });
+    resolve({
+      meta: baseStyle,
+    });
+  } catch (e) {
+    reject(e);
+  }
 });
 
 module.exports = buildLayerGroups;
