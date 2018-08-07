@@ -1,5 +1,5 @@
-import fetch from 'node-fetch';
-import { Promise } from 'rsvp';
+const fetch = require('node-fetch');
+const { Promise } = require('rsvp');
 
 const cartoUsername = 'planninglabs';
 const cartoDomain = `${cartoUsername}.carto.com`;
