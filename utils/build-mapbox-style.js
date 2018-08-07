@@ -1,6 +1,7 @@
 const fetch = require('node-fetch');
 const unique = require('array-unique');
 const { where } = require('./local-resources-utilities');
+const structureCartoSource = require('./structure-carto-source');
 
 const buildLayerGroups = layerGroups => new Promise(async (resolve, reject) => {
   try {
@@ -29,16 +30,21 @@ const buildLayerGroups = layerGroups => new Promise(async (resolve, reject) => {
     sourceIds = unique(sourceIds);
 
     // get sources for each id
-    const sourcePromises = where('sources', { id: sourceIds });
-    const sources = await Promise.all(sourcePromises);
+    const sources = await where('sources', { id: sourceIds });
+    const structuredSources = await Promise.all(
+      sources.map(
+        source => structureCartoSource(source),
+      ),
+    );
 
     // add all sources to the base style
-    sources.forEach((source) => {
-      baseStyle.sources = {
-        ...baseStyle.sources,
-        ...source,
-      };
-    });
+    structuredSources
+      .forEach(async (source) => {
+        baseStyle.sources = {
+          ...baseStyle.sources,
+          ...source,
+        };
+      });
 
     resolve({
       meta: baseStyle,

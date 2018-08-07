@@ -17,8 +17,7 @@ router.post('/', async (ctx) => {
   const { 'layer-groups': layerGroupIDs } = config;
 
   // get layerGroup configs from files...
-  const promises = where('layer-groups', { id: layerGroupIDs });
-  const layerGroupConfigs = await Promise.all(promises);
+  const layerGroupConfigs = await where('layer-groups', { id: layerGroupIDs });
 
   let response;
 

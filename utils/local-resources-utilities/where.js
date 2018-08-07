@@ -4,9 +4,11 @@ const loadJsonFile = require('load-json-file');
 
 module.exports = (resourceName, { id: ids }) => {
   if (ids) {
-    return ids.map(
-      identifier => loadJsonFile(
-        path.resolve(__dirname, `../../data/${resourceName}/${identifier}.json`),
+    return Promise.all(
+      ids.map(
+        identifier => loadJsonFile(
+          path.resolve(__dirname, `../../data/${resourceName}/${identifier}.json`),
+        ),
       ),
     );
   }
