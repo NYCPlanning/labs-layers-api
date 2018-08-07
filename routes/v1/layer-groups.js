@@ -16,15 +16,14 @@ router.post('/', async (ctx) => {
   const config = ctx.request.body;
   const { 'layer-groups': ids } = config;
 
-  // get layerGroup configs from files...
-  const data = await where('layer-groups', { id: ids });
-  const meta = {
-    mapboxStyle: await buildMapboxStyle(data),
-  };
-
   let response;
 
   try {
+    const data = await where('layer-groups', { id: ids });
+    const meta = {
+      mapboxStyle: await buildMapboxStyle(data),
+    };
+
     response = { data, meta };
   } catch (e) {
     response = {
