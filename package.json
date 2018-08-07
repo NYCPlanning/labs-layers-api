@@ -11,17 +11,24 @@
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "load-json-file": "^5.0.0",
+    "nock": "^9.4.4",
     "node-fetch": "^2.2.0",
     "rsvp": "^4.8.3"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "chai-things": "^0.2.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb-base": "^13.0.0",
     "eslint-plugin-ember": "^5.2.0",
-    "eslint-plugin-import": "^2.12.0"
+    "eslint-plugin-import": "^2.12.0",
+    "glob": "^7.1.2",
+    "mocha": "^5.2.0"
   },
   "scripts": {
     "start": "node app.js",
-    "devstart": "nodemon app.js"
+    "devstart": "nodemon app.js",
+    "test": "NODE_ENV=test node ./node_modules/mocha/bin/mocha ./test/**/*.js --exit"
   }
 }
