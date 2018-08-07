@@ -16,22 +16,12 @@ router.post('/', async (ctx) => {
   const config = ctx.request.body;
   const { 'layer-groups': ids } = config;
 
-  let response;
+  const data = await where('layer-groups', { id: ids });
+  const meta = {
+    mapboxStyle: await buildMapboxStyle(data),
+  };
 
-  try {
-    const data = await where('layer-groups', { id: ids });
-    const meta = {
-      mapboxStyle: await buildMapboxStyle(data),
-    };
-
-    response = { data, meta };
-  } catch (e) {
-    response = {
-      errors: [e],
-    };
-  }
-
-  ctx.body = response;
+  ctx.body = { data, meta };
 });
 
 module.exports = router;
