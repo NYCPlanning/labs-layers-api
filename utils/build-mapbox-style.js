@@ -1,26 +1,19 @@
-const path = require('path');
 const fetch = require('node-fetch');
-const loadJsonFile = require('load-json-file');
 const unique = require('array-unique');
-const getSource = require('./get-source');
+const { where } = require('./local-resources-utilities');
+const structureCartoSource = require('./structure-carto-source');
 
-const buildLayerGroups = config => new Promise(async (resolve, reject) => {
+const buildLayerGroups = layerGroups => new Promise(async (resolve, reject) => {
   try {
-    const { 'layer-groups': layerGroups } = config;
-
     // import the base style from labs-gl-style repo on github
     const baseStyle = await fetch('https://raw.githubusercontent.com/NYCPlanning/labs-gl-style/master/data/style.json')
       .then(d => d.json());
-
-    // get layerGroup configs from files...
-    const promises = layerGroups.map(layerGroup => loadJsonFile(path.resolve(__dirname, `../layer-groups/${layerGroup}.json`)));
-    const layerGroupConfigs = await Promise.all(promises);
 
     // iterate over configs, pull out the layers and all required source ids
     let layers = [];
     let sourceIds = [];
 
-    layerGroupConfigs.forEach((layerGroupConfig) => {
+    layerGroups.forEach((layerGroupConfig) => {
       const internalLayers = layerGroupConfig.layers.map(d => d.layer);
       const internalSourceIds = internalLayers.map(d => d.source);
       layers = [...layers, ...internalLayers];
@@ -37,20 +30,23 @@ const buildLayerGroups = config => new Promise(async (resolve, reject) => {
     sourceIds = unique(sourceIds);
 
     // get sources for each id
-    const sourcePromises = sourceIds.map(sourceId => getSource(sourceId));
-    const sources = await Promise.all(sourcePromises);
+    const sources = await where('sources', { id: sourceIds });
+    const structuredSources = await Promise.all(
+      sources.map(
+        source => structureCartoSource(source),
+      ),
+    );
 
     // add all sources to the base style
-    sources.forEach((source) => {
-      baseStyle.sources = {
-        ...baseStyle.sources,
-        ...source,
-      };
-    });
+    structuredSources
+      .forEach(async (source) => {
+        baseStyle.sources = {
+          ...baseStyle.sources,
+          ...source,
+        };
+      });
 
-    resolve({
-      meta: baseStyle,
-    });
+    resolve(baseStyle);
   } catch (e) {
     reject(e);
   }
