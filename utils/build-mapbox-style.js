@@ -3,7 +3,7 @@ const unique = require('array-unique');
 const { where } = require('./local-resources-utilities');
 const structureCartoSource = require('./structure-carto-source');
 
-const buildLayerGroups = layerGroups => new Promise(async (resolve) => {
+module.exports = async (layerGroups) => {
   // import the base style from labs-gl-style repo on github
   const baseStyle = await fetch('https://raw.githubusercontent.com/NYCPlanning/labs-gl-style/master/data/style.json')
     .then(d => d.json());
@@ -38,14 +38,12 @@ const buildLayerGroups = layerGroups => new Promise(async (resolve) => {
 
   // add all sources to the base style
   structuredSources
-    .forEach(async (source) => {
+    .forEach((source) => {
       baseStyle.sources = {
         ...baseStyle.sources,
         ...source,
       };
     });
 
-  resolve(baseStyle);
-});
-
-module.exports = buildLayerGroups;
+  return baseStyle;
+};
