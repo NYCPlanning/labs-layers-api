@@ -18,11 +18,17 @@ router.post('/', async (ctx) => {
 
   // get layerGroup configs from files...
   const layerGroupConfigs = await where('layer-groups', { id: layerGroupIDs });
+  const mapboxStyle = await buildMapboxStyle(layerGroupConfigs);
 
   let response;
 
   try {
-    response = await buildMapboxStyle(layerGroupConfigs);
+    response = {
+      data: layerGroupConfigs,
+      meta: {
+        mapboxStyle,
+      },
+    };
   } catch (e) {
     response = {
       errors: [e],
