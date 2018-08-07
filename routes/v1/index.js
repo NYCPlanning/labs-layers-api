@@ -9,6 +9,6 @@ router.get('/v1', async (ctx) => {
   ctx.body = {
     status: 'v1 is working',
   };
-})
+});
 
 module.exports = router;

@@ -2,32 +2,28 @@ const path = require('path');
 const fetch = require('node-fetch');
 const loadJsonFile = require('load-json-file');
 
-const buildLayerGroups = async (config) => {
+const buildLayerGroups = async config => new Promise(async (resolve, reject) => {
+  const { 'layer-groups': layerGroups } = config;
 
+  // get layergroup configs from files...
+  const promises = layerGroups.map(layerGroup => loadJsonFile(path.resolve(__dirname, `../layer-groups/${layerGroup}.json`)));
+  const layerGroupConfigs = await Promise.all(promises);
 
-  return new Promise(async (resolve, reject) => {
-    const { 'layer-groups':layerGroups } = config;
+  const baseStyle = await fetch('https://raw.githubusercontent.com/NYCPlanning/labs-gl-style/master/data/style.json')
+    .then(d => d.json());
 
-    // get layergroup configs from files...
-    const promises = layerGroups.map(layerGroup => loadJsonFile(path.resolve(__dirname, `../layer-groups/${layerGroup}.json`)));
-    const layerGroupConfigs = await Promise.all(promises);
+  let layers = [];
 
-    const baseStyle = await fetch('https://raw.githubusercontent.com/NYCPlanning/labs-gl-style/master/data/style.json')
-      .then(d => d.json());
+  layerGroupConfigs.forEach((layerGroupConfig) => {
+    const internalLayers = layerGroupConfig.layers.map(d => d.layer);
+    layers = [...layers, ...internalLayers];
+  });
 
-    let layers = [];
+  baseStyle.layers = [...baseStyle.layers, ...layers];
 
-    layerGroupConfigs.forEach((config) => {
-      const internalLayers = config.layers.map(d => d.layer);
-      layers = [...layers, ...internalLayers]
-    })
+  resolve({
+    meta: baseStyle,
+  });
+});
 
-    baseStyle.layers = [...baseStyle.layers, ...layers]
-
-    resolve({
-      meta: baseStyle
-    })
-  })
-}
-
-module.exports = buildLayerGroups
+module.exports = buildLayerGroups;

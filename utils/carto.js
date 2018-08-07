@@ -1,8 +1,7 @@
-import fetch from 'fetch';
+import fetch from 'node-fetch';
 import { Promise } from 'rsvp';
-import getConfiguration from '../configuration';
 
-const cartoUsername = getConfiguration()['carto-username'] || 'planninglabs';
+const cartoUsername = 'planninglabs';
 const cartoDomain = `${cartoUsername}.carto.com`;
 
 const buildTemplate = function(cartoResponse, type) { // eslint-disable-line
