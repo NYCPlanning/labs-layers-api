@@ -30,5 +30,8 @@
     "start": "node app.js",
     "devstart": "nodemon app.js",
     "test": "NODE_ENV=test node ./node_modules/mocha/bin/mocha ./test/**/*.js --exit"
+  },
+  "engines": {
+    "node": "8.11.3"
   }
 }
