@@ -6,7 +6,9 @@ const v1Routes = require('./routes/v1');
 
 const app = new Koa();
 app.use(bodyParser());
-app.use(cors());
+app.use(cors({
+  origin: '*',
+}));
 
 
 app.use(v1Routes.routes());
