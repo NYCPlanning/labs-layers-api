@@ -1,25 +1,19 @@
 const fetch = require('node-fetch');
 const unique = require('array-unique');
-const findLocalResource = require('./find-local-resource');
+
 const getSource = require('./get-source');
 
-const buildLayerGroups = config => new Promise(async (resolve, reject) => {
+const buildLayerGroups = layerGroups => new Promise(async (resolve, reject) => {
   try {
-    const { 'layer-groups': layerGroups } = config;
-
     // import the base style from labs-gl-style repo on github
     const baseStyle = await fetch('https://raw.githubusercontent.com/NYCPlanning/labs-gl-style/master/data/style.json')
       .then(d => d.json());
-
-    // get layerGroup configs from files...
-    const promises = layerGroups.map(layerGroupID => findLocalResource('layer-groups', layerGroupID));
-    const layerGroupConfigs = await Promise.all(promises);
 
     // iterate over configs, pull out the layers and all required source ids
     let layers = [];
     let sourceIds = [];
 
-    layerGroupConfigs.forEach((layerGroupConfig) => {
+    layerGroups.forEach((layerGroupConfig) => {
       const internalLayers = layerGroupConfig.layers.map(d => d.layer);
       const internalSourceIds = internalLayers.map(d => d.source);
       layers = [...layers, ...internalLayers];
