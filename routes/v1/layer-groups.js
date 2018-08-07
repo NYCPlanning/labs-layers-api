@@ -1,5 +1,7 @@
 const Router = require('koa-router');
-const buildLayerGroups = require('../../utils/build-layer-groups');
+const buildMapboxStyle = require('../../utils/build-mapbox-style');
+const { where } = require('../../utils/local-resources-utilities');
+// const findAll = require('../../utils/local-resources-utilities/find-all');
 
 const router = new Router();
 
@@ -12,10 +14,21 @@ router.get('/', async (ctx) => {
 
 router.post('/', async (ctx) => {
   const config = ctx.request.body;
+  const { 'layer-groups': layerGroupIDs } = config;
+
+  // get layerGroup configs from files...
+  const layerGroupConfigs = await where('layer-groups', { id: layerGroupIDs });
+  const mapboxStyle = await buildMapboxStyle(layerGroupConfigs);
 
   let response;
+
   try {
-    response = await buildLayerGroups(config);
+    response = {
+      data: layerGroupConfigs,
+      meta: {
+        mapboxStyle,
+      },
+    };
   } catch (e) {
     response = {
       errors: [e],
@@ -24,6 +37,5 @@ router.post('/', async (ctx) => {
 
   ctx.body = response;
 });
-
 
 module.exports = router;
