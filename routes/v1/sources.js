@@ -1,5 +1,4 @@
 const Router = require('koa-router');
-const buildMapboxStyle = require('../../utils/build-mapbox-style');
 const { where } = require('../../utils/local-resources-utilities');
 
 const router = new Router();
@@ -13,14 +12,11 @@ router.get('/', async (ctx) => {
 
 router.post('/', async (ctx) => {
   const config = ctx.request.body;
-  const { 'layer-groups': ids } = config;
+  const { sources: ids } = config;
 
-  const data = await where('layer-groups', { id: ids });
-  const meta = {
-    mapboxStyle: await buildMapboxStyle(data),
-  };
+  const data = await where('sources', { id: ids });
 
-  ctx.body = { data, meta };
+  ctx.body = { data };
 });
 
 module.exports = router;
