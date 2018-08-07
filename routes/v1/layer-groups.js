@@ -1,7 +1,6 @@
 const Router = require('koa-router');
 const buildMapboxStyle = require('../../utils/build-mapbox-style');
 const { where } = require('../../utils/local-resources-utilities');
-// const findAll = require('../../utils/local-resources-utilities/find-all');
 
 const router = new Router();
 
