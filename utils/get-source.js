@@ -2,7 +2,7 @@ const carto = require('./carto');
 
 const getSource = sourceId => new Promise(async (resolve, reject) => {
   // import sourceConfig
-  const sourceConfig = require(`../sources/${sourceId}.js`); // eslint-disable-line
+  const sourceConfig = require(`../data/sources/${sourceId}.js`); // eslint-disable-line
 
   try {
     // instantiate carto vector tiles, get back the tile template

@@ -25,5 +25,4 @@ router.post('/', async (ctx) => {
   ctx.body = response;
 });
 
-
 module.exports = router;

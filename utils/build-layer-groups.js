@@ -13,7 +13,7 @@ const buildLayerGroups = config => new Promise(async (resolve, reject) => {
       .then(d => d.json());
 
     // get layerGroup configs from files...
-    const promises = layerGroups.map(layerGroup => loadJsonFile(path.resolve(__dirname, `../layer-groups/${layerGroup}.json`)));
+    const promises = layerGroups.map(layerGroup => loadJsonFile(path.resolve(__dirname, `../data/layer-groups/${layerGroup}.json`)));
     const layerGroupConfigs = await Promise.all(promises);
 
     // iterate over configs, pull out the layers and all required source ids
