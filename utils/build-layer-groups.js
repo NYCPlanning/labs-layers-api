@@ -1,7 +1,6 @@
-const path = require('path');
 const fetch = require('node-fetch');
-const loadJsonFile = require('load-json-file');
 const unique = require('array-unique');
+const findLocalResource = require('./find-local-resource');
 const getSource = require('./get-source');
 
 const buildLayerGroups = config => new Promise(async (resolve, reject) => {
@@ -13,7 +12,7 @@ const buildLayerGroups = config => new Promise(async (resolve, reject) => {
       .then(d => d.json());
 
     // get layerGroup configs from files...
-    const promises = layerGroups.map(layerGroup => loadJsonFile(path.resolve(__dirname, `../data/layer-groups/${layerGroup}.json`)));
+    const promises = layerGroups.map(layerGroupID => findLocalResource('layer-groups', layerGroupID));
     const layerGroupConfigs = await Promise.all(promises);
 
     // iterate over configs, pull out the layers and all required source ids
