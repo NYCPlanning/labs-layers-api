@@ -47,7 +47,6 @@ const buildLayerGroups = layerGroups => new Promise(async (resolve, reject) => {
       });
 
     resolve(baseStyle);
-
   } catch (e) {
     reject(e);
   }
