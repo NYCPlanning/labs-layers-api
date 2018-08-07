@@ -8,16 +8,6 @@ const app = new Koa();
 app.use(bodyParser());
 app.use(cors());
 
-// better error handling
-app.use(async (ctx, next) => {
-  try {
-    await next();
-  } catch (err) {
-    ctx.status = err.status || 500;
-    ctx.body = { errors: [err] };
-    ctx.app.emit('error', err, ctx);
-  }
-});
 
 app.use(v1Routes.routes());
 
