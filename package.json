@@ -6,6 +6,7 @@
   "author": "Chris Whong <chris@whong.org>",
   "license": "MIT",
   "dependencies": {
+    "array-unique": "^0.3.2",
     "koa": "^2.5.2",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
