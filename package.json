@@ -31,7 +31,8 @@
   "scripts": {
     "start": "node app.js",
     "devstart": "nodemon app.js",
-    "test": "NODE_ENV=test node ./node_modules/mocha/bin/mocha ./test/**/*.js --exit"
+    "test": "NODE_ENV=test node ./node_modules/mocha/bin/mocha ./test/**/*.js --exit",
+    "watch-tests": "nodemon --exec 'npm run test || true'"
   },
   "engines": {
     "node": "8.11.3"
