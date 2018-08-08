@@ -14,6 +14,7 @@
     "load-json-file": "^5.0.0",
     "nock": "^9.4.4",
     "node-fetch": "^2.2.0",
+    "request-promise": "^4.2.2",
     "rsvp": "^4.8.3"
   },
   "devDependencies": {

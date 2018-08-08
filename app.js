@@ -13,4 +13,4 @@ app.use(cors({
 
 app.use(v1Routes.routes());
 
-app.listen(process.env.PORT || 3000);
+module.exports = app.listen(process.env.PORT || 3000);
