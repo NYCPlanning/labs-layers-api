@@ -6,7 +6,9 @@ const v1Routes = require('./routes/v1');
 
 const app = new Koa();
 app.use(bodyParser());
-app.use(cors());
+app.use(cors({
+  origin: '*',
+}));
 
 // better error handling
 app.use(async (ctx, next) => {
@@ -21,4 +23,4 @@ app.use(async (ctx, next) => {
 
 app.use(v1Routes.routes());
 
-app.listen(process.env.PORT || 3000);
+module.exports = app.listen(process.env.PORT || 3000);
