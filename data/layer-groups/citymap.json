@@ -1,0 +1,310 @@
+{
+  "id":"citymap",
+  "title":"Street Lines",
+  "legendIcon":"",
+  "legendColor":"",
+  "visible":true,
+  "meta":{
+    "description":"NYC Department of City Planning Technical Review Division",
+    "updated_at":"6 April 2018"
+  },
+  "layers":[
+    {
+      "style":{
+        "id":"citymap-mapped-streets-line",
+        "type":"line",
+        "source":"digital-citymap",
+        "source-layer":"citymap",
+        "paint":{
+          "line-color": {
+            "stops": [
+              [
+                10,
+                "rgba(50, 50, 50, 0.3)"
+              ],
+              [
+                13,
+                "rgba(50, 50, 50, 1)"
+              ]
+            ]
+          },
+          "line-width":{
+            "stops":[
+              [
+                10,
+                0.1
+              ],
+              [
+                13,
+                1
+              ],
+              [
+                15,
+                3
+              ]
+            ]
+          }
+        },
+        "filter":[
+          "all",
+          [
+            "==",
+            "type",
+            "Mapped Street"
+          ]
+        ]
+      }
+    },
+    {
+      "tooltipable":true,
+      "tooltipTemplate":"{{type}}",
+      "style":{
+        "id":"citymap-streets-tooltip-line",
+        "type":"line",
+        "source":"digital-citymap",
+        "source-layer":"citymap",
+        "paint":{
+          "line-opacity":0.001,
+          "line-width":{
+            "stops":[
+              [
+                10,
+                0.2
+              ],
+              [
+                13,
+                2
+              ],
+              [
+                15,
+                6
+              ]
+            ]
+          }
+        },
+        "filter":[
+          "any",
+          [
+            "==",
+            "type",
+            "Mapped Street"
+          ],
+          [
+            "==",
+            "type",
+            "Street not mapped"
+          ],
+          [
+            "==",
+            "type",
+            "Record Street"
+          ]
+        ]
+      }
+    },
+    {
+      "style":{
+        "id":"citymap-street-treatments-line",
+        "type":"line",
+        "source":"digital-citymap",
+        "source-layer":"citymap",
+        "filter":[
+          "all",
+          [
+            "==",
+            "type",
+            "street_treatment"
+          ]
+        ],
+        "paint":{
+          "line-color": {
+            "stops": [
+              [
+                10,
+                "rgba(84, 84, 84, 0.3)"
+              ],
+              [
+                13,
+                "rgba(84, 84, 84, 1)"
+              ]
+            ]
+          },
+          "line-width":{
+            "stops":[
+              [
+                10,
+                0.1
+              ],
+              [
+                13,
+                0.25
+              ],
+              [
+                15,
+                1
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "style":{
+        "id":"citymap-underpass-tunnel-line",
+        "type":"line",
+        "source":"digital-citymap",
+        "source-layer":"citymap",
+        "filter":[
+          "all",
+          [
+            "==",
+            "type",
+            "Underpass or Tunnel"
+          ]
+        ],
+        "paint":{
+          "line-color": {
+            "stops": [
+              [
+                10,
+                "rgba(150, 150, 150, 0.3)"
+              ],
+              [
+                13,
+                "rgba(150, 150, 150, 1)"
+              ]
+            ]
+          },
+          "line-width":{
+            "stops":[
+              [
+                10,
+                0.1
+              ],
+              [
+                13,
+                0.25
+              ],
+              [
+                15,
+                1
+              ]
+            ]
+          },
+          "line-dasharray":{
+            "stops":[
+              [
+                10,
+                [
+                  6,
+                  4
+                ]
+              ],
+              [
+                15,
+                [
+                  10,
+                  6
+                ]
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "style":{
+        "id":"citymap-street-not-mapped-line",
+        "type":"line",
+        "source":"digital-citymap",
+        "source-layer":"citymap",
+        "filter":[
+          "any",
+          [
+            "==",
+            "type",
+            "Street not mapped"
+          ],
+          [
+            "==",
+            "type",
+            "Record Street"
+          ]
+
+        ],
+        "paint":{
+          "line-color": {
+            "stops": [
+              [
+                10,
+                "rgba(50, 50, 50, 0.15)"
+              ],
+              [
+                13,
+                "rgba(50, 50, 50, 0.4)"
+              ]
+            ]
+          },
+          "line-width":{
+            "stops":[
+              [
+                10,
+                0.5
+              ],
+              [
+                13,
+                0.25
+              ],
+              [
+                15,
+                2
+              ]
+            ]
+          },
+          "line-dasharray":[
+            0,
+            2
+          ]
+        },
+        "layout":{
+          "line-cap":"round"
+        }
+      }
+    }
+  ],
+  "legendConfig": {
+    "label":"Street Lines",
+    "items":[
+      {
+        "type":"line",
+        "label":"Mapped Street",
+        "tooltip":"A street that has been established on an adopted alteration map or section map and filed with the appropriate agencies",
+        "style":{
+          "fill":"none",
+          "stroke": "rgba(50, 50, 50, 1)"
+        }
+      },
+      {
+        "type":"line",
+        "label":"Street Treatment",
+        "tooltip":"Lines on the City Map that reflect curb lines, approach ramps and other physical elements for illustrative purposes only - may be changed without public review (ULURP)",
+        "style":{
+          "fill":"none",
+          "stroke":"rgba(84, 84, 84, 1)",
+          "stroke-width":"0.5"
+        }
+      },
+      {
+        "type":"line",
+        "label":"Unmapped Street",
+        "tooltip":"A street that is not officially shown on the City Map and over which the public may or may not have a right of way. Record streets and private roads are examples of unmapped streets.",
+        "style":{
+          "fill":"none",
+          "stroke":"rgba(50, 50, 50, 0.4)",
+          "stroke-width":"0.5",
+          "stroke-dasharray":"1"
+        }
+      }
+    ]
+  }
+}

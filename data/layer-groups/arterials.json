@@ -1,0 +1,84 @@
+{
+  "id": "arterials",
+  "title": "Arterial Highways & Major Streets",
+  "titleTooltip": "Designated rights-of-way shown on the Master Plan of Arterial Highways and Major Streets (not an exact copy).",
+  "visible": false,
+  "meta": {
+    "description": "NYC Department of City Planning Technical Review Division",
+    "updated_at": "6 April 2018"
+  },
+  "layers": [
+    {
+      "style": {
+        "id": "citymap-arterials-line",
+        "type": "line",
+        "source": "digital-citymap",
+        "source-layer": "arterials",
+        "paint": {
+          "line-color": {
+            "property": "route_type",
+            "type": "categorical",
+            "stops": [
+              [
+                "Arterial Highway",
+                "rgba(255, 190, 0, 1)"
+              ],
+              [
+                "Major Streets",
+                "rgba(250, 230, 180, 1)"
+              ]
+            ]
+          },
+          "line-width": {
+            "stops": [
+              [
+                10,
+                1.5
+              ],
+              [
+                14,
+                6
+              ],
+              [
+                16,
+                20
+              ],
+              [
+                18,
+                50
+              ],
+              [
+                19,
+                100
+              ]
+            ]
+          }
+        },
+        "layout": {
+          "visibility": "visible"
+        }
+      }
+    }
+  ],
+  "legendConfig": {
+    "label":"Arterial & Major Streets",
+    "items":[
+      {
+        "type":"line",
+        "label":"Arterial",
+        "style":{
+          "fill":"none",
+          "stroke":"rgba(255, 210, 90, 1)"
+        }
+      },
+      {
+        "type":"line",
+        "label":"Major Street",
+        "style":{
+          "fill":"none",
+          "stroke":"rgba(250, 230, 180, 1)"
+        }
+      }
+    ]
+  }
+}

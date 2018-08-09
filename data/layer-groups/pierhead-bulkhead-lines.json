@@ -1,0 +1,115 @@
+{
+  "id": "pierhead-bulkhead-lines",
+  "title": "Pierhead & Bulkhead Lines",
+  "titleTooltip": "The Pierhead line is the extent to which piers and platforms over water may be built as shown on the City Map.  The Bulkhead line is the extent to which the filling of land is permitted without additional permits.",
+  "legendIcon": "",
+  "legendColor": "",
+  "visible": true,
+  "meta": {
+    "description": "NYC Department of City Planning Technical Review Division",
+    "updated_at": "6 April 2018"
+  },
+  "layers": [
+    {
+      "tooltipable": true,
+      "tooltipTemplate": "Pierhead Line",
+      "style": {
+        "id": "citymap-pierhead-line",
+        "type": "line",
+        "source": "digital-citymap",
+        "source-layer": "pierhead-lines",
+        "paint": {
+          "line-color": "rgba(50, 120, 200, 1)",
+          "line-width": {
+            "stops": [
+              [
+                 10,
+                 0.5
+              ],
+              [
+                 14,
+                 3
+              ]
+            ]
+          },
+          "line-opacity": 1,
+          "line-dasharray": [
+            5,
+            2,
+            0,
+            1.5,
+            0,
+            1.5,
+            0,
+            2
+          ]
+        },
+        "layout": {
+          "line-cap": "round"
+        }
+      }
+    },
+    {
+      "tooltipable": true,
+      "tooltipTemplate": "Bulkhead Line",
+      "style": {
+        "id": "citymap-bulkhead-line",
+        "type": "line",
+        "source": "digital-citymap",
+        "source-layer": "bulkhead-lines",
+        "paint": {
+          "line-color": "#3278C8",
+          "line-width": {
+            "stops": [
+              [
+                10,
+                0.5
+              ],
+              [
+                14,
+                3
+              ]
+            ]
+          },
+          "line-opacity": 1,
+          "line-dasharray": [
+            5,
+            2.5,
+            0,
+            2,
+            0,
+            2.5
+          ]
+        },
+        "layout": {
+          "line-cap": "round"
+        }
+      }
+    }
+  ],
+  "legendConfig": {
+    "label": "Water Lines",
+    "items": [
+      {
+         "type": "line",
+         "label": "Pierhead Line",
+         "style": {
+           "fill": "none",
+           "stroke": "#3278C8",
+           "stroke-linecap": "round",
+           "stroke-dasharray": "5,2.5,0,2,0,2.5"
+         }
+      },
+      {
+         "type": "line",
+         "label": "Bulkhead Line",
+         "style": {
+           "fill": "none",
+           "stroke": "#3278C8",
+           "stroke-linecap": "round",
+           "stroke-dasharray": "5,2,0,1.5,0,1.5,0,2"
+         }
+      }
+    ]
+  }
+}
