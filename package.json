@@ -33,7 +33,6 @@
   "scripts": {
     "start": "node app.js",
     "devstart": "nodemon app.js",
-    "inspect-tests": "ndb npm watch-tests",
     "test": "NODE_ENV=test node ./node_modules/mocha/bin/mocha ./test/**/*.js --exit",
     "watch-tests": "nodemon --exec 'npm run test || true'"
   },
