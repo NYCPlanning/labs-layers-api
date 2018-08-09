@@ -53,29 +53,6 @@ describe('POST /layer-groups', () => {
       });
   });
 
-  it('adds the layers for a requested layergroup to the style', (done) => {
-    chai.request(server)
-      .post('/v1/layer-groups')
-      .set('content-type', 'application/json')
-      .send({
-        'layer-groups': [
-          'tax-lots',
-          'zoning-districts',
-        ],
-      })
-      .end((err, res) => {
-        const { data } = res.body;
-
-        const taxLots = data.find(d => d.id === 'tax-lots');
-        const zoningDistricts = data.find(d => d.id === 'zoning-districts');
-
-        should.exist(taxLots);
-        should.exist(zoningDistricts);
-
-        done();
-      });
-  });
-
   it('finds matching resources with array of objects', (done) => {
     chai.request(server)
       .post('/v1/layer-groups')
