@@ -6,9 +6,21 @@ const v1Routes = require('./routes/v1');
 
 const app = new Koa();
 app.use(bodyParser());
-app.use(cors());
+app.use(cors({
+  origin: '*',
+}));
 
+// better error handling
+app.use(async (ctx, next) => {
+  try {
+    await next();
+  } catch (err) {
+    ctx.status = err.status || 500;
+    ctx.body = { errors: [err] };
+    ctx.app.emit('error', err, ctx);
+  }
+});
 
 app.use(v1Routes.routes());
 
-app.listen(process.env.PORT || 3000);
+module.exports = app.listen(process.env.PORT || 3000);

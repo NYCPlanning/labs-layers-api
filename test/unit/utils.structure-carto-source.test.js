@@ -8,13 +8,13 @@ const should = chai.should();
 
 const cartoResponse = require('./carto-response.json');
 
-nock('https://planninglabs.carto.com')
-  .post('/api/v1/map')
-  .reply(200, cartoResponse);
-
 
 describe('structure-carto-source util', () => {
   it('should return a source with the correct id', async () => {
+    const scope = nock('https://planninglabs.carto.com')
+      .post('/api/v1/map')
+      .reply(200, cartoResponse);
+
     try {
       const source = await find('sources', 'pluto');
       const cartoSource = await getSource(source);
@@ -26,5 +26,6 @@ describe('structure-carto-source util', () => {
     } catch (e) {
       throw new Error(e);
     }
+    scope.isDone();
   });
 });

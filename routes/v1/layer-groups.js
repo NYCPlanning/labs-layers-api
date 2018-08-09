@@ -1,9 +1,24 @@
 const Router = require('koa-router');
+const Joi = require('joi');
+const merge = require('../../utils/deep-merge-with-array-replace');
 const buildMapboxStyle = require('../../utils/build-mapbox-style');
 const { where } = require('../../utils/local-resources-utilities');
-// const findAll = require('../../utils/local-resources-utilities/find-all');
 
 const router = new Router();
+
+const querySchema = Joi.object().keys({
+  'layer-groups': Joi.array().items(
+    Joi.string(),
+    Joi.object().keys({
+      id: Joi.string().required(),
+      title: Joi.string(),
+      visible: Joi.boolean(),
+      titleTooltip: Joi.string(),
+      meta: Joi.object(),
+      layers: Joi.array().items(Joi.object()),
+    }),
+  ),
+});
 
 router.get('/', async (ctx) => {
   ctx.body = {
@@ -14,28 +29,26 @@ router.get('/', async (ctx) => {
 
 router.post('/', async (ctx) => {
   const config = ctx.request.body;
-  const { 'layer-groups': layerGroupIDs } = config;
+  const { value: { 'layer-groups': query } } = querySchema.validate(config);
 
-  // get layerGroup configs from files...
-  const layerGroupConfigs = await where('layer-groups', { id: layerGroupIDs });
-  const mapboxStyle = await buildMapboxStyle(layerGroupConfigs);
+  let data = {};
 
-  let response;
-
-  try {
-    response = {
-      data: layerGroupConfigs,
-      meta: {
-        mapboxStyle,
-      },
-    };
-  } catch (e) {
-    response = {
-      errors: [e],
-    };
+  // ids only
+  if (query.every(element => typeof element === 'string')) {
+    data = await where('layer-groups', { id: query });
   }
 
-  ctx.body = response;
+  // objects
+  if (query.every(element => typeof element === 'object')) {
+    const originalObjects = await where('layer-groups', { id: query.map(({ id }) => id) });
+    data = merge(originalObjects, query);
+  }
+
+  const meta = {
+    mapboxStyle: await buildMapboxStyle(data),
+  };
+
+  ctx.body = { data, meta };
 });
 
 module.exports = router;

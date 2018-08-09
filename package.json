@@ -6,14 +6,17 @@
   "author": "Chris Whong <chris@whong.org>",
   "license": "MIT",
   "dependencies": {
-    "@koa/cors": "^2.2.2",
+    "@koa/cors": "2",
     "array-unique": "^0.3.2",
+    "deepmerge": "2.1.1",
+    "joi": "13.5.2",
     "koa": "^2.5.2",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
     "load-json-file": "^5.0.0",
     "nock": "^9.4.4",
     "node-fetch": "^2.2.0",
+    "request-promise": "^4.2.2",
     "rsvp": "^4.8.3"
   },
   "devDependencies": {
@@ -30,7 +33,8 @@
   "scripts": {
     "start": "node app.js",
     "devstart": "nodemon app.js",
-    "test": "NODE_ENV=test node ./node_modules/mocha/bin/mocha ./test/**/*.js --exit"
+    "test": "NODE_ENV=test node ./node_modules/mocha/bin/mocha ./test/**/*.js --exit",
+    "watch-tests": "nodemon --exec 'npm run test || true'"
   },
   "engines": {
     "node": "8.11.3"
