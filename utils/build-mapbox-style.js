@@ -36,7 +36,7 @@ module.exports = async (layerGroups) => {
   // TODO use the order of the layers specified in the config to determine the correct order
   // TODO set visibility for each layer
   // TODO insert before labels
-  baseStyle.layers = [...baseStyle.layers, ...layers];
+  // baseStyle.layers = [...baseStyle.layers, ...layers];
 
   // de-dupe source ids, many layers may require the same source
   sourceIds = unique(sourceIds);
