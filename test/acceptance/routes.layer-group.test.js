@@ -182,4 +182,142 @@ describe('POST /layer-groups', () => {
         done();
       });
   });
+
+  it('blank objects denote array position', (done) => {
+    chai.request(server)
+      .post('/v1/layer-groups')
+      .set('content-type', 'application/json')
+      .send({
+        'layer-groups': [
+          {
+            id: 'tax-lots',
+            title: 'bananas',
+            layers: [
+              {},
+              {
+                layer:
+                {
+                  minzoom: 14,
+                },
+              },
+            ],
+          },
+        ],
+      })
+      .end((err, res) => {
+        const { data, errors } = res.body;
+
+        expect(errors).to.equal(undefined);
+
+        if (errors) {
+          console.log(errors[0]); // eslint-disable-line
+        }
+
+        const {
+          layers: [{
+            layer: {
+              id,
+              minzoom,
+              source,
+            },
+          }, {
+            layer: {
+              id: secondId,
+              minzoom: secondMinZoom,
+              source: secondSource,
+            },
+          }],
+        } = data.find(d => d.id === 'tax-lots');
+
+        id.should.equal('pluto-fill');
+        minzoom.should.equal(15);
+        source.should.equal('pluto');
+
+        secondId.should.equal('pluto-line');
+        secondMinZoom.should.equal(14);
+        secondSource.should.equal('pluto');
+
+        done();
+      });
+  });
+
+  it('deep nested arrays skippable', (done) => {
+    chai.request(server)
+      .post('/v1/layer-groups')
+      .set('content-type', 'application/json')
+      .send({
+        'layer-groups': [
+          {
+            id: 'tax-lots',
+            title: 'bananas',
+            layers: [
+              {
+                layer:
+                {
+                  minzoom: 15,
+                  paint:
+                  {
+                    'fill-outline-color': '#cdcdcd',
+                    'fill-color':
+                    {
+                      property: 'landuse',
+                      type: 'categorical',
+                      stops:
+                      [
+                        [],
+                        [
+                          '02',
+                          '#FFFFFF',
+                        ],
+                      ],
+                    },
+                  },
+                },
+              },
+            ],
+          },
+        ],
+      })
+      .end((err, res) => {
+        const { data, errors } = res.body;
+
+        expect(errors).to.equal(undefined);
+
+        if (errors) {
+          console.log(errors[0]); // eslint-disable-line
+        }
+
+        const {
+          layers: [{
+            layer: {
+              minzoom,
+              source,
+              paint: {
+                'fill-color': {
+                  stops: [
+                    [firstId, firstStopUnaltered],
+                    [secondId, secondStopAltered],
+                    [thirdId, thirdStopUnaltered],
+                  ],
+                },
+              },
+            },
+          }],
+        } = data.find(d => d.id === 'tax-lots');
+
+        minzoom.should.equal(15);
+        source.should.equal('pluto');
+
+        firstStopUnaltered.should.equal('#FEFFA8');
+        firstId.should.equal('01');
+
+        secondStopAltered.should.equal('#FFFFFF');
+        secondId.should.equal('02');
+
+        thirdStopUnaltered.should.equal('#B16E00');
+        thirdId.should.equal('03');
+
+        done();
+      });
+  });
 });
