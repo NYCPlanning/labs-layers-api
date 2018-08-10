@@ -111,6 +111,86 @@ describe('POST /layer-groups', () => {
       });
   });
 
+  it('deep nested arrays skippable', (done) => {
+    chai.request(server)
+      .post('/v1/layer-groups')
+      .set('content-type', 'application/json')
+      .send({
+        'layer-groups': [
+          {
+            id: 'tax-lots',
+            title: 'bananas',
+            layers: [
+              {
+                style:
+                {
+                  minzoom: 15,
+                  paint:
+                  {
+                    'fill-outline-color': '#cdcdcd',
+                    'fill-color':
+                    {
+                      property: 'landuse',
+                      type: 'categorical',
+                      stops:
+                      [
+                        [],
+                        [
+                          '02',
+                          '#FFFFFF',
+                        ],
+                      ],
+                    },
+                  },
+                },
+              },
+            ],
+          },
+        ],
+      })
+      .end((err, res) => {
+        const { data, errors } = res.body;
+
+        expect(errors).to.equal(undefined);
+
+        if (errors) {
+          console.log(errors[0]); // eslint-disable-line
+        }
+
+        const {
+          layers: [{
+            style: {
+              minzoom,
+              source,
+              paint: {
+                'fill-color': {
+                  stops: [
+                    [firstId, firstStopUnaltered],
+                    [secondId, secondStopAltered],
+                    [thirdId, thirdStopUnaltered],
+                  ],
+                },
+              },
+            },
+          }],
+        } = data.find(d => d.id === 'tax-lots');
+
+        minzoom.should.equal(15);
+        source.should.equal('pluto');
+
+        firstStopUnaltered.should.equal('#FEFFA8');
+        firstId.should.equal('01');
+
+        secondStopAltered.should.equal('#FFFFFF');
+        secondId.should.equal('02');
+
+        thirdStopUnaltered.should.equal('#B16E00');
+        thirdId.should.equal('03');
+
+        done();
+      });
+  });
+
   it('deep nested arrays are found and replaced', (done) => {
     chai.request(server)
       .post('/v1/layer-groups')
@@ -338,6 +418,57 @@ describe('POST /layer-groups', () => {
         if (errors) {
           console.log(errors[0]); // eslint-disable-line
         }
+
+        done();
+      });
+  });
+
+  it('appends layergroup metadata to layers', (done) => {
+    chai.request(server)
+      .post('/v1/layer-groups')
+      .set('content-type', 'application/json')
+      .send({
+        'layer-groups': [
+          {
+            id: 'zoning-districts',
+          },
+        ],
+      })
+      .end((err, res) => {
+        const { meta, errors } = res.body;
+
+        expect(errors).to.equal(undefined);
+
+        const zdLayers = meta.mapboxStyle.layers
+          .filter(d => (d.metadata && d.metadata['nycplanninglabs:layergroupid'] === 'zoning-districts'));
+        expect(zdLayers.length).to.equal(3);
+
+        done();
+      });
+  });
+
+  it('sets visibility of child layers to match layerGroup visible property', (done) => {
+    chai.request(server)
+      .post('/v1/layer-groups')
+      .set('content-type', 'application/json')
+      .send({
+        'layer-groups': [
+          {
+            id: 'zoning-districts',
+            visible: 'false',
+          },
+        ],
+      })
+      .end((err, res) => {
+        const { meta, errors } = res.body;
+        const zdLayers = meta.mapboxStyle.layers
+          .filter(d => (d.metadata && d.metadata['nycplanninglabs:layergroupid'] === 'zoning-districts'));
+        expect(zdLayers[0].visibility).to.equal('none');
+        expect(zdLayers[1].visibility).to.equal('none');
+        expect(zdLayers[2].visibility).to.equal('none');
+
+        expect(errors).to.equal(undefined);
+
 
         done();
       });
