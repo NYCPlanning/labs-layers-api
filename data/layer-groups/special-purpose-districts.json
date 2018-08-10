@@ -1,0 +1,55 @@
+{
+  "id": "special-purpose-districts",
+  "title": "Special Purpose Districts",
+  "titleTooltip": "The regulations for special purpose districts are designed to supplement and modify the underlying zoning in order to respond to distinctive neighborhoods with particular issues and goals",
+  "legendIcon": "polygon-fill-dash",
+  "legendColor": "rgba(94,102,51, 1)",
+  "meta": {
+    "description": "NYC GIS Zoning Features February 2018, Bytes of the Big Apple",
+    "url": [
+      "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
+    ],
+    "updated_at": "5 March 2018"
+  },
+  "layers": [
+    {
+      "style": {
+        "id": "zoning-sp-line",
+        "type": "line",
+        "source": "zoning",
+        "source-layer": "special-purpose-districts",
+        "paint": {
+          "line-width": {
+            "stops": [
+              [
+                11,
+                1
+              ],
+              [
+                12,
+                3
+              ]
+            ]
+          },
+          "line-color": "rgba(94,102,51, 0.6)",
+          "line-dasharray": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "zoning-sp-fill",
+        "type": "fill",
+        "source": "zoning",
+        "source-layer": "special-purpose-districts",
+        "paint": {
+          "fill-color": "#5E6633",
+          "fill-opacity": 0.2
+        }
+      }
+    }
+  ]
+}

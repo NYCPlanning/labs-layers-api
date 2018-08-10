@@ -1,0 +1,38 @@
+{
+  "id": "street-centerlines",
+  "title": "Street Names",
+  "titleTooltip": "Legal street names as shown on the City Map",
+  "visible": true,
+  "meta": {
+    "description": "NYC Department of City Planning Technical Review Division",
+    "updated_at": "6 April 2018"
+  },
+  "layers": [
+    {
+      "before": "place_country_major",
+      "style": {
+        "id": "citymap-street-centerlines-symbol",
+        "type": "symbol",
+        "source": "digital-citymap",
+        "source-layer": "street-centerlines",
+        "minzoom": 13,
+        "layout": {
+          "text-field": "{streetname}{streetwidth}",
+          "text-keep-upright": true,
+          "symbol-placement": "line",
+          "text-size": 12
+        },
+        "paint": {
+          "text-color": "rgba(37, 37, 37, 1)",
+          "text-halo-color": "#fff",
+          "text-translate": [
+            0,
+            0
+          ],
+          "text-halo-width": 2,
+          "text-halo-blur": 1
+        }
+      }
+    }
+  ]
+}
