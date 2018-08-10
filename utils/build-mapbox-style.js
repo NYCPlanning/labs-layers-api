@@ -13,7 +13,20 @@ module.exports = async (layerGroups) => {
   let sourceIds = [];
 
   layerGroups.forEach((layerGroupConfig) => {
-    const internalLayers = layerGroupConfig.layers.map(d => d.style);
+    const { id, visible: layerGroupVisible } = layerGroupConfig;
+    const internalLayers = layerGroupConfig.layers.map((d) => {
+      const { layer } = d;
+
+      // set metadata to tie layer to layergroup
+      layer.metadata = {
+        'nycplanninglabs:layergroupid': id,
+      };
+
+      // set initial visibility to match visible property of layergroup
+      layer.visibility = layerGroupVisible ? 'visible' : 'none';
+
+      return layer;
+    });
     const internalSourceIds = internalLayers.map(d => d.source);
     layers = [...layers, ...internalLayers];
     sourceIds = [...sourceIds, ...internalSourceIds];
