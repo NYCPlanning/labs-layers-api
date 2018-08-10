@@ -5,7 +5,6 @@
   "legendIcon": "polygon-stacked",
   "legendColor": "rgba(240, 15, 130, 0.4)",
   "visible": false,
-  "highlightable": false,
   "meta": {
     "description": "NYC Department of City Planning Technical Review Division",
     "updated_at": "6 April 2018"

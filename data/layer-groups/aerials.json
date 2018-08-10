@@ -9,7 +9,6 @@
      ],
      "updated_at": "n/a"
   },
-  "layerVisibilityType": "singleton",
   "layers": [
     {
       "before": "boundary_state",

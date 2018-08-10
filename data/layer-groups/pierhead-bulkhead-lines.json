@@ -2,8 +2,6 @@
   "id": "pierhead-bulkhead-lines",
   "title": "Pierhead & Bulkhead Lines",
   "titleTooltip": "The Pierhead line is the extent to which piers and platforms over water may be built as shown on the City Map.  The Bulkhead line is the extent to which the filling of land is permitted without additional permits.",
-  "legendIcon": "",
-  "legendColor": "",
   "visible": true,
   "meta": {
     "description": "NYC Department of City Planning Technical Review Division",

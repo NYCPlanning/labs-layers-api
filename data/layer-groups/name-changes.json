@@ -2,8 +2,6 @@
   "id":"name-changes",
   "title":"Local Law Names",
   "titleTooltip":"Local Law name changes to thoroughfares and public places from 2002 to present",
-  "legendIcon":"",
-  "legendColor":"",
   "visible":false,
   "meta":{
     "description":"NYC Department of City Planning Technical Review Division",

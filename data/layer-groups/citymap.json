@@ -1,8 +1,6 @@
 {
   "id":"citymap",
   "title":"Street Lines",
-  "legendIcon":"",
-  "legendColor":"",
   "visible":true,
   "meta":{
     "description":"NYC Department of City Planning Technical Review Division",
