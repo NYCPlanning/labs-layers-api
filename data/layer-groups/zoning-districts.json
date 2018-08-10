@@ -15,7 +15,7 @@
   "layers":
   [
     {
-      "layer":
+      "style":
       {
         "id": "zd-fill",
         "type": "fill",
@@ -170,7 +170,7 @@
       "tooltipTemplate": "Zoning District {{zonedist}}"
     },
     {
-      "layer":
+      "style":
       {
         "id": "zd-lines",
         "type": "line",
@@ -220,7 +220,7 @@
       "before": "place_other"
     },
     {
-      "layer":
+      "style":
       {
         "id": "zd_labels",
         "source": "zoning-districts",

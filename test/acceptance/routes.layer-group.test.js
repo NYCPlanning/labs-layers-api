@@ -122,7 +122,7 @@ describe('POST /layer-groups', () => {
             title: 'bananas',
             layers: [
               {
-                layer:
+                style:
                 {
                   minzoom: 14,
                   paint:
@@ -158,7 +158,7 @@ describe('POST /layer-groups', () => {
 
         const {
           layers: [{
-            layer: {
+            style: {
               minzoom,
               source,
               paint: {
@@ -195,7 +195,7 @@ describe('POST /layer-groups', () => {
             layers: [
               {},
               {
-                layer:
+                style:
                 {
                   minzoom: 14,
                 },
@@ -215,13 +215,13 @@ describe('POST /layer-groups', () => {
 
         const {
           layers: [{
-            layer: {
+            style: {
               id,
               minzoom,
               source,
             },
           }, {
-            layer: {
+            style: {
               id: secondId,
               minzoom: secondMinZoom,
               source: secondSource,
@@ -252,7 +252,7 @@ describe('POST /layer-groups', () => {
             title: 'bananas',
             layers: [
               {
-                layer:
+                style:
                 {
                   minzoom: 15,
                   paint:
@@ -289,7 +289,7 @@ describe('POST /layer-groups', () => {
 
         const {
           layers: [{
-            layer: {
+            style: {
               minzoom,
               source,
               paint: {
@@ -316,6 +316,28 @@ describe('POST /layer-groups', () => {
 
         thirdStopUnaltered.should.equal('#B16E00');
         thirdId.should.equal('03');
+
+        done();
+      });
+  });
+
+  it('non-carto sources are skipped during the carto tiles step', (done) => {
+    chai.request(server)
+      .post('/v1/layer-groups')
+      .set('content-type', 'application/json')
+      .send({
+        'layer-groups': [
+          'aerials',
+        ],
+      })
+      .end((err, res) => {
+        const { errors } = res.body;
+
+        expect(errors).to.equal(undefined);
+
+        if (errors) {
+          console.log(errors[0]); // eslint-disable-line
+        }
 
         done();
       });

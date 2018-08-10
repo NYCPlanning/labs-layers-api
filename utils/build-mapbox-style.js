@@ -13,7 +13,7 @@ module.exports = async (layerGroups) => {
   let sourceIds = [];
 
   layerGroups.forEach((layerGroupConfig) => {
-    const internalLayers = layerGroupConfig.layers.map(d => d.layer);
+    const internalLayers = layerGroupConfig.layers.map(d => d.style);
     const internalSourceIds = internalLayers.map(d => d.source);
     layers = [...layers, ...internalLayers];
     sourceIds = [...sourceIds, ...internalSourceIds];

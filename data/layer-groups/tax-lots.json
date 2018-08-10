@@ -14,7 +14,7 @@
   "layers":
   [
     {
-      "layer":
+      "style":
       {
         "id": "pluto-fill",
         "type": "fill",
@@ -96,7 +96,7 @@
       "tooltipTemplate": "{{address}}"
     },
     {
-      "layer":
+      "style":
       {
         "id": "pluto-line",
         "type": "line",
@@ -127,7 +127,7 @@
       }
     },
     {
-      "layer":
+      "style":
       {
         "id": "pluto-labels",
         "type": "symbol",
