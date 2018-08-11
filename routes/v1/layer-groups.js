@@ -67,7 +67,7 @@ router.get('/', async (ctx) => {
 
         return {
           id,
-          type: 'layer',
+          type: 'layers',
           attributes: layer,
         };
       }),
