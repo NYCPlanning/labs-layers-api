@@ -1,6 +1,7 @@
 const Router = require('koa-router');
 const Joi = require('joi');
 const layerGroupSerializer = require('../../serializers/layer-groups');
+const layerGroupSchema = require('../../schemas/layer-group');
 const merge = require('../../utils/deep-merge-with-array-replace');
 const buildMapboxStyle = require('../../utils/build-mapbox-style');
 const { where, findAll } = require('../../utils/local-resources-utilities');
@@ -10,14 +11,7 @@ const router = new Router();
 const querySchema = Joi.object().keys({
   'layer-groups': Joi.array().items(
     Joi.string(),
-    Joi.object().keys({
-      id: Joi.string().required(),
-      title: Joi.string(),
-      visible: Joi.boolean(),
-      titleTooltip: Joi.string(),
-      meta: Joi.object(),
-      layers: Joi.array().items(Joi.object()),
-    }),
+    layerGroupSchema,
   ),
 });
 
@@ -57,11 +51,13 @@ router.post('/', async (ctx) => {
     data = merge(originalObjects, query);
   }
 
-  const meta = {
+  const responseBody = layerGroupSerializer(data);
+
+  responseBody.meta = {
     mapboxStyle: await buildMapboxStyle(data),
   };
 
-  ctx.body = { data, meta };
+  ctx.body = responseBody;
 });
 
 module.exports = router;
