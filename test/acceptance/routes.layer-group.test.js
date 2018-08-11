@@ -423,7 +423,6 @@ describe('POST /layer-groups', () => {
       });
   });
 
-
   // it('appends layergroup metadata to layers', (done) => {
   //   chai.request(server)
   //     .post('/v1/layer-groups')
@@ -476,4 +475,33 @@ describe('POST /layer-groups', () => {
   //       done();
   //     });
   // });
+
+  it('returns a 200 response with json; returns all by default', (done) => {
+    chai.request(server)
+      .get('/v1/layer-groups')
+      .set('content-type', 'application/json')
+      .end((err, res) => {
+        should.not.exist(err);
+        res.status.should.equal(200);
+        res.type.should.equal('application/json');
+
+        done();
+      });
+  });
+
+  it('accepts query params for specific layer groups', (done) => {
+    chai.request(server)
+      .get('/v1/layer-groups?ids[]=tax-lots&ids[]=zoning-districts')
+      .set('content-type', 'application/json')
+      .end((err, res) => {
+        const { data } = res.body;
+        should.not.exist(err);
+        res.status.should.equal(200);
+        res.type.should.equal('application/json');
+
+        data.length.should.equal(2);
+
+        done();
+      });
+  });
 });
