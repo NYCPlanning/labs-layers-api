@@ -19,19 +19,19 @@ router.get('/', async (ctx) => {
   const { 'ids[]': ids } = ctx.request.query;
 
   let data;
+
   if (ids) {
     data = await where('layer-groups', { id: ids });
   } else {
     data = await findAll('layer-groups');
   }
 
-  const responseBody = layerGroupSerializer(data);
-
-  responseBody.meta = {
-    mapboxStyle: await buildMapboxStyle(data),
+  ctx.body = {
+    ...layerGroupSerializer(data),
+    meta: {
+      mapboxStyle: await buildMapboxStyle(data),
+    },
   };
-
-  ctx.body = responseBody;
 });
 
 router.post('/', async (ctx) => {
@@ -51,13 +51,12 @@ router.post('/', async (ctx) => {
     data = merge(originalObjects, query);
   }
 
-  const responseBody = layerGroupSerializer(data);
-
-  responseBody.meta = {
-    mapboxStyle: await buildMapboxStyle(data),
+  ctx.body = {
+    ...layerGroupSerializer(data),
+    meta: {
+      mapboxStyle: await buildMapboxStyle(data),
+    },
   };
-
-  ctx.body = responseBody;
 });
 
 module.exports = router;
