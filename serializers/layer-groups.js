@@ -1,12 +1,17 @@
 const JSONAPISerializer = require('jsonapi-serializer').Serializer;
+const layerGroupSchema = require('../schemas/layer-group');
+const layerSchema = require('../schemas/layer');
+
+const { children: layerGroupAttrs } = layerGroupSchema.describe();
+const { children: layerAttrs } = layerSchema.describe();
 
 module.exports = data => new JSONAPISerializer('layer-groups', {
-  attributes: ['title', 'visible', 'layerVisibilityType', 'titleTooltip', 'meta', 'layers', 'legendConfig', 'legendIcon', 'legendColor'],
+  attributes: Object.keys(layerGroupAttrs),
   layers: {
     ref(parent, child) {
       return child.style.id;
     },
     included: true,
-    attributes: ['style', 'displayName', 'before', 'clickable', 'highlightable', 'tooltipable', 'tooltipTemplate'],
+    attributes: Object.keys(layerAttrs),
   },
 }).serialize(data);
