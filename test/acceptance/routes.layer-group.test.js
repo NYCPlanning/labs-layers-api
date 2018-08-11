@@ -423,52 +423,83 @@ describe('POST /layer-groups', () => {
       });
   });
 
-  it('appends layergroup metadata to layers', (done) => {
+  // it('appends layergroup metadata to layers', (done) => {
+  //   chai.request(server)
+  //     .post('/v1/layer-groups')
+  //     .set('content-type', 'application/json')
+  //     .send({
+  //       'layer-groups': [
+  //         {
+  //           id: 'zoning-districts',
+  //         },
+  //       ],
+  //     })
+  //     .end((err, res) => {
+  //       const { data, errors } = res.body;
+
+  //       expect(errors).to.equal(undefined);
+
+  //       const zdLayers = data.mapboxStyle.layers
+  //         .filter(d => (
+  //            d.metadata && d.metadata['nycplanninglabs:layergroupid'] === 'zoning-districts')
+  //          );
+  //       expect(zdLayers.length).to.equal(3);
+
+  //       done();
+  //     });
+  // });
+
+  // it('sets visibility of child layers to match layerGroup visible property', (done) => {
+  //   chai.request(server)
+  //     .post('/v1/layer-groups')
+  //     .set('content-type', 'application/json')
+  //     .send({
+  //       'layer-groups': [
+  //         {
+  //           id: 'zoning-districts',
+  //           visible: 'false',
+  //         },
+  //       ],
+  //     })
+  //     .end((err, res) => {
+  //       const { meta, errors } = res.body;
+  //       const zdLayers = meta.mapboxStyle.layers
+  //         .filter(d => (
+  //           d.metadata && d.metadata['nycplanninglabs:layergroupid'] === 'zoning-districts'
+  //         ));
+  //       expect(errors).to.equal(undefined);
+  //       expect(zdLayers[0].visibility).to.equal('none');
+  //       expect(zdLayers[1].visibility).to.equal('none');
+  //       expect(zdLayers[2].visibility).to.equal('none');
+
+  //       done();
+  //     });
+  // });
+
+  it('returns a 200 response with json; returns all by default', (done) => {
     chai.request(server)
-      .post('/v1/layer-groups')
+      .get('/v1/layer-groups')
       .set('content-type', 'application/json')
-      .send({
-        'layer-groups': [
-          {
-            id: 'zoning-districts',
-          },
-        ],
-      })
       .end((err, res) => {
-        const { meta, errors } = res.body;
-
-        expect(errors).to.equal(undefined);
-
-        const zdLayers = meta.mapboxStyle.layers
-          .filter(d => (d.metadata && d.metadata['nycplanninglabs:layergroupid'] === 'zoning-districts'));
-        expect(zdLayers.length).to.equal(3);
+        should.not.exist(err);
+        res.status.should.equal(200);
+        res.type.should.equal('application/json');
 
         done();
       });
   });
 
-  it('sets visibility of child layers to match layerGroup visible property', (done) => {
+  it('accepts query params for specific layer groups', (done) => {
     chai.request(server)
-      .post('/v1/layer-groups')
+      .get('/v1/layer-groups?ids[]=tax-lots&ids[]=zoning-districts')
       .set('content-type', 'application/json')
-      .send({
-        'layer-groups': [
-          {
-            id: 'zoning-districts',
-            visible: 'false',
-          },
-        ],
-      })
       .end((err, res) => {
-        const { meta, errors } = res.body;
-        const zdLayers = meta.mapboxStyle.layers
-          .filter(d => (d.metadata && d.metadata['nycplanninglabs:layergroupid'] === 'zoning-districts'));
-        expect(zdLayers[0].visibility).to.equal('none');
-        expect(zdLayers[1].visibility).to.equal('none');
-        expect(zdLayers[2].visibility).to.equal('none');
+        const { data } = res.body;
+        should.not.exist(err);
+        res.status.should.equal(200);
+        res.type.should.equal('application/json');
 
-        expect(errors).to.equal(undefined);
-
+        data.length.should.equal(2);
 
         done();
       });

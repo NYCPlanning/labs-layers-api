@@ -1,12 +1,24 @@
 const Router = require('koa-router');
-const { where } = require('../../utils/local-resources-utilities');
+const { findAll, where } = require('../../utils/local-resources-utilities');
 
 const router = new Router();
 
 router.get('/', async (ctx) => {
+  // const config = ctx.request.query;
+  // const { sources: ids } = config;
+
+  const data = await findAll('sources');
+
   ctx.body = {
-    status: 'success',
-    message: 'hello, world!',
+    data: data.map((resource) => {
+      const { id } = resource;
+
+      return {
+        id,
+        type: 'sources',
+        attributes: resource,
+      };
+    }),
   };
 });
 

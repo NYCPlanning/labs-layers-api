@@ -13,7 +13,7 @@ module.exports = async (layerGroups) => {
   let sourceIds = [];
 
   layerGroups.forEach((layerGroupConfig) => {
-    const { id, visible: layerGroupVisible } = layerGroupConfig;
+    const { id } = layerGroupConfig;
     const internalLayers = layerGroupConfig.layers.map((d) => {
       const { style } = d;
 
@@ -22,8 +22,8 @@ module.exports = async (layerGroups) => {
         'nycplanninglabs:layergroupid': id,
       };
 
-      // set initial visibility to match visible property of layergroup
-      style.visibility = layerGroupVisible ? 'visible' : 'none';
+      // // set initial visibility to match visible property of layergroup
+      // style.visibility = layerGroupVisible ? 'visible' : 'none';
 
       return style;
     });
@@ -36,7 +36,7 @@ module.exports = async (layerGroups) => {
   // TODO use the order of the layers specified in the config to determine the correct order
   // TODO set visibility for each layer
   // TODO insert before labels
-  baseStyle.layers = [...baseStyle.layers, ...layers];
+  // baseStyle.layers = [...baseStyle.layers, ...layers];
 
   // de-dupe source ids, many layers may require the same source
   sourceIds = unique(sourceIds);
