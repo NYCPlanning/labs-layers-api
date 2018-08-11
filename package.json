@@ -10,6 +10,7 @@
     "array-unique": "^0.3.2",
     "deepmerge": "2.1.1",
     "joi": "13.5.2",
+    "jsonapi-serializer": "3.5.6",
     "koa": "^2.5.2",
     "koa-bodyparser": "^4.2.1",
     "koa-router": "^7.4.0",
