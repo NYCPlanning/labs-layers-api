@@ -1,62 +1,14 @@
 const chai = require('chai');
-const Joi = require('joi');
 const path = require('path');
 const fs = require('fs');
 
+const layerGroupSchema = require('../../schemas/layer-group');
+const sourceSchema = require('../../schemas/source');
 const { find } = require('../../utils/local-resources-utilities');
-
 
 const getFilenames = resourceName => fs.readdirSync(path.resolve(__dirname, `../../data/${resourceName}`));
 
 const should = chai.should();
-
-const layerGroupSchema = Joi.object().keys({
-  id: Joi.string().required(),
-  title: Joi.string(),
-  visible: Joi.boolean(),
-  layerVisibilityType: Joi.string(),
-  titleTooltip: Joi.string(),
-  meta: Joi.object(),
-  layers: Joi.array().items(
-    Joi.object({
-      style: Joi.object().required(),
-      displayName: Joi.string(),
-      before: Joi.string(),
-      clickable: Joi.boolean(),
-      highlightable: Joi.boolean(),
-      tooltipable: Joi.boolean(),
-      tooltipTemplate: Joi.string(),
-    }),
-  ),
-  legendConfig: Joi.object(),
-  legendIcon: Joi.string(),
-  legendColor: Joi.string(),
-});
-
-const sourceSchema = Joi.object().keys({
-  id: Joi.string().required(),
-  type: Joi.valid(
-    'vector',
-    'raster',
-    'geojson',
-    'cartovector',
-  ),
-  minzoom: Joi.number(),
-  maxzoom: Joi.number(),
-  'source-layers': Joi.array().items(Joi.object())
-    .when('type', {
-      is: 'cartovector',
-      then: Joi.required(),
-    }),
-  tiles: Joi.array().items(Joi.string()).when('type', {
-    is: 'raster',
-    then: Joi.required(),
-  }),
-  tileSize: Joi.number().when('type', {
-    is: 'raster',
-    then: Joi.required(),
-  }),
-});
 
 function testLayerGroup(filename) {
   it(`validates layer-groups/${filename}`, async () => {

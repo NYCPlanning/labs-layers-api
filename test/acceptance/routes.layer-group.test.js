@@ -101,8 +101,8 @@ describe('POST /layer-groups', () => {
           console.log(errors[0]); // eslint-disable-line
         }
 
-        const { title: taxLotsTitle } = data.find(d => d.id === 'tax-lots');
-        const { title: zdTitle } = data.find(d => d.id === 'zoning-districts');
+        const { attributes: { title: taxLotsTitle } } = data.find(d => d.id === 'tax-lots');
+        const { attributes: { title: zdTitle } } = data.find(d => d.id === 'zoning-districts');
 
         taxLotsTitle.should.equal('bananas');
         zdTitle.should.equal('peanut butter');
@@ -149,7 +149,7 @@ describe('POST /layer-groups', () => {
         ],
       })
       .end((err, res) => {
-        const { data, errors } = res.body;
+        const { included, errors } = res.body;
 
         expect(errors).to.equal(undefined);
 
@@ -158,7 +158,7 @@ describe('POST /layer-groups', () => {
         }
 
         const {
-          layers: [{
+          attributes: {
             style: {
               minzoom,
               source,
@@ -172,8 +172,8 @@ describe('POST /layer-groups', () => {
                 },
               },
             },
-          }],
-        } = data.find(d => d.id === 'tax-lots');
+          },
+        } = included.find(d => d.id === 'pluto-fill');
 
         minzoom.should.equal(15);
         source.should.equal('pluto');
@@ -228,7 +228,7 @@ describe('POST /layer-groups', () => {
         ],
       })
       .end((err, res) => {
-        const { data, errors } = res.body;
+        const { included, errors } = res.body;
 
         expect(errors).to.equal(undefined);
 
@@ -237,7 +237,7 @@ describe('POST /layer-groups', () => {
         }
 
         const {
-          layers: [{
+          attributes: {
             style: {
               minzoom,
               source,
@@ -250,8 +250,8 @@ describe('POST /layer-groups', () => {
                 },
               },
             },
-          }],
-        } = data.find(d => d.id === 'tax-lots');
+          },
+        } = included.find(d => d.id === 'pluto-fill');
 
         minzoom.should.equal(14);
         source.should.equal('pluto');
@@ -285,7 +285,7 @@ describe('POST /layer-groups', () => {
         ],
       })
       .end((err, res) => {
-        const { data, errors } = res.body;
+        const { included, errors } = res.body;
 
         expect(errors).to.equal(undefined);
 
@@ -294,20 +294,24 @@ describe('POST /layer-groups', () => {
         }
 
         const {
-          layers: [{
+          attributes: {
             style: {
               id,
               minzoom,
               source,
             },
-          }, {
+          },
+        } = included.find(d => d.id === 'pluto-fill');
+
+        const {
+          attributes: {
             style: {
               id: secondId,
               minzoom: secondMinZoom,
               source: secondSource,
             },
-          }],
-        } = data.find(d => d.id === 'tax-lots');
+          },
+        } = included.find(d => d.id === 'pluto-line');
 
         id.should.equal('pluto-fill');
         minzoom.should.equal(15);
@@ -359,7 +363,7 @@ describe('POST /layer-groups', () => {
         ],
       })
       .end((err, res) => {
-        const { data, errors } = res.body;
+        const { included, errors } = res.body;
 
         expect(errors).to.equal(undefined);
 
@@ -368,7 +372,7 @@ describe('POST /layer-groups', () => {
         }
 
         const {
-          layers: [{
+          attributes: {
             style: {
               minzoom,
               source,
@@ -382,8 +386,8 @@ describe('POST /layer-groups', () => {
                 },
               },
             },
-          }],
-        } = data.find(d => d.id === 'tax-lots');
+          },
+        } = included.find(d => d.id === 'pluto-fill');
 
         minzoom.should.equal(15);
         source.should.equal('pluto');
