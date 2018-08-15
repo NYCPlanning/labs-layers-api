@@ -14,10 +14,10 @@
  "sources":{
     "openmaptiles":{
        "type":"vector",
-       "url": "{{HOSTNAME}}/v3.json"
+       "url": "{{HOSTNAME}}/static/v3.json"
     }
  },
- "sprite":"{{HOSTNAME}}/sprite",
+ "sprite":"{{HOSTNAME}}/static/sprite",
  "glyphs":"https://tiles.planninglabs.nyc/fonts/{fontstack}/{range}.pbf",
  "layers":[
     {

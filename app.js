@@ -7,11 +7,11 @@ const v1Routes = require('./routes/v1');
 
 const app = new Koa();
 
-app.use(serve('public'));
 app.use(bodyParser());
 app.use(cors({
   origin: '*',
 }));
+app.use(serve('public'));
 
 // better error handling
 app.use(async (ctx, next) => {
