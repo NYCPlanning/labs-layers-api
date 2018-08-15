@@ -7,6 +7,7 @@
   "license": "MIT",
   "dependencies": {
     "@koa/cors": "2",
+    "@mapbox/mapbox-gl-style-spec": "^13.1.0",
     "array-unique": "^0.3.2",
     "deepmerge": "2.1.1",
     "joi": "13.5.2",
@@ -16,9 +17,11 @@
     "koa-router": "^7.4.0",
     "load-json-file": "^5.0.0",
     "nock": "^9.4.4",
+    "node-cache": "^4.2.0",
     "node-fetch": "^2.2.0",
     "request-promise": "^4.2.2",
-    "rsvp": "^4.8.3"
+    "rsvp": "^4.8.3",
+    "shortid": "^2.2.12"
   },
   "devDependencies": {
     "chai": "^4.1.2",

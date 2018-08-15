@@ -1,6 +1,7 @@
 const Koa = require('koa');
 const cors = require('@koa/cors');
 const bodyParser = require('koa-bodyparser');
+const NodeCache = require('node-cache');
 
 const v1Routes = require('./routes/v1');
 
@@ -9,6 +10,9 @@ app.use(bodyParser());
 app.use(cors({
   origin: '*',
 }));
+
+// use node-cache to store SQL queries
+app.styleCache = new NodeCache({ stdTTL: 3600 });
 
 // better error handling
 app.use(async (ctx, next) => {
