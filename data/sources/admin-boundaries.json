@@ -1,0 +1,8 @@
+{
+      "type":"vector",
+      "id":"admin-boundaries",
+      "tiles":[
+         "https://cartocdn-gusc-b.global.ssl.fastly.net/planninglabs/api/v1/map/ae461026356d0521fe5a4f60185cba3f:1525336751194/{z}/{x}/{y}.mvt"
+      ],
+      "minzoom":0
+   }

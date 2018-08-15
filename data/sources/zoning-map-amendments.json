@@ -1,0 +1,8 @@
+{
+      "type":"vector",
+      "id":"zoning-map-amendments",
+      "tiles":[
+         "https://cartocdn-gusc-c.global.ssl.fastly.net/planninglabs/api/v1/map/d2a210c24197461ae9a74d4a0e3076b7:1531772739795/{z}/{x}/{y}.mvt"
+      ],
+      "minzoom":0
+   }
