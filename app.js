@@ -1,14 +1,17 @@
 const Koa = require('koa');
 const cors = require('@koa/cors');
 const bodyParser = require('koa-bodyparser');
+const serve = require('koa-static');
 
 const v1Routes = require('./routes/v1');
 
 const app = new Koa();
+
 app.use(bodyParser());
 app.use(cors({
   origin: '*',
 }));
+app.use(serve('public'));
 
 // better error handling
 app.use(async (ctx, next) => {

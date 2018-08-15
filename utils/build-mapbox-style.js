@@ -1,12 +1,14 @@
-const fetch = require('node-fetch');
 const unique = require('array-unique');
 const { where } = require('./local-resources-utilities');
 const structureCartoSource = require('./structure-carto-source');
+const baseStyle = require('../data/base/style.json');
+
+const HOST = process.env.NODE_ENV === 'production' ? 'https://layers-api.planninglabs.nyc' : 'http://localhost:3000';
+baseStyle.sources.openmaptiles.url = baseStyle.sources.openmaptiles.url.replace('{{HOSTNAME}}', HOST);
+baseStyle.sprite = baseStyle.sprite.replace('{{HOSTNAME}}', HOST);
 
 module.exports = async (layerGroups) => {
-  // import the base style from labs-gl-style repo on github
-  const baseStyle = await fetch('https://raw.githubusercontent.com/NYCPlanning/labs-gl-style/master/data/style.json')
-    .then(d => d.json());
+  // import the base style and replace the HOSTNAME with the current environment
 
   // iterate over configs, pull out the layers and all required source ids
   let layers = [];
