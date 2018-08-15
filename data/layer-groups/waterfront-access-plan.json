@@ -1,0 +1,62 @@
+{
+      "id":"waterfront-access-plan",
+      "title":"Waterfront Access Plan",
+      "titleTooltip":"These areas reflect site specific modification of waterfront public access requirements for waterfront parcels with unique conditions and opportunities",
+      "visible":false,
+      "legendIcon":"polygon",
+      "legendColor":"#00A4D2",
+      "meta":{
+         "description":"Waterfront Access Plan release 2011.1, Bytes of the Big Apple",
+         "url":[
+            "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
+         ],
+         "updated_at":"September 2017"
+      },
+      "layers":[
+         {
+            "style":{
+               "id":"waterfront-access-plan-line",
+               "type":"line",
+               "source":"supporting-zoning",
+               "source-layer":"waterfront-access-plan",
+               "paint":{
+                  "line-width":{
+                     "stops":[
+                        [
+                           11,
+                           1
+                        ],
+                        [
+                           12,
+                           3
+                        ]
+                     ]
+                  },
+                  "line-color":"#00A4D2",
+                  "line-dasharray":[
+                     1,
+                     1
+                  ],
+                  "line-opacity":0.6
+               }
+            }
+         },
+         {
+            "style":{
+               "id":"waterfront-access-plan-fill",
+               "type":"fill",
+               "source":"supporting-zoning",
+               "source-layer":"waterfront-access-plan",
+               "paint":{
+                  "fill-color":"#00A4D2",
+                  "fill-opacity":0.2
+               },
+               "layout":{
+
+               }
+            },
+            "highlightable":true,
+            "tooltipTemplate":"Waterfront Access Plan - {{{name}}}"
+         }
+      ]
+   }

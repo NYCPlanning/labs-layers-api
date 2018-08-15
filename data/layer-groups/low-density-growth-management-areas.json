@@ -1,0 +1,62 @@
+{
+      "id":"low-density-growth-mgmt-areas",
+      "title":"Lower Density Growth Management Areas",
+      "titleTooltip":"Areas where special zoning controls intend to limit growth and better match available infrastructure and services in lower-density areas experiencing rapid development",
+      "visible":false,
+      "legendIcon":"polygon",
+      "legendColor":"#9D47B2",
+      "meta":{
+         "description":"Lower Density Growth Management Area release 2011.1, Bytes of the Big Apple",
+         "url":[
+            "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
+         ],
+         "updated_at":"September 2017"
+      },
+      "layers":[
+         {
+            "style":{
+               "id":"low-density-growth-mgmt-areas-line",
+               "type":"line",
+               "source":"supporting-zoning",
+               "source-layer":"low-density-growth-mgmt-areas",
+               "paint":{
+                  "line-width":{
+                     "stops":[
+                        [
+                           11,
+                           1
+                        ],
+                        [
+                           12,
+                           3
+                        ]
+                     ]
+                  },
+                  "line-color":"#9D47B2",
+                  "line-dasharray":[
+                     1,
+                     1
+                  ],
+                  "line-opacity":0.6
+               }
+            }
+         },
+         {
+            "style":{
+               "id":"low-density-growth-mgmt-areas-fill",
+               "type":"fill",
+               "source":"supporting-zoning",
+               "source-layer":"low-density-growth-mgmt-areas",
+               "paint":{
+                  "fill-color":"#9D47B2",
+                  "fill-opacity":0.2
+               },
+               "layout":{
+
+               }
+            },
+            "highlightable":true,
+            "tooltipTemplate":"Lower Density Growth Management Area"
+         }
+      ]
+   }
