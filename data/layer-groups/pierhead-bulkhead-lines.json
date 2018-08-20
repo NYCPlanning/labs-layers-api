@@ -1,64 +1,60 @@
 {
-  "id": "pierhead-bulkhead-lines",
-  "title": "Pierhead & Bulkhead Lines",
-  "titleTooltip": "The Pierhead line is the extent to which piers and platforms over water may be built as shown on the City Map.  The Bulkhead line is the extent to which the filling of land is permitted without additional permits.",
-  "visible": true,
-  "meta": {
-    "description": "NYC Department of City Planning Technical Review Division",
-    "updated_at": "6 April 2018"
+  "id":"pierhead-bulkhead-lines",
+  "title":"Pierhead & Bulkhead Lines",
+  "titleTooltip":"The Pierhead line is the extent to which piers and platforms over water may be built as shown on the City Map.  The Bulkhead line is the extent to which the filling of land is permitted without additional permits.",
+  "legendIcon":"",
+  "legendColor":"",
+  "visible":true,
+  "meta":{
+    "description":"NYC Department of City Planning Technical Review Division",
+    "updated_at":"6 April 2018"
   },
-  "layers": [
+  "layers":[
     {
-      "tooltipable": true,
-      "tooltipTemplate": "Pierhead Line",
-      "style": {
-        "id": "citymap-pierhead-line",
-        "type": "line",
-        "source": "digital-citymap",
-        "source-layer": "pierhead-lines",
-        "paint": {
-          "line-color": "rgba(50, 120, 200, 1)",
-          "line-width": {
-            "stops": [
+      "tooltipable":true,
+      "tooltipTemplate":"Water Edge",
+      "style":{
+        "id":"water-edge",
+        "type":"line",
+        "source":"digital-citymap",
+        "source-layer":"citymap",
+        "paint":{
+          "line-color":"#b0b5b5",
+          "line-width":{
+            "stops":[
               [
-                 10,
-                 0.5
+                10,
+                0.5
               ],
               [
-                 14,
-                 3
+                14,
+                2
               ]
             ]
-          },
-          "line-opacity": 1,
-          "line-dasharray": [
-            5,
-            2,
-            0,
-            1.5,
-            0,
-            1.5,
-            0,
-            2
-          ]
+          }
         },
-        "layout": {
-          "line-cap": "round"
-        }
+        "filter":[
+          "all",
+          [
+            "==",
+            "type",
+            "Water line"
+          ]
+        ]
       }
     },
     {
-      "tooltipable": true,
-      "tooltipTemplate": "Bulkhead Line",
-      "style": {
-        "id": "citymap-bulkhead-line",
-        "type": "line",
-        "source": "digital-citymap",
-        "source-layer": "bulkhead-lines",
-        "paint": {
-          "line-color": "#3278C8",
-          "line-width": {
-            "stops": [
+      "tooltipable":true,
+      "tooltipTemplate":"US Pierhead Line",
+      "style":{
+        "id":"citymap-pierhead-line-US",
+        "type":"line",
+        "source":"digital-citymap",
+        "source-layer":"pierhead-lines",
+        "paint":{
+          "line-color":"#fc9272",
+          "line-width":{
+            "stops":[
               [
                 10,
                 0.5
@@ -69,8 +65,112 @@
               ]
             ]
           },
-          "line-opacity": 1,
-          "line-dasharray": [
+          "line-opacity":1,
+          "line-dasharray":[
+            5,
+            2,
+            0,
+            1.5,
+            0,
+            1.5,
+            0,
+            2
+          ]
+        },
+        "layout":{
+          "line-cap":"round"
+        },
+        "filter":[
+          "any",
+          [
+            "==",
+            "jurisdicti",
+            "U.S."
+          ],
+          [
+            "==",
+            "jurisdicti",
+            "US"
+          ],
+          [
+            "==",
+            "jurisdicti",
+            "unknown"
+          ]
+        ]
+      }
+    },
+    {
+      "tooltipable":true,
+      "tooltipTemplate":"NYC Pierhead Line",
+      "style":{
+        "id":"citymap-pierhead-line-NYC",
+        "type":"line",
+        "source":"digital-citymap",
+        "source-layer":"pierhead-lines",
+        "paint":{
+          "line-color":"#de2d26",
+          "line-width":{
+            "stops":[
+              [
+                10,
+                0.5
+              ],
+              [
+                14,
+                3
+              ]
+            ]
+          },
+          "line-opacity":1,
+          "line-dasharray":[
+            5,
+            2,
+            0,
+            1.5,
+            0,
+            1.5,
+            0,
+            2
+          ]
+        },
+        "layout":{
+          "line-cap":"round"
+        },
+        "filter":[
+          "any",
+          [
+            "==",
+            "jurisdicti",
+            "City of New York"
+          ]
+        ]
+      }
+    },
+    {
+      "tooltipable":true,
+      "tooltipTemplate":"US Bulkhead Line",
+      "style":{
+        "id":"citymap-bulkhead-line-US",
+        "type":"line",
+        "source":"digital-citymap",
+        "source-layer":"bulkhead-lines",
+        "paint":{
+          "line-color":"#2ca2b8",
+          "line-width":{
+            "stops":[
+              [
+                10,
+                0.5
+              ],
+              [
+                14,
+                3
+              ]
+            ]
+          },
+          "line-opacity":1,
+          "line-dasharray":[
             5,
             2.5,
             0,
@@ -79,34 +179,121 @@
             2.5
           ]
         },
-        "layout": {
-          "line-cap": "round"
-        }
+        "layout":{
+          "line-cap":"round"
+        },
+        "filter":[
+          "any",
+          [
+            "==",
+            "jurisdicti",
+            "U.S."
+          ],
+          [
+            "==",
+            "jurisdicti",
+            "unknown"
+          ]
+        ]
+      }
+    },
+    {
+      "tooltipable":true,
+      "tooltipTemplate":"NYC Bulkhead Line",
+      "style":{
+        "id":"citymap-bulkhead-line-NYC",
+        "type":"line",
+        "source":"digital-citymap",
+        "source-layer":"bulkhead-lines",
+        "paint":{
+          "line-color":"#1d547a",
+          "line-width":{
+            "stops":[
+              [
+                10,
+                0.5
+              ],
+              [
+                14,
+                3
+              ]
+            ]
+          },
+          "line-opacity":1,
+          "line-dasharray":[
+            5,
+            2.5,
+            0,
+            2,
+            0,
+            2.5
+          ]
+        },
+        "layout":{
+          "line-cap":"round"
+        },
+        "filter":[
+          "all",
+          [
+            "==",
+            "jurisdicti",
+            "City of New York"
+          ]
+        ]
       }
     }
   ],
-  "legendConfig": {
-    "label": "Water Lines",
-    "items": [
+  "legendConfig":{
+    "label":"Water Lines",
+    "items":[
       {
-         "type": "line",
-         "label": "Pierhead Line",
-         "style": {
-           "fill": "none",
-           "stroke": "#3278C8",
-           "stroke-linecap": "round",
-           "stroke-dasharray": "5,2.5,0,2,0,2.5"
-         }
+        "type":"line",
+        "label":"US Pierhead Line",
+        "style":{
+          "fill":"none",
+          "stroke":"#fc9272",
+          "stroke-linecap":"round",
+          "stroke-dasharray":"5,2.5,0,2,0,2.5"
+        }
       },
       {
-         "type": "line",
-         "label": "Bulkhead Line",
-         "style": {
-           "fill": "none",
-           "stroke": "#3278C8",
-           "stroke-linecap": "round",
-           "stroke-dasharray": "5,2,0,1.5,0,1.5,0,2"
-         }
+        "type":"line",
+        "label":"NYC Pierhead Line",
+        "style":{
+          "fill":"none",
+          "stroke":"#de2d26",
+          "stroke-linecap":"round",
+          "stroke-dasharray":"5,2.5,0,2,0,2.5"
+        }
+      },
+      {
+        "type":"line",
+        "label":"US Bulkhead Line",
+        "style":{
+          "fill":"none",
+          "stroke":"#2ca2b8",
+          "stroke-linecap":"round",
+          "stroke-dasharray":"5,2,0,1.5,0,1.5,0,2"
+        }
+      },
+      {
+        "type":"line",
+        "label":"NYC Bulkhead Line",
+        "style":{
+          "fill":"none",
+          "stroke":"#1d547a",
+          "stroke-linecap":"round",
+          "stroke-dasharray":"5,2,0,1.5,0,1.5,0,2"
+        }
+      },
+      {
+        "type":"line",
+        "label":"Water Edge",
+        "tooltip":"When there are no pierhead or bulkhead lines, boundaries are marked by the water's edge",
+        "style":{
+          "fill":"none",
+          "stroke":"#757879"
+        }
       }
     ]
   }

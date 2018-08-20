@@ -1,6 +1,8 @@
 {
   "id":"citymap",
-  "title":"Street Lines",
+  "title":"Street Map Features",
+  "legendIcon":"",
+  "legendColor":"",
   "visible":true,
   "meta":{
     "description":"NYC Department of City Planning Technical Review Division",
@@ -14,8 +16,8 @@
         "source":"digital-citymap",
         "source-layer":"citymap",
         "paint":{
-          "line-color": {
-            "stops": [
+          "line-color":{
+            "stops":[
               [
                 10,
                 "rgba(50, 50, 50, 0.3)"
@@ -115,8 +117,8 @@
           ]
         ],
         "paint":{
-          "line-color": {
-            "stops": [
+          "line-color":{
+            "stops":[
               [
                 10,
                 "rgba(84, 84, 84, 0.3)"
@@ -161,8 +163,8 @@
           ]
         ],
         "paint":{
-          "line-color": {
-            "stops": [
+          "line-color":{
+            "stops":[
               [
                 10,
                 "rgba(150, 150, 150, 0.3)"
@@ -228,11 +230,10 @@
             "type",
             "Record Street"
           ]
-
         ],
         "paint":{
-          "line-color": {
-            "stops": [
+          "line-color":{
+            "stops":[
               [
                 10,
                 "rgba(50, 50, 50, 0.15)"
@@ -268,9 +269,208 @@
           "line-cap":"round"
         }
       }
+    },
+    {
+      "tooltipable":true,
+      "tooltipTemplate":"{{boro_nm}}",
+      "style":{
+        "id":"borough-boundaries",
+        "type":"line",
+        "source":"digital-citymap",
+        "source-layer":"citymap",
+        "paint":{
+          "line-color":"rgba(50,100,100,0.4)",
+          "line-width":{
+            "stops":[
+              [
+                10,
+                3
+              ],
+              [
+                13,
+                4
+              ],
+              [
+                15,
+                5
+              ]
+            ]
+          }
+        },
+        "filter":[
+          "all",
+          [
+            "==",
+            "type",
+            "City_boundary"
+          ]
+        ]
+      }
+    },
+    {
+      "style":{
+        "id":"citymap-underpass-tunnel-line",
+        "type":"line",
+        "source":"digital-citymap",
+        "source-layer":"citymap",
+        "filter":[
+          "all",
+          [
+            "==",
+            "type",
+            "Underpass or Tunnel"
+          ]
+        ],
+        "paint":{
+          "line-color":{
+            "stops":[
+              [
+                10,
+                "rgba(150, 150, 150, 0.3)"
+              ],
+              [
+                13,
+                "rgba(150, 150, 150, 1)"
+              ]
+            ]
+          },
+          "line-width":{
+            "stops":[
+              [
+                10,
+                0.1
+              ],
+              [
+                13,
+                0.25
+              ],
+              [
+                15,
+                1
+              ]
+            ]
+          },
+          "line-dasharray":{
+            "stops":[
+              [
+                10,
+                [
+                  6,
+                  4
+                ]
+              ],
+              [
+                15,
+                [
+                  10,
+                  6
+                ]
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "tooltipable":true,
+      "tooltipTemplate":"{{street}}",
+      "style":{
+        "id":"railway-lines",
+        "type":"line",
+        "source":"digital-citymap",
+        "source-layer":"rail-lines",
+        "paint":{
+          "line-color":{
+            "stops":[
+              [
+                10,
+                "#9ca0a1"
+              ],
+              [
+                13,
+                "#9ca0a1"
+              ]
+            ]
+          },
+          "line-width":{
+            "stops":[
+              [
+                10,
+                0.5
+              ],
+              [
+                13,
+                1
+              ],
+              [
+                15,
+                2
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "tooltipable":true,
+      "tooltipTemplate":"{{street}}",
+      "style":{
+        "id":"railway-cross-lines",
+        "type":"line",
+        "source":"digital-citymap",
+        "source-layer":"rail-lines",
+        "paint":{
+          "line-color":{
+            "stops":[
+              [
+                10,
+                "#9ca0a1"
+              ],
+              [
+                13,
+                "#9ca0a1"
+              ]
+            ]
+          },
+          "line-width":{
+            "stops":[
+              [
+                10,
+                2
+              ],
+              [
+                13,
+                4
+              ],
+              [
+                15,
+                6
+              ]
+            ]
+          },
+          "line-dasharray":{
+            "stops":[
+              [
+                10,
+                [
+                  0.2,
+                  4
+                ]
+              ],
+              [
+                15,
+                [
+                  0.2,
+                  4
+                ]
+              ]
+            ]
+          }
+        }
+      }
     }
   ],
-  "legendConfig": {
+  "legendConfig":{
     "label":"Street Lines",
     "items":[
       {
@@ -279,7 +479,7 @@
         "tooltip":"A street that has been established on an adopted alteration map or section map and filed with the appropriate agencies",
         "style":{
           "fill":"none",
-          "stroke": "rgba(50, 50, 50, 1)"
+          "stroke":"rgba(50, 50, 50, 1)"
         }
       },
       {
@@ -301,6 +501,27 @@
           "stroke":"rgba(50, 50, 50, 0.4)",
           "stroke-width":"0.5",
           "stroke-dasharray":"1"
+        }
+      },
+      {
+        "type":"railroad",
+        "label":"Rail",
+        "tooltip":"Railroad right-of-way",
+        "style":{
+          "fill":"none",
+          "stroke":"#9ca0a1",
+          "stroke-width":"2",
+          "stroke-dasharray":"0.6, 2"
+        }
+      },
+      {
+        "type":"line",
+        "label":"Borough Boundaries",
+        "tooltip":"",
+        "style":{
+          "fill":"none",
+          "stroke-width":"3",
+          "stroke":"rgba(50,100,100,0.4)"
         }
       }
     ]
