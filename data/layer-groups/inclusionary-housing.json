@@ -1,0 +1,62 @@
+{
+      "id":"inclusionary-housing",
+      "title":"Inclusionary Housing Designated Areas",
+      "titleTooltip":"Areas where zoning incentives are offered to encourage the creation of permanently affordable housing",
+      "visible":false,
+      "legendIcon":"polygon",
+      "legendColor":"#E57300",
+      "meta":{
+         "description":"Inclusionary Housing Designated Areas release 2017.7, Bytes of the Big Apple",
+         "url":[
+            "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
+         ],
+         "updated_at":"September 2017"
+      },
+      "layers":[
+         {
+            "style":{
+               "id":"inclusionary-housing-line",
+               "type":"line",
+               "source":"supporting-zoning",
+               "source-layer":"inclusionary-housing",
+               "paint":{
+                  "line-width":{
+                     "stops":[
+                        [
+                           11,
+                           1
+                        ],
+                        [
+                           12,
+                           3
+                        ]
+                     ]
+                  },
+                  "line-color":"#E57300",
+                  "line-dasharray":[
+                     1,
+                     1
+                  ],
+                  "line-opacity":0.6
+               }
+            }
+         },
+         {
+            "style":{
+               "id":"inclusionary-housing-fill",
+               "type":"fill",
+               "source":"supporting-zoning",
+               "source-layer":"inclusionary-housing",
+               "paint":{
+                  "fill-color":"#E57300",
+                  "fill-opacity":0.2
+               },
+               "layout":{
+
+               }
+            },
+            "highlightable":true,
+            "tooltipTemplate":"{{{projectnam}}}"
+         }
+      ]
+   }

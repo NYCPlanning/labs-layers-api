@@ -1,0 +1,8 @@
+{
+      "type":"vector",
+      "id":"landmark-historic",
+      "tiles":[
+         "https://cartocdn-gusc-c.global.ssl.fastly.net/planninglabs/api/v1/map/f75279b7a688a93f1d6dd2b88f2589d5:1526570453789/{z}/{x}/{y}.mvt"
+      ],
+      "minzoom":0
+   }

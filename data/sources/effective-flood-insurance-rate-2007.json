@@ -1,0 +1,8 @@
+{
+      "type":"vector",
+      "id":"effective-flood-insurance-rate-2007",
+      "tiles":[
+         "https://cartocdn-gusc-a.global.ssl.fastly.net/planninglabs/api/v1/map/40d820e88122efa7d4fdd96d13f27c7d:1525336674067/{z}/{x}/{y}.mvt"
+      ],
+      "minzoom":0
+   }

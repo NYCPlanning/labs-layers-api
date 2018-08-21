@@ -1,0 +1,8 @@
+{
+      "type":"vector",
+      "id":"supporting-zoning",
+      "tiles":[
+         "https://cartocdn-gusc-d.global.ssl.fastly.net/planninglabs/api/v1/map/166f4d41feddd399bdacaa46f9dc66e1:1531772777417/{z}/{x}/{y}.mvt"
+      ],
+      "minzoom":0
+   }

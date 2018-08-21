@@ -41,7 +41,8 @@ module.exports = async (layerGroups) => {
   // baseStyle.layers = [...baseStyle.layers, ...layers];
 
   // de-dupe source ids, many layers may require the same source
-  sourceIds = unique(sourceIds);
+  // some layergroups reference the source 'openmaptiles' which is already added to the base style
+  sourceIds = unique(sourceIds).filter(d => d !== 'openmaptiles');
 
   // get sources for each id
   const sources = await where('sources', { id: sourceIds });

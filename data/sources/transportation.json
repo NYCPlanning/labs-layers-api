@@ -1,0 +1,8 @@
+{
+      "type":"vector",
+      "id":"transportation",
+      "tiles":[
+         "https://cartocdn-gusc-d.global.ssl.fastly.net/planninglabs/api/v1/map/997ee4141d0c594ea9483c3d5e5da6ac:1525336734600/{z}/{x}/{y}.mvt"
+      ],
+      "minzoom":0
+   }
