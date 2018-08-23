@@ -1,8 +1,10 @@
 {
-      "type":"vector",
-      "id":"zoning-map-amendments",
-      "tiles":[
-         "https://cartocdn-gusc-c.global.ssl.fastly.net/planninglabs/api/v1/map/d2a210c24197461ae9a74d4a0e3076b7:1531772739795/{z}/{x}/{y}.mvt"
-      ],
-      "minzoom":0
-   }
+  "id": "zoning-map-amendments",
+  "type": "cartovector",
+  "source-layers": [
+    {
+      "id": "zoning-map-amendments",
+      "sql": "SELECT * FROM (SELECT the_geom_webmercator, to_char(effective, 'MM\/DD\/YYYY') as effectiveformatted, effective, ulurpno, status, project_na FROM zoning_map_amendments_v201806 WHERE status = 'Adopted') a"
+    }
+  ]
+}
