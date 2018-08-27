@@ -56,7 +56,7 @@
                }
             },
             "highlightable":true,
-            "tooltipTemplate":"{{projectnam}} - {{mih_option}}"
+            "tooltipTemplate":"{{{projectnam}}} - {{{mih_option}}}"
          }
       ]
    }

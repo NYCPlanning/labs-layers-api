@@ -56,7 +56,7 @@
                }
             },
             "highlightable":true,
-            "tooltipTemplate":"Limited height district - {{lhlbl}}"
+            "tooltipTemplate":"Limited height district - {{{lhlbl}}}"
          }
       ]
    }
