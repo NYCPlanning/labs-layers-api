@@ -2,9 +2,9 @@ const Joi = require('joi');
 const layerSchema = require('./layer');
 
 const legendItemSchema = Joi.object().keys({
-  label: Joi.string(),
+  label: Joi.string().required(),
   icon: Joi.object().keys({
-    type: Joi.string(),
+    type: Joi.string().required(),
     options: Joi.object(),
   }),
   tooltip: Joi.string(),
@@ -14,7 +14,7 @@ module.exports = Joi.object().keys({
   id: Joi.string().required(),
   visible: Joi.boolean(),
   legend: Joi.object().keys({
-    label: Joi.string(),
+    label: Joi.string().required(),
     icon: Joi.string(),
     tooltip: Joi.string(),
     items: Joi.array().items(
