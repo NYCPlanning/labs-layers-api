@@ -1,26 +1,23 @@
 {
   "id":"community-districts",
   "visible":false,
-  "legend":{
+  "legend": {
     "label":"Community Districts",
-    "icon":[
-      {
-        "type":"line",
-        "options":{
+    "icon": {
+      "type":"line",
+      "layers": [
+        {
           "stroke":"#76F578",
           "stroke-width":4,
           "stroke-opacity":0.5
-        }
-      },
-      {
-        "type":"line",
-        "options":{
+        },
+        {
           "stroke":"#444",
           "stroke-width":1.5,
           "stroke-opacity":0.5
         }
-      }
-    ]
+      ]
+    }
   },
   "meta":{
     "description":"Administrative and Political Districts v17D, Bytes of the Big Apple",

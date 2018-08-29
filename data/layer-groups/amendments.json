@@ -9,11 +9,13 @@
       "layers": [
         {
           "fa-icon": "square",
-          "color":"rgba(174, 86, 31, 0.4)"
+          "color":"rgba(174, 86, 31, 0.4)",
+          "transform": "left-2 down-2"
         },
         {
           "fa-icon": "square",
-          "color":"rgba(174, 86, 31, 0.4)"
+          "color":"rgba(174, 86, 31, 0.4)",
+          "transform": "right-2 up-2"
         }
       ]
     }

@@ -7,67 +7,57 @@
     "items": [
       {
         "label":"US Pierhead Line",
-        "icon":[
-          {
-            "type":"line",
-            "options": {
-              "stroke":"#fc9272",
-              "stroke-linecap":"round",
-              "stroke-dasharray":"5,2.5,0,2,0,2.5"
-            }
-          }
-        ]
+        "icon":{
+          "type":"line",
+          "layers": [{
+            "stroke":"#fc9272",
+            "stroke-linecap":"round",
+            "stroke-dasharray":"5,2.5,0,2,0,2.5"
+          }]
+        }
       },
       {
         "label":"NYC Pierhead Line",
-        "icon":[
-          {
-            "type":"line",
-            "options": {
-              "stroke":"#de2d26",
-              "stroke-linecap":"round",
-              "stroke-dasharray":"5,2.5,0,2,0,2.5"
-            }
-          }
-        ]
+        "icon":{
+          "type":"line",
+          "layers": [{
+            "stroke":"#de2d26",
+            "stroke-linecap":"round",
+            "stroke-dasharray":"5,2.5,0,2,0,2.5"
+          }]
+        }
       },
       {
         "label":"US Bulkhead Line",
-        "icon":[
-          {
-            "type":"line",
-            "options": {
-              "stroke":"#2ca2b8",
-              "stroke-linecap":"round",
-              "stroke-dasharray":"5,2,0,1.5,0,1.5,0,2"
-            }
-          }
-        ]
+        "icon":{
+          "type":"line",
+          "layers": [{
+            "stroke":"#2ca2b8",
+            "stroke-linecap":"round",
+            "stroke-dasharray":"5,2,0,1.5,0,1.5,0,2"
+          }]
+        }
       },
       {
         "label":"NYC Bulkhead Line",
-        "icon":[
-          {
-            "type":"line",
-            "options": {
-              "stroke":"#1d547a",
-              "stroke-linecap":"round",
-              "stroke-dasharray":"5,2,0,1.5,0,1.5,0,2"
-            }
-          }
-        ]
+        "icon":{
+          "type":"line",
+          "layers": [{
+            "stroke":"#1d547a",
+            "stroke-linecap":"round",
+            "stroke-dasharray":"5,2,0,1.5,0,1.5,0,2"
+          }]
+        }
       },
       {
         "label":"Water Edge",
         "tooltip":"When there are no pierhead or bulkhead lines, boundaries are marked by the water's edge",
-        "icon":[
-          {
-            "type":"line",
-            "options": {
-              "stroke":"#757879"
-            }
-          }
-        ]
+        "icon":{
+          "type":"line",
+          "layers": [{
+            "stroke":"#757879"
+          }]
+        }
       }
     ]
   },
