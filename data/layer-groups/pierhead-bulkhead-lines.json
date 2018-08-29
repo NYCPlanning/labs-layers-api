@@ -1,8 +1,76 @@
 {
   "id":"pierhead-bulkhead-lines",
-  "title":"Pierhead & Bulkhead Lines",
-  "titleTooltip":"The Pierhead line is the extent to which piers and platforms over water may be built as shown on the City Map.  The Bulkhead line is the extent to which the filling of land is permitted without additional permits.",
   "visible":true,
+  "legend":{
+    "label":"Pierhead & Bulkhead Lines",
+    "tooltip":"The Pierhead line is the extent to which piers and platforms over water may be built as shown on the City Map.  The Bulkhead line is the extent to which the filling of land is permitted without additional permits.",
+    "items": [
+      {
+        "label":"US Pierhead Line",
+        "icon":[
+          {
+            "type":"line",
+            "options": {
+              "stroke":"#fc9272",
+              "stroke-linecap":"round",
+              "stroke-dasharray":"5,2.5,0,2,0,2.5"
+            }
+          }
+        ]
+      },
+      {
+        "label":"NYC Pierhead Line",
+        "icon":[
+          {
+            "type":"line",
+            "options": {
+              "stroke":"#de2d26",
+              "stroke-linecap":"round",
+              "stroke-dasharray":"5,2.5,0,2,0,2.5"
+            }
+          }
+        ]
+      },
+      {
+        "label":"US Bulkhead Line",
+        "icon":[
+          {
+            "type":"line",
+            "options": {
+              "stroke":"#2ca2b8",
+              "stroke-linecap":"round",
+              "stroke-dasharray":"5,2,0,1.5,0,1.5,0,2"
+            }
+          }
+        ]
+      },
+      {
+        "label":"NYC Bulkhead Line",
+        "icon":[
+          {
+            "type":"line",
+            "options": {
+              "stroke":"#1d547a",
+              "stroke-linecap":"round",
+              "stroke-dasharray":"5,2,0,1.5,0,1.5,0,2"
+            }
+          }
+        ]
+      },
+      {
+        "label":"Water Edge",
+        "tooltip":"When there are no pierhead or bulkhead lines, boundaries are marked by the water's edge",
+        "icon":[
+          {
+            "type":"line",
+            "options": {
+              "stroke":"#757879"
+            }
+          }
+        ]
+      }
+    ]
+  },
   "meta":{
     "description":"NYC Department of City Planning Technical Review Division",
     "updated_at":"6 April 2018"
@@ -240,59 +308,5 @@
         ]
       }
     }
-  ],
-  "legendConfig":{
-    "label":"Water Lines",
-    "items":[
-      {
-        "type":"line",
-        "label":"US Pierhead Line",
-        "style":{
-          "fill":"none",
-          "stroke":"#fc9272",
-          "stroke-linecap":"round",
-          "stroke-dasharray":"5,2.5,0,2,0,2.5"
-        }
-      },
-      {
-        "type":"line",
-        "label":"NYC Pierhead Line",
-        "style":{
-          "fill":"none",
-          "stroke":"#de2d26",
-          "stroke-linecap":"round",
-          "stroke-dasharray":"5,2.5,0,2,0,2.5"
-        }
-      },
-      {
-        "type":"line",
-        "label":"US Bulkhead Line",
-        "style":{
-          "fill":"none",
-          "stroke":"#2ca2b8",
-          "stroke-linecap":"round",
-          "stroke-dasharray":"5,2,0,1.5,0,1.5,0,2"
-        }
-      },
-      {
-        "type":"line",
-        "label":"NYC Bulkhead Line",
-        "style":{
-          "fill":"none",
-          "stroke":"#1d547a",
-          "stroke-linecap":"round",
-          "stroke-dasharray":"5,2,0,1.5,0,1.5,0,2"
-        }
-      },
-      {
-        "type":"line",
-        "label":"Water Edge",
-        "tooltip":"When there are no pierhead or bulkhead lines, boundaries are marked by the water's edge",
-        "style":{
-          "fill":"none",
-          "stroke":"#757879"
-        }
-      }
-    ]
-  }
+  ]
 }

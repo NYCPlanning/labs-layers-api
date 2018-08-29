@@ -3,10 +3,12 @@ const layerSchema = require('./layer');
 
 const legendItemSchema = Joi.object().keys({
   label: Joi.string().required(),
-  icon: Joi.object().keys({
-    type: Joi.string().required(),
-    options: Joi.object(),
-  }),
+  icon: Joi.array().items(
+    Joi.object().keys({
+      type: Joi.string().required(),
+      options: Joi.object(),
+    }),
+  ),
   tooltip: Joi.string(),
 });
 

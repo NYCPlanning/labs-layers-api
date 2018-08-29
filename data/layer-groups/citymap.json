@@ -6,63 +6,81 @@
     "items": [
       {
         "label":"Mapped Street",
-        "icon": {
-          "type": "line",
-          "options": {
-            "fill":"none",
-            "stroke":"rgba(50, 50, 50, 1)"
+        "icon": [
+          {
+            "type": "line",
+            "options": {
+              "fill":"none",
+              "stroke":"rgba(50, 50, 50, 1)"
+            }
           }
-        },
+        ],
         "tooltip":"A street that has been established on an adopted alteration map or section map and filed with the appropriate agencies"
       },
       {
         "label":"Street Treatment",
-        "icon": {
-          "type": "line",
-          "options": {
-            "fill":"none",
-            "stroke":"rgba(84, 84, 84, 1)",
-            "stroke-width":"0.5"
+        "icon": [
+          {
+            "type": "line",
+            "options": {
+              "fill":"none",
+              "stroke":"rgba(84, 84, 84, 1)",
+              "stroke-width":"0.5"
+            }
           }
-        },
+        ],
         "tooltip":"Lines on the City Map that reflect curb lines, approach ramps and other physical elements for illustrative purposes only - may be changed without public review (ULURP)"
       },
       {
         "label":"Unmapped Street",
-        "icon": {
-          "type": "line",
-          "options": {
-            "fill":"none",
-            "stroke":"rgba(50, 50, 50, 0.4)",
-            "stroke-width":"0.5",
-            "stroke-dasharray":"1"
+        "icon": [
+          {
+            "type": "line",
+            "options": {
+              "fill":"none",
+              "stroke":"rgba(50, 50, 50, 0.4)",
+              "stroke-width":"0.5",
+              "stroke-dasharray":"1"
+            }
           }
-        },
+        ],
         "tooltip":"A street that is not officially shown on the City Map and over which the public may or may not have a right of way. Record streets and private roads are examples of unmapped streets."
       },
       {
         "label":"Rail",
-        "icon": {
-          "type": "railroad",
-          "options": {
-            "fill":"none",
-            "stroke":"#9ca0a1",
-            "stroke-width":"2",
-            "stroke-dasharray":"0.6, 2"
+        "icon": [
+          {
+            "type": "line",
+            "options": {
+              "fill":"none",
+              "stroke":"#9ca0a1",
+              "stroke-width":"2",
+              "stroke-dasharray":"0.6, 2"
+            }
+          },
+          {
+            "type": "line",
+            "options": {
+              "fill":"none",
+              "stroke":"#9ca0a1",
+              "stroke-width": "0.5"
+            }
           }
-        },
+        ],
         "tooltip":"Railroad right-of-way"
       },
       {
         "label":"Borough Boundaries",
-        "icon": {
-          "type": "line",
-          "options": {
-            "fill":"none",
-            "stroke-width":"3",
-            "stroke":"rgba(50,100,100,0.4)"
+        "icon": [
+          {
+            "type": "line",
+            "options": {
+              "fill":"none",
+              "stroke-width":"2.5",
+              "stroke":"rgba(50,100,100,0.4)"
+            }
           }
-        }
+        ]
       }
     ]
   },
