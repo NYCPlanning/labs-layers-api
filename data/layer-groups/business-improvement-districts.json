@@ -1,62 +1,66 @@
 {
-      "id":"business-improvement-districts",
-      "title":"Business Improvement Districts",
-      "titleTooltip":"A Business Improvement District (BID) is a geographical area where local stakeholders oversee and fund the maintenance, improvement, and promotion of their commercial district.",
-      "visible":false,
-      "legendIcon":"polygon",
-      "legendColor":"#76420a",
-      "meta":{
-         "description":"Business Improvement Districts Shapefile on the NYC Open Data Portal",
-         "url":[
-            "https://data.cityofnewyork.us/Business/Business-Improvement-Districts/ejxk-d93y/data"
-         ],
-         "updated_at":"20 November 2017"
+  "id":"business-improvement-districts",
+  "visible":false,
+  "legend": {
+    "label":"Business Improvement Districts",
+    "tooltip":"A Business Improvement District (BID) is a geographical area where local stakeholders oversee and fund the maintenance, improvement, and promotion of their commercial district.",
+    "icon": {
+      "type": "fa-icon",
+      "layers": [{
+        "fa-icon":"square",
+        "color":"#76420a"
+      }]
+    }
+  },
+  "meta":{
+    "description":"Business Improvement Districts Shapefile on the NYC Open Data Portal",
+    "url":[
+      "https://data.cityofnewyork.us/Business/Business-Improvement-Districts/ejxk-d93y/data"
+    ],
+    "updated_at":"20 November 2017"
+  },
+  "layers":[
+    {
+      "style":{
+        "id":"business-improvement-districts-line",
+        "type":"line",
+        "source":"supporting-zoning",
+        "source-layer":"business-improvement-districts",
+        "paint":{
+          "line-width":{
+            "stops":[
+              [
+                11,
+                1
+              ],
+              [
+                12,
+                3
+              ]
+            ]
+          },
+          "line-color":"#76420a",
+          "line-dasharray":[
+            1,
+            1
+          ],
+          "line-opacity":0.6
+        }
+      }
+    },
+    {
+      "style":{
+        "id":"business-improvement-districts-fill",
+        "type":"fill",
+        "source":"supporting-zoning",
+        "source-layer":"business-improvement-districts",
+        "paint":{
+          "fill-color":"#76420a",
+          "fill-opacity":0.2
+        }
       },
-      "layers":[
-         {
-            "style":{
-               "id":"business-improvement-districts-line",
-               "type":"line",
-               "source":"supporting-zoning",
-               "source-layer":"business-improvement-districts",
-               "paint":{
-                  "line-width":{
-                     "stops":[
-                        [
-                           11,
-                           1
-                        ],
-                        [
-                           12,
-                           3
-                        ]
-                     ]
-                  },
-                  "line-color":"#76420a",
-                  "line-dasharray":[
-                     1,
-                     1
-                  ],
-                  "line-opacity":0.6
-               }
-            }
-         },
-         {
-            "style":{
-               "id":"business-improvement-districts-fill",
-               "type":"fill",
-               "source":"supporting-zoning",
-               "source-layer":"business-improvement-districts",
-               "paint":{
-                  "fill-color":"#76420a",
-                  "fill-opacity":0.2
-               },
-               "layout":{
-
-               }
-            },
-            "highlightable":true,
-            "tooltipTemplate":"{{{bid}}}"
-         }
-      ]
-   }
+      "highlightable":true,
+      "tooltipTemplate":"{{{bid}}}"
+    }
+  ]
+}

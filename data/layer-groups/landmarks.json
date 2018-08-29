@@ -1,123 +1,175 @@
 {
-      "id":"landmarks",
-      "title":"Landmarks",
-      "titleTooltip":"Sites designated by the NYC Landmarks Preservation Commission that possess historical significance and to which special zoning regulations apply",
-      "visible":false,
-      "meta":{
-         "description":"Individual Landmarks Shapefile, NYC Open Data Portal",
-         "url":[
-            "https://data.cityofnewyork.us/Housing-Development/Individual-Landmarks/ch5p-r223/data"
-         ],
-         "updated_at":"17 May 2018"
+  "id":"landmarks",
+  "legend": {
+    "label":"Landmarks",
+    "tooltip":"Sites designated by the NYC Landmarks Preservation Commission that possess historical significance and to which special zoning regulations apply",
+    "items": [
+      {
+        "label":"Individual Landmarks",
+        "icon": {
+          "type": "fa-icon",
+          "layers": [
+            {
+              "fa-icon": "circle",
+              "color":"rgba(147, 245, 201, 1)"
+            },
+            {
+              "fa-icon": "circle",
+              "prefix":"far",
+              "color":"#012700"
+            }
+          ]
+        }
       },
-      "layers":[
-         {
-            "style":{
-               "id":"landmarks_v0-circle-outline",
-               "type":"circle",
-               "source":"landmark-historic",
-               "source-layer":"landmarks",
-               "paint":{
-                  "circle-radius":{
-                     "stops":[
-                        [
-                           10,
-                           3
-                        ],
-                        [
-                           15,
-                           7
-                        ]
-                     ]
-                  },
-                  "circle-color":"#012700",
-                  "circle-opacity":0.7
-               }
-            }
-         },
-         {
-            "style":{
-               "id":"landmarks_v0-circle",
-               "type":"circle",
-               "source":"landmark-historic",
-               "source-layer":"landmarks",
-               "paint":{
-                  "circle-radius":{
-                     "stops":[
-                        [
-                           10,
-                           1
-                        ],
-                        [
-                           15,
-                           5
-                        ]
-                     ]
-                  },
-                  "circle-color":{
-                     "property":"lm_type",
-                     "type":"categorical",
-                     "stops":[
-                        [
-                           "Individual Landmark",
-                           "rgba(147, 245, 201, 1)"
-                        ],
-                        [
-                           "Interior Landmark",
-                           "rgba(152, 152, 247, 1)"
-                        ]
-                     ]
-                  },
-                  "circle-opacity":0.7
-               }
+      {
+        "label":"Interior Landmarks",
+        "icon": {
+          "type": "fa-icon",
+          "layers": [
+            {
+              "fa-icon": "circle",
+              "color":"rgba(152, 152, 247, 1)"
             },
-            "highlightable":true,
-            "tooltipTemplate":"{{{lm_name}}}"
-         },
-         {
-            "style":{
-               "id":"scenic-landmarks-line",
-               "type":"line",
-               "source":"landmark-historic",
-               "source-layer":"scenic-landmarks",
-               "paint":{
-                  "line-width":{
-                     "stops":[
-                        [
-                           11,
-                           1
-                        ],
-                        [
-                           12,
-                           3
-                        ]
-                     ]
-                  },
-                  "line-color":"purple",
-                  "line-dasharray":[
-                     1,
-                     1
-                  ],
-                  "line-opacity":0.6
-               }
+            {
+              "fa-icon": "circle",
+              "prefix":"far",
+              "color":"#012700"
             }
-         },
-         {
-            "style":{
-               "id":"scenic-landmarks-fill",
-               "type":"fill",
-               "source":"landmark-historic",
-               "source-layer":"scenic-landmarks",
-               "paint":{
-                  "fill-color":"purple",
-                  "fill-opacity":0.2
-               },
-               "layout":{
+          ]
+        }
+      },
+      {
+        "label":"Scenic Landmarks",
+        "icon": {
+          "type": "fa-icon",
+          "layers": [
+            {
+              "fa-icon": "square",
+              "color":"rgba(153, 18, 237, 0.2)"
+            },
+            {
+              "fa-icon": "square",
+              "prefix":"far",
+              "color":"rgba(153, 18, 237, 0.6)"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "meta":{
+    "description":"Individual Landmarks Shapefile, NYC Open Data Portal",
+    "url":[
+      "https://data.cityofnewyork.us/Housing-Development/Individual-Landmarks/ch5p-r223/data"
+    ],
+    "updated_at":"17 May 2018"
+  },
+  "layers":[
+    {
+      "style":{
+        "id":"landmarks_v0-circle-outline",
+        "type":"circle",
+        "source":"landmark-historic",
+        "source-layer":"landmarks",
+        "paint":{
+          "circle-radius":{
+            "stops":[
+              [
+                10,
+                3
+              ],
+              [
+                15,
+                7
+              ]
+            ]
+          },
+          "circle-color":"#012700",
+          "circle-opacity":0.7
+        }
+      }
+    },
+    {
+      "style":{
+        "id":"landmarks_v0-circle",
+        "type":"circle",
+        "source":"landmark-historic",
+        "source-layer":"landmarks",
+        "paint":{
+          "circle-radius":{
+            "stops":[
+              [
+                10,
+                1
+              ],
+              [
+                15,
+                5
+              ]
+            ]
+          },
+          "circle-color":{
+            "property":"lm_type",
+            "type":"categorical",
+            "stops":[
+              [
+                "Individual Landmark",
+                "rgba(147, 245, 201, 1)"
+              ],
+              [
+                "Interior Landmark",
+                "rgba(152, 152, 247, 1)"
+              ]
+            ]
+          },
+          "circle-opacity":0.7
+        }
+      },
+      "highlightable":true,
+      "tooltipTemplate":"{{{lm_name}}}"
+    },
+    {
+      "style":{
+        "id":"scenic-landmarks-line",
+        "type":"line",
+        "source":"landmark-historic",
+        "source-layer":"scenic-landmarks",
+        "paint":{
+          "line-width":{
+            "stops":[
+              [
+                11,
+                1
+              ],
+              [
+                12,
+                3
+              ]
+            ]
+          },
+          "line-color":"rgba(153, 18, 237, 0.6)",
+          "line-dasharray":[
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "style":{
+        "id":"scenic-landmarks-fill",
+        "type":"fill",
+        "source":"landmark-historic",
+        "source-layer":"scenic-landmarks",
+        "paint":{
+          "fill-color":"rgba(153, 18, 237, 0.2)"
+        },
+        "layout":{
 
-               }
-            },
-            "highlightable":true,
-            "tooltipTemplate":"{{{scen_lm_na}}}"
-         }
-      ]
-   }
+        }
+      },
+      "highlightable":true,
+      "tooltipTemplate":"{{{scen_lm_na}}}"
+    }
+  ]
+}

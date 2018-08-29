@@ -1,62 +1,65 @@
 {
-      "id":"appendixj-designated-mdistricts",
-      "title":"Appendix J Designated M Districts",
-      "titleTooltip":"Designated areas within Manufacturing Districts in which self service storage facilities are subject to certain as-of-right provisions (subarea 1) or are subject to special permit by the City Planning Commission (subarea 2)",
-      "visible":false,
-      "legendIcon":"polygon",
-      "legendColor":"#F333E1",
-      "meta":{
-         "description":"Appendix J Designated M Districts Shapefile",
-         "url":[
-            "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM appendixj_designated_mdistricts_v201712&format=SHP"
-         ],
-         "updated_at":"3 May 2018"
+  "id":"appendixj-designated-mdistricts",
+  "legend": {
+    "label":"Appendix J Designated M Districts",
+    "tooltip":"Designated areas within Manufacturing Districts in which self service storage facilities are subject to certain as-of-right provisions (subarea 1) or are subject to special permit by the City Planning Commission (subarea 2)",
+    "icon": {
+      "type": "fa-icon",
+      "layers": [{
+        "fa-icon": "square",
+        "color": "#F333E1"
+      }]
+    }
+  },
+  "meta":{
+    "description":"Appendix J Designated M Districts Shapefile",
+    "url":[
+      "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM appendixj_designated_mdistricts_v201712&format=SHP"
+    ],
+    "updated_at":"3 May 2018"
+  },
+  "layers":[
+    {
+      "style":{
+        "id":"appendixj-designated-mdistricts-line",
+        "type":"line",
+        "source":"supporting-zoning",
+        "source-layer":"appendixj-designated-mdistricts",
+        "paint":{
+          "line-width":{
+            "stops":[
+              [
+                11,
+                1
+              ],
+              [
+                12,
+                3
+              ]
+            ]
+          },
+          "line-color":"#F333E1",
+          "line-dasharray":[
+            1,
+            1
+          ],
+          "line-opacity":0.6
+        }
+      }
+    },
+    {
+      "style":{
+        "id":"appendixj-designated-mdistricts-fill",
+        "type":"fill",
+        "source":"supporting-zoning",
+        "source-layer":"appendixj-designated-mdistricts",
+        "paint":{
+          "fill-color":"#F333E1",
+          "fill-opacity":0.2
+        }
       },
-      "layers":[
-         {
-            "style":{
-               "id":"appendixj-designated-mdistricts-line",
-               "type":"line",
-               "source":"supporting-zoning",
-               "source-layer":"appendixj-designated-mdistricts",
-               "paint":{
-                  "line-width":{
-                     "stops":[
-                        [
-                           11,
-                           1
-                        ],
-                        [
-                           12,
-                           3
-                        ]
-                     ]
-                  },
-                  "line-color":"#F333E1",
-                  "line-dasharray":[
-                     1,
-                     1
-                  ],
-                  "line-opacity":0.6
-               }
-            }
-         },
-         {
-            "style":{
-               "id":"appendixj-designated-mdistricts-fill",
-               "type":"fill",
-               "source":"supporting-zoning",
-               "source-layer":"appendixj-designated-mdistricts",
-               "paint":{
-                  "fill-color":"#F333E1",
-                  "fill-opacity":0.2
-               },
-               "layout":{
-
-               }
-            },
-            "highlightable":true,
-            "tooltipTemplate":"{{{name}}} - Subarea {{{subarea}}}"
-         }
-      ]
-   }
+      "highlightable":true,
+      "tooltipTemplate":"{{{name}}} - Subarea {{{subarea}}}"
+    }
+  ]
+}
