@@ -1,8 +1,9 @@
 {
       "id":"three-d-buildings",
-      "title":"3D Buildings",
-      "titleTooltip":"Extruded building height from OpenStreetMap data",
-      "visible":false,
+      "legend": {
+        "label": "3D Buildings",
+        "tooltip": "Extruded building height from OpenStreetMap data"
+      },
       "meta":{
          "description":"OpenStreetMap Building Footprints via Mapbox Vector Tile Service",
          "url":[
