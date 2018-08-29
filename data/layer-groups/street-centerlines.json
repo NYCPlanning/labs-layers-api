@@ -1,7 +1,9 @@
 {
   "id": "street-centerlines",
-  "title": "Street Names",
-  "titleTooltip": "Legal street names as shown on the City Map",
+  "legend": {
+    "label": "Street Names",
+    "tooltip": "Legal street names as shown on the City Map"
+  },
   "visible": true,
   "meta": {
     "description": "NYC Department of City Planning Technical Review Division",

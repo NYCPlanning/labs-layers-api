@@ -1,10 +1,16 @@
 {
       "id":"waterfront-access-plan",
-      "title":"Waterfront Access Plan",
-      "titleTooltip":"These areas reflect site specific modification of waterfront public access requirements for waterfront parcels with unique conditions and opportunities",
-      "visible":false,
-      "legendIcon":"polygon",
-      "legendColor":"#00A4D2",
+      "legend": {
+        "label": "Waterfront Access Plan",
+        "tooltip": "These areas reflect site specific modification of waterfront public access requirements for waterfront parcels with unique conditions and opportunities",
+        "icon": {
+          "type": "fa-icon",
+          "layers": [{
+            "fa-icon":"square",
+            "color":"#00A4D2"
+          }]
+        }
+      },
       "meta":{
          "description":"Waterfront Access Plan release 2011.1, Bytes of the Big Apple",
          "url":[

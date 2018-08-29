@@ -1,7 +1,8 @@
 {
       "id":"subway",
-      "title":"Subways",
-      "visible":true,
+      "legend": {
+        "label": "Subways"
+      },
       "meta":{
          "description":"NYC Subway Lines and Stops - Originally Sourced from NYC DoITT GIS, combined with SI Railway data from Baruch College NYC Mass Transit Spatial Layers | Subway entrances from NYC Open Data",
          "url":[
