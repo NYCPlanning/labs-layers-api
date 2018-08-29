@@ -3,15 +3,13 @@
       "legend": {
         "label":"Zoning Map Amendments",
         "tooltip":"Changes to the Zoning Map that have been adopted since 2002",
-        "icon": [
-          {
-            "type": "fa-icon",
-            "options": {
-              "fa-icon":"square",
-              "color":"#9FC73E"
-            }
-          }
-        ]
+        "icon": {
+          "type": "fa-icon",
+          "layers": [{
+            "fa-icon":"square",
+            "color":"#9FC73E"
+          }]
+        }
       },
       "visible":false,
       "meta":{
