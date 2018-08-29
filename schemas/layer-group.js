@@ -3,13 +3,11 @@ const layerSchema = require('./layer');
 
 const legendItemSchema = Joi.object().keys({
   label: Joi.string().required(),
-  icon: Joi.array().items(
-    Joi.object().keys({
-      type: Joi.string().required(),
-      options: Joi.object(),
-    }),
-  ),
   tooltip: Joi.string(),
+  icon: Joi.object().keys({
+    type: Joi.string().required(),
+    layers: Joi.array(),
+  }),
 });
 
 module.exports = Joi.object().keys({
@@ -17,8 +15,11 @@ module.exports = Joi.object().keys({
   visible: Joi.boolean(),
   legend: Joi.object().keys({
     label: Joi.string().required(),
-    icon: Joi.string(),
     tooltip: Joi.string(),
+    icon: Joi.object().keys({
+      type: Joi.string().required(),
+      layers: Joi.array(),
+    }),
     items: Joi.array().items(
       legendItemSchema,
     ),
