@@ -15,7 +15,7 @@
   "layers":[
     {
       "style":{
-        "id":"building",
+        "id":"building-footprints",
         "type":"fill",
         "source":"openmaptiles",
         "source-layer":"building",
