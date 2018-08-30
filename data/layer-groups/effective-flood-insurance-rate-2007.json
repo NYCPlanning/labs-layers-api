@@ -2,7 +2,31 @@
   "id":"effective-flood-insurance-rate-2007",
   "legend": {
     "label":"Effective Flood Insurance Rate Maps 2007",
-    "tooltip":"The Effective Flood Insurance Rate Maps (FIRMs), first adopted by New York City in 1983 and last updated in 2007, establish the floodplain currently subject to the National Flood Insurance Program purchase requirements."
+    "tooltip":"The Effective Flood Insurance Rate Maps (FIRMs), first adopted by New York City in 1983 and last updated in 2007, establish the floodplain currently subject to the National Flood Insurance Program purchase requirements.",
+    "items": [
+      {
+        "label": "V Zone",
+        "tooltip": "Portion of the 1% annual chance floodplain subject to high velocity wave action (a breaking wave 3 feet high or larger). V Zones are subject to more stringent building requirements than other zones because of the damaging force of waves.",
+        "icon": {
+          "type": "fa-icon",
+          "layers": [{
+            "fa-icon": "square",
+            "color": "#0084a8"
+          }]
+        }
+      },
+      {
+        "label": "A Zone",
+        "tooltip": "A portion of the area subject to flooding from the 1% annual chance flood. These areas are not subject to high velocity wave action but are still considered high risk flooding areas.",
+        "icon": {
+          "type": "fa-icon",
+          "layers": [{
+            "fa-icon": "square",
+            "color": "#00a9e6"
+          }]
+        }
+      }
+    ]
   },
   "meta":{
     "description":"Effective Flood Insurance Rate Maps (FIRMs) data are available at FEMA Flood Map Service Center",
