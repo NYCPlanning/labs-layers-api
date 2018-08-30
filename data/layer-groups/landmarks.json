@@ -11,12 +11,14 @@
           "layers": [
             {
               "fa-icon": "circle",
-              "color":"rgba(147, 245, 201, 1)"
+              "color":"rgba(147, 245, 201, 1)",
+              "transform":"shrink-4"
             },
             {
               "fa-icon": "circle",
               "prefix":"far",
-              "color":"#012700"
+              "color":"#012700",
+              "transform":"shrink-4"
             }
           ]
         }
@@ -28,12 +30,14 @@
           "layers": [
             {
               "fa-icon": "circle",
-              "color":"rgba(152, 152, 247, 1)"
+              "color":"rgba(152, 152, 247, 1)",
+              "transform":"shrink-4"
             },
             {
               "fa-icon": "circle",
               "prefix":"far",
-              "color":"#012700"
+              "color":"#012700",
+              "transform":"shrink-4"
             }
           ]
         }

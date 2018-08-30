@@ -1,62 +1,66 @@
 {
-      "id":"mandatory-inclusionary-housing",
-      "title":"Mandatory Inclusionary Housing Areas",
-      "titleTooltip":"Areas where developments, enlargements and conversions over a certain size are required to set aside a percentage of floor area for permanently affordable housing",
-      "visible":false,
-      "legendIcon":"polygon",
-      "legendColor":"#CC3D5D",
-      "meta":{
-         "description":"Mandatory Inclusionary Housing (MIH) release June 2018, Bytes of the Big Apple",
-         "url":[
-            "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
-         ],
-         "updated_at":"July 18th, 2018"
-      },
-      "layers":[
-         {
-            "style":{
-               "id":"mandatory-inclusionary-housing-line",
-               "type":"line",
-               "source":"supporting-zoning",
-               "source-layer":"mandatory-inclusionary-housing",
-               "paint":{
-                  "line-width":{
-                     "stops":[
-                        [
-                           11,
-                           1
-                        ],
-                        [
-                           12,
-                           3
-                        ]
-                     ]
-                  },
-                  "line-color":"#CC3D5D",
-                  "line-dasharray":[
-                     1,
-                     1
-                  ],
-                  "line-opacity":0.6
-               }
-            }
-         },
-         {
-            "style":{
-               "id":"mandatory-inclusionary-housing-fill",
-               "type":"fill",
-               "source":"supporting-zoning",
-               "source-layer":"mandatory-inclusionary-housing",
-               "paint":{
-                  "fill-color":"#CC3D5D",
-                  "fill-opacity":0.2
-               },
-               "layout":{
+  "id":"mandatory-inclusionary-housing",
+  "legend": {
+    "label":"Mandatory Inclusionary Housing Areas",
+    "tooltip":"Areas where developments, enlargements and conversions over a certain size are required to set aside a percentage of floor area for permanently affordable housing",
+    "icon": {
+      "type": "fa-icon",
+      "layers": [{
+        "fa-icon": "square",
+        "color": "rgba(204, 61, 93, 1)"
+      }]
+    }
+  },
+  "meta":{
+    "description":"Mandatory Inclusionary Housing (MIH) release June 2018, Bytes of the Big Apple",
+    "url":[
+      "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
+    ],
+    "updated_at":"July 18th, 2018"
+  },
+  "layers":[
+    {
+      "style":{
+        "id":"mandatory-inclusionary-housing-line",
+        "type":"line",
+        "source":"supporting-zoning",
+        "source-layer":"mandatory-inclusionary-housing",
+        "paint":{
+          "line-width":{
+            "stops":[
+              [
+                11,
+                1
+              ],
+              [
+                12,
+                3
+              ]
+            ]
+          },
+          "line-color":"rgba(204, 61, 93, 0.6)",
+          "line-dasharray":[
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "style":{
+        "id":"mandatory-inclusionary-housing-fill",
+        "type":"fill",
+        "source":"supporting-zoning",
+        "source-layer":"mandatory-inclusionary-housing",
+        "paint":{
+          "fill-color":"rgba(204, 61, 93, 0.2)"
+        },
+        "layout":{
 
-               }
-            },
-            "highlightable":true,
-            "tooltipTemplate":"{{projectnam}} - {{mih_option}}"
-         }
-      ]
-   }
+        }
+      },
+      "highlightable":true,
+      "tooltipTemplate":"{{projectnam}} - {{mih_option}}"
+    }
+  ]
+}

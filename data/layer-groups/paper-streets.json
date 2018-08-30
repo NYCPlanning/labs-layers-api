@@ -1,10 +1,16 @@
 {
   "id":"paper-streets",
-  "title":"Paper Streets",
-  "legendIcon": "polygon",
-  "legendColor": "rgba(80, 80, 210, 0.8)",
-  "titleTooltip": "Streets that are officially mapped but are not built and only appear on paper maps",
-  "visible":false,
+  "legend": {
+    "label":"Paper Streets",
+    "tooltip":"Streets that are officially mapped but are not built and only appear on paper maps",
+    "icon": {
+      "type": "line",
+      "layers": [{
+        "stroke":"rgba(80, 80, 210, 0.8)",
+        "stroke-width":3
+      }]
+    }
+  },
   "layers":[
     {
       "style":{
