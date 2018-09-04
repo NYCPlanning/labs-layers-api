@@ -5,10 +5,11 @@
     "label":"Business Improvement Districts",
     "tooltip":"A Business Improvement District (BID) is a geographical area where local stakeholders oversee and fund the maintenance, improvement, and promotion of their commercial district.",
     "icon": {
-      "type": "fa-icon",
+      "type": "rectangle",
       "layers": [{
-        "fa-icon":"square",
-        "color":"#76420a"
+        "fill":"rgba(118, 66, 10, 0.2)",
+        "stroke":"rgba(118, 66, 10, 0.6)",
+        "stroke-dasharray":"1"
       }]
     }
   },
@@ -39,12 +40,11 @@
               ]
             ]
           },
-          "line-color":"#76420a",
+          "line-color":"rgba(118, 66, 10, 0.6)",
           "line-dasharray":[
             1,
             1
-          ],
-          "line-opacity":0.6
+          ]
         }
       }
     },
@@ -55,8 +55,7 @@
         "source":"supporting-zoning",
         "source-layer":"business-improvement-districts",
         "paint":{
-          "fill-color":"#76420a",
-          "fill-opacity":0.2
+          "fill-color":"rgba(118, 66, 10, 0.2)"
         }
       },
       "highlightable":true,

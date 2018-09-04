@@ -45,18 +45,12 @@
       {
         "label":"Scenic Landmarks",
         "icon": {
-          "type": "fa-icon",
-          "layers": [
-            {
-              "fa-icon": "square",
-              "color":"rgba(153, 18, 237, 0.2)"
-            },
-            {
-              "fa-icon": "square",
-              "prefix":"far",
-              "color":"rgba(153, 18, 237, 0.6)"
-            }
-          ]
+          "type": "rectangle",
+          "layers": [{
+            "fill":"rgba(153, 18, 237, 0.2)",
+            "stroke":"rgba(153, 18, 237, 0.6)",
+            "stroke-dasharray":"1"
+          }]
         }
       }
     ]

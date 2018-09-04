@@ -4,10 +4,11 @@
     "label":"Mandatory Inclusionary Housing Areas",
     "tooltip":"Areas where developments, enlargements and conversions over a certain size are required to set aside a percentage of floor area for permanently affordable housing",
     "icon": {
-      "type": "fa-icon",
+      "type": "rectangle",
       "layers": [{
-        "fa-icon": "square",
-        "color": "rgba(204, 61, 93, 1)"
+        "fill":"rgba(204, 61, 93, 0.2)",
+        "stroke":"rgba(204, 61, 93, 0.6)",
+        "stroke-dasharray":"1"
       }]
     }
   },

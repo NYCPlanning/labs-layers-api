@@ -1,68 +1,67 @@
 {
-      "id":"transit-zones",
-      "legend": {
-        "label": "Transit Zones",
-        "tooltip": "Transit-accessible areas where parking is optional for new affordable housing units and special rules apply to existing affordable units",
-        "icon": {
-          "type": "fa-icon",
-          "layers": [{
-            "fa-icon":"square",
-            "color":"#E6D62E"
-          }]
+  "id":"transit-zones",
+  "legend": {
+    "label": "Transit Zones",
+    "tooltip": "Transit-accessible areas where parking is optional for new affordable housing units and special rules apply to existing affordable units",
+    "icon": {
+      "type": "rectangle",
+      "layers": [{
+        "fill":"rgba(230, 214, 46, 0.2)",
+        "stroke":"rgba(230, 214, 46, 0.6)",
+        "stroke-dasharray":"1"
+      }]
+    }
+  },
+  "meta":{
+     "description":"Transit Zones release July 2016, Bytes of the Big Apple",
+     "url":[
+        "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
+     ],
+     "updated_at":"September 2017"
+  },
+  "layers":[
+     {
+        "style":{
+           "id":"transit-zones-line",
+           "type":"line",
+           "source":"supporting-zoning",
+           "source-layer":"transit-zones",
+           "paint":{
+              "line-width":{
+                 "stops":[
+                    [
+                       11,
+                       1
+                    ],
+                    [
+                       12,
+                       3
+                    ]
+                 ]
+              },
+              "line-color":"rgba(230, 214, 46, 0.6)",
+              "line-dasharray":[
+                 1,
+                 1
+              ]
+           }
         }
-      },
-      "meta":{
-         "description":"Transit Zones release July 2016, Bytes of the Big Apple",
-         "url":[
-            "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
-         ],
-         "updated_at":"September 2017"
-      },
-      "layers":[
-         {
-            "style":{
-               "id":"transit-zones-line",
-               "type":"line",
-               "source":"supporting-zoning",
-               "source-layer":"transit-zones",
-               "paint":{
-                  "line-width":{
-                     "stops":[
-                        [
-                           11,
-                           1
-                        ],
-                        [
-                           12,
-                           3
-                        ]
-                     ]
-                  },
-                  "line-color":"#E6D62E",
-                  "line-dasharray":[
-                     1,
-                     1
-                  ],
-                  "line-opacity":0.6
-               }
-            }
-         },
-         {
-            "style":{
-               "id":"transit-zones-fill",
-               "type":"fill",
-               "source":"supporting-zoning",
-               "source-layer":"transit-zones",
-               "paint":{
-                  "fill-color":"#E6D62E",
-                  "fill-opacity":0.2
-               },
-               "layout":{
+     },
+     {
+        "style":{
+           "id":"transit-zones-fill",
+           "type":"fill",
+           "source":"supporting-zoning",
+           "source-layer":"transit-zones",
+           "paint":{
+              "fill-color":"rgba(230, 214, 46, 0.2)"
+           },
+           "layout":{
 
-               }
-            },
-            "highlightable":true,
-            "tooltipTemplate":"Transit Zone"
-         }
-      ]
-   }
+           }
+        },
+        "highlightable":true,
+        "tooltipTemplate":"Transit Zone"
+     }
+  ]
+}

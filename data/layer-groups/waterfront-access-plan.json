@@ -4,10 +4,11 @@
         "label": "Waterfront Access Plan",
         "tooltip": "These areas reflect site specific modification of waterfront public access requirements for waterfront parcels with unique conditions and opportunities",
         "icon": {
-          "type": "fa-icon",
+          "type": "rectangle",
           "layers": [{
-            "fa-icon":"square",
-            "color":"#00A4D2"
+            "fill":"rgba(0, 164, 210, 0.2)",
+            "stroke":"rgba(0, 164, 210, 0.6)",
+            "stroke-dasharray":"1"
           }]
         }
       },
@@ -38,12 +39,11 @@
                         ]
                      ]
                   },
-                  "line-color":"#00A4D2",
+                  "line-color":"rgba(0, 164, 210, 0.6)",
                   "line-dasharray":[
                      1,
                      1
-                  ],
-                  "line-opacity":0.6
+                  ]
                }
             }
          },
@@ -54,8 +54,7 @@
                "source":"supporting-zoning",
                "source-layer":"waterfront-access-plan",
                "paint":{
-                  "fill-color":"#00A4D2",
-                  "fill-opacity":0.2
+                  "fill-color":"rgba(0, 164, 210, 0.2)"
                },
                "layout":{
 

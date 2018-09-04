@@ -4,10 +4,11 @@
     "label":"Historic Districts",
     "tooltip":"Areas designated by the NYC Landmarks Preservation Commission that possess historical significance and to which special zoning regulations apply",
     "icon": {
-      "type":"fa-icon",
+      "type": "rectangle",
       "layers": [{
-        "fa-icon": "square",
-        "color":"rgba(70, 130, 180, 1)"
+        "fill":"rgba(70, 130, 180, 0.2)",
+        "stroke":"rgba(70, 130, 180, 0.6)",
+        "stroke-dasharray":"1"
       }]
     }
   },

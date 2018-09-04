@@ -36,10 +36,10 @@
       {
         "label":"Parks, Plazas, & Public Space",
         "icon": {
-          "type": "fa-icon",
+          "type": "rectangle",
           "layers": [{
-            "fa-icon": "square",
-            "color": "rgba(228, 72, 192, 0.4)"
+            "fill":"rgba(228, 72, 192, 0.4)",
+            "stroke-width":0
           }]
         }
       }

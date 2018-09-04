@@ -4,10 +4,11 @@
     "label":"Industrial Business Zones",
     "tooltip":"Industrial Business Zones (IBZs) are areas where expanded business services are available for industrial and manufacturing businesses. This designation fosters high-performing business districts by creating competitive advantages over locating in areas outside of New York City.",
     "icon": {
-      "type": "fa-icon",
+      "type": "rectangle",
       "layers": [{
-        "fa-icon": "square",
-        "color":"#2B0A76"
+        "fill":"rgba(43, 10, 118, 0.2)",
+        "stroke":"rgba(43, 10, 118, 0.6)",
+        "stroke-dasharray":"1"
       }]
     }
   },
@@ -38,12 +39,11 @@
               ]
             ]
           },
-          "line-color":"#2B0A76",
+          "line-color":"rgba(43, 10, 118, 0.6)",
           "line-dasharray":[
             1,
             1
-          ],
-          "line-opacity":0.6
+          ]
         }
       }
     },
@@ -54,8 +54,7 @@
         "source":"supporting-zoning",
         "source-layer":"industrial-business-zones",
         "paint":{
-          "fill-color":"#2B0A76",
-          "fill-opacity":0.2
+          "fill-color":"rgba(43, 10, 118, 0.2)"
         },
         "layout":{
 

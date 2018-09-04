@@ -4,10 +4,11 @@
     "label":"Appendix J Designated M Districts",
     "tooltip":"Designated areas within Manufacturing Districts in which self service storage facilities are subject to certain as-of-right provisions (subarea 1) or are subject to special permit by the City Planning Commission (subarea 2)",
     "icon": {
-      "type": "fa-icon",
+      "type": "rectangle",
       "layers": [{
-        "fa-icon": "square",
-        "color": "#F333E1"
+        "fill":"rgba(243, 51, 225, 0.2)",
+        "stroke":"rgba(243, 51, 225, 0.6)",
+        "stroke-dasharray":"1"
       }]
     }
   },
@@ -38,12 +39,11 @@
               ]
             ]
           },
-          "line-color":"#F333E1",
+          "line-color":"rgba(243, 51, 225, 0.6)",
           "line-dasharray":[
             1,
             1
-          ],
-          "line-opacity":0.6
+          ]
         }
       }
     },
@@ -54,8 +54,7 @@
         "source":"supporting-zoning",
         "source-layer":"appendixj-designated-mdistricts",
         "paint":{
-          "fill-color":"#F333E1",
-          "fill-opacity":0.2
+          "fill-color":"rgba(243, 51, 225, 0.2)"
         }
       },
       "highlightable":true,

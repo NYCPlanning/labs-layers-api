@@ -4,10 +4,11 @@
     "label":"Inclusionary Housing Designated Areas",
     "tooltip":"Areas where zoning incentives are offered to encourage the creation of permanently affordable housing",
     "icon": {
-      "type":"fa-icon",
+      "type": "rectangle",
       "layers": [{
-        "fa-icon": "square",
-        "color":"#E57300"
+        "fill":"rgba(229, 115, 0, 0.2)",
+        "stroke":"rgba(229, 115, 0, 0.6)",
+        "stroke-dasharray":"1"
       }]
     }
   },
@@ -38,12 +39,11 @@
               ]
             ]
           },
-          "line-color":"#E57300",
+          "line-color":"rgba(229, 115, 0, 0.6)",
           "line-dasharray":[
             1,
             1
-          ],
-          "line-opacity":0.6
+          ]
         }
       }
     },
@@ -54,7 +54,7 @@
         "source":"supporting-zoning",
         "source-layer":"inclusionary-housing",
         "paint":{
-          "fill-color":"#E57300",
+          "fill-color":"rgba(229, 115, 0, 0.2)",
           "fill-opacity":0.2
         },
         "layout":{

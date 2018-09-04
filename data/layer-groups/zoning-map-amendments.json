@@ -4,10 +4,11 @@
         "label":"Zoning Map Amendments",
         "tooltip":"Changes to the Zoning Map that have been adopted since 2002",
         "icon": {
-          "type": "fa-icon",
+          "type": "rectangle",
           "layers": [{
-            "fa-icon":"square",
-            "color":"#9FC73E"
+            "fill":"rgba(159, 199, 62, 0.6)",
+            "stroke":"rgba(159, 199, 62, 0.6)",
+            "stroke-dasharray":"1"
           }]
         }
       },
@@ -39,12 +40,11 @@
                         ]
                      ]
                   },
-                  "line-color":"#9FC73E",
+                  "line-color":"rgba(159, 199, 62, 0.6)",
                   "line-dasharray":[
                      1,
                      1
-                  ],
-                  "line-opacity":0.6
+                  ]
                }
             }
          },
@@ -55,8 +55,7 @@
                "source":"zoning-map-amendments",
                "source-layer":"zoning-map-amendments",
                "paint":{
-                  "fill-color":"#9FC73E",
-                  "fill-opacity":0.6
+                  "fill-color":"rgba(159, 199, 62, 0.6)"
                }
             },
             "highlightable":true,
