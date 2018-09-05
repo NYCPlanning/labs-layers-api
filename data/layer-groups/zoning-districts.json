@@ -169,7 +169,7 @@
       },
       "highlightable": true,
       "clickable": true,
-      "tooltipTemplate": "Zoning District {{zonedist}}"
+      "tooltipTemplate": "Zoning District {{{zonedist}}}"
     },
     {
       "style":

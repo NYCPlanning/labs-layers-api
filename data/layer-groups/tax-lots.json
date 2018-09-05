@@ -102,7 +102,7 @@
       },
       "highlightable": true,
       "clickable": true,
-      "tooltipTemplate": "{{address}}"
+      "tooltipTemplate": "{{{address}}}"
     },
     {
       "style":

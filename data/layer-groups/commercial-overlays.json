@@ -34,7 +34,7 @@
       },
       "highlightable": true,
       "clickable": true,
-      "tooltipTemplate": "{{overlay}}"
+      "tooltipTemplate": "{{{overlay}}}"
     },
     {
       "style": {
