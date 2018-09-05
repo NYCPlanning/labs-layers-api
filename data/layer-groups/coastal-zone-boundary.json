@@ -1,62 +1,67 @@
 {
-      "id":"coastal-zone-boundary",
-      "title":"Coastal Zone Boundary",
-      "titleTooltip":"Projects within the coastal zone boundary are subject to additional review under the Waterfront Revitalization Program",
-      "visible":false,
-      "legendIcon":"polygon",
-      "legendColor":"#5DC6E4",
-      "meta":{
-         "description":"WRP Coastal Zone Boundary v2016.1, Bytes of the Big Apple",
-         "url":[
-            "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
-         ],
-         "updated_at":"September 2017"
-      },
-      "layers":[
-         {
-            "style":{
-               "id":"coastal-zone-boundary-line",
-               "type":"line",
-               "source":"supporting-zoning",
-               "source-layer":"coastal-zone-boundary",
-               "paint":{
-                  "line-width":{
-                     "stops":[
-                        [
-                           11,
-                           1
-                        ],
-                        [
-                           12,
-                           3
-                        ]
-                     ]
-                  },
-                  "line-color":"#5DC6E4",
-                  "line-dasharray":[
-                     1,
-                     1
-                  ],
-                  "line-opacity":0.6
-               }
-            }
-         },
-         {
-            "style":{
-               "id":"coastal-zone-boundary-fill",
-               "type":"fill",
-               "source":"supporting-zoning",
-               "source-layer":"coastal-zone-boundary",
-               "paint":{
-                  "fill-color":"#5DC6E4",
-                  "fill-opacity":0.2
-               },
-               "layout":{
+  "id":"coastal-zone-boundary",
+  "legend": {
+    "label":"Coastal Zone Boundary",
+    "tooltip":"Projects within the coastal zone boundary are subject to additional review under the Waterfront Revitalization Program",
+    "icon": {
+      "type": "rectangle",
+      "layers": [{
+        "fill":"rgba(93, 198, 228, 0.2)",
+        "stroke":"rgba(93, 198, 228, 0.6)",
+        "stroke-dasharray":"1"
+      }]
+    }
+  },
+  "meta":{
+    "description":"WRP Coastal Zone Boundary v2016.1, Bytes of the Big Apple",
+    "url":[
+      "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
+    ],
+    "updated_at":"September 2017"
+  },
+  "layers":[
+    {
+      "style":{
+        "id":"coastal-zone-boundary-line",
+        "type":"line",
+        "source":"supporting-zoning",
+        "source-layer":"coastal-zone-boundary",
+        "paint":{
+          "line-width":{
+            "stops":[
+              [
+                11,
+                1
+              ],
+              [
+                12,
+                3
+              ]
+            ]
+          },
+          "line-color":"rgba(93, 198, 228, 0.6)",
+          "line-dasharray":[
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "style":{
+        "id":"coastal-zone-boundary-fill",
+        "type":"fill",
+        "source":"supporting-zoning",
+        "source-layer":"coastal-zone-boundary",
+        "paint":{
+          "fill-color":"rgba(93, 198, 228, 0.2)"
+        },
+        "layout":{
 
-               }
-            },
-            "highlightable":true,
-            "tooltipTemplate":"Coastal Zone Boundary"
-         }
-      ]
-   }
+        }
+      },
+      "highlightable":true,
+      "tooltipTemplate":"Coastal Zone Boundary"
+    }
+  ]
+}

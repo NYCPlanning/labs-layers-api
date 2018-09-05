@@ -84,11 +84,15 @@ describe('POST /layer-groups', () => {
         'layer-groups': [
           {
             id: 'zoning-districts',
-            title: 'peanut butter',
+            legend: {
+              label: 'peanut butter',
+            },
           },
           {
             id: 'tax-lots',
-            title: 'bananas',
+            legend: {
+              label: 'bananas',
+            },
           },
         ],
       })
@@ -101,8 +105,8 @@ describe('POST /layer-groups', () => {
           console.log(errors[0]); // eslint-disable-line
         }
 
-        const { attributes: { title: taxLotsTitle } } = data.find(d => d.id === 'tax-lots');
-        const { attributes: { title: zdTitle } } = data.find(d => d.id === 'zoning-districts');
+        const { attributes: { legend: { label: taxLotsTitle } } } = data.find(d => d.id === 'tax-lots');
+        const { attributes: { legend: { label: zdTitle } } } = data.find(d => d.id === 'zoning-districts');
 
         taxLotsTitle.should.equal('bananas');
         zdTitle.should.equal('peanut butter');

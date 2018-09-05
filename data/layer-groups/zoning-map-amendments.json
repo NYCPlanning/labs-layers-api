@@ -1,10 +1,18 @@
 {
       "id":"zoning-map-amendments",
-      "title":"Zoning Map Amendments",
-      "titleTooltip":"Changes to the Zoning Map that have been adopted since 2002",
+      "legend": {
+        "label":"Zoning Map Amendments",
+        "tooltip":"Changes to the Zoning Map that have been adopted since 2002",
+        "icon": {
+          "type": "rectangle",
+          "layers": [{
+            "fill":"rgba(159, 199, 62, 0.6)",
+            "stroke":"rgba(159, 199, 62, 0.6)",
+            "stroke-dasharray":"1"
+          }]
+        }
+      },
       "visible":false,
-      "legendIcon":"polygon",
-      "legendColor":"#9FC73E",
       "meta":{
          "description":"NYC GIS Zoning Features June 2018, Bytes of the Big Apple",
          "url":[
@@ -32,12 +40,11 @@
                         ]
                      ]
                   },
-                  "line-color":"#9FC73E",
+                  "line-color":"rgba(159, 199, 62, 0.6)",
                   "line-dasharray":[
                      1,
                      1
-                  ],
-                  "line-opacity":0.6
+                  ]
                }
             }
          },
@@ -48,8 +55,7 @@
                "source":"zoning-map-amendments",
                "source-layer":"zoning-map-amendments",
                "paint":{
-                  "fill-color":"#9FC73E",
-                  "fill-opacity":0.6
+                  "fill-color":"rgba(159, 199, 62, 0.6)"
                }
             },
             "highlightable":true,

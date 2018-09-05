@@ -1,10 +1,17 @@
 {
   "id":"stair-streets",
-  "title":"Stair Streets",
-  "legendIcon": "four-vertical-lines",
-  "legendColor": "rgba(40, 110, 90, 0.8)",
-  "titleTooltip": "Street segments with steps or stairs to accommodate foot traffic.",
-  "visible":false,
+  "legend": {
+    "label": "Stair Streets",
+    "tooltip": "Street segments with steps or stairs to accommodate foot traffic",
+    "icon": {
+      "type": "fa-icon",
+      "layers": [{
+        "fa-icon":"align-justify",
+        "color":"rgba(40, 110, 90, 0.8)",
+        "transform": "rotate-45"
+      }]
+    }
+  },
   "layers":[
     {
       "style":{

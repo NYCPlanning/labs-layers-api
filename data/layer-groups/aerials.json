@@ -1,7 +1,9 @@
 {
   "id": "aerials",
-  "title": "Aerial Imagery",
-  "titleTooltip": "Aerial Photos Raster Tiles provided by DoITT GIS",
+  "legend": {
+    "label":"Aerial Imagery",
+    "tooltip":"Aerial Photos Raster Tiles provided by DoITT GIS"
+  },
   "meta": {
      "description": "NYC DoITT GIS Aerial Photography Tile Layers (TMS)",
      "url": [

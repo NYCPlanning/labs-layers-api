@@ -1,10 +1,18 @@
 {
       "id":"zoning-map-amendments-pending",
-      "title":"Pending Zoning Map Amendments",
-      "titleTooltip":"Changes to the Zoning Map that are currently undergoing public review",
+      "legend": {
+        "label":"Pending Zoning Map Amendments",
+        "tooltip":"Changes to the Zoning Map that are currently undergoing public review",
+        "icon": {
+          "type": "rectangle",
+          "layers": [{
+            "fill":"rgba(176, 31, 31, 0.6)",
+            "stroke":"rgba(176, 31, 31, 0.6)",
+            "stroke-dasharray":"1"
+          }]
+        }
+      },
       "visible":false,
-      "legendIcon":"polygon",
-      "legendColor":"#B01F1F",
       "meta":{
          "description":"NYC GIS Zoning Features March 2018, Bytes of the Big Apple",
          "url":[
@@ -32,12 +40,11 @@
                         ]
                      ]
                   },
-                  "line-color":"#B01F1F",
+                  "line-color":"rgba(176, 31, 31, 0.6)",
                   "line-dasharray":[
                      1,
                      1
-                  ],
-                  "line-opacity":0.6
+                  ]
                }
             }
          },
@@ -48,8 +55,7 @@
                "source":"supporting-zoning",
                "source-layer":"zoning-map-amendments-pending",
                "paint":{
-                  "fill-color":"#B01F1F",
-                  "fill-opacity":0.6
+                  "fill-color":"rgba(176, 31, 31, 0.6)"
                }
             },
             "highlightable":true,

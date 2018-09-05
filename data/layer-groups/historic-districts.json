@@ -1,62 +1,67 @@
 {
-      "id":"historic-districts",
-      "title":"Historic Districts",
-      "titleTooltip":"Areas designated by the NYC Landmarks Preservation Commission that possess historical significance and to which special zoning regulations apply",
-      "visible":false,
-      "legendIcon":"polygon",
-      "legendColor":"steelblue",
-      "meta":{
-         "description":"Historic Districts Shapefile, NYC Open Data Portal",
-         "url":[
-            "https://data.cityofnewyork.us/Housing-Development/Historic-Districts/xbvj-gfnw/data"
-         ],
-         "updated_at":"17 May 2018"
-      },
-      "layers":[
-         {
-            "style":{
-               "id":"historic-districts-line",
-               "type":"line",
-               "source":"landmark-historic",
-               "source-layer":"historic-districts",
-               "paint":{
-                  "line-width":{
-                     "stops":[
-                        [
-                           11,
-                           1
-                        ],
-                        [
-                           12,
-                           3
-                        ]
-                     ]
-                  },
-                  "line-color":"steelblue",
-                  "line-dasharray":[
-                     1,
-                     1
-                  ],
-                  "line-opacity":0.6
-               }
-            }
-         },
-         {
-            "style":{
-               "id":"historic-districts-fill",
-               "type":"fill",
-               "source":"landmark-historic",
-               "source-layer":"historic-districts",
-               "paint":{
-                  "fill-color":"steelblue",
-                  "fill-opacity":0.2
-               },
-               "layout":{
+  "id":"historic-districts",
+  "legend": {
+    "label":"Historic Districts",
+    "tooltip":"Areas designated by the NYC Landmarks Preservation Commission that possess historical significance and to which special zoning regulations apply",
+    "icon": {
+      "type": "rectangle",
+      "layers": [{
+        "fill":"rgba(70, 130, 180, 0.2)",
+        "stroke":"rgba(70, 130, 180, 0.6)",
+        "stroke-dasharray":"1"
+      }]
+    }
+  },
+  "meta":{
+    "description":"Historic Districts Shapefile, NYC Open Data Portal",
+    "url":[
+      "https://data.cityofnewyork.us/Housing-Development/Historic-Districts/xbvj-gfnw/data"
+    ],
+    "updated_at":"17 May 2018"
+  },
+  "layers":[
+    {
+      "style":{
+        "id":"historic-districts-line",
+        "type":"line",
+        "source":"landmark-historic",
+        "source-layer":"historic-districts",
+        "paint":{
+          "line-width":{
+            "stops":[
+              [
+                11,
+                1
+              ],
+              [
+                12,
+                3
+              ]
+            ]
+          },
+          "line-color":"rgba(70, 130, 180, 0.6)",
+          "line-dasharray":[
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "style":{
+        "id":"historic-districts-fill",
+        "type":"fill",
+        "source":"landmark-historic",
+        "source-layer":"historic-districts",
+        "paint":{
+          "fill-color":"rgba(70, 130, 180, 0.2)"
+        },
+        "layout":{
 
-               }
-            },
-            "highlightable":true,
-            "tooltipTemplate":"{{{area_name}}}"
-         }
-      ]
-   }
+        }
+      },
+      "highlightable":true,
+      "tooltipTemplate":"{{{area_name}}}"
+    }
+  ]
+}

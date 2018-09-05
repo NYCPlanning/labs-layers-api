@@ -1,8 +1,50 @@
 {
   "id":"name-changes",
-  "title":"Local Law Names",
-  "titleTooltip":"Local Law name changes to thoroughfares and public places from 2002 to present",
-  "visible":false,
+  "legend": {
+    "label":"Local Law Names",
+    "tooltip":"Local Law name changes to thoroughfares and public places from 2002 to present",
+    "items": [
+      {
+        "label":"Intersections & Corners",
+        "icon": {
+          "type": "fa-icon",
+          "layers": [
+            {
+              "fa-icon": "circle",
+              "color": "rgba(228, 72, 192, 1)",
+              "transform":"shrink-4"
+            },
+            {
+              "fa-icon": "circle",
+              "prefix": "far",
+              "color": "rgba(49, 49, 49, 1)",
+              "transform":"shrink-4"
+            }
+          ]
+        }
+      },
+      {
+        "label":"Streets",
+        "icon": {
+          "type": "line",
+          "layers": [{
+            "stroke":"rgba(228, 72, 192, 0.5)",
+            "stroke-width":3
+          }]
+        }
+      },
+      {
+        "label":"Parks, Plazas, & Public Space",
+        "icon": {
+          "type": "rectangle",
+          "layers": [{
+            "fill":"rgba(228, 72, 192, 0.4)",
+            "stroke-width":0
+          }]
+        }
+      }
+    ]
+  },
   "meta":{
     "description":"NYC Department of City Planning Technical Review Division",
     "updated_at":"6 April 2018"
@@ -54,7 +96,7 @@
         "source":"digital-citymap",
         "source-layer":"name-changes-lines",
         "paint":{
-          "line-color":"rgba(228, 72, 192, 1)",
+          "line-color":"rgba(228, 72, 192, 0.5)",
           "line-width":{
             "stops":[
               [
@@ -66,8 +108,7 @@
                 19
               ]
             ]
-          },
-          "line-opacity":0.5
+          }
         }
       }
     },
@@ -78,8 +119,7 @@
         "source":"digital-citymap",
         "source-layer":"name-changes-areas",
         "paint":{
-          "fill-color":"rgba(228, 72, 192, 1)",
-          "fill-opacity":0.5
+          "fill-color":"rgba(228, 72, 192, 0.4)"
         }
       }
     },

@@ -1,10 +1,16 @@
 {
       "id":"special-purpose-subdistricts",
-      "title":"Special Purpose Subdistricts",
-      "titleTooltip":"Areas within Special Purpose Districts where unique rules apply",
-      "visible":false,
-      "legendIcon":"polygon",
-      "legendColor":"#8DA610",
+      "legend": {
+        "label": "Special Purpose Subdistricts",
+        "tooltip": "Areas within Special Purpose Districts where unique rules apply",
+        "icon": {
+          "type": "fa-icon",
+          "layers": [{
+            "fa-icon":"square",
+            "color":"#8DA610"
+          }]
+        }
+      },
       "meta":{
          "description":"NYC GIS Zoning Features June 2018, Bytes of the Big Apple",
          "url":[

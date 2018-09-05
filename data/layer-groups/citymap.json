@@ -1,7 +1,78 @@
 {
   "id":"citymap",
-  "title":"Street Map Features",
   "visible":true,
+  "legend": {
+    "label":"Street Map Features",
+    "tooltip":"A street that has been established on an adopted alteration map or section map and filed with the appropriate agencies",
+    "items": [
+      {
+        "label":"Mapped Street",
+        "icon": {
+          "type": "line",
+          "layers": [{
+            "fill":"none",
+            "stroke":"rgba(50, 50, 50, 1)"
+          }]
+        }
+      },
+      {
+        "label":"Street Treatment",
+        "tooltip":"Lines on the City Map that reflect curb lines, approach ramps and other physical elements for illustrative purposes only - may be changed without public review (ULURP)",
+        "icon": {
+          "type": "line",
+          "layers": [{
+            "fill":"none",
+            "stroke":"rgba(84, 84, 84, 1)",
+            "stroke-width":"0.5"
+          }]
+        }
+      },
+      {
+        "label":"Unmapped Street",
+        "tooltip":"A street that is not officially shown on the City Map and over which the public may or may not have a right of way. Record streets and private roads are examples of unmapped streets.",
+        "icon": {
+          "type": "line",
+          "layers": [{
+            "fill":"none",
+            "stroke":"rgba(50, 50, 50, 0.4)",
+            "stroke-width":"0.5",
+            "stroke-dasharray":"1"
+          }]
+        }
+      },
+      {
+        "label":"Rail",
+        "tooltip":"Railroad right-of-way",
+        "icon": {
+          "type": "line",
+          "layers": [
+            {
+              "fill":"none",
+              "stroke":"#9ca0a1",
+              "stroke-width": "0.5"
+            },
+            {
+              "fill":"none",
+              "stroke":"#9ca0a1",
+              "stroke-width":"2",
+              "stroke-dasharray":"0.6, 2"
+            }
+          ]
+        }
+      },
+      {
+        "label":"Borough Boundaries",
+        "icon": {
+          "type": "line",
+          "layers": [{
+            "fill":"none",
+            "stroke-width":"2.5",
+            "stroke":"rgba(50,100,100,0.4)"
+          }]
+        }
+      }
+    ]
+  },
   "meta":{
     "description":"NYC Department of City Planning Technical Review Division",
     "updated_at":"6 April 2018"
@@ -465,61 +536,5 @@
         }
       }
     }
-  ],
-  "legendConfig":{
-    "label":"Street Lines",
-    "items":[
-      {
-        "type":"line",
-        "label":"Mapped Street",
-        "tooltip":"A street that has been established on an adopted alteration map or section map and filed with the appropriate agencies",
-        "style":{
-          "fill":"none",
-          "stroke":"rgba(50, 50, 50, 1)"
-        }
-      },
-      {
-        "type":"line",
-        "label":"Street Treatment",
-        "tooltip":"Lines on the City Map that reflect curb lines, approach ramps and other physical elements for illustrative purposes only - may be changed without public review (ULURP)",
-        "style":{
-          "fill":"none",
-          "stroke":"rgba(84, 84, 84, 1)",
-          "stroke-width":"0.5"
-        }
-      },
-      {
-        "type":"line",
-        "label":"Unmapped Street",
-        "tooltip":"A street that is not officially shown on the City Map and over which the public may or may not have a right of way. Record streets and private roads are examples of unmapped streets.",
-        "style":{
-          "fill":"none",
-          "stroke":"rgba(50, 50, 50, 0.4)",
-          "stroke-width":"0.5",
-          "stroke-dasharray":"1"
-        }
-      },
-      {
-        "type":"railroad",
-        "label":"Rail",
-        "tooltip":"Railroad right-of-way",
-        "style":{
-          "fill":"none",
-          "stroke":"#9ca0a1",
-          "stroke-width":"2",
-          "stroke-dasharray":"0.6, 2"
-        }
-      },
-      {
-        "type":"line",
-        "label":"Borough Boundaries",
-        "tooltip":"",
-        "style":{
-          "fill":"none",
-          "stroke-width":"3",
-          "stroke":"rgba(50,100,100,0.4)"
-        }
-      }
-    ]
-  }
+  ]
 }

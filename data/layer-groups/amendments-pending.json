@@ -1,10 +1,24 @@
 {
   "id": "amendments-pending",
-  "title": "Pending City Map Alterations",
-  "titleTooltip": "Proposed Alterations to the City Map that have been approved in public review but have not yet been officially enacted. These alterations have not yet taken effect and are shown for illustrative purposes.",
-  "legendIcon": "polygon-stacked",
-  "legendColor": "rgba(240, 15, 130, 0.4)",
-  "visible": false,
+  "legend": {
+    "label": "Pending City Map Alterations",
+    "tooltip": "Proposed Alterations to the City Map that have been approved in public review but have not yet been officially enacted. These alterations have not yet taken effect and are shown for illustrative purposes.",
+    "icon": {
+      "type": "fa-icon",
+      "layers": [
+        {
+          "fa-icon": "square",
+          "color":"rgba(240, 15, 130, 0.4)",
+          "transform": "left-2 down-2"
+        },
+        {
+          "fa-icon": "square",
+          "color":"rgba(240, 15, 130, 0.4)",
+          "transform": "right-2 up-2"
+        }
+      ]
+    }
+  },
   "meta": {
     "description": "NYC Department of City Planning Technical Review Division",
     "updated_at": "6 April 2018"
@@ -24,17 +38,5 @@
         "filter": ["==", "status", "13"]
       }
     }
-  ],
-  "legendConfig": {
-    "items": [
-      {
-        "type": "area",
-        "label": "City Map Alterations",
-        "style": {
-          "stroke": "none",
-          "fill": "rgba(240, 15, 130, 0.4)"
-        }
-      }
-    ]
-  }
+  ]
 }
