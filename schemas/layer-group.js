@@ -1,13 +1,27 @@
 const Joi = require('joi');
 const layerSchema = require('./layer');
 
+const legendIconSchema = Joi.object().keys({
+  type: Joi.string().valid(
+    'line',
+    'rectangle',
+    'fa-icon',
+  ).required(),
+  layers: Joi.when('type', {
+    is: 'fa-icon',
+    then: Joi.array().items(
+      Joi.object().keys({
+        'fa-icon': Joi.string().required(),
+      }).unknown(),
+    ),
+    otherwise: Joi.array().items(Joi.object()),
+  }),
+});
+
 const legendItemSchema = Joi.object().keys({
   label: Joi.string().required(),
   tooltip: Joi.string(),
-  icon: Joi.object().keys({
-    type: Joi.string().required(),
-    layers: Joi.array(),
-  }),
+  icon: legendIconSchema,
 });
 
 module.exports = Joi.object().keys({
@@ -16,10 +30,7 @@ module.exports = Joi.object().keys({
   legend: Joi.object().keys({
     label: Joi.string().required(),
     tooltip: Joi.string(),
-    icon: Joi.object().keys({
-      type: Joi.string().required(),
-      layers: Joi.array(),
-    }),
+    icon: legendIconSchema,
     items: Joi.array().items(
       legendItemSchema,
     ),
