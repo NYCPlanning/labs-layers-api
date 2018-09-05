@@ -5,7 +5,7 @@
   "meta":
   {
     "description": "MapPLUTO™ v18.1, Bytes of the Big Apple",
-    "url": 
+    "url":
     [
       "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
     ],
@@ -93,7 +93,7 @@
       },
       "highlightable": true,
       "clickable": true,
-      "tooltipTemplate": "{{address}}"
+      "tooltipTemplate": "{{{address}}}"
     },
     {
       "style":

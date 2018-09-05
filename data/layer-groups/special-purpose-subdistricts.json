@@ -57,7 +57,7 @@
             },
             "highlightable":true,
             "clickable":true,
-            "tooltipTemplate":"{{spname}} - {{subdist}}"
+            "tooltipTemplate":"{{{spname}}} - {{{subdist}}}"
          }
       ]
    }
