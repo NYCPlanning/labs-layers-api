@@ -1,42 +1,35 @@
 {
-  "id":"neighborhood-tabulation-areas",
+  "id": "neighborhood-tabulation-areas",
   "legend": {
-    "label":"Neighborhood Tabulation Areas",
+    "label": "Neighborhood Tabulation Areas",
     "icon": {
-      "type":"line",
+      "type": "line",
       "layers": [
         {
-          "stroke":"#F576CC",
-          "stroke-width":4,
-          "stroke-opacity":0.5
+          "stroke": "#F576CC",
+          "stroke-width": 4,
+          "stroke-opacity": 0.5
         },
         {
-          "stroke":"#444",
-          "stroke-width":1.5,
-          "stroke-opacity":0.5
+          "stroke": "#444",
+          "stroke-width": 1.5,
+          "stroke-opacity": 0.5
         }
       ]
     }
   },
-  "meta":{
-    "description":"Neighborhood Tabulation Areas v17D, Bytes of the Big Apple",
-    "url":[
-      "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
-    ],
-    "updated_at":"21 November 2017"
-  },
-  "layers":[
+  "layers": [
     {
-      "style":{
-        "id":"nta-line-glow",
-        "type":"line",
-        "source":"admin-boundaries",
-        "source-layer":"neighborhood-tabulation-areas",
-        "paint":{
-          "line-color":"#F576CC",
-          "line-opacity":0.2,
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "nta-line-glow",
+        "type": "line",
+        "source": "admin-boundaries",
+        "source-layer": "neighborhood-tabulation-areas",
+        "paint": {
+          "line-color": "#F576CC",
+          "line-opacity": 0.2,
+          "line-width": {
+            "stops": [
               [
                 11,
                 3
@@ -51,16 +44,16 @@
       }
     },
     {
-      "style":{
-        "id":"nta-line",
-        "type":"line",
-        "source":"admin-boundaries",
-        "source-layer":"neighborhood-tabulation-areas",
-        "paint":{
-          "line-color":"#444",
-          "line-opacity":0.3,
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "nta-line",
+        "type": "line",
+        "source": "admin-boundaries",
+        "source-layer": "neighborhood-tabulation-areas",
+        "paint": {
+          "line-color": "#444",
+          "line-opacity": 0.3,
+          "line-width": {
+            "stops": [
               [
                 11,
                 1
@@ -72,33 +65,33 @@
             ]
           }
         },
-        "layout":{
-          "line-join":"round",
-          "line-cap":"round"
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
         }
       }
     },
     {
-      "style":{
-        "id":"nta-label",
-        "type":"symbol",
-        "source":"admin-boundaries",
-        "source-layer":"neighborhood-tabulation-areas-centroids",
-        "minzoom":12,
-        "paint":{
-          "text-color":"#626262",
-          "text-halo-color":"#FFFFFF",
-          "text-halo-width":2,
-          "text-halo-blur":2
+      "style": {
+        "id": "nta-label",
+        "type": "symbol",
+        "source": "admin-boundaries",
+        "source-layer": "neighborhood-tabulation-areas-centroids",
+        "minzoom": 12,
+        "paint": {
+          "text-color": "#626262",
+          "text-halo-color": "#FFFFFF",
+          "text-halo-width": 2,
+          "text-halo-blur": 2
         },
-        "layout":{
-          "text-field":"{ntaname}",
-          "text-font":[
+        "layout": {
+          "text-field": "{ntaname}",
+          "text-font": [
             "Open Sans Semibold",
             "Arial Unicode MS Bold"
           ],
-          "text-size":{
-            "stops":[
+          "text-size": {
+            "stops": [
               [
                 11,
                 12

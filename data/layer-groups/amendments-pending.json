@@ -8,20 +8,16 @@
       "layers": [
         {
           "fa-icon": "square",
-          "color":"rgba(240, 15, 130, 0.4)",
+          "color": "rgba(240, 15, 130, 0.4)",
           "transform": "left-2 down-2"
         },
         {
           "fa-icon": "square",
-          "color":"rgba(240, 15, 130, 0.4)",
+          "color": "rgba(240, 15, 130, 0.4)",
           "transform": "right-2 up-2"
         }
       ]
     }
-  },
-  "meta": {
-    "description": "NYC Department of City Planning Technical Review Division",
-    "updated_at": "6 April 2018"
   },
   "layers": [
     {
@@ -35,7 +31,11 @@
           "fill-color": "rgba(240, 15, 130, 0.4)"
         },
         "layout": {},
-        "filter": ["==", "status", "13"]
+        "filter": [
+          "==",
+          "status",
+          "13"
+        ]
       }
     }
   ]

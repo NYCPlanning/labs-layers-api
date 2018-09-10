@@ -1,8 +1,15 @@
 {
-      "type":"vector",
-      "id":"admin-boundaries",
-      "tiles":[
-         "https://cartocdn-gusc-b.global.ssl.fastly.net/planninglabs/api/v1/map/ae461026356d0521fe5a4f60185cba3f:1525336751194/{z}/{x}/{y}.mvt"
-      ],
-      "minzoom":0
-   }
+  "type": "vector",
+  "id": "admin-boundaries",
+  "tiles": [
+    "https://cartocdn-gusc-b.global.ssl.fastly.net/planninglabs/api/v1/map/ae461026356d0521fe5a4f60185cba3f:1525336751194/{z}/{x}/{y}.mvt"
+  ],
+  "minzoom": 0,
+  "meta": {
+    "description": "Administrative and Political Districts v17D, Bytes of the Big Apple",
+    "url": [
+      "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
+    ],
+    "updated_at": "21 November 2017"
+  }
+}

@@ -1,15 +1,8 @@
 {
   "id": "aerials",
   "legend": {
-    "label":"Aerial Imagery",
-    "tooltip":"Aerial Photos Raster Tiles provided by DoITT GIS"
-  },
-  "meta": {
-     "description": "NYC DoITT GIS Aerial Photography Tile Layers (TMS)",
-     "url": [
-        "https://maps.nyc.gov/tiles/"
-     ],
-     "updated_at": "n/a"
+    "label": "Aerial Imagery",
+    "tooltip": "Aerial Photos Raster Tiles provided by DoITT GIS"
   },
   "layerVisibilityType": "singleton",
   "layers": [

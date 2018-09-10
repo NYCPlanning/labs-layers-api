@@ -1,58 +1,57 @@
 {
-  "id":"fresh",
+  "id": "fresh",
   "legend": {
-    "label":"FRESH Zones",
-    "tooltip":"FRESH promotes the establishment and expansion of neighborhood grocery stores in underserved communities by providing zoning and financial incentives",
+    "label": "FRESH Zones",
+    "tooltip": "FRESH promotes the establishment and expansion of neighborhood grocery stores in underserved communities by providing zoning and financial incentives",
     "items": [
       {
-        "label":"Zoning incentives",
+        "label": "Zoning incentives",
         "icon": {
           "type": "fa-icon",
-          "layers": [{
-            "fa-icon":"square",
-            "color":"rgba(11, 147, 144, 0.2)"
-          }]
+          "layers": [
+            {
+              "fa-icon": "square",
+              "color": "rgba(11, 147, 144, 0.2)"
+            }
+          ]
         }
       },
       {
-        "label":"Zoning and discretionary tax incentives",
+        "label": "Zoning and discretionary tax incentives",
         "icon": {
           "type": "fa-icon",
-          "layers": [{
-            "fa-icon":"square",
-            "color":"rgba(48, 191, 78, 0.2)"
-          }]
+          "layers": [
+            {
+              "fa-icon": "square",
+              "color": "rgba(48, 191, 78, 0.2)"
+            }
+          ]
         }
       },
       {
-        "label":"Discretionary tax incentives",
+        "label": "Discretionary tax incentives",
         "icon": {
           "type": "fa-icon",
-          "layers": [{
-            "fa-icon":"square",
-            "color":"rgba(143, 227, 57, 0.2)"
-          }]
+          "layers": [
+            {
+              "fa-icon": "square",
+              "color": "rgba(143, 227, 57, 0.2)"
+            }
+          ]
         }
       }
     ]
   },
-  "meta":{
-    "description":"FRESH Food Stores Zoning Boundaries release 2016.1, Bytes of the Big Apple",
-    "url":[
-      "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
-    ],
-    "updated_at":"September 2017"
-  },
-  "layers":[
+  "layers": [
     {
-      "style":{
-        "id":"fresh-line",
-        "type":"line",
-        "source":"supporting-zoning",
-        "source-layer":"fresh",
-        "paint":{
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "fresh-line",
+        "type": "line",
+        "source": "supporting-zoning",
+        "source-layer": "fresh",
+        "paint": {
+          "line-width": {
+            "stops": [
               [
                 11,
                 1
@@ -63,8 +62,8 @@
               ]
             ]
           },
-          "line-color":"rgba(48, 191, 78, 0.6)",
-          "line-dasharray":[
+          "line-color": "rgba(48, 191, 78, 0.6)",
+          "line-dasharray": [
             1,
             1
           ]
@@ -72,15 +71,15 @@
       }
     },
     {
-      "style":{
-        "id":"fresh-fill-zoning-and-tax",
-        "type":"fill",
-        "source":"supporting-zoning",
-        "source-layer":"fresh",
-        "paint":{
-          "fill-color":"rgba(48, 191, 78, 0.2)"
+      "style": {
+        "id": "fresh-fill-zoning-and-tax",
+        "type": "fill",
+        "source": "supporting-zoning",
+        "source-layer": "fresh",
+        "paint": {
+          "fill-color": "rgba(48, 191, 78, 0.2)"
         },
-        "filter":[
+        "filter": [
           "all",
           [
             "==",
@@ -88,23 +87,21 @@
             "Zoning and discretionary tax incentives"
           ]
         ],
-        "layout":{
-
-        }
+        "layout": {}
       },
-      "highlightable":true,
-      "tooltipTemplate":"FRESH - {{{name}}}"
+      "highlightable": true,
+      "tooltipTemplate": "FRESH - {{{name}}}"
     },
     {
-      "style":{
-        "id":"fresh-fill-zoning",
-        "type":"fill",
-        "source":"supporting-zoning",
-        "source-layer":"fresh",
-        "paint":{
-          "fill-color":"rgba(11, 147, 144, 0.2)"
+      "style": {
+        "id": "fresh-fill-zoning",
+        "type": "fill",
+        "source": "supporting-zoning",
+        "source-layer": "fresh",
+        "paint": {
+          "fill-color": "rgba(11, 147, 144, 0.2)"
         },
-        "filter":[
+        "filter": [
           "all",
           [
             "==",
@@ -112,23 +109,21 @@
             "Zoning incentives"
           ]
         ],
-        "layout":{
-
-        }
+        "layout": {}
       },
-      "highlightable":true,
-      "tooltipTemplate":"FRESH - {{{name}}}"
+      "highlightable": true,
+      "tooltipTemplate": "FRESH - {{{name}}}"
     },
     {
-      "style":{
-        "id":"fresh-fill-tax",
-        "type":"fill",
-        "source":"supporting-zoning",
-        "source-layer":"fresh",
-        "paint":{
-          "fill-color":"rgba(143, 227, 57, 0.2)"
+      "style": {
+        "id": "fresh-fill-tax",
+        "type": "fill",
+        "source": "supporting-zoning",
+        "source-layer": "fresh",
+        "paint": {
+          "fill-color": "rgba(143, 227, 57, 0.2)"
         },
-        "filter":[
+        "filter": [
           "all",
           [
             "==",
@@ -136,12 +131,10 @@
             "Discretionary tax incentives"
           ]
         ],
-        "layout":{
-
-        }
+        "layout": {}
       },
-      "highlightable":true,
-      "tooltipTemplate":"FRESH - {{{name}}}"
+      "highlightable": true,
+      "tooltipTemplate": "FRESH - {{{name}}}"
     }
   ]
 }

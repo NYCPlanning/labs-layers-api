@@ -1,21 +1,23 @@
 {
-  "id":"paper-streets",
+  "id": "paper-streets",
   "legend": {
-    "label":"Paper Streets",
-    "tooltip":"Streets that are officially mapped but are not built and only appear on paper maps",
+    "label": "Paper Streets",
+    "tooltip": "Streets that are officially mapped but are not built and only appear on paper maps",
     "icon": {
       "type": "line",
-      "layers": [{
-        "stroke":"rgba(80, 80, 210, 0.8)",
-        "stroke-width":3
-      }]
+      "layers": [
+        {
+          "stroke": "rgba(80, 80, 210, 0.8)",
+          "stroke-width": 3
+        }
+      ]
     }
   },
-  "layers":[
+  "layers": [
     {
-      "style":{
+      "style": {
         "id": "paper-streets-line",
-        "before":"boundary_country",
+        "before": "boundary_country",
         "type": "line",
         "source": "digital-citymap",
         "source-layer": "street-centerlines",
@@ -57,7 +59,7 @@
       }
     },
     {
-      "style":{
+      "style": {
         "id": "paper-streets-line-halo",
         "type": "line",
         "source": "digital-citymap",

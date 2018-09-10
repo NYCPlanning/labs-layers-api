@@ -1,34 +1,29 @@
 {
-  "id":"low-density-growth-mgmt-areas",
+  "id": "low-density-growth-mgmt-areas",
   "legend": {
-    "label":"Lower Density Growth Management Areas",
-    "tooltip":"Areas where special zoning controls intend to limit growth and better match available infrastructure and services in lower-density areas experiencing rapid development",
+    "label": "Lower Density Growth Management Areas",
+    "tooltip": "Areas where special zoning controls intend to limit growth and better match available infrastructure and services in lower-density areas experiencing rapid development",
     "icon": {
       "type": "rectangle",
-      "layers": [{
-        "fill":"rgba(157, 71, 178, 0.2)",
-        "stroke":"rgba(157, 71, 178, 0.6)",
-        "stroke-dasharray":"1"
-      }]
+      "layers": [
+        {
+          "fill": "rgba(157, 71, 178, 0.2)",
+          "stroke": "rgba(157, 71, 178, 0.6)",
+          "stroke-dasharray": "1"
+        }
+      ]
     }
   },
-  "meta":{
-    "description":"Lower Density Growth Management Area release 2011.1, Bytes of the Big Apple",
-    "url":[
-      "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
-    ],
-    "updated_at":"September 2017"
-  },
-  "layers":[
+  "layers": [
     {
-      "style":{
-        "id":"low-density-growth-mgmt-areas-line",
-        "type":"line",
-        "source":"supporting-zoning",
-        "source-layer":"low-density-growth-mgmt-areas",
-        "paint":{
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "low-density-growth-mgmt-areas-line",
+        "type": "line",
+        "source": "supporting-zoning",
+        "source-layer": "low-density-growth-mgmt-areas",
+        "paint": {
+          "line-width": {
+            "stops": [
               [
                 11,
                 1
@@ -39,8 +34,8 @@
               ]
             ]
           },
-          "line-color":"rgba(157, 71, 178, 0.6)",
-          "line-dasharray":[
+          "line-color": "rgba(157, 71, 178, 0.6)",
+          "line-dasharray": [
             1,
             1
           ]
@@ -48,20 +43,18 @@
       }
     },
     {
-      "style":{
-        "id":"low-density-growth-mgmt-areas-fill",
-        "type":"fill",
-        "source":"supporting-zoning",
-        "source-layer":"low-density-growth-mgmt-areas",
-        "paint":{
-          "fill-color":"rgba(157, 71, 178, 0.2)"
+      "style": {
+        "id": "low-density-growth-mgmt-areas-fill",
+        "type": "fill",
+        "source": "supporting-zoning",
+        "source-layer": "low-density-growth-mgmt-areas",
+        "paint": {
+          "fill-color": "rgba(157, 71, 178, 0.2)"
         },
-        "layout":{
-
-        }
+        "layout": {}
       },
-      "highlightable":true,
-      "tooltipTemplate":"Lower Density Growth Management Area"
+      "highlightable": true,
+      "tooltipTemplate": "Lower Density Growth Management Area"
     }
   ]
 }

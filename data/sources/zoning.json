@@ -1,1 +1,25 @@
-{"id":"zoning","type":"cartovector","source-layers":[{"id":"zoning-districts","sql":"SELECT *, CASE WHEN SUBSTRING(zonedist, 3, 1) = '-' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[A-Z]' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[0-9]' THEN LEFT(zonedist, 3) ELSE zonedist END as primaryzone FROM zoning_districts_v201803"},{"id":"special-purpose-districts","sql":"SELECT the_geom_webmercator, cartodb_id, sdlbl, sdname FROM special_purpose_districts_v201803"},{"id":"commercial-overlays","sql":"SELECT * FROM commercial_overlays_v201803"}]}
+{
+  "id": "zoning",
+  "type": "cartovector",
+  "source-layers": [
+    {
+      "id": "zoning-districts",
+      "sql": "SELECT *, CASE WHEN SUBSTRING(zonedist, 3, 1) = '-' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[A-Z]' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[0-9]' THEN LEFT(zonedist, 3) ELSE zonedist END as primaryzone FROM zoning_districts_v201803"
+    },
+    {
+      "id": "special-purpose-districts",
+      "sql": "SELECT the_geom_webmercator, cartodb_id, sdlbl, sdname FROM special_purpose_districts_v201803"
+    },
+    {
+      "id": "commercial-overlays",
+      "sql": "SELECT * FROM commercial_overlays_v201803"
+    }
+  ],
+  "meta": {
+    "description": "NYC GIS Zoning Features February 2018, Bytes of the Big Apple",
+    "url": [
+      "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
+    ],
+    "updated_at": "5 March 2018"
+  }
+}

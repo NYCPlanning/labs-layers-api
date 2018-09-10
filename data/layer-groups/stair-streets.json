@@ -1,20 +1,22 @@
 {
-  "id":"stair-streets",
+  "id": "stair-streets",
   "legend": {
     "label": "Stair Streets",
     "tooltip": "Street segments with steps or stairs to accommodate foot traffic",
     "icon": {
       "type": "fa-icon",
-      "layers": [{
-        "fa-icon":"align-justify",
-        "color":"rgba(40, 110, 90, 0.8)",
-        "transform": "rotate-45"
-      }]
+      "layers": [
+        {
+          "fa-icon": "align-justify",
+          "color": "rgba(40, 110, 90, 0.8)",
+          "transform": "rotate-45"
+        }
+      ]
     }
   },
-  "layers":[
+  "layers": [
     {
-      "style":{
+      "style": {
         "id": "stair-streets-line",
         "type": "line",
         "source": "digital-citymap",
@@ -74,7 +76,7 @@
       }
     },
     {
-      "style":{
+      "style": {
         "id": "stair-streets-line-halo",
         "type": "line",
         "source": "digital-citymap",

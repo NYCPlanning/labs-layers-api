@@ -1,8 +1,15 @@
 {
-      "type":"vector",
-      "id":"supporting-zoning",
-      "tiles":[
-         "https://cartocdn-gusc-d.global.ssl.fastly.net/planninglabs/api/v1/map/166f4d41feddd399bdacaa46f9dc66e1:1531772777417/{z}/{x}/{y}.mvt"
-      ],
-      "minzoom":0
-   }
+  "type": "vector",
+  "id": "supporting-zoning",
+  "tiles": [
+    "https://cartocdn-gusc-d.global.ssl.fastly.net/planninglabs/api/v1/map/166f4d41feddd399bdacaa46f9dc66e1:1531772777417/{z}/{x}/{y}.mvt"
+  ],
+  "minzoom": 0,
+  "meta": {
+    "description": "NYC GIS Zoning Features March 2018, Bytes of the Big Apple",
+    "url": [
+      "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
+    ],
+    "updated_at": "April 5th, 2018"
+  }
+}

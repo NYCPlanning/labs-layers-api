@@ -1,66 +1,61 @@
 {
-      "id":"zoning-map-amendments-pending",
-      "legend": {
-        "label":"Pending Zoning Map Amendments",
-        "tooltip":"Changes to the Zoning Map that are currently undergoing public review",
-        "icon": {
-          "type": "rectangle",
-          "layers": [{
-            "fill":"rgba(176, 31, 31, 0.6)",
-            "stroke":"rgba(176, 31, 31, 0.6)",
-            "stroke-dasharray":"1"
-          }]
+  "id": "zoning-map-amendments-pending",
+  "legend": {
+    "label": "Pending Zoning Map Amendments",
+    "tooltip": "Changes to the Zoning Map that are currently undergoing public review",
+    "icon": {
+      "type": "rectangle",
+      "layers": [
+        {
+          "fill": "rgba(176, 31, 31, 0.6)",
+          "stroke": "rgba(176, 31, 31, 0.6)",
+          "stroke-dasharray": "1"
+        }
+      ]
+    }
+  },
+  "visible": false,
+  "layers": [
+    {
+      "style": {
+        "id": "zmacert-line",
+        "type": "line",
+        "source": "supporting-zoning",
+        "source-layer": "zoning-map-amendments-pending",
+        "paint": {
+          "line-width": {
+            "stops": [
+              [
+                11,
+                1
+              ],
+              [
+                12,
+                3
+              ]
+            ]
+          },
+          "line-color": "rgba(176, 31, 31, 0.6)",
+          "line-dasharray": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "zmacert-fill",
+        "type": "fill",
+        "source": "supporting-zoning",
+        "source-layer": "zoning-map-amendments-pending",
+        "paint": {
+          "fill-color": "rgba(176, 31, 31, 0.6)"
         }
       },
-      "visible":false,
-      "meta":{
-         "description":"NYC GIS Zoning Features March 2018, Bytes of the Big Apple",
-         "url":[
-            "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
-         ],
-         "updated_at":"April 5th, 2018"
-      },
-      "layers":[
-         {
-            "style":{
-               "id":"zmacert-line",
-               "type":"line",
-               "source":"supporting-zoning",
-               "source-layer":"zoning-map-amendments-pending",
-               "paint":{
-                  "line-width":{
-                     "stops":[
-                        [
-                           11,
-                           1
-                        ],
-                        [
-                           12,
-                           3
-                        ]
-                     ]
-                  },
-                  "line-color":"rgba(176, 31, 31, 0.6)",
-                  "line-dasharray":[
-                     1,
-                     1
-                  ]
-               }
-            }
-         },
-         {
-            "style":{
-               "id":"zmacert-fill",
-               "type":"fill",
-               "source":"supporting-zoning",
-               "source-layer":"zoning-map-amendments-pending",
-               "paint":{
-                  "fill-color":"rgba(176, 31, 31, 0.6)"
-               }
-            },
-            "highlightable":true,
-            "clickable":true,
-            "tooltipTemplate":"{{{project_na}}}"
-         }
-      ]
-   }
+      "highlightable": true,
+      "clickable": true,
+      "tooltipTemplate": "{{{project_na}}}"
+    }
+  ]
+}

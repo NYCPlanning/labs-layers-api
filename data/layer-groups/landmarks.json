@@ -1,77 +1,72 @@
 {
-  "id":"landmarks",
+  "id": "landmarks",
   "legend": {
-    "label":"Landmarks",
-    "tooltip":"Sites designated by the NYC Landmarks Preservation Commission that possess historical significance and to which special zoning regulations apply",
+    "label": "Landmarks",
+    "tooltip": "Sites designated by the NYC Landmarks Preservation Commission that possess historical significance and to which special zoning regulations apply",
     "items": [
       {
-        "label":"Individual Landmarks",
+        "label": "Individual Landmarks",
         "icon": {
           "type": "fa-icon",
           "layers": [
             {
               "fa-icon": "circle",
-              "color":"rgba(147, 245, 201, 1)",
-              "transform":"shrink-4"
+              "color": "rgba(147, 245, 201, 1)",
+              "transform": "shrink-4"
             },
             {
               "fa-icon": "circle",
-              "prefix":"far",
-              "color":"#012700",
-              "transform":"shrink-4"
+              "prefix": "far",
+              "color": "#012700",
+              "transform": "shrink-4"
             }
           ]
         }
       },
       {
-        "label":"Interior Landmarks",
+        "label": "Interior Landmarks",
         "icon": {
           "type": "fa-icon",
           "layers": [
             {
               "fa-icon": "circle",
-              "color":"rgba(152, 152, 247, 1)",
-              "transform":"shrink-4"
+              "color": "rgba(152, 152, 247, 1)",
+              "transform": "shrink-4"
             },
             {
               "fa-icon": "circle",
-              "prefix":"far",
-              "color":"#012700",
-              "transform":"shrink-4"
+              "prefix": "far",
+              "color": "#012700",
+              "transform": "shrink-4"
             }
           ]
         }
       },
       {
-        "label":"Scenic Landmarks",
+        "label": "Scenic Landmarks",
         "icon": {
           "type": "rectangle",
-          "layers": [{
-            "fill":"rgba(153, 18, 237, 0.2)",
-            "stroke":"rgba(153, 18, 237, 0.6)",
-            "stroke-dasharray":"1"
-          }]
+          "layers": [
+            {
+              "fill": "rgba(153, 18, 237, 0.2)",
+              "stroke": "rgba(153, 18, 237, 0.6)",
+              "stroke-dasharray": "1"
+            }
+          ]
         }
       }
     ]
   },
-  "meta":{
-    "description":"Individual Landmarks Shapefile, NYC Open Data Portal",
-    "url":[
-      "https://data.cityofnewyork.us/Housing-Development/Individual-Landmarks/ch5p-r223/data"
-    ],
-    "updated_at":"17 May 2018"
-  },
-  "layers":[
+  "layers": [
     {
-      "style":{
-        "id":"landmarks_v0-circle-outline",
-        "type":"circle",
-        "source":"landmark-historic",
-        "source-layer":"landmarks",
-        "paint":{
-          "circle-radius":{
-            "stops":[
+      "style": {
+        "id": "landmarks_v0-circle-outline",
+        "type": "circle",
+        "source": "landmark-historic",
+        "source-layer": "landmarks",
+        "paint": {
+          "circle-radius": {
+            "stops": [
               [
                 10,
                 3
@@ -82,20 +77,20 @@
               ]
             ]
           },
-          "circle-color":"#012700",
-          "circle-opacity":0.7
+          "circle-color": "#012700",
+          "circle-opacity": 0.7
         }
       }
     },
     {
-      "style":{
-        "id":"landmarks_v0-circle",
-        "type":"circle",
-        "source":"landmark-historic",
-        "source-layer":"landmarks",
-        "paint":{
-          "circle-radius":{
-            "stops":[
+      "style": {
+        "id": "landmarks_v0-circle",
+        "type": "circle",
+        "source": "landmark-historic",
+        "source-layer": "landmarks",
+        "paint": {
+          "circle-radius": {
+            "stops": [
               [
                 10,
                 1
@@ -106,10 +101,10 @@
               ]
             ]
           },
-          "circle-color":{
-            "property":"lm_type",
-            "type":"categorical",
-            "stops":[
+          "circle-color": {
+            "property": "lm_type",
+            "type": "categorical",
+            "stops": [
               [
                 "Individual Landmark",
                 "rgba(147, 245, 201, 1)"
@@ -120,21 +115,21 @@
               ]
             ]
           },
-          "circle-opacity":0.7
+          "circle-opacity": 0.7
         }
       },
-      "highlightable":true,
-      "tooltipTemplate":"{{{lm_name}}}"
+      "highlightable": true,
+      "tooltipTemplate": "{{{lm_name}}}"
     },
     {
-      "style":{
-        "id":"scenic-landmarks-line",
-        "type":"line",
-        "source":"landmark-historic",
-        "source-layer":"scenic-landmarks",
-        "paint":{
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "scenic-landmarks-line",
+        "type": "line",
+        "source": "landmark-historic",
+        "source-layer": "scenic-landmarks",
+        "paint": {
+          "line-width": {
+            "stops": [
               [
                 11,
                 1
@@ -145,8 +140,8 @@
               ]
             ]
           },
-          "line-color":"rgba(153, 18, 237, 0.6)",
-          "line-dasharray":[
+          "line-color": "rgba(153, 18, 237, 0.6)",
+          "line-dasharray": [
             1,
             1
           ]
@@ -154,20 +149,18 @@
       }
     },
     {
-      "style":{
-        "id":"scenic-landmarks-fill",
-        "type":"fill",
-        "source":"landmark-historic",
-        "source-layer":"scenic-landmarks",
-        "paint":{
-          "fill-color":"rgba(153, 18, 237, 0.2)"
+      "style": {
+        "id": "scenic-landmarks-fill",
+        "type": "fill",
+        "source": "landmark-historic",
+        "source-layer": "scenic-landmarks",
+        "paint": {
+          "fill-color": "rgba(153, 18, 237, 0.2)"
         },
-        "layout":{
-
-        }
+        "layout": {}
       },
-      "highlightable":true,
-      "tooltipTemplate":"{{{scen_lm_na}}}"
+      "highlightable": true,
+      "tooltipTemplate": "{{{scen_lm_na}}}"
     }
   ]
 }

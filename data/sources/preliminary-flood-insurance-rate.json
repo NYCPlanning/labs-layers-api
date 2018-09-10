@@ -1,8 +1,15 @@
 {
-      "type":"vector",
-      "id":"preliminary-flood-insurance-rate",
-      "tiles":[
-         "https://cartocdn-gusc-d.global.ssl.fastly.net/planninglabs/api/v1/map/5d72f18dd7cff53aa4bfd1289ef12603:1525336736357/{z}/{x}/{y}.mvt"
-      ],
-      "minzoom":0
-   }
+  "type": "vector",
+  "id": "preliminary-flood-insurance-rate",
+  "tiles": [
+    "https://cartocdn-gusc-d.global.ssl.fastly.net/planninglabs/api/v1/map/5d72f18dd7cff53aa4bfd1289ef12603:1525336736357/{z}/{x}/{y}.mvt"
+  ],
+  "minzoom": 0,
+  "meta": {
+    "description": "Flood Insurance Rate Data provided by FEMA",
+    "url": [
+      "http://www.region2coastal.com/view-flood-maps-data/view-preliminary-flood-map-data/"
+    ],
+    "updated_at": "September 2017"
+  }
+}
