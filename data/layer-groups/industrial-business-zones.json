@@ -1,34 +1,29 @@
 {
-  "id":"industrial-business-zones",
+  "id": "industrial-business-zones",
   "legend": {
-    "label":"Industrial Business Zones",
-    "tooltip":"Industrial Business Zones (IBZs) are areas where expanded business services are available for industrial and manufacturing businesses. This designation fosters high-performing business districts by creating competitive advantages over locating in areas outside of New York City.",
+    "label": "Industrial Business Zones",
+    "tooltip": "Industrial Business Zones (IBZs) are areas where expanded business services are available for industrial and manufacturing businesses. This designation fosters high-performing business districts by creating competitive advantages over locating in areas outside of New York City.",
     "icon": {
       "type": "rectangle",
-      "layers": [{
-        "fill":"rgba(43, 10, 118, 0.2)",
-        "stroke":"rgba(43, 10, 118, 0.6)",
-        "stroke-dasharray":"1"
-      }]
+      "layers": [
+        {
+          "fill": "rgba(43, 10, 118, 0.2)",
+          "stroke": "rgba(43, 10, 118, 0.6)",
+          "stroke-dasharray": "1"
+        }
+      ]
     }
   },
-  "meta":{
-    "description":"Business Improvement Districts Shapefile on nycedc.com",
-    "url":[
-      "https://www.nycedc.com/industry/industrial/nyc-industrial-business-zones"
-    ],
-    "updated_at":"2 May 2018"
-  },
-  "layers":[
+  "layers": [
     {
-      "style":{
-        "id":"industrial-business-zones-line",
-        "type":"line",
-        "source":"supporting-zoning",
-        "source-layer":"industrial-business-zones",
-        "paint":{
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "industrial-business-zones-line",
+        "type": "line",
+        "source": "supporting-zoning",
+        "source-layer": "industrial-business-zones",
+        "paint": {
+          "line-width": {
+            "stops": [
               [
                 11,
                 1
@@ -39,8 +34,8 @@
               ]
             ]
           },
-          "line-color":"rgba(43, 10, 118, 0.6)",
-          "line-dasharray":[
+          "line-color": "rgba(43, 10, 118, 0.6)",
+          "line-dasharray": [
             1,
             1
           ]
@@ -48,20 +43,18 @@
       }
     },
     {
-      "style":{
-        "id":"industrial-business-zones-fill",
-        "type":"fill",
-        "source":"supporting-zoning",
-        "source-layer":"industrial-business-zones",
-        "paint":{
-          "fill-color":"rgba(43, 10, 118, 0.2)"
+      "style": {
+        "id": "industrial-business-zones-fill",
+        "type": "fill",
+        "source": "supporting-zoning",
+        "source-layer": "industrial-business-zones",
+        "paint": {
+          "fill-color": "rgba(43, 10, 118, 0.2)"
         },
-        "layout":{
-
-        }
+        "layout": {}
       },
-      "highlightable":true,
-      "tooltipTemplate":"{{{name}}} IBZ"
+      "highlightable": true,
+      "tooltipTemplate": "{{{name}}} IBZ"
     }
   ]
 }

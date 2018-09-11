@@ -1,69 +1,69 @@
 {
-  "id":"name-changes",
+  "id": "name-changes",
   "legend": {
-    "label":"Local Law Names",
-    "tooltip":"Local Law name changes to thoroughfares and public places from 2002 to present",
+    "label": "Local Law Names",
+    "tooltip": "Local Law name changes to thoroughfares and public places from 2002 to present",
     "items": [
       {
-        "label":"Intersections & Corners",
+        "label": "Intersections & Corners",
         "icon": {
           "type": "fa-icon",
           "layers": [
             {
               "fa-icon": "circle",
               "color": "rgba(228, 72, 192, 1)",
-              "transform":"shrink-4"
+              "transform": "shrink-4"
             },
             {
               "fa-icon": "circle",
               "prefix": "far",
               "color": "rgba(49, 49, 49, 1)",
-              "transform":"shrink-4"
+              "transform": "shrink-4"
             }
           ]
         }
       },
       {
-        "label":"Streets",
+        "label": "Streets",
         "icon": {
           "type": "line",
-          "layers": [{
-            "stroke":"rgba(228, 72, 192, 0.5)",
-            "stroke-width":3
-          }]
+          "layers": [
+            {
+              "stroke": "rgba(228, 72, 192, 0.5)",
+              "stroke-width": 3
+            }
+          ]
         }
       },
       {
-        "label":"Parks, Plazas, & Public Space",
+        "label": "Parks, Plazas, & Public Space",
         "icon": {
           "type": "rectangle",
-          "layers": [{
-            "fill":"rgba(228, 72, 192, 0.4)",
-            "stroke-width":0
-          }]
+          "layers": [
+            {
+              "fill": "rgba(228, 72, 192, 0.4)",
+              "stroke-width": 0
+            }
+          ]
         }
       }
     ]
   },
-  "meta":{
-    "description":"NYC Department of City Planning Technical Review Division",
-    "updated_at":"6 April 2018"
-  },
-  "layers":[
+  "layers": [
     {
-      "style":{
-        "id":"citymap-name-changes-circle",
-        "type":"circle",
-        "source":"digital-citymap",
-        "source-layer":"name-changes-points",
-        "layout":{
-          "visibility":"visible"
+      "style": {
+        "id": "citymap-name-changes-circle",
+        "type": "circle",
+        "source": "digital-citymap",
+        "source-layer": "name-changes-points",
+        "layout": {
+          "visibility": "visible"
         },
-        "paint":{
-          "circle-stroke-color":"rgba(49, 49, 49, 1)",
-          "circle-color":"rgba(228, 72, 192, 1)",
-          "circle-stroke-width":{
-            "stops":[
+        "paint": {
+          "circle-stroke-color": "rgba(49, 49, 49, 1)",
+          "circle-color": "rgba(228, 72, 192, 1)",
+          "circle-stroke-width": {
+            "stops": [
               [
                 10,
                 0.5
@@ -74,8 +74,8 @@
               ]
             ]
           },
-          "circle-radius":{
-            "stops":[
+          "circle-radius": {
+            "stops": [
               [
                 10,
                 1
@@ -90,15 +90,15 @@
       }
     },
     {
-      "style":{
-        "id":"citymap-name-changes-line",
-        "type":"line",
-        "source":"digital-citymap",
-        "source-layer":"name-changes-lines",
-        "paint":{
-          "line-color":"rgba(228, 72, 192, 0.5)",
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "citymap-name-changes-line",
+        "type": "line",
+        "source": "digital-citymap",
+        "source-layer": "name-changes-lines",
+        "paint": {
+          "line-color": "rgba(228, 72, 192, 0.5)",
+          "line-width": {
+            "stops": [
               [
                 10,
                 1
@@ -113,42 +113,42 @@
       }
     },
     {
-      "style":{
-        "id":"citymap-name-changes-fill",
-        "type":"fill",
-        "source":"digital-citymap",
-        "source-layer":"name-changes-areas",
-        "paint":{
-          "fill-color":"rgba(228, 72, 192, 0.4)"
+      "style": {
+        "id": "citymap-name-changes-fill",
+        "type": "fill",
+        "source": "digital-citymap",
+        "source-layer": "name-changes-areas",
+        "paint": {
+          "fill-color": "rgba(228, 72, 192, 0.4)"
         }
       }
     },
     {
-      "style":{
-        "id":"citymap-name-changes-circle-label",
-        "type":"symbol",
-        "source":"digital-citymap",
-        "source-layer":"name-changes-points",
-        "filter":[
+      "style": {
+        "id": "citymap-name-changes-circle-label",
+        "type": "symbol",
+        "source": "digital-citymap",
+        "source-layer": "name-changes-points",
+        "filter": [
           "all"
         ],
-        "layout":{
-          "text-field":"{honoraryna}",
-          "text-font":[
+        "layout": {
+          "text-field": "{honoraryna}",
+          "text-font": [
             "Open Sans Regular",
             "Arial Unicode MS Regular"
           ],
-          "text-size":11,
-          "text-justify":"left",
-          "text-anchor":"left",
-          "text-offset":[
+          "text-size": 11,
+          "text-justify": "left",
+          "text-anchor": "left",
+          "text-offset": [
             1.5,
             0
           ]
         },
-        "paint":{
-          "text-opacity":{
-            "stops":[
+        "paint": {
+          "text-opacity": {
+            "stops": [
               [
                 14.5,
                 0
@@ -159,8 +159,8 @@
               ]
             ]
           },
-          "text-color":"rgba(0, 0, 0, 1)",
-          "text-halo-color":"rgba(152, 152, 152, 0)"
+          "text-color": "rgba(0, 0, 0, 1)",
+          "text-halo-color": "rgba(152, 152, 152, 0)"
         }
       }
     },

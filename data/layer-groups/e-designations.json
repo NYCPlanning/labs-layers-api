@@ -1,41 +1,34 @@
 {
-  "id":"e-designations",
+  "id": "e-designations",
   "legend": {
-    "label":"Environmental Designations",
-    "tooltip":"An E-Designation is a NYC zoning map designation that indicates the presence of an environmental requirement pertaining to potential Hazardous Materials Contamination, Window/Wall Noise Attenuation, or Air Quality impacts on a particular tax lot.",
+    "label": "Environmental Designations",
+    "tooltip": "An E-Designation is a NYC zoning map designation that indicates the presence of an environmental requirement pertaining to potential Hazardous Materials Contamination, Window/Wall Noise Attenuation, or Air Quality impacts on a particular tax lot.",
     "icon": {
-      "type":"fa-icon",
+      "type": "fa-icon",
       "layers": [
         {
           "fa-icon": "circle",
-          "color":"rgba(255, 255, 255, 0.65)"
+          "color": "rgba(255, 255, 255, 0.65)"
         },
         {
           "fa-icon": "circle",
-          "prefix":"far",
-          "color":"rgba(52, 33, 220, 1)"
+          "prefix": "far",
+          "color": "rgba(52, 33, 220, 1)"
         }
       ]
     }
   },
-  "meta":{
-    "description":"(E) Designations release June 2018, Bytes of the Big Apple",
-    "url":[
-      "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-edesignations.page"
-    ],
-    "updated_at":"July 18th, 2018"
-  },
-  "layers":[
+  "layers": [
     {
-      "style":{
-        "id":"e-designations-circle",
-        "type":"circle",
-        "source":"supporting-zoning",
-        "source-layer":"e-designations",
-        "minzoom":15,
-        "paint":{
-          "circle-radius":{
-            "stops":[
+      "style": {
+        "id": "e-designations-circle",
+        "type": "circle",
+        "source": "supporting-zoning",
+        "source-layer": "e-designations",
+        "minzoom": 15,
+        "paint": {
+          "circle-radius": {
+            "stops": [
               [
                 16,
                 2
@@ -46,9 +39,9 @@
               ]
             ]
           },
-          "circle-color":"rgba(255, 255, 255, 0.65)",
-          "circle-stroke-opacity":{
-            "stops":[
+          "circle-color": "rgba(255, 255, 255, 0.65)",
+          "circle-stroke-opacity": {
+            "stops": [
               [
                 15,
                 0
@@ -59,32 +52,32 @@
               ]
             ]
           },
-          "circle-stroke-color":"rgba(52, 33, 220, 1)",
-          "circle-pitch-scale":"map",
-          "circle-stroke-width":1.5,
-          "circle-opacity":1
+          "circle-stroke-color": "rgba(52, 33, 220, 1)",
+          "circle-pitch-scale": "map",
+          "circle-stroke-width": 1.5,
+          "circle-opacity": 1
         }
       },
-      "highlightable":true,
-      "clickable":true,
-      "tooltipTemplate":"E-designation<br/>E-Number: {{{enumber}}}<br/>CEQR: {{{ceqr_num}}}<br/>ULURP: {{{ulurp_num}}}"
+      "highlightable": true,
+      "clickable": true,
+      "tooltipTemplate": "E-designation<br/>E-Number: {{{enumber}}}<br/>CEQR: {{{ceqr_num}}}<br/>ULURP: {{{ulurp_num}}}"
     },
     {
-      "style":{
-        "id":"e-designations-label",
-        "type":"symbol",
-        "source":"supporting-zoning",
-        "source-layer":"e-designations",
-        "minzoom":16,
-        "layout":{
-          "text-field":"E",
-          "text-size":8,
-          "text-allow-overlap":true,
-          "visibility":"visible"
+      "style": {
+        "id": "e-designations-label",
+        "type": "symbol",
+        "source": "supporting-zoning",
+        "source-layer": "e-designations",
+        "minzoom": 16,
+        "layout": {
+          "text-field": "E",
+          "text-size": 8,
+          "text-allow-overlap": true,
+          "visibility": "visible"
         },
-        "paint":{
-          "text-opacity":{
-            "stops":[
+        "paint": {
+          "text-opacity": {
+            "stops": [
               [
                 16,
                 0

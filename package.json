@@ -37,7 +37,8 @@
     "devstart": "nodemon app.js",
     "test": "PORT=3001 NODE_ENV=test node ./node_modules/mocha/bin/mocha ./test/**/*.js --exit",
     "watch-tests": "nodemon --exec 'npm run test || true'",
-    "create-sprite-svgs": "node ./assets/sprite/create-sprite-svgs.js"
+    "create-sprite-svgs": "node ./assets/sprite/create-sprite-svgs.js",
+    "migrate-meta": "node ./tasks/migrate-meta-from-layer-group-to-source.js"
   },
   "engines": {
     "node": "8.11.3"

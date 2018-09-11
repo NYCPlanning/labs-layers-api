@@ -1,55 +1,54 @@
 {
-  "id":"sidewalk-cafes",
+  "id": "sidewalk-cafes",
   "legend": {
-    "label":"Sidewalk Cafes",
-    "tooltip":"Areas where different types of sidewalk cafes are permitted on public sidewalks",
+    "label": "Sidewalk Cafes",
+    "tooltip": "Areas where different types of sidewalk cafes are permitted on public sidewalks",
     "items": [
       {
-        "label":"All Cafes Permitted",
+        "label": "All Cafes Permitted",
         "icon": {
           "type": "line",
-          "layers": [{
-            "stroke":"#28AD15"
-          }]
+          "layers": [
+            {
+              "stroke": "#28AD15"
+            }
+          ]
         }
       },
       {
-        "label":"Small Cafes Permitted",
+        "label": "Small Cafes Permitted",
         "icon": {
           "type": "line",
-          "layers": [{
-            "stroke":"#CC3DCA"
-          }]
+          "layers": [
+            {
+              "stroke": "#CC3DCA"
+            }
+          ]
         }
       },
       {
-        "label":"Unenclosed and Small Cafes Permitted",
+        "label": "Unenclosed and Small Cafes Permitted",
         "icon": {
           "type": "line",
-          "layers": [{
-            "stroke":"#216BC6"
-          }]
+          "layers": [
+            {
+              "stroke": "#216BC6"
+            }
+          ]
         }
       }
     ]
   },
-  "meta":{
-    "description":"Sidewalk Cafes release June 2018, Bytes of the Big Apple",
-    "url":[
-      "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
-    ],
-    "updated_at":"July 18th, 2018"
-  },
-  "layers":[
+  "layers": [
     {
-      "style":{
-        "id":"sidewalkcafes-line-all",
-        "type":"line",
-        "source":"supporting-zoning",
-        "source-layer":"sidewalk-cafes",
-        "paint":{
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "sidewalkcafes-line-all",
+        "type": "line",
+        "source": "supporting-zoning",
+        "source-layer": "sidewalk-cafes",
+        "paint": {
+          "line-width": {
+            "stops": [
               [
                 11,
                 0.5
@@ -64,9 +63,9 @@
               ]
             ]
           },
-          "line-color":"#28AD15"
+          "line-color": "#28AD15"
         },
-        "filter":[
+        "filter": [
           "all",
           [
             "==",
@@ -77,14 +76,14 @@
       }
     },
     {
-      "style":{
-        "id":"sidewalkcafes-line-small",
-        "type":"line",
-        "source":"supporting-zoning",
-        "source-layer":"sidewalk-cafes",
-        "paint":{
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "sidewalkcafes-line-small",
+        "type": "line",
+        "source": "supporting-zoning",
+        "source-layer": "sidewalk-cafes",
+        "paint": {
+          "line-width": {
+            "stops": [
               [
                 11,
                 0.5
@@ -99,9 +98,9 @@
               ]
             ]
           },
-          "line-color":"#CC3DCA"
+          "line-color": "#CC3DCA"
         },
-        "filter":[
+        "filter": [
           "all",
           [
             "==",
@@ -109,20 +108,20 @@
             "Small Only"
           ]
         ],
-        "layout":{
-          "visibility":"visible"
+        "layout": {
+          "visibility": "visible"
         }
       }
     },
     {
-      "style":{
-        "id":"sidewalkcafes-line-unenclosed",
-        "type":"line",
-        "source":"supporting-zoning",
-        "source-layer":"sidewalk-cafes",
-        "paint":{
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "sidewalkcafes-line-unenclosed",
+        "type": "line",
+        "source": "supporting-zoning",
+        "source-layer": "sidewalk-cafes",
+        "paint": {
+          "line-width": {
+            "stops": [
               [
                 11,
                 0.5
@@ -137,9 +136,9 @@
               ]
             ]
           },
-          "line-color":"#216BC6"
+          "line-color": "#216BC6"
         },
-        "filter":[
+        "filter": [
           "all",
           [
             "==",
@@ -147,8 +146,8 @@
             "Unenclosed Only"
           ]
         ],
-        "layout":{
-          "visibility":"visible"
+        "layout": {
+          "visibility": "visible"
         }
       }
     }

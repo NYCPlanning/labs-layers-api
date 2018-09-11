@@ -1,23 +1,18 @@
 {
   "id": "commercial-overlays",
   "legend": {
-    "label":"Commercial Overlays",
-    "tooltip":"A commercial overlay is a C1 or C2 district mapped within residential districts to serve local retail needs.",
+    "label": "Commercial Overlays",
+    "tooltip": "A commercial overlay is a C1 or C2 district mapped within residential districts to serve local retail needs.",
     "icon": {
-      "type":"fa-icon",
-      "layers": [{
-        "fa-icon":"square",
-        "prefix":"far",
-        "color":"rgba(220,10,10,0.75)"
-      }]
+      "type": "fa-icon",
+      "layers": [
+        {
+          "fa-icon": "square",
+          "prefix": "far",
+          "color": "rgba(220,10,10,0.75)"
+        }
+      ]
     }
-  },
-  "meta": {
-    "description": "NYC GIS Zoning Features February 2018, Bytes of the Big Apple",
-    "url": [
-      "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
-    ],
-    "updated_at": "5 March 2018"
   },
   "layers": [
     {

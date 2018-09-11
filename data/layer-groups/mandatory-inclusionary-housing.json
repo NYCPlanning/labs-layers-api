@@ -1,34 +1,29 @@
 {
-  "id":"mandatory-inclusionary-housing",
+  "id": "mandatory-inclusionary-housing",
   "legend": {
-    "label":"Mandatory Inclusionary Housing Areas",
-    "tooltip":"Areas where developments, enlargements and conversions over a certain size are required to set aside a percentage of floor area for permanently affordable housing",
+    "label": "Mandatory Inclusionary Housing Areas",
+    "tooltip": "Areas where developments, enlargements and conversions over a certain size are required to set aside a percentage of floor area for permanently affordable housing",
     "icon": {
       "type": "rectangle",
-      "layers": [{
-        "fill":"rgba(204, 61, 93, 0.2)",
-        "stroke":"rgba(204, 61, 93, 0.6)",
-        "stroke-dasharray":"1"
-      }]
+      "layers": [
+        {
+          "fill": "rgba(204, 61, 93, 0.2)",
+          "stroke": "rgba(204, 61, 93, 0.6)",
+          "stroke-dasharray": "1"
+        }
+      ]
     }
   },
-  "meta":{
-    "description":"Mandatory Inclusionary Housing (MIH) release June 2018, Bytes of the Big Apple",
-    "url":[
-      "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
-    ],
-    "updated_at":"July 18th, 2018"
-  },
-  "layers":[
+  "layers": [
     {
-      "style":{
-        "id":"mandatory-inclusionary-housing-line",
-        "type":"line",
-        "source":"supporting-zoning",
-        "source-layer":"mandatory-inclusionary-housing",
-        "paint":{
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "mandatory-inclusionary-housing-line",
+        "type": "line",
+        "source": "supporting-zoning",
+        "source-layer": "mandatory-inclusionary-housing",
+        "paint": {
+          "line-width": {
+            "stops": [
               [
                 11,
                 1
@@ -39,8 +34,8 @@
               ]
             ]
           },
-          "line-color":"rgba(204, 61, 93, 0.6)",
-          "line-dasharray":[
+          "line-color": "rgba(204, 61, 93, 0.6)",
+          "line-dasharray": [
             1,
             1
           ]
@@ -48,20 +43,18 @@
       }
     },
     {
-      "style":{
-        "id":"mandatory-inclusionary-housing-fill",
-        "type":"fill",
-        "source":"supporting-zoning",
-        "source-layer":"mandatory-inclusionary-housing",
-        "paint":{
-          "fill-color":"rgba(204, 61, 93, 0.2)"
+      "style": {
+        "id": "mandatory-inclusionary-housing-fill",
+        "type": "fill",
+        "source": "supporting-zoning",
+        "source-layer": "mandatory-inclusionary-housing",
+        "paint": {
+          "fill-color": "rgba(204, 61, 93, 0.2)"
         },
-        "layout":{
-
-        }
+        "layout": {}
       },
-      "highlightable":true,
-      "tooltipTemplate":"{{{projectnam}}} - {{{mih_option}}}"
+      "highlightable": true,
+      "tooltipTemplate": "{{{projectnam}}} - {{{mih_option}}}"
     }
   ]
 }

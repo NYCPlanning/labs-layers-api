@@ -26,8 +26,10 @@ router.get('/', async (ctx) => {
     data = await findAll('layer-groups');
   }
 
+  const sources = await findAll('sources');
+
   ctx.body = {
-    ...layerGroupSerializer(data),
+    ...layerGroupSerializer(data, sources),
     meta: {
       mapboxStyle: await buildMapboxStyle(data),
     },
@@ -51,8 +53,10 @@ router.post('/', async (ctx) => {
     data = merge(originalObjects, query);
   }
 
+  const sources = await findAll('sources');
+
   ctx.body = {
-    ...layerGroupSerializer(data),
+    ...layerGroupSerializer(data, sources),
     meta: {
       mapboxStyle: await buildMapboxStyle(data),
     },

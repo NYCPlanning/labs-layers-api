@@ -1,42 +1,35 @@
 {
-  "id":"ny-senate-districts",
+  "id": "ny-senate-districts",
   "legend": {
-    "label":"NY State Senate Districts",
+    "label": "NY State Senate Districts",
     "icon": {
-      "type":"line",
+      "type": "line",
       "layers": [
         {
-          "stroke":"#E4F576",
-          "stroke-width":4,
-          "stroke-opacity":0.5
+          "stroke": "#E4F576",
+          "stroke-width": 4,
+          "stroke-opacity": 0.5
         },
         {
-          "stroke":"#444",
-          "stroke-width":1.5,
-          "stroke-opacity":0.5
+          "stroke": "#444",
+          "stroke-width": 1.5,
+          "stroke-opacity": 0.5
         }
       ]
     }
   },
-  "meta":{
-    "description":"Administrative and Political Districts v17D, Bytes of the Big Apple",
-    "url":[
-      "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
-    ],
-    "updated_at":"21 November 2017"
-  },
-  "layers":[
+  "layers": [
     {
-      "style":{
-        "id":"nysenatedistricts-line-glow",
-        "type":"line",
-        "source":"admin-boundaries",
-        "source-layer":"ny-senate-districts",
-        "paint":{
-          "line-color":"#E4F576",
-          "line-opacity":1,
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "nysenatedistricts-line-glow",
+        "type": "line",
+        "source": "admin-boundaries",
+        "source-layer": "ny-senate-districts",
+        "paint": {
+          "line-color": "#E4F576",
+          "line-opacity": 1,
+          "line-width": {
+            "stops": [
               [
                 11,
                 3
@@ -51,16 +44,16 @@
       }
     },
     {
-      "style":{
-        "id":"nysenatedistricts-line",
-        "type":"line",
-        "source":"admin-boundaries",
-        "source-layer":"ny-senate-districts",
-        "paint":{
-          "line-color":"#444",
-          "line-opacity":0.3,
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "nysenatedistricts-line",
+        "type": "line",
+        "source": "admin-boundaries",
+        "source-layer": "ny-senate-districts",
+        "paint": {
+          "line-color": "#444",
+          "line-opacity": 0.3,
+          "line-width": {
+            "stops": [
               [
                 11,
                 1
@@ -72,33 +65,33 @@
             ]
           }
         },
-        "layout":{
-          "line-join":"round",
-          "line-cap":"round"
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
         }
       }
     },
     {
-      "style":{
-        "id":"nysenatedistricts-label",
-        "type":"symbol",
-        "source":"admin-boundaries",
-        "source-layer":"ny-senate-districts",
-        "minzoom":10,
-        "paint":{
-          "text-color":"#626262",
-          "text-halo-color":"#FFFFFF",
-          "text-halo-width":2,
-          "text-halo-blur":2
+      "style": {
+        "id": "nysenatedistricts-label",
+        "type": "symbol",
+        "source": "admin-boundaries",
+        "source-layer": "ny-senate-districts",
+        "minzoom": 10,
+        "paint": {
+          "text-color": "#626262",
+          "text-halo-color": "#FFFFFF",
+          "text-halo-width": 2,
+          "text-halo-blur": 2
         },
-        "layout":{
-          "text-field":"{stsendist}",
-          "text-font":[
+        "layout": {
+          "text-field": "{stsendist}",
+          "text-font": [
             "Open Sans Semibold",
             "Arial Unicode MS Bold"
           ],
-          "text-size":{
-            "stops":[
+          "text-size": {
+            "stops": [
               [
                 11,
                 12

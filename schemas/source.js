@@ -23,4 +23,5 @@ module.exports = Joi.object().keys({
     is: 'raster',
     then: Joi.required(),
   }),
+  meta: Joi.object(),
 });

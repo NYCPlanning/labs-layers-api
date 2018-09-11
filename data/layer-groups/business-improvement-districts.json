@@ -1,35 +1,30 @@
 {
-  "id":"business-improvement-districts",
-  "visible":false,
+  "id": "business-improvement-districts",
+  "visible": false,
   "legend": {
-    "label":"Business Improvement Districts",
-    "tooltip":"A Business Improvement District (BID) is a geographical area where local stakeholders oversee and fund the maintenance, improvement, and promotion of their commercial district.",
+    "label": "Business Improvement Districts",
+    "tooltip": "A Business Improvement District (BID) is a geographical area where local stakeholders oversee and fund the maintenance, improvement, and promotion of their commercial district.",
     "icon": {
       "type": "rectangle",
-      "layers": [{
-        "fill":"rgba(118, 66, 10, 0.2)",
-        "stroke":"rgba(118, 66, 10, 0.6)",
-        "stroke-dasharray":"1"
-      }]
+      "layers": [
+        {
+          "fill": "rgba(118, 66, 10, 0.2)",
+          "stroke": "rgba(118, 66, 10, 0.6)",
+          "stroke-dasharray": "1"
+        }
+      ]
     }
   },
-  "meta":{
-    "description":"Business Improvement Districts Shapefile on the NYC Open Data Portal",
-    "url":[
-      "https://data.cityofnewyork.us/Business/Business-Improvement-Districts/ejxk-d93y/data"
-    ],
-    "updated_at":"20 November 2017"
-  },
-  "layers":[
+  "layers": [
     {
-      "style":{
-        "id":"business-improvement-districts-line",
-        "type":"line",
-        "source":"supporting-zoning",
-        "source-layer":"business-improvement-districts",
-        "paint":{
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "business-improvement-districts-line",
+        "type": "line",
+        "source": "supporting-zoning",
+        "source-layer": "business-improvement-districts",
+        "paint": {
+          "line-width": {
+            "stops": [
               [
                 11,
                 1
@@ -40,8 +35,8 @@
               ]
             ]
           },
-          "line-color":"rgba(118, 66, 10, 0.6)",
-          "line-dasharray":[
+          "line-color": "rgba(118, 66, 10, 0.6)",
+          "line-dasharray": [
             1,
             1
           ]
@@ -49,17 +44,17 @@
       }
     },
     {
-      "style":{
-        "id":"business-improvement-districts-fill",
-        "type":"fill",
-        "source":"supporting-zoning",
-        "source-layer":"business-improvement-districts",
-        "paint":{
-          "fill-color":"rgba(118, 66, 10, 0.2)"
+      "style": {
+        "id": "business-improvement-districts-fill",
+        "type": "fill",
+        "source": "supporting-zoning",
+        "source-layer": "business-improvement-districts",
+        "paint": {
+          "fill-color": "rgba(118, 66, 10, 0.2)"
         }
       },
-      "highlightable":true,
-      "tooltipTemplate":"{{{bid}}}"
+      "highlightable": true,
+      "tooltipTemplate": "{{{bid}}}"
     }
   ]
 }

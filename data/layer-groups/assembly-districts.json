@@ -1,42 +1,35 @@
 {
-  "id":"assembly-districts",
+  "id": "assembly-districts",
   "legend": {
-    "label":"NY State Assembly Districts",
+    "label": "NY State Assembly Districts",
     "icon": {
       "type": "line",
       "layers": [
         {
-          "stroke":"#8A76F5",
-          "stroke-width":4,
-          "stroke-opacity":0.5
+          "stroke": "#8A76F5",
+          "stroke-width": 4,
+          "stroke-opacity": 0.5
         },
         {
-          "stroke":"#444",
-          "stroke-width":1.5,
-          "stroke-opacity":0.5
+          "stroke": "#444",
+          "stroke-width": 1.5,
+          "stroke-opacity": 0.5
         }
       ]
     }
   },
-  "meta":{
-    "description":"Administrative and Political Districts v17D, Bytes of the Big Apple",
-    "url":[
-      "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
-    ],
-    "updated_at":"21 November 2017"
-  },
-  "layers":[
+  "layers": [
     {
-      "style":{
-        "id":"assemblydistricts-line-glow",
-        "type":"line",
-        "source":"admin-boundaries",
-        "source-layer":"ny-assembly-districts",
-        "paint":{
-          "line-color":"#8A76F5",
-          "line-opacity":0.2,
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "assemblydistricts-line-glow",
+        "type": "line",
+        "source": "admin-boundaries",
+        "source-layer": "ny-assembly-districts",
+        "paint": {
+          "line-color": "#8A76F5",
+          "line-opacity": 0.2,
+          "line-width": {
+            "stops": [
               [
                 11,
                 3
@@ -51,16 +44,16 @@
       }
     },
     {
-      "style":{
-        "id":"assemblydistricts-line",
-        "type":"line",
-        "source":"admin-boundaries",
-        "source-layer":"ny-assembly-districts",
-        "paint":{
-          "line-color":"#444",
-          "line-opacity":0.3,
-          "line-width":{
-            "stops":[
+      "style": {
+        "id": "assemblydistricts-line",
+        "type": "line",
+        "source": "admin-boundaries",
+        "source-layer": "ny-assembly-districts",
+        "paint": {
+          "line-color": "#444",
+          "line-opacity": 0.3,
+          "line-width": {
+            "stops": [
               [
                 11,
                 1
@@ -72,33 +65,33 @@
             ]
           }
         },
-        "layout":{
-          "line-join":"round",
-          "line-cap":"round"
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
         }
       }
     },
     {
-      "style":{
-        "id":"assemblydistricts-label",
-        "type":"symbol",
-        "source":"admin-boundaries",
-        "source-layer":"ny-assembly-districts",
-        "minzoom":10,
-        "paint":{
-          "text-color":"#626262",
-          "text-halo-color":"#FFFFFF",
-          "text-halo-width":2,
-          "text-halo-blur":2
+      "style": {
+        "id": "assemblydistricts-label",
+        "type": "symbol",
+        "source": "admin-boundaries",
+        "source-layer": "ny-assembly-districts",
+        "minzoom": 10,
+        "paint": {
+          "text-color": "#626262",
+          "text-halo-color": "#FFFFFF",
+          "text-halo-width": 2,
+          "text-halo-blur": 2
         },
-        "layout":{
-          "text-field":"{assemdist}",
-          "text-font":[
+        "layout": {
+          "text-field": "{assemdist}",
+          "text-font": [
             "Open Sans Semibold",
             "Arial Unicode MS Bold"
           ],
-          "text-size":{
-            "stops":[
+          "text-size": {
+            "stops": [
               [
                 11,
                 12
