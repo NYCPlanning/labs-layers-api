@@ -1,8 +1,7 @@
 [![CircleCI](https://circleci.com/gh/NYCPlanning/labs-layers-api.svg?style=svg)](https://circleci.com/gh/NYCPlanning/labs-layers-api)
 
-{Replace this with a description of the application, customer, purpose, etc.}
+A web API for serving layer groups, which are a custom data model for named groups of Mapbox GL layers and their associate legend and source data.
 
-{Replace this with a screenshot of the app.}
 
 ## Requirements
 
@@ -10,21 +9,22 @@ You will need the following things properly installed on your computer.
 
 - [Git](https://git-scm.com/)
 - [Node.js](https://nodejs.org/) (with NPM)
-- {Replace this list with the app's dependencies.}
+- [Yarn](https://yarnpkg.com/en/)
+
 
 ## Local development
 
-- Clone this repo `command`
-- Install Dependencies `command`
-- Start the server `command`
+- Clone this repo: `git clone git@github.com:NYCPlanning/labs-layers-api.git`
+- Navigate to the repo: `cd labs-layers-api`
+- Install the dependencies: `yarn`
+- Start the server: `npm run devstart`
 
-## Architecture
 
-{"Lay of the land" structure of the codebase, components...}
+## Schemas
 
-## Backend services
-
-- {Replace this list with the app's backend service dependencies.}
+- [Layer Group](https://github.com/NYCPlanning/labs-layers-api/blob/develop/schemas/layer-group.js)
+- [Layer](https://github.com/NYCPlanning/labs-layers-api/blob/develop/schemas/layer.js)
+- [Source](https://github.com/NYCPlanning/labs-layers-api/blob/develop/schemas/source.js)
 
 ## Testing and checks
 
@@ -35,9 +35,6 @@ You will need the following things properly installed on your computer.
 - **Testing**
   - run `yarn test`
 
-## Deployment
-
-{Description of what type of hosting environmen is required, and steps for how Labs deploys -- e.g `git push dokku master`.}
 
 ## Sprites
 
