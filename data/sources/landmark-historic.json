@@ -1,8 +1,19 @@
 {
-  "type": "vector",
   "id": "landmark-historic",
-  "tiles": [
-    "https://cartocdn-gusc-c.global.ssl.fastly.net/planninglabs/api/v1/map/f75279b7a688a93f1d6dd2b88f2589d5:1526570453789/{z}/{x}/{y}.mvt"
+  "type": "cartovector",
+  "source-layers": [
+    {
+      "id": "historic-districts",
+      "sql": "SELECT the_geom_webmercator, area_name FROM historic_districts_lpc_v20180501 WHERE status_of = 'DESIGNATED'"
+    },
+    {
+      "id": "landmarks",
+      "sql": "SELECT the_geom_webmercator, lm_name, lm_type FROM individual_landmarks_lpc_v20180501 WHERE (lm_type = 'Individual Landmark' OR lm_type = 'Interior Landmark') AND last_actio = 'DESIGNATED'"
+    },
+    {
+      "id": "scenic-landmarks",
+      "sql": "SELECT the_geom_webmercator, scen_lm_na FROM scenic_landmarks_lpc_v20180501 WHERE last_actio = 'DESIGNATED'"
+    }
   ],
   "minzoom": 0,
   "meta": {
