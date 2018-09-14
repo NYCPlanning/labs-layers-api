@@ -58,6 +58,7 @@
         }
       },
       "highlightable": true,
+      "tooltipable": true,
       "tooltipTemplate": "2007 {{{fld_zone}}} Zone"
     }
   ]

@@ -29,6 +29,7 @@
       },
       "highlightable": true,
       "clickable": true,
+      "tooltipable": true,
       "tooltipTemplate": "{{{overlay}}}"
     },
     {

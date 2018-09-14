@@ -54,6 +54,7 @@
         "layout": {}
       },
       "highlightable": true,
+      "tooltipable": true,
       "tooltipTemplate": "Lower Density Growth Management Area"
     }
   ]

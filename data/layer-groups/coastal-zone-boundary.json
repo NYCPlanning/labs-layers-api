@@ -54,6 +54,7 @@
         "layout": {}
       },
       "highlightable": true,
+      "tooltipable": true,
       "tooltipTemplate": "Coastal Zone Boundary"
     }
   ]

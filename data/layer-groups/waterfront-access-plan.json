@@ -54,6 +54,7 @@
         "layout": {}
       },
       "highlightable": true,
+      "tooltipable": true,
       "tooltipTemplate": "Waterfront Access Plan - {{{name}}}"
     }
   ]

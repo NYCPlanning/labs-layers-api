@@ -119,6 +119,7 @@
         }
       },
       "highlightable": true,
+      "tooltipable": true,
       "tooltipTemplate": "{{{lm_name}}}"
     },
     {
@@ -160,6 +161,7 @@
         "layout": {}
       },
       "highlightable": true,
+      "tooltipable": true,
       "tooltipTemplate": "{{{scen_lm_na}}}"
     }
   ]

@@ -53,6 +53,7 @@
         }
       },
       "highlightable": true,
+      "tooltipable": true,
       "tooltipTemplate": "{{{name}}} - Subarea {{{subarea}}}"
     }
   ]

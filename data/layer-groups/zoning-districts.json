@@ -128,6 +128,7 @@
       },
       "highlightable": true,
       "clickable": true,
+      "tooltipable": true,
       "tooltipTemplate": "Zoning District {{{zonedist}}}"
     },
     {

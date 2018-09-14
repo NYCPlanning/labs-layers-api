@@ -90,6 +90,7 @@
         "layout": {}
       },
       "highlightable": true,
+      "tooltipable": true,
       "tooltipTemplate": "FRESH - {{{name}}}"
     },
     {
@@ -112,6 +113,7 @@
         "layout": {}
       },
       "highlightable": true,
+      "tooltipable": true,
       "tooltipTemplate": "FRESH - {{{name}}}"
     },
     {
@@ -134,6 +136,7 @@
         "layout": {}
       },
       "highlightable": true,
+      "tooltipable": true,
       "tooltipTemplate": "FRESH - {{{name}}}"
     }
   ]

@@ -55,6 +55,7 @@
       },
       "highlightable": true,
       "clickable": true,
+      "tooltipable": true,
       "tooltipTemplate": "{{{project_na}}} - Effective {{{effectiveformatted}}}"
     }
   ]

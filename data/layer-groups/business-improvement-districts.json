@@ -54,6 +54,7 @@
         }
       },
       "highlightable": true,
+      "tooltipable": true,
       "tooltipTemplate": "{{{bid}}}"
     }
   ]

@@ -55,6 +55,7 @@
         "layout": {}
       },
       "highlightable": true,
+      "tooltipable": true,
       "tooltipTemplate": "{{{projectnam}}}"
     }
   ]

@@ -61,6 +61,7 @@
         }
       },
       "highlightable":true,
+      "tooltipable": true,
       "tooltipTemplate":"2015 {{{fld_zone}}} Zone"
     }
   ]
