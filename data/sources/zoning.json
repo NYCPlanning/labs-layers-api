@@ -8,11 +8,11 @@
     },
     {
       "id": "special-purpose-districts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id, sdlbl, sdname FROM special_purpose_districts_v201803"
+      "sql": "SELECT the_geom_webmercator, cartodb_id, sdlbl, sdname FROM special_purpose_districts_v201808"
     },
     {
       "id": "commercial-overlays",
-      "sql": "SELECT * FROM commercial_overlays_v201803"
+      "sql": "SELECT * FROM commercial_overlays_v201808"
     }
   ],
   "meta": {
