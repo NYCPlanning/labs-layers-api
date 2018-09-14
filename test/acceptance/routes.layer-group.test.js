@@ -484,7 +484,7 @@ describe('POST /layer-groups', () => {
   //     });
   // });
 
-  /* it('returns a 200 response with json; returns all by default', (done) => {
+  it('returns a 200 response with json; returns all by default', (done) => {
     chai.request(server)
       .get('/v1/layer-groups')
       .set('content-type', 'application/json')
@@ -495,7 +495,7 @@ describe('POST /layer-groups', () => {
 
         done();
       });
-  }); */
+  });
 
   it('accepts query params for specific layer groups', (done) => {
     chai.request(server)
