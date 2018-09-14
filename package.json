@@ -41,6 +41,6 @@
     "migrate-meta": "node ./tasks/migrate-meta-from-layer-group-to-source.js"
   },
   "engines": {
-    "node": "8.11.3"
+    "node": "^8.11.3"
   }
 }
