@@ -5,7 +5,7 @@
   "source-layers": [
     {
       "id": "pluto",
-      "sql": "SELECT the_geom_webmercator, bbl, lot, landuse, address FROM mappluto_v1711"
+      "sql": "SELECT the_geom_webmercator, bbl, lot, landuse, address, numfloors FROM mappluto_v1711"
     },
     {
       "id": "block-centroids",
