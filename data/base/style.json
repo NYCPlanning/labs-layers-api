@@ -945,6 +945,62 @@
        }
     },
     {
+      "id": "street_direction_test",
+      "type": "symbol",
+      "metadata": {
+        "mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"
+      },
+      "source": "openmaptiles",
+      "source-layer": "transportation",
+      "filter": [
+        "all",
+        [
+          "==",
+          "$type",
+          "LineString"
+        ],
+        [
+          "==",
+          "oneway",
+          1
+        ],
+        [
+          "!=",
+          "class",
+          "path"
+        ]
+      ],
+      "layout": {
+        "text-size": 25,
+        "text-max-angle": 0,
+        "text-transform": "none",
+        "symbol-spacing": 150,
+        "text-font": [
+          "Metropolis Regular",
+          "Noto Sans Regular"
+        ],
+        "symbol-placement": "line",
+        "visibility": "visible",
+        "text-rotation-alignment": "map",
+        "text-pitch-alignment": "viewport",
+        "text-field": "→",
+        "text-keep-upright": false,
+        "text-padding": 0,
+        "text-line-height": 1,
+        "icon-padding": 0
+      },
+      "paint": {
+        "text-color": "rgb(117, 129, 145)",
+        "text-halo-color": "#fff",
+        "text-translate": [
+          0,
+          0
+        ],
+        "text-halo-width": 2,
+        "text-halo-blur": 1
+      }
+    },
+    {
        "id":"railway_transit",
        "type":"line",
        "metadata":{
