@@ -8,7 +8,7 @@
   "layers": [
     {
       "style": {
-        "id": "street_direction_test",
+        "id": "street-direction-arrows",
         "type": "symbol",
         "metadata": {
           "mapbox:group": "b6371a3f2f5a9932464fa3867530a2e5"
