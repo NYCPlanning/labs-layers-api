@@ -1,6 +1,15 @@
 const fs = require('fs');
 
 const colors = [
+  { hex: '#212326', name: 'black' },
+  { hex: '#393c41', name: 'charcoal' },
+  { hex: '#5d626a', name: 'dark_gray' },
+  { hex: '#828892', name: 'gray' },
+  { hex: '#aaafb5', name: 'light_gray' },
+  { hex: '#d3d5d9', name: 'silver' },
+  { hex: '#ecedee', name: 'white_smoke' },
+  { hex: '#fafafa', name: 'off_white' },
+  { hex: '#fefefe', name: 'white' },
   { hex: '#12eded', name: 'aqua' },
   { hex: '#3bffff', name: 'aqua_light' },
   { hex: '#007a7a', name: 'aqua_dark' },
@@ -52,6 +61,195 @@ const colors = [
 ];
 
 colors.forEach((color) => {
+  // 45 degree lines
+  const path45 = `assets/sprite/svg/${color.name}-45.svg`;
+  const svg45 = `
+<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'>
+  <path d='M-1,1 l2,-2 M0,20 l20,-20 M-1,11 l12,-12 M9,21 l12,-12 M19,21 l2,-2' stroke='${color.hex}' stroke-width='1' stroke-linecap='square'/>
+</svg>`;
+
+  fs.writeFile(path45, svg45, (err) => {
+    if (err) throw err;
+    console.log(`${path45} created!`);
+  });
+
+
+  // 45 degree lines with dots
+  const path45dot = `assets/sprite/svg/${color.name}-45-dot.svg`;
+  const svg45dot = `
+<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'>
+  <rect width='20' height='20' fill='none'/>
+  <path d='M-1,1 l2,-2 M0,20 l20,-20 M-1,11 l12,-12 M9,21 l12,-12 M19,21 l2,-2' stroke='${color.hex}' stroke-width='1' stroke-linecap='square'/>
+  <circle cx='2.5' cy='2.5' r='1' fill='${color.hex}' />
+  <circle cx='12.5' cy='2.5' r='1' fill='${color.hex}' />
+  <circle cx='12.5' cy='12.5' r='1' fill='${color.hex}' />
+  <circle cx='2.5' cy='12.5' r='1' fill='${color.hex}' />
+</svg>`;
+
+  fs.writeFile(path45dot, svg45dot, (err) => {
+    if (err) throw err;
+    console.log(`${path45dot} created!`);
+  });
+
+
+  // 45 and 135 degree lines
+  const path45135 = `assets/sprite/svg/${color.name}-45-135.svg`;
+  const svg45135 = `
+<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'>
+  <rect width='20' height='20' fill='none'/>
+  <path d='M-1,1 l2,-2 M0,20 l20,-20 M-1,11 l12,-12 M9,21 l12,-12 M19,21 l2,-2' stroke='${color.hex}' stroke-width='1' stroke-linecap='square'/>
+  <path d='M21,1 l-2,-2 M20,20 l-20,-20 M21,11 l-12,-12 M11,21 l-12,-12 M1,21 l-2,-2' stroke='${color.hex}' stroke-width='1' stroke-linecap='square'/>
+</svg>`;
+
+  fs.writeFile(path45135, svg45135, (err) => {
+    if (err) throw err;
+    console.log(`${path45135} created!`);
+  });
+
+
+  // 45 and 135 degree lines with dots
+  const path45135dot = `assets/sprite/svg/${color.name}-45-135-dot.svg`;
+  const svg45135dot = `
+<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'>
+  <rect width='20' height='20' fill='none'/>
+  <path d='M-1,1 l2,-2 M0,20 l20,-20 M-1,11 l12,-12 M9,21 l12,-12 M19,21 l2,-2' stroke='${color.hex}' stroke-width='1' stroke-linecap='square'/>
+  <path d='M21,1 l-2,-2 M20,20 l-20,-20 M21,11 l-12,-12 M11,21 l-12,-12 M1,21 l-2,-2' stroke='${color.hex}' stroke-width='1' stroke-linecap='square'/>
+  <circle cx='0' cy='5' r='1' fill='${color.hex}' />
+  <circle cx='0' cy='15' r='1' fill='${color.hex}' />
+  <circle cx='5' cy='0' r='1' fill='${color.hex}' />
+  <circle cx='5' cy='10' r='1' fill='${color.hex}' />
+  <circle cx='5' cy='20' r='1' fill='${color.hex}' />
+  <circle cx='10' cy='5' r='1' fill='${color.hex}' />
+  <circle cx='10' cy='15' r='1' fill='${color.hex}' />
+  <circle cx='15' cy='0' r='1' fill='${color.hex}' />
+  <circle cx='15' cy='10' r='1' fill='${color.hex}' />
+  <circle cx='15' cy='20' r='1' fill='${color.hex}' />
+  <circle cx='20' cy='5' r='1' fill='${color.hex}' />
+  <circle cx='20' cy='15' r='1' fill='${color.hex}' />
+</svg>`;
+
+  fs.writeFile(path45135dot, svg45135dot, (err) => {
+    if (err) throw err;
+    console.log(`${path45135dot} created!`);
+  });
+
+
+  // 45 degree dashed lines
+  const path45dash = `assets/sprite/svg/${color.name}-45_dash.svg`;
+  const svg45dash = `
+<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'>
+  <rect width='20' height='20' fill='none'/>
+  <path d='M-1,11 l7,-7 M11,-1 l-2,2 M2,18 l7,-7 M12,8 l7,-7 M9,21 l7,-7 M19,11 l2,-2' stroke='${color.hex}' stroke-width='1' stroke-linecap='butt'/>
+</svg>`;
+
+  fs.writeFile(path45dash, svg45dash, (err) => {
+    if (err) throw err;
+    console.log(`${path45dash} created!`);
+  });
+
+
+  // 45 degree dashed lines with dots
+  const path45dashdot = `assets/sprite/svg/${color.name}-45_dash-dot.svg`;
+  const svg45dashdot = `
+<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'>
+  <rect width='20' height='20' fill='none'/>
+  <path d='M-1,11 l7,-7 M11,-1 l-2,2 M2,18 l7,-7 M12,8 l7,-7 M9,21 l7,-7 M19,11 l2,-2' stroke='${color.hex}' stroke-width='1' stroke-linecap='butt'/>
+  <circle cx='3' cy='12' r='1' fill='${color.hex}' />
+  <circle cx='13' cy='12' r='1' fill='${color.hex}' />
+  <circle cx='13' cy='2' r='1' fill='${color.hex}' />
+  <circle cx='3' cy='2' r='1' fill='${color.hex}' />
+</svg>`;
+
+  fs.writeFile(path45dashdot, svg45dashdot, (err) => {
+    if (err) throw err;
+    console.log(`${path45dashdot} created!`);
+  });
+
+
+  // 45 degree lines, alternating thin/bold
+  const path45altbold = `assets/sprite/svg/${color.name}-45_altbold.svg`;
+  const svg45altbold = `
+<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'>
+  <rect width='20' height='20' fill='none'/>
+  <path d='M-1,1 l2,-2 M0,20 l20,-20 M19,21 l2,-2' stroke='${color.hex}' stroke-width='2' stroke-linecap='square'/>
+  <path d='M-1,11 l12,-12 M9,21 l12,-12' stroke='${color.hex}' stroke-width='1' stroke-linecap='square'/>
+</svg>`;
+
+  fs.writeFile(path45altbold, svg45altbold, (err) => {
+    if (err) throw err;
+    console.log(`${path45altbold} created!`);
+  });
+
+
+  // 45 degree lines, alternating thin/bold, with dots
+  const path45altbolddot = `assets/sprite/svg/${color.name}-45_altbold-dot.svg`;
+  const svg45altbolddot = `
+<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'>
+  <rect width='20' height='20' fill='none'/>
+  <path d='M-1,1 l2,-2 M0,20 l20,-20 M19,21 l2,-2' stroke='${color.hex}' stroke-width='2' stroke-linecap='square'/>
+  <path d='M-1,11 l12,-12 M9,21 l12,-12' stroke='${color.hex}' stroke-width='1' stroke-linecap='square'/>
+  <circle cx='2.5' cy='2.5' r='1' fill='${color.hex}' />
+  <circle cx='2.5' cy='2.5' r='1' fill='${color.hex}' />
+  <circle cx='2.5' cy='2.5' r='1' fill='${color.hex}' />
+  <circle cx='2.5' cy='2.5' r='1' fill='${color.hex}' />
+</svg>`;
+
+  fs.writeFile(path45altbolddot, svg45altbolddot, (err) => {
+    if (err) throw err;
+    console.log(`${path45altbolddot} created!`);
+  });
+
+
+  // 45 and 135 degree lines, alternating thin/bold
+  const path45altbold135altbold = `assets/sprite/svg/${color.name}-45_altbold-135_altbold.svg`;
+  const svg45altbold135altbold = `
+<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'>
+  <rect width='20' height='20' fill='none'/>
+  <path d='M-1,1 l2,-2 M0,20 l20,-20 M19,21 l2,-2' stroke='${color.hex}' stroke-width='2' stroke-linecap='square'/>
+  <path d='M-1,11 l12,-12 M9,21 l12,-12' stroke='${color.hex}' stroke-width='1' stroke-linecap='square'/>
+  <path d='M21,1 l-2,-2 M20,20 l-20,-20 M1,21 l-2,-2' stroke='${color.hex}' stroke-width='2' stroke-linecap='square'/>
+  <path d=' M21,11 l-12,-12 M11,21 l-12,-12' stroke='${color.hex}' stroke-width='1' stroke-linecap='square'/>
+</svg>`;
+
+  fs.writeFile(path45altbold135altbold, svg45altbold135altbold, (err) => {
+    if (err) throw err;
+    console.log(`${path45altbold135altbold} created!`);
+  });
+
+
+  // 45 and 135 degree lines, alternating thin/bold, with dots
+  const path45altbold135altbolddot = `assets/sprite/svg/${color.name}-45_altbold-135_altbold-dot.svg`;
+  const svg45altbold135altbolddot = `
+<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20'>
+  <rect width='20' height='20' fill='none'/>
+  <path d='M-1,1 l2,-2 M0,20 l20,-20 M19,21 l2,-2' stroke='${color.hex}' stroke-width='2' stroke-linecap='square'/>
+  <path d='M-1,11 l12,-12 M9,21 l12,-12' stroke='${color.hex}' stroke-width='1' stroke-linecap='square'/>
+  <path d='M21,1 l-2,-2 M20,20 l-20,-20 M1,21 l-2,-2' stroke='${color.hex}' stroke-width='2' stroke-linecap='square'/>
+  <path d='M21,11 l-12,-12 M11,21 l-12,-12' stroke='${color.hex}' stroke-width='1' stroke-linecap='square'/>
+  <circle cx="0" cy="5" r="1" fill='${color.hex}' />
+  <circle cx="0" cy="15" r="1" fill='${color.hex}' />
+  <circle cx="5" cy="0" r="1" fill='${color.hex}' />
+  <circle cx="5" cy="10" r="1" fill='${color.hex}' />
+  <circle cx="5" cy="20" r="1" fill='${color.hex}' />
+  <circle cx="10" cy="5" r="1" fill='${color.hex}' />
+  <circle cx="10" cy="15" r="1" fill='${color.hex}' />
+  <circle cx="15" cy="0" r="1" fill='${color.hex}' />
+  <circle cx="15" cy="10" r="1" fill='${color.hex}' />
+  <circle cx="15" cy="20" r="1" fill='${color.hex}' />
+  <circle cx="20" cy="5" r="1" fill='${color.hex}' />
+  <circle cx="20" cy="15" r="1" fill='${color.hex}' />
+</svg>`;
+
+  fs.writeFile(path45altbold135altbolddot, svg45altbold135altbolddot, (err) => {
+    if (err) throw err;
+    console.log(`${path45altbold135altbolddot} created!`);
+  });
+
+
+  // --------------------
+  // DIAGONAL LINES OF VARIOUS THICKNESS
+  // --------------------
+
   // 1 pixel diagonal line
   const path1 = `assets/sprite/svg/${color.name}-diagonal-1px.svg`;
   const svg1 = `
