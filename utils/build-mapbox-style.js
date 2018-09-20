@@ -3,7 +3,7 @@ const { where } = require('./local-resources-utilities');
 const structureCartoSource = require('./structure-carto-source');
 const baseStyle = require('../data/base/style.json');
 
-const HOST = process.env.NODE_ENV === 'production' ? 'https://layers-api.planninglabs.nyc' : 'http://localhost:3000';
+const HOST = process.env.HOST || 'http://localhost:3000';
 baseStyle.sources.openmaptiles.url = baseStyle.sources.openmaptiles.url.replace('{{HOSTNAME}}', HOST);
 baseStyle.sprite = baseStyle.sprite.replace('{{HOSTNAME}}', HOST);
 
