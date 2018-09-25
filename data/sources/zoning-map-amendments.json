@@ -4,14 +4,15 @@
   "source-layers": [
     {
       "id": "zoning-map-amendments",
-      "sql": "SELECT * FROM (SELECT the_geom_webmercator, to_char(effective, 'MM/DD/YYYY') as effectiveformatted, extract(epoch from effective) * 1000 as effective_epoch, ulurpno, status, project_na FROM planninglabs.zoning_map_amendments_v201808 WHERE status = 'Adopted') a"
+      "sql": "SELECT * FROM (SELECT the_geom_webmercator, to_char(effective, 'MM/DD/YYYY') as effectiveformatted, extract(epoch from effective) * 1000 as effective_epoch, ulurpno, status, project_na FROM planninglabs.zoning_map_amendments_v201809 WHERE status = 'Adopted') a"
     }
   ],
   "meta": {
-    "description": "NYC GIS Zoning Features August 2018, Bytes of the Big Apple",
+    "description": "NYC GIS Zoning Features September 2018, Bytes of the Big Apple",
     "url": [
       "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-gis-zoning.page"
     ],
-    "updated_at": "September 14, 2018"
+    "data_date": "September, 2018",
+    "updated_at": "September 25, 2018"
   }
 }
