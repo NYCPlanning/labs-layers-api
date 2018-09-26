@@ -33,6 +33,7 @@
     "mocha": "^5.2.0"
   },
   "scripts": {
+    "postinstall": "npm run create-sprite-svgs",
     "start": "node app.js",
     "devstart": "nodemon app.js",
     "test": "PORT=3001 NODE_ENV=test node ./node_modules/mocha/bin/mocha ./test/**/*.js --exit",
