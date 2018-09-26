@@ -189,9 +189,9 @@ colors.forEach((color) => {
   <path d='M-1,1 l2,-2 M0,20 l20,-20 M19,21 l2,-2' stroke='${color.hex}' stroke-width='2' stroke-linecap='square'/>
   <path d='M-1,11 l12,-12 M9,21 l12,-12' stroke='${color.hex}' stroke-width='1' stroke-linecap='square'/>
   <circle cx='2.5' cy='2.5' r='1' fill='${color.hex}' />
-  <circle cx='2.5' cy='2.5' r='1' fill='${color.hex}' />
-  <circle cx='2.5' cy='2.5' r='1' fill='${color.hex}' />
-  <circle cx='2.5' cy='2.5' r='1' fill='${color.hex}' />
+  <circle cx='12.5' cy='2.5' r='1' fill='${color.hex}' />
+  <circle cx='12.5' cy='12.5' r='1' fill='${color.hex}' />
+  <circle cx='2.5' cy='12.5' r='1' fill='${color.hex}' />
 </svg>`;
 
   fs.writeFile(path45altbolddot, svg45altbolddot, (err) => {
