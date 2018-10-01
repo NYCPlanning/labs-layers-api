@@ -380,29 +380,15 @@
         "minzoom": 15,
         "source": "transportation",
         "source-layer": "subway-entrances",
-        "type": "symbol",
+        "type": "circle",
         "layout": {
-          "icon-image": "rail-15",
-          "icon-allow-overlap": true,
-          "text-font": [
-            "Open Sans Semibold",
-            "Arial Unicode MS Bold"
-          ],
-          "text-anchor": "top"
+          "visibility": "visible"
         },
         "paint": {
-          "icon-opacity": {
-            "stops": [
-              [
-                15.5,
-                0
-              ],
-              [
-                16.5,
-                1
-              ]
-            ]
-          }
+          "circle-stroke-color": "rgba(33, 35, 38, 1)",
+          "circle-color": "rgba(255, 255, 255, 0.2)",
+          "circle-stroke-width": 0.5,
+          "circle-radius": 2
         }
       }
     },
@@ -421,7 +407,7 @@
           "text-size": 8,
           "text-offset": [
             0,
-            2
+            1
           ],
           "text-anchor": "center"
         },
@@ -431,11 +417,11 @@
           "text-opacity": {
             "stops": [
               [
-                15.5,
+                16.5,
                 0
               ],
               [
-                16.5,
+                17.5,
                 1
               ]
             ]
