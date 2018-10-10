@@ -25,7 +25,11 @@
         "paint": {
           "fill-color": "rgba(154, 180, 100, 1)"
         }
-      }
+      },
+      "highlightable": true,
+      "clickable": true,
+      "tooltipable": true,
+      "tooltipTemplate": "{{{park_name}}}"
     },
     {
       "style": {
