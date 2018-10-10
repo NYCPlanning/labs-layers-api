@@ -25,6 +25,17 @@
         "paint": {
           "fill-color": "rgba(154, 180, 100, 1)"
         }
+      }
+    },
+    {
+      "style": {
+        "id": "publicallyownedwaterfront-overlay",
+        "type": "fill",
+        "source": "waterfront-access",
+        "source-layer": "publicallyownedwaterfront",
+        "paint": {
+          "fill-color": "rgba(154, 180, 100, 0.5)"
+        }
       },
       "highlightable": true,
       "clickable": true,

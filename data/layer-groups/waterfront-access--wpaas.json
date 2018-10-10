@@ -25,6 +25,17 @@
         "paint": {
           "fill-color": "rgba(100, 180, 154, 1)"
         }
+      }
+    },
+    {
+      "style": {
+        "id": "wpaas-overlay",
+        "type": "fill",
+        "source": "waterfront-access",
+        "source-layer": "wpaas",
+        "paint": {
+          "fill-color": "rgba(100, 180, 154, 0.5)"
+        }
       },
       "highlightable": true,
       "clickable": true,
