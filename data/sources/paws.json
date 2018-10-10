@@ -1,5 +1,5 @@
 {
-  "id": "waterfront-access",
+  "id": "paws",
   "type": "cartovector",
   "source-layers": [
     {
@@ -11,7 +11,7 @@
       "sql": "SELECT the_geom_webmercator, cartodb_id, park_name, link FROM publicallyownedwaterfront_v201810"
     },
     {
-      "id": "publicallyownedwaterfront_footprints",
+      "id": "paws_footprints",
       "sql": "SELECT the_geom_webmercator, cartodb_id FROM publicallyownedwaterfront_footprints_v201810"
     }
   ],

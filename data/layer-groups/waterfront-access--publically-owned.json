@@ -18,9 +18,9 @@
     {
       "before": "building",
       "style": {
-        "id": "publicallyownedwaterfront-fill",
+        "id": "publically-owned-waterfront-fill",
         "type": "fill",
-        "source": "waterfront-access",
+        "source": "paws",
         "source-layer": "publicallyownedwaterfront",
         "paint": {
           "fill-color": "rgba(154, 180, 100, 1)"
@@ -29,12 +29,12 @@
     },
     {
       "style": {
-        "id": "publicallyownedwaterfront-overlay",
+        "id": "publically-owned-waterfront-overlay",
         "type": "fill",
-        "source": "waterfront-access",
+        "source": "paws",
         "source-layer": "publicallyownedwaterfront",
         "paint": {
-          "fill-color": "rgba(154, 180, 100, 0.5)"
+          "fill-color": "rgba(154, 180, 100, 0.7)"
         }
       },
       "highlightable": true,
@@ -44,9 +44,9 @@
     },
     {
       "style": {
-        "id": "publicallyownedwaterfront-halo",
+        "id": "publically-owned-waterfront-halo",
         "type": "line",
-        "source": "waterfront-access",
+        "source": "paws",
         "source-layer": "publicallyownedwaterfront",
         "paint": {
           "line-color": "rgba(154, 180, 100, 1)",

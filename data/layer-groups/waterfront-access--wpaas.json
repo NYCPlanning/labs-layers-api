@@ -20,7 +20,7 @@
       "style": {
         "id": "wpaas-fill",
         "type": "fill",
-        "source": "waterfront-access",
+        "source": "paws",
         "source-layer": "wpaas",
         "paint": {
           "fill-color": "rgba(100, 180, 154, 1)"
@@ -31,10 +31,10 @@
       "style": {
         "id": "wpaas-overlay",
         "type": "fill",
-        "source": "waterfront-access",
+        "source": "paws",
         "source-layer": "wpaas",
         "paint": {
-          "fill-color": "rgba(100, 180, 154, 0.5)"
+          "fill-color": "rgba(100, 180, 154, 0.7)"
         }
       },
       "highlightable": true,
@@ -46,7 +46,7 @@
       "style": {
         "id": "wpaas-halo",
         "type": "line",
-        "source": "waterfront-access",
+        "source": "paws",
         "source-layer": "wpaas",
         "paint": {
           "line-color": "rgba(100, 180, 154, 1)",
@@ -66,6 +66,31 @@
         "layout": {
           "line-cap": "round",
           "line-join": "round"
+        }
+      }
+    },
+    {
+      "before": "place_other",
+      "style": {
+        "id": "paws-footprints",
+        "type": "line",
+        "source": "paws",
+        "source-layer": "paws_footprints",
+        "paint": {
+          "line-color": "#007a52",
+          "line-opacity": {
+            "stops": [
+              [13, 0],
+              [15, 1]
+            ]
+          },
+          "line-width": {
+            "stops": [
+              [14, 2],
+              [16, 3]
+            ]
+          },
+          "line-dasharray": [1, 0.5]
         }
       }
     }
