@@ -1,0 +1,58 @@
+{
+  "id": "waterfront-access--wpaas",
+  "legend": {
+    "label": "Waterfront Public Access Area",
+    "tooltip": "The portion of a waterfront zoning lot where publicly accessible open space is provided to and along the shoreline",
+    "icon": {
+      "type": "rectangle",
+      "layers": [
+        {
+          "fill": "rgba(100, 180, 154, 1)",
+          "stroke": "rgba(100, 180, 154, 0.6)",
+          "stroke-width": "2"
+        }
+      ]
+    }
+  },
+  "layers": [
+    {
+      "before": "building",
+      "style": {
+        "id": "wpaas-fill",
+        "type": "fill",
+        "source": "waterfront-access",
+        "source-layer": "wpaas",
+        "paint": {
+          "fill-color": "rgba(100, 180, 154, 1)"
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "wpaas-halo",
+        "type": "line",
+        "source": "waterfront-access",
+        "source-layer": "wpaas",
+        "paint": {
+          "line-color": "rgba(100, 180, 154, 1)",
+          "line-opacity": {
+            "stops": [
+              [10, 1],
+              [13, 0.3]
+            ]
+          },
+          "line-width": {
+            "stops": [
+              [12, 10],
+              [14, 0]
+            ]
+          }
+        },
+        "layout": {
+          "line-cap": "round",
+          "line-join": "round"
+        }
+      }
+    }
+  ]
+}

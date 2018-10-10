@@ -1,0 +1,22 @@
+{
+  "id": "waterfront-access",
+  "type": "cartovector",
+  "source-layers": [
+    {
+      "id": "wpaas",
+      "sql": "SELECT the_geom_webmercator, cartodb_id, paws_id, park_name, status FROM wpaas_v201810"
+    },
+    {
+      "id": "publicallyownedwaterfront",
+      "sql": "SELECT the_geom_webmercator, cartodb_id, park_name, link FROM publicallyownedwaterfront_v201810"
+    },
+    {
+      "id": "publicallyownedwaterfront_footprints",
+      "sql": "SELECT the_geom_webmercator, cartodb_id FROM publicallyownedwaterfront_footprints_v201810"
+    }
+  ],
+  "meta": {
+    "description": "Publicly Accessible Waterfront Spaces, NYC Department of City Planning Waterfront Division",
+    "updated_at": "October 2018"
+  }
+}

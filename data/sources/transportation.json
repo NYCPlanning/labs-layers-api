@@ -12,7 +12,7 @@
     },
     {
       "id": "subway-entrances",
-      "sql": "SELECT the_geom_webmercator FROM mta_subway_entrances_v0"
+      "sql": "SELECT the_geom_webmercator, cartodb_id FROM mta_subway_entrances_v0"
     }
   ],
   "minzoom": 0,
