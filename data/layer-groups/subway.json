@@ -338,6 +338,7 @@
       }
     },
     {
+      "before": "place_other",
       "style": {
         "id": "subway_stations_labels",
         "minzoom": 13,
@@ -375,6 +376,7 @@
       }
     },
     {
+      "before": "place_other",
       "style": {
         "id": "subway_entrances",
         "minzoom": 15,
@@ -393,6 +395,7 @@
       }
     },
     {
+      "before": "place_other",
       "style": {
         "id": "subway_entrances_labels",
         "minzoom": 15,
