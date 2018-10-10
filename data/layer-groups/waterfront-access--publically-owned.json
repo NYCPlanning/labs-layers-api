@@ -1,0 +1,62 @@
+{
+  "id": "waterfront-access--publically-owned",
+  "legend": {
+    "label": "Publically Owned",
+    "tooltip": "Government owned and operated publicly accessible open space",
+    "icon": {
+      "type": "rectangle",
+      "layers": [
+        {
+          "fill": "rgba(154, 180, 100, 1)",
+          "stroke": "rgba(154, 180, 100, 0.6)",
+          "stroke-width": "2"
+        }
+      ]
+    }
+  },
+  "layers": [
+    {
+      "before": "building",
+      "style": {
+        "id": "publicallyownedwaterfront-fill",
+        "type": "fill",
+        "source": "waterfront-access",
+        "source-layer": "publicallyownedwaterfront",
+        "paint": {
+          "fill-color": "rgba(154, 180, 100, 1)"
+        }
+      },
+      "highlightable": true,
+      "clickable": true,
+      "tooltipable": true,
+      "tooltipTemplate": "{{{park_name}}}"
+    },
+    {
+      "style": {
+        "id": "publicallyownedwaterfront-halo",
+        "type": "line",
+        "source": "waterfront-access",
+        "source-layer": "publicallyownedwaterfront",
+        "paint": {
+          "line-color": "rgba(154, 180, 100, 1)",
+          "line-opacity": {
+            "stops": [
+              [10, 1],
+              [13, 0.3]
+            ]
+          },
+          "line-width": {
+            "stops": [
+              [12, 8],
+              [14, 0]
+            ]
+          }
+        },
+        "layout": {
+          "line-cap": "round",
+          "line-join": "round"
+        }
+      }
+    }
+  ]
+}
