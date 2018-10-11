@@ -1,7 +1,7 @@
 {
-  "id": "waterfront-access--publically-owned",
+  "id": "waterfront-access--publicly-owned",
   "legend": {
-    "label": "Publically Owned",
+    "label": "Publicly Owned Spaces",
     "tooltip": "Government owned and operated publicly accessible open space",
     "icon": {
       "type": "rectangle",
@@ -18,10 +18,10 @@
     {
       "before": "building",
       "style": {
-        "id": "publically-owned-waterfront-fill",
+        "id": "publicly-owned-waterfront-fill",
         "type": "fill",
         "source": "paws",
-        "source-layer": "publicallyownedwaterfront",
+        "source-layer": "publiclyownedwaterfront",
         "paint": {
           "fill-color": "rgba(154, 180, 100, 1)"
         }
@@ -29,10 +29,10 @@
     },
     {
       "style": {
-        "id": "publically-owned-waterfront-overlay",
+        "id": "publicly-owned-waterfront-overlay",
         "type": "fill",
         "source": "paws",
-        "source-layer": "publicallyownedwaterfront",
+        "source-layer": "publiclyownedwaterfront",
         "paint": {
           "fill-color": "rgba(154, 180, 100, 0.7)"
         }
@@ -44,10 +44,10 @@
     },
     {
       "style": {
-        "id": "publically-owned-waterfront-halo",
+        "id": "publicly-owned-waterfront-halo",
         "type": "line",
         "source": "paws",
-        "source-layer": "publicallyownedwaterfront",
+        "source-layer": "publiclyownedwaterfront",
         "paint": {
           "line-color": "rgba(154, 180, 100, 1)",
           "line-opacity": {

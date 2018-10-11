@@ -6,7 +6,8 @@
       "type": "line",
       "layers": [
         {
-          "stroke": "rgba(100, 180, 100, 0.4)"
+          "stroke": "rgba(100, 180, 100, 0.4)",
+          "stroke-width": 2.5
         }
       ]
     }

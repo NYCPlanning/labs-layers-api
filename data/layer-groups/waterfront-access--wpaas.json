@@ -1,8 +1,8 @@
 {
   "id": "waterfront-access--wpaas",
   "legend": {
-    "label": "Waterfront Public Access Area",
-    "tooltip": "The portion of a waterfront zoning lot where publicly accessible open space is provided to and along the shoreline",
+    "label": "Privately Owned Spaces",
+    "tooltip": "Waterfront zoning lots where publicly accessible open space is provided to and along the shoreline",
     "icon": {
       "type": "rectangle",
       "layers": [

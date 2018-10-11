@@ -7,12 +7,12 @@
       "sql": "SELECT the_geom_webmercator, cartodb_id, paws_id, park_name, status FROM wpaas_v201810"
     },
     {
-      "id": "publicallyownedwaterfront",
-      "sql": "SELECT the_geom_webmercator, cartodb_id, park_name, link FROM publicallyownedwaterfront_v201810"
+      "id": "publiclyownedwaterfront",
+      "sql": "SELECT the_geom_webmercator, cartodb_id, park_name, link FROM publiclyownedwaterfront_v201810"
     },
     {
       "id": "paws_footprints",
-      "sql": "SELECT the_geom_webmercator, cartodb_id FROM publicallyownedwaterfront_footprints_v201810"
+      "sql": "SELECT the_geom_webmercator, cartodb_id FROM publiclyownedwaterfront_footprints_v201810"
     },
     {
       "id": "paws_entry_points",
