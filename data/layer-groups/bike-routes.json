@@ -1,7 +1,15 @@
 {
   "id": "bike-routes",
   "legend": {
-    "label": "Bike Routes"
+    "label": "Bike Routes",
+    "icon": {
+      "type": "line",
+      "layers": [
+        {
+          "stroke": "rgba(100, 180, 100, 0.4)"
+        }
+      ]
+    }
   },
   "layers": [
     {
