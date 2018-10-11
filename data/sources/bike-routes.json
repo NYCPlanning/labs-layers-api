@@ -1,0 +1,17 @@
+{
+  "id": "bike-routes",
+  "type": "cartovector",
+  "source-layers": [
+    {
+      "id": "bike-routes",
+      "sql": "SELECT the_geom_webmercator, cartodb_id FROM bike_routes_v20180913"
+    }
+  ],
+  "meta": {
+    "description": "Locations of bike lanes and routes throughout the City, NYC Open Data",
+    "url": [
+      "https://data.cityofnewyork.us/Transportation/Bicycle-Routes/7vsa-caz7"
+    ],
+    "updated_at": "Sep 13, 2018"
+  }
+}
