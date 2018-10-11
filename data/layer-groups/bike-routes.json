@@ -16,7 +16,7 @@
       "before": "highway_name_other",
       "style": {
         "id": "bike_routes",
-        "source": "bike-routes",
+        "source": "transportation",
         "source-layer": "bike-routes",
         "type": "line",
         "paint": {

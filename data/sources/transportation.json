@@ -3,6 +3,10 @@
   "type": "cartovector",
   "source-layers": [
     {
+      "id": "bike-routes",
+      "sql": "SELECT the_geom_webmercator, cartodb_id FROM bike_routes_v20180913"
+    },
+    {
       "id": "subway-routes",
       "sql": "SELECT the_geom_webmercator, rt_symbol FROM mta_subway_routes_v0"
     },
