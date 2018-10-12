@@ -12,7 +12,23 @@
           "stroke-width": "2"
         }
       ]
-    }
+    },
+    "items": [
+      {
+        "label": "Public Access Footprint",
+        "icon": {
+          "type": "rectangle",
+          "layers": [
+            {
+              "fill": "rgba(100, 180, 154, 0)",
+              "stroke": "#007a52",
+              "stroke-dasharray": "1.5,0.75",
+              "stroke-width": 1.5
+            }
+          ]
+        }
+      }
+    ]
   },
   "layers": [
     {
