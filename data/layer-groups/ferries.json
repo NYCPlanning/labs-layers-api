@@ -1,7 +1,17 @@
 {
   "id": "ferries",
   "legend": {
-    "label": "NYC Ferry Routes and Landings"
+    "label": "NYC Ferry Routes and Landings",
+    "icon": {
+      "type": "line",
+      "layers": [
+        {
+          "stroke": "#4f0093",
+          "stroke-width": 2,
+          "stroke-dasharray": "2 2"
+        }
+      ]
+    }
   },
   "layers": [
     {

@@ -1,7 +1,16 @@
 {
   "id": "subway",
   "legend": {
-    "label": "Subways"
+    "label": "Subways",
+    "icon": {
+      "type": "line",
+      "layers": [
+        {
+          "stroke": "rgba(238, 53, 46, 1)",
+          "stroke-width": 2
+        }
+      ]
+    }
   },
   "layers": [
     {
