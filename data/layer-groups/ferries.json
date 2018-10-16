@@ -1,0 +1,160 @@
+{
+  "id": "ferries",
+  "legend": {
+    "label": "NYC Ferry Routes and Landings"
+  },
+  "layers": [
+    {
+      "before": "place_other",
+      "style": {
+        "id": "ferry-routes",
+        "type": "line",
+        "source": "ferries",
+        "source-layer": "ferry-routes",
+        "paint": {
+          "line-color": {
+            "property": "route_name",
+            "type": "categorical",
+            "stops": [
+              [
+                "Soundview",
+                "#4f0093"
+              ],
+              [
+                "Astoria",
+                "#ff6900"
+              ],
+              [
+                "East River",
+                "#00829e"
+              ],
+              [
+                "Rockaway",
+                "#b300ae"
+              ],
+              [
+                "South Brooklyn",
+                "#fb7098"
+              ],
+              [
+                "Governor's Island",
+                "#00829e"
+              ],
+              [
+                "Lower East Side",
+                "#f7d400"
+              ]
+            ]
+          },
+          "line-width": {
+            "stops": [
+              [
+                10,
+                1
+              ],
+              [
+                15,
+                4
+              ]
+            ]
+          },
+          "line-dasharray": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "before": "place_other",
+      "style": {
+        "id": "ferry-landings",
+        "type": "circle",
+        "source": "ferries",
+        "source-layer": "ferry-landings",
+        "metadata": {
+          "nycplanninglabs:layergroupid": "ferries"
+        },
+        "paint": {
+          "circle-color": "rgba(255, 255, 255, 1)",
+          "circle-opacity": {
+            "stops": [
+              [
+                11,
+                0
+              ],
+              [
+                12,
+                1
+              ]
+            ]
+          },
+          "circle-stroke-opacity": {
+            "stops": [
+              [
+                11,
+                0
+              ],
+              [
+                12,
+                1
+              ]
+            ]
+          },
+          "circle-radius": {
+            "stops": [
+              [
+                10,
+                2
+              ],
+              [
+                14,
+                5
+              ]
+            ]
+          },
+          "circle-stroke-width": 2,
+          "circle-pitch-scale": "map"
+        }
+      }
+    },
+    {
+      "before": "place_other",
+      "style": {
+        "id": "ferry_landings_labels",
+        "minzoom": 13,
+        "source": "ferries",
+        "source-layer": "ferry-landings",
+        "type": "symbol",
+        "layout": {
+          "text-field": "{name}",
+          "symbol-placement": "point",
+          "symbol-spacing": 250,
+          "symbol-avoid-edges": false,
+          "text-size": 14,
+          "text-anchor": "center"
+        },
+        "paint": {
+          "text-halo-color": "rgba(255, 255, 255, 1)",
+          "text-halo-width": 1,
+          "text-translate": [
+            1,
+            20
+          ],
+          "text-opacity": {
+            "stops": [
+              [
+                13,
+                0
+              ],
+              [
+                14,
+                1
+              ]
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

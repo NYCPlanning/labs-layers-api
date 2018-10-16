@@ -1,0 +1,23 @@
+{
+  "id": "ferries",
+  "type": "cartovector",
+  "source-layers": [
+    {
+      "id": "ferry-routes",
+      "sql": "SELECT the_geom_webmercator, cartodb_id, route_name FROM nyc_ferry_routes"
+    },
+    {
+      "id": "ferry-landings",
+      "sql": "SELECT the_geom_webmercator, name FROM nyc_ferry_landings"
+    }
+  ],
+  "minzoom": 0,
+  "meta": {
+    "description": "",
+    "url": [
+      "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM nyc_ferry_routes&format=SHP",
+      "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM nyc_ferry_landings&format=SHP"
+    ],
+    "updated_at": "12 October 2017"
+  }
+}
