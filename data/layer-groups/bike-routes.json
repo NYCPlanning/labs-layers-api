@@ -6,7 +6,7 @@
       "type": "line",
       "layers": [
         {
-          "stroke": "rgba(100, 180, 100, 0.4)",
+          "stroke": "rgba(18, 237, 18, 0.3)",
           "stroke-width": 2.5
         }
       ]
@@ -21,7 +21,7 @@
         "source-layer": "bike-routes",
         "type": "line",
         "paint": {
-          "line-color": "rgba(100, 180, 100, 0.4)",
+          "line-color": "rgba(18, 237, 18, 0.3)",
           "line-width": {
             "stops": [
               [
