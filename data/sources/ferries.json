@@ -13,7 +13,7 @@
   ],
   "minzoom": 0,
   "meta": {
-    "description": "",
+    "description": "Ferry Routes and Landings, NYC Department of City Planning Waterfront Division",
     "url": [
       "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM nyc_ferry_routes&format=SHP",
       "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM nyc_ferry_landings&format=SHP"
