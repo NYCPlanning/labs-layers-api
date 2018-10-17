@@ -27,6 +27,7 @@ const legendItemSchema = Joi.object().keys({
 module.exports = Joi.object().keys({
   id: Joi.string().required(),
   visible: Joi.boolean(),
+  filter: Joi.array(),
   legend: Joi.object().keys({
     label: Joi.string().required(),
     tooltip: Joi.string(),
