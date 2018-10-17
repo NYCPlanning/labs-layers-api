@@ -13,11 +13,11 @@
   ],
   "minzoom": 0,
   "meta": {
-    "description": "",
+    "description": "Ferry Routes and Landings",
     "url": [
       "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM nyc_ferry_routes&format=SHP",
       "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM nyc_ferry_landings&format=SHP"
     ],
-    "updated_at": "12 October 2017"
+    "updated_at": "October 2018"
   }
 }
