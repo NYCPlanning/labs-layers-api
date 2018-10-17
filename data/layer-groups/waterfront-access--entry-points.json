@@ -55,7 +55,6 @@
         }
       },
       "tooltipable": true,
-      "tooltipTemplate": "{{{notes}}}"
     }
   ]
 }
