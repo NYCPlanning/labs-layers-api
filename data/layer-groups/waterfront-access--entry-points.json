@@ -20,6 +20,7 @@
   },
   "layers": [
     {
+      "before": "place_other",
       "style": {
         "id": "wpaas-entry-points",
         "type": "circle",
