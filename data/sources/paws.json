@@ -21,6 +21,9 @@
   ],
   "meta": {
     "description": "Publicly Accessible Waterfront Spaces, NYC Department of City Planning Waterfront Division",
+    "url": [
+      "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-waterfront.page",
+     ],
     "updated_at": "October 2018"
   }
 }
