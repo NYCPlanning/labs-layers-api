@@ -1,14 +1,13 @@
 {
   "id": "waterfront-access--publicly-owned",
   "legend": {
-    "label": "Publicly Owned Spaces",
-    "tooltip": "Government owned and operated publicly accessible open space",
+    "label": "Public Parks and Facilities",
     "icon": {
       "type": "rectangle",
       "layers": [
         {
-          "fill": "rgba(154, 180, 100, 1)",
-          "stroke": "rgba(154, 180, 100, 0.6)",
+          "fill": "rgba(178, 201, 134, 1)",
+          "stroke": "rgba(178, 201, 134, 0.6)",
           "stroke-width": "2"
         }
       ]
@@ -23,7 +22,7 @@
         "source": "paws",
         "source-layer": "publiclyownedwaterfront",
         "paint": {
-          "fill-color": "rgba(154, 180, 100, 1)"
+          "fill-color": "rgba(178, 201, 134, 1)"
         }
       }
     },
@@ -34,40 +33,13 @@
         "source": "paws",
         "source-layer": "publiclyownedwaterfront",
         "paint": {
-          "fill-color": "rgba(154, 180, 100, 0.7)"
+          "fill-color": "rgba(178, 201, 134, 0.5)"
         }
       },
       "highlightable": true,
       "clickable": true,
       "tooltipable": true,
       "tooltipTemplate": "{{{park_name}}}"
-    },
-    {
-      "style": {
-        "id": "publicly-owned-waterfront-halo",
-        "type": "line",
-        "source": "paws",
-        "source-layer": "publiclyownedwaterfront",
-        "paint": {
-          "line-color": "rgba(154, 180, 100, 1)",
-          "line-opacity": {
-            "stops": [
-              [10, 1],
-              [13, 0.3]
-            ]
-          },
-          "line-width": {
-            "stops": [
-              [12, 4],
-              [14, 0]
-            ]
-          }
-        },
-        "layout": {
-          "line-cap": "round",
-          "line-join": "round"
-        }
-      }
     }
   ]
 }

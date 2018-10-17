@@ -3,25 +3,28 @@
   "legend": {
     "label": "Privately Owned Spaces",
     "tooltip": "Waterfront zoning lots where publicly accessible open space is provided to and along the shoreline",
-    "icon": {
-      "type": "rectangle",
-      "layers": [
-        {
-          "fill": "rgba(100, 180, 154, 1)",
-          "stroke": "rgba(100, 180, 154, 0.6)",
-          "stroke-width": "2"
-        }
-      ]
-    },
     "items": [
       {
-        "label": "Public Access Footprint",
+        "label": "Waterfront Zoning Lots",
         "icon": {
           "type": "rectangle",
           "layers": [
             {
-              "fill": "rgba(100, 180, 154, 0)",
-              "stroke": "#007a52",
+              "fill": "rgba(100, 180, 100, 1)",
+              "stroke": "rgba(100, 180, 100, 0.6)",
+              "stroke-width": "2"
+            }
+          ]
+        }
+      },
+      {
+        "label": "Public Access Areas",
+        "icon": {
+          "type": "rectangle",
+          "layers": [
+            {
+              "fill": "rgba(100, 180, 100, 0)",
+              "stroke": "#007a00",
               "stroke-dasharray": "1.5,0.75",
               "stroke-width": 1.5
             }
@@ -39,7 +42,7 @@
         "source": "paws",
         "source-layer": "wpaas",
         "paint": {
-          "fill-color": "rgba(100, 180, 154, 1)"
+          "fill-color": "rgba(100, 180, 100, 1)"
         }
       }
     },
@@ -50,7 +53,7 @@
         "source": "paws",
         "source-layer": "wpaas",
         "paint": {
-          "fill-color": "rgba(100, 180, 154, 0.7)"
+          "fill-color": "rgba(100, 180, 100, 0.5)"
         }
       },
       "highlightable": true,
@@ -65,7 +68,7 @@
         "source": "paws",
         "source-layer": "wpaas",
         "paint": {
-          "line-color": "rgba(100, 180, 154, 1)",
+          "line-color": "rgba(100, 180, 100, 1)",
           "line-opacity": {
             "stops": [
               [10, 1],
@@ -93,7 +96,7 @@
         "source": "paws",
         "source-layer": "paws_footprints",
         "paint": {
-          "line-color": "#007a52",
+          "line-color": "#007a00",
           "line-opacity": {
             "stops": [
               [13, 0],
