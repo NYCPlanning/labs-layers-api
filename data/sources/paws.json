@@ -4,7 +4,7 @@
   "source-layers": [
     {
       "id": "wpaas",
-      "sql": "SELECT the_geom_webmercator, cartodb_id, paws_id, park_name, status FROM wpaas_v201810"
+      "sql": "SELECT a.the_geom_webmercator, a.cartodb_id, a.paws_id, a.park_name, a.status, b.lighting, b.other_planting, b.entry_gates, b.designated_bike_path, b.bike_racks, b.other_circulation_paths, b.ground_floor_retail, b.piers, b.ferry_watertaxi__service, b.boat_launch, b.public_access_easement, b.guardrail, b.public_art, b.interpretive_displays, b.trash_receptacles, b.handicapped_accessible, b.emergency_access FROM wpaas_v201810 a LEFT JOIN pawsmastertable b ON a.paws_id = b.paws_id::text"
     },
     {
       "id": "publiclyownedwaterfront",
@@ -16,11 +16,14 @@
     },
     {
       "id": "paws_entry_points",
-      "sql": "SELECT the_geom_webmercator, cartodb_id, notes FROM paws_accesspoints_v201810"
+      "sql": "SELECT the_geom_webmercator, cartodb_id FROM paws_accesspoints_v1"
     }
   ],
   "meta": {
     "description": "Publicly Accessible Waterfront Spaces, NYC Department of City Planning Waterfront Division",
+    "url": [
+      "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-waterfront.page"
+     ],
     "updated_at": "October 2018"
   }
 }
