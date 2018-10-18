@@ -8,7 +8,7 @@
     },
     {
       "id": "publiclyownedwaterfront",
-      "sql": "SELECT the_geom_webmercator, cartodb_id, park_name, link FROM publiclyownedwaterfront_v201810"
+      "sql": "SELECT the_geom_webmercator, cartodb_id, wf_park_id, park_name, link, agency, status FROM publiclyownedwaterfront_v201810"
     },
     {
       "id": "paws_footprints",
