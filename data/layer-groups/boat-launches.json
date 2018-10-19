@@ -30,27 +30,17 @@
           "circle-color": "rgba(0, 255, 255, 1)",
           "circle-radius": {
             "stops": [
-              [14, 1],
+              [9, 1],
+              [14, 2],
               [16, 3]
             ]
           },
           "circle-stroke-color": "rgba(0, 0, 255, 1)",
           "circle-stroke-width": {
             "stops": [
-              [14, 1],
+              [9, 1],
+              [14, 2],
               [16, 3]
-            ]
-          },
-          "circle-opacity": {
-            "stops": [
-              [12, 0],
-              [13, 1]
-            ]
-          },
-          "circle-stroke-opacity": {
-            "stops": [
-              [12, 0],
-              [13, 1]
             ]
           }
         }
