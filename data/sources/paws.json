@@ -4,7 +4,7 @@
   "source-layers": [
     {
       "id": "wpaas",
-      "sql": "SELECT a.the_geom_webmercator, a.cartodb_id, a.paws_id, a.park_name, a.status, b.lighting, b.other_planting, b.entry_gates, b.designated_bike_path, b.bike_racks, b.other_circulation_paths, b.ground_floor_retail, b.piers, b.ferry_watertaxi__service, b.boat_launch, b.public_access_easement, b.guardrail, b.public_art, b.interpretive_displays, b.trash_receptacles, b.handicapped_accessible, b.emergency_access FROM wpaas_v201810 a LEFT JOIN pawsmastertable b ON a.paws_id = b.paws_id::text"
+      "sql": "SELECT a.the_geom_webmercator, a.cartodb_id, a.paws_id, a.park_name, a.status, b.feature_promenade_esplanade, b.feature_seating_lawn, b.feature_pier, b.feature_wetland_natural_edge, b.feature_dog_run, b.feature_educational_or_interpretive, b.feature_public_restroom, b.feature_shade_structure, b.feature_outdoor_art, b.feature_food_or_beverage_concessions, b.feature_group_seating, b.activity_volleyball_court, b.activity_basketball_court, b.activity_fishing, b.activity_boating_access, b.activity_tot_playground, b.activity_splash_feature, b.activity_other_recreational_facilities, b.activity_swimming FROM wpaas_v201810 a LEFT JOIN pawsmastertable b ON a.paws_id = b.paws_id::text"
     },
     {
       "id": "publiclyownedwaterfront",
