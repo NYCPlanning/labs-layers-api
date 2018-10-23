@@ -14,7 +14,7 @@
   },
   "layers": [
     {
-      "before": "highway_name_other",
+      "before": "place_other",
       "style": {
         "id": "bike_routes",
         "source": "transportation",

@@ -35,14 +35,27 @@
   },
   "layers": [
     {
-      "before": "building",
+      "before": "place_other",
       "style": {
-        "id": "wpaas-fill",
-        "type": "fill",
+        "id": "wpaas-line",
+        "type": "line",
         "source": "paws",
         "source-layer": "wpaas",
         "paint": {
-          "fill-color": "rgba(100, 180, 100, 1)"
+          "line-color": "#007a00",
+          "line-opacity": {
+            "stops": [
+              [13, 0],
+              [15, 1]
+            ]
+          },
+          "line-width": {
+            "stops": [
+              [14, 2],
+              [16, 3]
+            ]
+          },
+          "line-dasharray": [1, 0.5]
         }
       }
     },
@@ -53,7 +66,13 @@
         "source": "paws",
         "source-layer": "wpaas",
         "paint": {
-          "fill-color": "rgba(100, 180, 100, 0.5)"
+          "fill-color": "rgba(100, 180, 100, 1)",
+          "fill-opacity": {
+            "stops": [
+              [12, 1],
+              [15, 0.1]
+            ]
+          }
         }
       },
       "highlightable": true,
@@ -92,24 +111,11 @@
       "before": "place_other",
       "style": {
         "id": "paws-footprints",
-        "type": "line",
+        "type": "fill",
         "source": "paws",
         "source-layer": "paws_footprints",
         "paint": {
-          "line-color": "#007a00",
-          "line-opacity": {
-            "stops": [
-              [13, 0],
-              [15, 1]
-            ]
-          },
-          "line-width": {
-            "stops": [
-              [14, 2],
-              [16, 3]
-            ]
-          },
-          "line-dasharray": [1, 0.5]
+          "fill-color": "rgba(100, 180, 100, 1)"
         }
       }
     }
