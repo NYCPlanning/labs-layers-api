@@ -10,9 +10,10 @@
           "type": "rectangle",
           "layers": [
             {
-              "fill": "rgba(100, 180, 100, 1)",
-              "stroke": "rgba(100, 180, 100, 0.6)",
-              "stroke-width": "2"
+              "fill": "rgba(100, 180, 100, 0)",
+              "stroke": "#007a00",
+              "stroke-dasharray": "1.5,0.75",
+              "stroke-width": 1.5
             }
           ]
         }
@@ -23,10 +24,9 @@
           "type": "rectangle",
           "layers": [
             {
-              "fill": "rgba(100, 180, 100, 0)",
-              "stroke": "#007a00",
-              "stroke-dasharray": "1.5,0.75",
-              "stroke-width": 1.5
+              "fill": "rgba(100, 180, 100, 1)",
+              "stroke": "rgba(100, 180, 100, 0.6)",
+              "stroke-width": "2"
             }
           ]
         }
