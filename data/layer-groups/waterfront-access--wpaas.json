@@ -30,6 +30,19 @@
             }
           ]
         }
+      },
+      {
+        "label": "Not Yet Constructed",
+        "icon": {
+          "type": "rectangle",
+          "layers": [
+            {
+              "fill": "rgba(237, 189, 18, 0.8)",
+              "stroke": "rgba(237, 189, 18, 0.6)",
+              "stroke-width": "2"
+            }
+          ]
+        }
       }
     ]
   },
@@ -66,11 +79,25 @@
         "source": "paws",
         "source-layer": "wpaas",
         "paint": {
-          "fill-color": "rgba(100, 180, 100, 1)",
+          "fill-color": {
+            "property": "constructi",
+            "type": "categorical",
+            "stops": [
+              [
+                "Under Construction",
+                "rgba(237, 189, 18, 0.7)"
+              ],
+              [
+                "Approved (to be constructed)",
+                "rgba(237, 189, 18, 0.7)"
+              ]
+            ],
+            "default": "rgba(100, 180, 100, 1)"
+          },
           "fill-opacity": {
             "stops": [
               [12, 1],
-              [15, 0.1]
+              [15, 0.2]
             ]
           }
         }
@@ -87,7 +114,21 @@
         "source": "paws",
         "source-layer": "wpaas",
         "paint": {
-          "line-color": "rgba(100, 180, 100, 1)",
+          "line-color": {
+            "property": "constructi",
+            "type": "categorical",
+            "stops": [
+              [
+                "Under Construction",
+                "rgba(237, 189, 18, 0.9)"
+              ],
+              [
+                "Approved (to be constructed)",
+                "rgba(237, 189, 18, 0.9)"
+              ]
+            ],
+            "default": "rgba(100, 180, 100, 1)"
+          },
           "line-opacity": {
             "stops": [
               [10, 1],
