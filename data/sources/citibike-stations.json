@@ -4,7 +4,7 @@
   "source-layers": [
     {
       "id": "citibike-stations",
-      "sql": "SELECT the_geom_webmercator, station::json->>'name' AS name, station::json->>'capacity' AS capacity, station::json->>'bikes_available' AS bikes_available, station::json->>'docks_available' AS docks_available FROM twg_i75aydysqbrqk9zgvg"
+      "sql": "SELECT the_geom_webmercator, station::json->>'name' AS name, station::json->>'capacity' AS capacity, station::json->>'bikes_available' AS bikes_available, station::json->>'docks_available' AS docks_available FROM twg_i75aydysqbrqk9zgvg WHERE station::json->>'capacity' <> '0'"
     }
   ],
   "meta": {
