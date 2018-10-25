@@ -1,0 +1,52 @@
+{
+  "id": "citibike-stations",
+  "legend": {
+    "label": "Citibike Stations",
+    "icon": {
+      "type": "fa-icon",
+      "layers": [
+        {
+          "fa-icon": "circle",
+          "color": "rgba(128, 0, 0, 1)",
+          "transform": "shrink-4"
+        },
+        {
+          "fa-icon": "circle",
+          "color": "rgba(240, 128, 128, 1)",
+          "transform": "shrink-10"
+        }
+      ]
+    }
+  },
+  "layers": [
+    {
+      "before": "place_other",
+      "style": {
+        "id": "citibike-stations",
+        "type": "circle",
+        "source": "citibike-stations",
+        "source-layer": "citibike-stations",
+        "paint": {
+          "circle-color": "rgba(240, 128, 128, 1)",
+          "circle-radius": {
+            "stops": [
+              [9, 1],
+              [14, 2],
+              [16, 3]
+            ]
+          },
+          "circle-stroke-color": "rgba(128, 0, 0, 1)",
+          "circle-stroke-width": {
+            "stops": [
+              [9, 1],
+              [14, 2],
+              [16, 3]
+            ]
+          }
+        }
+      },
+      "tooltipable": true,
+      "tooltipTemplate": "{{{name}}}"
+    }
+  ]
+}
