@@ -8,7 +8,7 @@
     },
     {
       "id": "ferry-landings",
-      "sql": "SELECT the_geom_webmercator, name FROM nyc_ferry_landings_v20181023 WHERE status <> 'Inactive'"
+      "sql": "SELECT the_geom_webmercator, name, link FROM nyc_ferry_landings_v20181023 WHERE status <> 'Inactive'"
     }
   ],
   "minzoom": 0,
