@@ -10,7 +10,7 @@
   "meta": {
     "description": "Citibike Stations",
     "url": [
-      "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM twg_i75aydysqbrqk9zgvg&format=SHP"
+      "https://layer.bicyclesharing.net/map/v1/nyc/map-inventory"
     ],
     "updated_at": "October 2018"
   }
