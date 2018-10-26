@@ -4,7 +4,7 @@
   "source-layers": [
     {
       "id": "zoning-districts",
-      "sql": "SELECT * FROM (\n              SELECT *, CASE\n                WHEN SUBSTRING(zonedist, 3, 1) = '-' THEN LEFT(zonedist, 2)\n                WHEN SUBSTRING(zonedist, 3, 1) ~ E'[A-Z]' THEN LEFT(zonedist, 2)\n                WHEN SUBSTRING(zonedist, 3, 1) ~ E'[0-9]' THEN LEFT(zonedist, 3)\n                ELSE zonedist\n              END as primaryzone FROM zoning_districts_v201809\n            ) a"
+      "sql": "SELECT * FROM (SELECT the_geom_webmercator, zonedist, CASE WHEN SUBSTRING(zonedist, 3, 1) = '-' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[A-Z]' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[0-9]' THEN LEFT(zonedist, 3) ELSE zonedist END as primaryzone FROM zoning_districts_v201809) a"
     }
   ],
   "meta": {
