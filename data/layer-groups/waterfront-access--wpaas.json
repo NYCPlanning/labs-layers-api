@@ -5,20 +5,6 @@
     "tooltip": "The portion of a waterfront zoning lot where publicly accessible open space is provided to and along the shoreline",
     "items": [
       {
-        "label": "Waterfront Zoning Lots",
-        "icon": {
-          "type": "rectangle",
-          "layers": [
-            {
-              "fill": "rgba(100, 180, 100, 0)",
-              "stroke": "#007a00",
-              "stroke-dasharray": "1.5,0.75",
-              "stroke-width": 1.5
-            }
-          ]
-        }
-      },
-      {
         "label": "Public Access Areas",
         "icon": {
           "type": "rectangle",
@@ -32,7 +18,21 @@
         }
       },
       {
-        "label": "Future Public Access Areas",
+        "label": "Waterfront Zoning Tax Lots",
+        "icon": {
+          "type": "rectangle",
+          "layers": [
+            {
+              "fill": "rgba(100, 180, 100, 0)",
+              "stroke": "#007a00",
+              "stroke-dasharray": "1.5,0.75",
+              "stroke-width": 1.5
+            }
+          ]
+        }
+      },
+      {
+        "label": "Lots with Future Public Access Areas",
         "icon": {
           "type": "rectangle",
           "layers": [
