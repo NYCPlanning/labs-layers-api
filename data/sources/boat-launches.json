@@ -1,0 +1,17 @@
+{
+  "id": "boat-launches",
+  "type": "cartovector",
+  "source-layers": [
+    {
+      "id": "boat-launches",
+      "sql": "SELECT the_geom_webmercator, cartodb_id, comments, link, name, notes FROM humanboatlaunch_v201810"
+    }
+  ],
+  "meta": {
+    "description": "Boat Launches",
+    "url": [
+      "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM humanboatlaunch_v201810&format=SHP"
+    ],
+    "updated_at": "October 2018"
+  }
+}

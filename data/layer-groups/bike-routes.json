@@ -1,0 +1,41 @@
+{
+  "id": "bike-routes",
+  "legend": {
+    "label": "Bike Routes",
+    "icon": {
+      "type": "line",
+      "layers": [
+        {
+          "stroke": "rgba(18, 237, 18, 0.3)",
+          "stroke-width": 2.5
+        }
+      ]
+    }
+  },
+  "layers": [
+    {
+      "before": "place_other",
+      "style": {
+        "id": "bike_routes",
+        "source": "transportation",
+        "source-layer": "bike-routes",
+        "type": "line",
+        "paint": {
+          "line-color": "rgba(18, 237, 18, 0.3)",
+          "line-width": {
+            "stops": [
+              [
+                10,
+                0.5
+              ],
+              [
+                15,
+                8
+              ]
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

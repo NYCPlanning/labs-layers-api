@@ -1,7 +1,16 @@
 {
   "id": "subway",
   "legend": {
-    "label": "Subways"
+    "label": "Subways",
+    "icon": {
+      "type": "line",
+      "layers": [
+        {
+          "stroke": "rgba(238, 53, 46, 1)",
+          "stroke-width": 2
+        }
+      ]
+    }
   },
   "layers": [
     {
@@ -338,6 +347,7 @@
       }
     },
     {
+      "before": "place_other",
       "style": {
         "id": "subway_stations_labels",
         "minzoom": 13,
@@ -375,6 +385,7 @@
       }
     },
     {
+      "before": "place_other",
       "style": {
         "id": "subway_entrances",
         "minzoom": 15,
@@ -393,6 +404,7 @@
       }
     },
     {
+      "before": "place_other",
       "style": {
         "id": "subway_entrances_labels",
         "minzoom": 15,

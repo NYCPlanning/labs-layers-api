@@ -1,0 +1,62 @@
+{
+  "id": "waterfront-access--entry-points",
+  "legend": {
+    "label": "Entry Points",
+    "icon": {
+      "type": "fa-icon",
+      "layers": [
+        {
+          "fa-icon": "circle",
+          "color": "rgba(0, 122, 0, 1)",
+          "transform": "shrink-4"
+        },
+        {
+          "fa-icon": "circle",
+          "color": "rgba(179, 255, 179, 1)",
+          "transform": "shrink-10"
+        }
+      ]
+    }
+  },
+  "layers": [
+    {
+      "before": "place_other",
+      "style": {
+        "id": "wpaas-entry-points",
+        "type": "circle",
+        "source": "paws",
+        "source-layer": "paws_entry_points",
+        "minzoom":14,
+        "paint": {
+          "circle-color": "rgba(179, 255, 179, 1)",
+          "circle-radius": {
+            "stops": [
+              [14, 2],
+              [16, 4]
+            ]
+          },
+          "circle-stroke-color": "rgba(0, 122, 0, 1)",
+          "circle-stroke-width": {
+            "stops": [
+              [14, 2],
+              [16, 3]
+            ]
+          },
+          "circle-opacity": {
+            "stops": [
+              [14, 0.5],
+              [16, 1]
+            ]
+          },
+          "circle-stroke-opacity": {
+            "stops": [
+              [14, 0.5],
+              [16, 1]
+            ]
+          }
+        }
+      },
+      "tooltipable": true
+    }
+  ]
+}

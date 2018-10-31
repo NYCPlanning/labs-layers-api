@@ -207,21 +207,25 @@
        }
     },
     {
-       "id":"waterway",
-       "type":"line",
-       "source":"openmaptiles",
-       "source-layer":"waterway",
-       "filter":[
-          "==",
-          "$type",
-          "LineString"
-       ],
-       "layout":{
-          "visibility":"visible"
-       },
-       "paint":{
-          "line-color":"hsl(195, 17%, 78%)"
-       }
+      "id":"waterway",
+      "type":"line",
+      "source":"openmaptiles",
+      "source-layer":"waterway",
+      "filter":[
+        "==",
+        "$type",
+        "LineString"
+      ],
+      "layout":{
+        "visibility":"visible"
+      },
+      "paint":{
+        "line-color":"#bbccdd",
+        "line-dasharray":[
+          3,
+          3
+        ]
+      }
     },
     {
        "id":"water_name",
@@ -1447,7 +1451,7 @@
           "visibility":"visible"
        },
        "paint":{
-          "line-color":"rgb(230, 204, 207)",
+          "line-color":"rgba(230, 204, 207, 0)",
           "line-width":{
              "base":1.3,
              "stops":[
@@ -1487,7 +1491,7 @@
           "line-join":"round"
        },
        "paint":{
-          "line-color":"rgb(230, 204, 207)",
+          "line-color":"rgba(230, 204, 207, 0)",
           "line-width":{
              "base":1.1,
              "stops":[

@@ -1,0 +1,164 @@
+{
+  "id": "waterfront-access--wpaas",
+  "legend": {
+    "label": "Waterfront Public Access Areas",
+    "tooltip": "The portion of a waterfront zoning lot where publicly accessible open space is provided to and along the shoreline",
+    "items": [
+      {
+        "label": "Public Access Areas",
+        "icon": {
+          "type": "rectangle",
+          "layers": [
+            {
+              "fill": "rgba(100, 180, 100, 1)",
+              "stroke": "rgba(100, 180, 100, 0.6)",
+              "stroke-width": "2"
+            }
+          ]
+        }
+      },
+      {
+        "label": "Waterfront Zoning Tax Lots",
+        "icon": {
+          "type": "rectangle",
+          "layers": [
+            {
+              "fill": "rgba(100, 180, 100, 0)",
+              "stroke": "#007a00",
+              "stroke-dasharray": "1.5,0.75",
+              "stroke-width": 1.5
+            }
+          ]
+        }
+      },
+      {
+        "label": "Lots with Future Public Access Areas",
+        "icon": {
+          "type": "rectangle",
+          "layers": [
+            {
+              "fill": "rgba(237, 189, 18, 0.8)",
+              "stroke": "rgba(237, 189, 18, 0.6)",
+              "stroke-width": "2"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "layers": [
+    {
+      "before": "place_other",
+      "style": {
+        "id": "wpaas-line",
+        "type": "line",
+        "source": "paws",
+        "source-layer": "wpaas",
+        "paint": {
+          "line-color": "#007a00",
+          "line-opacity": {
+            "stops": [
+              [13, 0],
+              [15, 1]
+            ]
+          },
+          "line-width": {
+            "stops": [
+              [14, 2],
+              [16, 3]
+            ]
+          },
+          "line-dasharray": [1, 0.5]
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "wpaas-overlay",
+        "type": "fill",
+        "source": "paws",
+        "source-layer": "wpaas",
+        "paint": {
+          "fill-color": {
+            "property": "constructi",
+            "type": "categorical",
+            "stops": [
+              [
+                "Under construction",
+                "rgba(237, 189, 18, 0.7)"
+              ],
+              [
+                "Approved (to be constructed)",
+                "rgba(237, 189, 18, 0.7)"
+              ]
+            ],
+            "default": "rgba(100, 180, 100, 1)"
+          },
+          "fill-opacity": {
+            "stops": [
+              [12, 1],
+              [15, 0.2]
+            ]
+          }
+        }
+      },
+      "highlightable": true,
+      "clickable": true,
+      "tooltipable": true,
+      "tooltipTemplate": "{{{name}}}"
+    },
+    {
+      "style": {
+        "id": "wpaas-halo",
+        "type": "line",
+        "source": "paws",
+        "source-layer": "wpaas",
+        "paint": {
+          "line-color": {
+            "property": "constructi",
+            "type": "categorical",
+            "stops": [
+              [
+                "Under construction",
+                "rgba(237, 189, 18, 0.9)"
+              ],
+              [
+                "Approved (to be constructed)",
+                "rgba(237, 189, 18, 0.9)"
+              ]
+            ],
+            "default": "rgba(100, 180, 100, 1)"
+          },
+          "line-opacity": {
+            "stops": [
+              [10, 1],
+              [13, 0.3]
+            ]
+          },
+          "line-width": {
+            "stops": [
+              [12, 6],
+              [14, 0]
+            ]
+          }
+        },
+        "layout": {
+          "line-cap": "round",
+          "line-join": "round"
+        }
+      }
+    },
+    {
+      "before": "place_other",
+      "style": {
+        "id": "paws-footprints",
+        "type": "fill",
+        "source": "paws",
+        "source-layer": "paws_footprints",
+        "paint": {
+          "fill-color": "rgba(100, 180, 100, 1)"
+        }
+      }
+    }
+  ]
+}
