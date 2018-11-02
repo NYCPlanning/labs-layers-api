@@ -9,7 +9,7 @@
     },
     {
       "id": "block-centroids",
-      "sql": "SELECT bbl AS id, the_geom_webmercator, block FROM mappluto_block_centroids"
+      "sql": "SELECT the_geom_webmercator, block FROM mappluto_block_centroids"
     }
   ],
   "meta": {
