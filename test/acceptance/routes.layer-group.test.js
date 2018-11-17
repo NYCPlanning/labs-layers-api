@@ -512,4 +512,25 @@ describe('POST /layer-groups', () => {
         done();
       });
   });
+
+  it('delegate explicitly-set "visible" state to related layers', (done) => {
+    chai.request(server)
+      .post('/v1/layer-groups')
+      .set('content-type', 'application/json')
+      .send({
+        'layer-groups': [
+          { id: 'zoning-districts', visible: false },
+        ],
+      })
+      .end((err, res) => {
+        const { data, included } = res.body;
+
+        const zoningDistricts = data.find(d => d.id === 'zoning-districts');
+
+        should.exist(zoningDistricts);
+        should.exist(included[0].attributes.style.layout);
+
+        done();
+      });
+  });
 });
