@@ -12,7 +12,7 @@
     },
     {
       "id": "commercial-overlays",
-      "sql": "SELECT * FROM commercial_overlays_v201810"
+      "sql": "SELECT cartodb_id AS id, * FROM commercial_overlays_v201810"
     }
   ],
   "meta": {
