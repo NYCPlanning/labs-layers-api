@@ -4,7 +4,7 @@
   "source-layers": [
     {
       "id": "zoning-map-amendments",
-      "sql": "SELECT * FROM (SELECT the_geom_webmercator, to_char(effective, 'MM/DD/YYYY') as effectiveformatted, extract(epoch from effective) * 1000 as effective_epoch, ulurpno, status, project_na FROM planninglabs.zoning_map_amendments_v201810 WHERE status = 'Adopted') a"
+      "sql": "SELECT * FROM (SELECT the_geom_webmercator, to_char(effective, 'MM/DD/YYYY') as effectiveformatted, extract(epoch from effective) * 1000 as effective_epoch, ulurpno, status, project_na FROM planninglabs.zoning_map_amendments_v201811 WHERE status = 'Adopted') a"
     }
   ],
   "meta": {
@@ -12,7 +12,7 @@
     "url": [
       "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-gis-zoning.page"
     ],
-    "data_date": "October 30, 2018",
-    "updated_at": "November 2, 2018"
+    "data_date": "November 30, 2018",
+    "updated_at": "November 30, 2018"
   }
 }
