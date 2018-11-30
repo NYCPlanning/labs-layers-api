@@ -1,4 +1,5 @@
 const JSONAPISerializer = require('jsonapi-serializer').Serializer;
+const merge = require('deepmerge');
 const layerGroupSchema = require('../schemas/layer-group');
 const layerSchema = require('../schemas/layer');
 const sourceSchema = require('../schemas/source');
@@ -15,6 +16,23 @@ module.exports = (data, sources = []) => new JSONAPISerializer('layer-groups', {
         sourceObject => record.layers
           .map(({ style: { source } }) => source).includes(sourceObject.id),
       );
+
+    // delegate explicitly-set "visible" state to related layers
+    mutatedRecord.layers = mutatedRecord.layers
+      .map((layer) => {
+        const mutatedLayer = layer;
+
+        // check if only true or false to avoid delegation
+        if (mutatedRecord.visible === true || mutatedRecord.visible === false) {
+          mutatedLayer.style = merge(mutatedLayer.style, {
+            layout: {
+              visibility: (mutatedRecord.visible === true) ? 'visible' : 'none',
+            },
+          });
+        }
+
+        return mutatedLayer;
+      });
 
     return mutatedRecord;
   },
