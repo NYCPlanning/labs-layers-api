@@ -29,11 +29,11 @@
     {
       "id": "ny-assembly-districts",
       "sql": "SELECT the_geom_webmercator, assemdist FROM ny_assembly_districts_v201811"
-    }
+    },
     {
       "id": "nyc-pumas",
-      "sql": "SELECT the_geom_webmercator, puma FROM nyc_pumas_v201811",
-    },
+      "sql": "SELECT the_geom_webmercator, puma FROM nyc_pumas_v201811"
+    }
   ],
   "minzoom": 0,
   "meta": {
