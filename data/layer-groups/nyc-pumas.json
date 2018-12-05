@@ -1,0 +1,110 @@
+{
+  "id": "nyc-pumas",
+  "visible": false,
+  "legend": {
+    "label": "NYC PUMAs",
+    "icon": {
+      "type": "line",
+      "layers": [
+        {
+          "stroke": "#F5B176",
+          "stroke-width": 4,
+          "stroke-opacity": 0.5
+        },
+        {
+          "stroke": "#444",
+          "stroke-width": 1.5,
+          "stroke-opacity": 0.5
+        }
+      ]
+    }
+  },
+  "layers": [
+    {
+      "style": {
+        "id": "nyc-pumas-line-glow",
+        "type": "line",
+        "source": "admin-boundaries",
+        "source-layer": "nyc-pumas",
+        "paint": {
+          "line-color": "##F5B176",
+          "line-opacity": 0.2,
+          "line-width": {
+            "stops": [
+              [
+                11,
+                3
+              ],
+              [
+                16,
+                6
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "nyc-pumas-line",
+        "type": "line",
+        "source": "admin-boundaries",
+        "source-layer": "nyc-pumas",
+        "paint": {
+          "line-color": "#444",
+          "line-opacity": 0.3,
+          "line-width": {
+            "stops": [
+              [
+                11,
+                1
+              ],
+              [
+                16,
+                3
+              ]
+            ]
+          }
+        },
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "nyc-pumas-label",
+        "type": "symbol",
+        "source": "admin-boundaries",
+        "source-layer": "nyc-pumas",
+        "minzoom": 12,
+        "paint": {
+          "text-color": "#626262",
+          "text-halo-color": "#FFFFFF",
+          "text-halo-width": 2,
+          "text-halo-blur": 2
+        },
+        "layout": {
+          "text-field": "{puma}",
+          "text-font": [
+            "Open Sans Semibold",
+            "Arial Unicode MS Bold"
+          ],
+          "text-size": {
+            "stops": [
+              [
+                11,
+                12
+              ],
+              [
+                14,
+                16
+              ]
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
