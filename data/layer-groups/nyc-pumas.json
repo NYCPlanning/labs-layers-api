@@ -2,7 +2,7 @@
   "id": "nyc-pumas",
   "visible": false,
   "legend": {
-    "label": "NYC PUMAs",
+    "label": "PUMAs",
     "icon": {
       "type": "line",
       "layers": [
