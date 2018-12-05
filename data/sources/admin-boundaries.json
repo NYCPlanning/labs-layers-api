@@ -16,7 +16,7 @@
     },
     {
       "id": "boroughs",
-      "sql": "SELECT the_geom_webmercator, boroname FROM boro_boundaries_v0"
+      "sql": "SELECT the_geom_webmercator, boroname FROM boro_boundaries_V201811"
     },
     {
       "id": "nyc-council-districts",
