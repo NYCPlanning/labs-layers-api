@@ -1,25 +1,25 @@
 {
   "id": "bk-qn-mh-boundary",
   "legend": {
-      "label": "Borough Boundaries",
-      "icon": {
-        "type": "line",
-        "layers": [
-          {
-            "fill": "none",
-            "stroke-width": "2.5",
-            "stroke": "rgba(50,100,100,0.4)"
-          }
-        ]
-      }
+    "label": "Borough Boundaries",
+    "icon": {
+      "type": "line",
+      "layers": [
+        {
+          "fill": "none",
+          "stroke-width": "2.5",
+          "stroke": "rgba(50,100,100,0.4)"
+        }
+      ]
     }
   },
   "layers": [
     {
+      "before": "place_other",
       "tooltipable": true,
       "tooltipTemplate": "{{{boro_boundary}}}",
       "style": {
-        "id": "bk-qn-mh-boundary",
+        "id": "bk-qn-mh-boundary-line",
         "type": "line",
         "source": "admin-boundaries",
         "source-layer": "bk-qn-mh-boundary",
@@ -41,16 +41,8 @@
               ]
             ]
           }
-        },
-        "filter": [
-          "all",
-          [
-            "==",
-            "type",
-            "City_boundary"
-          ]
-        ]
+        }
       }
-    },
+    }
   ]
 }
