@@ -36,7 +36,7 @@
     },
     {
       "id": "bk-qn-mh-boundary",
-      "sql": "SELECT the_geom_webmercator, CONCAT(label1,"/",label2) AS boro_boundary FROM bk_qn_mh_boundary_v201804"
+      "sql": "SELECT the_geom_webmercator, CONCAT(label1,'/',label2) AS boro_boundary FROM bk_qn_mh_boundary_v201804"
     }
   ],
   "minzoom": 0,
