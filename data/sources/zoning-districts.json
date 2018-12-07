@@ -8,11 +8,11 @@
     }
   ],
   "meta": {
-    "description": "NYC GIS Zoning Features October 2018, Bytes of the Big Apple",
+    "description": "NYC GIS Zoning Features December 2018, Bytes of the Big Apple",
     "url": [
       "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
     ],
-    "data_date": "November 30, 2018",
-    "updated_at": "November 30, 2018"
+      "data_date": "December 6, 2018",
+      "updated_at": "December 7, 2018"
   }
 }

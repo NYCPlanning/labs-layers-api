@@ -68,11 +68,11 @@
     }
     ],
     "meta": {
-      "description": "Zoning related datasets November 2018, Bytes of the Big Apple",
+      "description": "Zoning related datasets December 2018, Bytes of the Big Apple",
       "url": [
         "https://www1.nyc.gov/site/planning/data-maps/open-data.page#zoning_related"
       ],
-      "data_date": "November 30, 2018",
-      "updated_at": "November 30, 2018"
+      "data_date": "December 6, 2018",
+      "updated_at": "December 7, 2018"
     }
   }
