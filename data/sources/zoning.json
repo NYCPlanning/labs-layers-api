@@ -4,15 +4,15 @@
   "source-layers": [
     {
       "id": "zoning-districts",
-      "sql": "SELECT *, CASE WHEN SUBSTRING(zonedist, 3, 1) = '-' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[A-Z]' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[0-9]' THEN LEFT(zonedist, 3) ELSE zonedist END as primaryzone FROM zoning_districts_v201811"
+      "sql": "SELECT *, CASE WHEN SUBSTRING(zonedist, 3, 1) = '-' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[A-Z]' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[0-9]' THEN LEFT(zonedist, 3) ELSE zonedist END as primaryzone FROM zoning_districts_v20181206"
     },
     {
       "id": "special-purpose-districts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id, sdlbl, sdname FROM special_purpose_districts_v201811"
+      "sql": "SELECT the_geom_webmercator, cartodb_id, sdlbl, sdname FROM special_purpose_districts_v20181206"
     },
     {
       "id": "commercial-overlays",
-      "sql": "SELECT cartodb_id AS id, * FROM commercial_overlays_v201811"
+      "sql": "SELECT cartodb_id AS id, * FROM commercial_overlays_v20181206"
     }
   ],
   "meta": {
