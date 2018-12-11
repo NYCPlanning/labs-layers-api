@@ -25,7 +25,6 @@
         "type": "circle",
         "source": "supporting-zoning",
         "source-layer": "e-designations",
-        "minzoom": 15,
         "paint": {
           "circle-radius": {
             "stops": [
