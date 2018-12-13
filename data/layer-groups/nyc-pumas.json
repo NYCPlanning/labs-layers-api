@@ -104,6 +104,18 @@
           }
         }
       }
+    },
+    {
+      "layer": {
+        "id": "nyc-pumas-selection-fill",
+        "type": "fill",
+        "source": "admin-boundaries",
+        "source-layer": "nyc-pumas",
+        "paint": {
+          "fill-opacity": 0.01
+        }
+      },
+      "highlightable": true
     }
   ]
 }
