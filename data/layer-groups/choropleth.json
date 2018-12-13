@@ -1,6 +1,10 @@
 {
   "id": "choropleth",
   "visible": true,
+  "legend": {
+    "label": "Thematic Maps (NTAs)",
+    "tooltip": "Neighborhood Tabulation Area maps for selected variables"
+  },
   "layers": [
     {
       "style": {
