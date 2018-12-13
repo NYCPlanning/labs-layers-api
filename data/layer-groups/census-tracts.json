@@ -1,6 +1,5 @@
 {
   "id": "census-tracts",
-  "title": "Census Tracts",
   "visible": true,
   "layers": [
     {
