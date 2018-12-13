@@ -1,0 +1,10 @@
+{
+  "id": "choropleth",
+  "type": "cartovector",
+  "source-layers": [
+    {
+      "id": "choropleth",
+      "sql": "SELECT the_geom_webmercator, ntaname FROM choropleth"
+    }
+  ]
+}
