@@ -106,7 +106,7 @@
       }
     },
     {
-      "layer": {
+      "style": {
         "id": "neighborhood-tabulation-areas-fill",
         "type": "fill",
         "source": "admin-boundaries",
