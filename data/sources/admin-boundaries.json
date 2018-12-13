@@ -32,7 +32,7 @@
     },
     {
       "id": "nyc-pumas",
-      "sql": "SELECT the_geom_webmercator, puma FROM nyc_pumas_v201811"
+      "sql": "SELECT the_geom_webmercator, puma, pumas AS id FROM nyc_pumas_v201811"
     },
     {
       "id": "bk-qn-mh-boundary",
