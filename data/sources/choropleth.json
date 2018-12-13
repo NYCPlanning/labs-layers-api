@@ -4,10 +4,7 @@
   "source-layers": [
     {
       "id": "choropleth",
-      "sql": "SELECT * FROM choropleth"
+      "sql": "SELECT the_geom_webmercator, ntaname FROM choropleth"
     }
-  ],
-  "meta": {
-    "description": "Choropleth"
-  }
+  ]
 }
