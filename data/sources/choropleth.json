@@ -4,7 +4,7 @@
   "source-layers": [
     {
       "id": "choropleth",
-      "sql": "SELECT the_geom_webmercator, ntaname FROM choropleth"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, ntaname FROM choropleth"
     }
   ]
 }
