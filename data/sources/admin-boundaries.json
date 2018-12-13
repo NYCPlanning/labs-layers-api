@@ -8,7 +8,7 @@
     },
     {
       "id": "neighborhood-tabulation-areas",
-      "sql": "SELECT the_geom_webmercator, ntaname FROM nta_boundaries_v201811 WHERE ntaname NOT ILIKE 'park-cemetery-etc%'"
+      "sql": "SELECT the_geom_webmercator, ntaname, ntaname AS id FROM nta_boundaries_v201811 WHERE ntaname NOT ILIKE 'park-cemetery-etc%'"
     },
     {
       "id": "neighborhood-tabulation-areas-centroids",
