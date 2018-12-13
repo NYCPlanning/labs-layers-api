@@ -1,0 +1,13 @@
+{
+  "id": "choropleth",
+  "type": "cartovector",
+  "source-layers": [
+    {
+      "id": "choropleth",
+      "sql": "SELECT * FROM choropleth"
+    }
+  ],
+  "meta": {
+    "description": "Choropleth"
+  }
+}

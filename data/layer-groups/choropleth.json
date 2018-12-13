@@ -1,0 +1,44 @@
+{
+  "id": "choropleth",
+  "visible": true,
+  "layers": [
+    {
+      "style": {
+        "id": "choropleth-nta-fill",
+        "type": "fill",
+        "source": "choropleth",
+        "source-layer": "choropleth",
+        "paint": {
+          "fill-opacity": 0.6,
+          "fill-color": "#f2f2a2"
+        }
+      },
+      "highlightable": true
+    },
+    {
+      "style": {
+        "id": "choropleth-nta-line",
+        "type": "line",
+        "source": "choropleth",
+        "source-layer": "choropleth",
+        "paint": {
+          "line-color": "#444",
+          "line-opacity": 0.6,
+          "line-translate-anchor": "map",
+          "line-width": {
+            "stops": [
+              [
+                10,
+                2
+              ],
+              [
+                14,
+                5
+              ]
+            ]
+          }
+        },
+      }
+    },
+  ]
+}
