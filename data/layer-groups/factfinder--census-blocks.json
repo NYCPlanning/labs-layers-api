@@ -115,6 +115,52 @@
           }
         }
       }
+    },
+    {
+      "style": {
+        "id": "census-tracts-label-for-blocks",
+        "type": "symbol",
+        "source": "census-geoms",
+        "source-layer": "census-geoms-tracts",
+        "minzoom": 11,
+        "paint": {
+          "text-color": "#626262",
+          "text-halo-color": "#FFFFFF",
+          "text-halo-width": 2,
+          "text-halo-blur": 2,
+          "text-opacity": {
+            "stops": [
+              [
+                12,
+                0
+              ],
+              [
+                13,
+                0.6
+              ]
+            ]
+          }
+        },
+        "layout": {
+          "text-field": "{geolabel}",
+          "text-font": [
+            "Open Sans Semibold",
+            "Arial Unicode MS Bold"
+          ],
+          "text-size": {
+            "stops": [
+              [
+                11,
+                8
+              ],
+              [
+                14,
+                16
+              ]
+            ]
+          }
+        }
+      }
     }
   ]
 }
