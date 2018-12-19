@@ -1,33 +1,28 @@
 {
-  "id": "nyc-pumas",
-  "legend": {
-    "label": "PUMAs",
-    "icon": {
-      "type": "line",
-      "layers": [
-        {
-          "stroke": "#F5B176",
-          "stroke-width": 4,
-          "stroke-opacity": 0.5
-        },
-        {
-          "stroke": "#444",
-          "stroke-width": 1.5,
-          "stroke-opacity": 0.5
-        }
-      ]
-    }
-  },
+  "id": "census-blocks",
+  "visible": true,
   "layers": [
     {
       "style": {
-        "id": "nyc-pumas-line-glow",
-        "type": "line",
-        "source": "admin-boundaries",
-        "source-layer": "nyc-pumas",
+        "id": "census-blocks-fill",
+        "type": "fill",
+        "source": "census-geoms",
+        "source-layer": "census-geoms-blocks",
         "paint": {
-          "line-color": "#F5B176",
-          "line-opacity": 1,
+          "fill-opacity": 0.01
+        }
+      },
+      "highlightable": true
+    },
+    {
+      "style": {
+        "id": "census-blocks-line-glow",
+        "type": "line",
+        "source": "census-geoms",
+        "source-layer": "census-geoms-blocks",
+        "paint": {
+          "line-color": "#76CAF5",
+          "line-opacity": 0.2,
           "line-width": {
             "stops": [
               [
@@ -45,22 +40,22 @@
     },
     {
       "style": {
-        "id": "nyc-pumas-line",
+        "id": "census-blocks-line",
         "type": "line",
-        "source": "admin-boundaries",
-        "source-layer": "nyc-pumas",
+        "source": "census-geoms",
+        "source-layer": "census-geoms-blocks",
         "paint": {
           "line-color": "#444",
-          "line-opacity": 0.3,
+          "line-opacity": 0.5,
           "line-width": {
             "stops": [
               [
                 11,
-                1
+                0.5
               ],
               [
                 16,
-                3
+                1
               ]
             ]
           }
@@ -73,19 +68,31 @@
     },
     {
       "style": {
-        "id": "nyc-pumas-label",
+        "id": "census-blocks-label",
         "type": "symbol",
-        "source": "admin-boundaries",
-        "source-layer": "nyc-pumas",
-        "minzoom": 12,
+        "source": "census-geoms",
+        "source-layer": "census-geoms-blocks",
+        "minzoom": 11,
         "paint": {
           "text-color": "#626262",
           "text-halo-color": "#FFFFFF",
           "text-halo-width": 2,
-          "text-halo-blur": 2
+          "text-halo-blur": 2,
+          "text-opacity": {
+            "stops": [
+              [
+                13,
+                0
+              ],
+              [
+                14,
+                1
+              ]
+            ]
+          }
         },
         "layout": {
-          "text-field": "{puma}",
+          "text-field": "{cb2010}",
           "text-font": [
             "Open Sans Semibold",
             "Arial Unicode MS Bold"
@@ -93,26 +100,15 @@
           "text-size": {
             "stops": [
               [
-                11,
-                12
+                13,
+                6
               ],
               [
-                14,
+                17,
                 16
               ]
             ]
           }
-        }
-      }
-    },
-    {
-      "style": {
-        "id": "nyc-pumas-selection-fill",
-        "type": "fill",
-        "source": "admin-boundaries",
-        "source-layer": "nyc-pumas",
-        "paint": {
-          "fill-opacity": 0.01
         }
       }
     }

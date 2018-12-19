@@ -27,7 +27,7 @@
         "source-layer": "neighborhood-tabulation-areas",
         "paint": {
           "line-color": "#F576CC",
-          "line-opacity": 0.2,
+          "line-opacity": 1,
           "line-width": {
             "stops": [
               [
@@ -102,6 +102,17 @@
               ]
             ]
           }
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "neighborhood-tabulation-areas-fill",
+        "type": "fill",
+        "source": "admin-boundaries",
+        "source-layer": "neighborhood-tabulation-areas",
+        "paint": {
+          "fill-opacity": 0.01
         }
       }
     }
