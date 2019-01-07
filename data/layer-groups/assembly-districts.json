@@ -6,7 +6,7 @@
       "type": "line",
       "layers": [
         {
-          "stroke": "#8A76F5",
+          "stroke": "#12ed12",
           "stroke-width": 4,
           "stroke-opacity": 0.5
         },
@@ -26,8 +26,8 @@
         "source": "admin-boundaries",
         "source-layer": "ny-assembly-districts",
         "paint": {
-          "line-color": "#8A76F5",
-          "line-opacity": 0.2,
+          "line-color": "#12ed12",
+          "line-opacity": 0.75,
           "line-width": {
             "stops": [
               [

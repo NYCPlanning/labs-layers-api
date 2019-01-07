@@ -6,7 +6,7 @@
       "type": "line",
       "layers": [
         {
-          "stroke": "#76CAF5",
+          "stroke": "#129ded",
           "stroke-width": 4,
           "stroke-opacity": 0.5
         },
@@ -26,8 +26,8 @@
         "source": "admin-boundaries",
         "source-layer": "nyc-council-districts",
         "paint": {
-          "line-color": "#76CAF5",
-          "line-opacity": 1,
+          "line-color": "#129ded",
+          "line-opacity": 0.75,
           "line-width": {
             "stops": [
               [
