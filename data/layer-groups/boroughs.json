@@ -6,9 +6,9 @@
       "type": "line",
       "layers": [
         {
-          "stroke": "#F5B176",
+          "stroke": "#2929ed",
           "stroke-width": 4,
-          "stroke-opacity": 0.5
+          "stroke-opacity": 0.6
         },
         {
           "stroke": "#444",
@@ -26,8 +26,8 @@
         "source": "admin-boundaries",
         "source-layer": "boroughs",
         "paint": {
-          "line-color": "#F5B176",
-          "line-opacity": 0.2,
+          "line-color": "#2929ed",
+          "line-opacity": 0.6,
           "line-width": {
             "stops": [
               [

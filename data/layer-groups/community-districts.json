@@ -1,13 +1,12 @@
 {
   "id": "community-districts",
-  "visible": false,
   "legend": {
     "label": "Community Districts",
     "icon": {
       "type": "line",
       "layers": [
         {
-          "stroke": "#76F578",
+          "stroke": "#12eded",
           "stroke-width": 4,
           "stroke-opacity": 0.5
         },
@@ -27,8 +26,8 @@
         "source": "admin-boundaries",
         "source-layer": "community-districts",
         "paint": {
-          "line-color": "#76F578",
-          "line-opacity": 0.2,
+          "line-color": "#12eded",
+          "line-opacity": 0.75,
           "line-width": {
             "stops": [
               [
