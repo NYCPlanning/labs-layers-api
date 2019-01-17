@@ -6,14 +6,14 @@
       "type": "line",
       "layers": [
         {
-          "stroke": "#a5ed12",
+          "stroke": "#9912ed",
           "stroke-width": 4,
-          "stroke-opacity": 0.5
+          "stroke-opacity": 0.4
         },
         {
-          "stroke": "#444",
+          "stroke": "#4b007a",
           "stroke-width": 1.5,
-          "stroke-opacity": 0.5
+          "stroke-opacity": 0.6
         }
       ]
     }
@@ -26,17 +26,17 @@
         "source": "admin-boundaries",
         "source-layer": "ny-senate-districts",
         "paint": {
-          "line-color": "#a5ed12",
-          "line-opacity": 0.75,
+          "line-color": "#9912ed",
+          "line-opacity": 0.4,
           "line-width": {
             "stops": [
               [
                 11,
-                3
+                4
               ],
               [
                 16,
-                6
+                8
               ]
             ]
           }
@@ -50,8 +50,8 @@
         "source": "admin-boundaries",
         "source-layer": "ny-senate-districts",
         "paint": {
-          "line-color": "#444",
-          "line-opacity": 0.3,
+          "line-color": "#4b007a",
+          "line-opacity": 0.6,
           "line-width": {
             "stops": [
               [

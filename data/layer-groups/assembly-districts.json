@@ -6,14 +6,14 @@
       "type": "line",
       "layers": [
         {
-          "stroke": "#12ed12",
+          "stroke": "#ed1294",
           "stroke-width": 4,
-          "stroke-opacity": 0.5
+          "stroke-opacity": 0.4
         },
         {
-          "stroke": "#444",
+          "stroke": "#7a0048",
           "stroke-width": 1.5,
-          "stroke-opacity": 0.5
+          "stroke-opacity": 0.8
         }
       ]
     }
@@ -26,17 +26,17 @@
         "source": "admin-boundaries",
         "source-layer": "ny-assembly-districts",
         "paint": {
-          "line-color": "#12ed12",
-          "line-opacity": 0.75,
+          "line-color": "#ed1294",
+          "line-opacity": 0.4,
           "line-width": {
             "stops": [
               [
                 11,
-                3
+                4
               ],
               [
                 16,
-                6
+                8
               ]
             ]
           }
@@ -50,8 +50,8 @@
         "source": "admin-boundaries",
         "source-layer": "ny-assembly-districts",
         "paint": {
-          "line-color": "#444",
-          "line-opacity": 0.3,
+          "line-color": "#7a0048",
+          "line-opacity": 0.8,
           "line-width": {
             "stops": [
               [
