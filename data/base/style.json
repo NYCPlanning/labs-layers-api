@@ -168,7 +168,7 @@
        }
     },
     {
-       "id":"landcover_wood",
+       "id":"landcover_grass",
        "type":"fill",
        "source":"openmaptiles",
        "source-layer":"landcover",
@@ -183,14 +183,14 @@
           [
              "==",
              "class",
-             "wood"
+             "grass"
           ]
        ],
        "layout":{
           "visibility":"visible"
        },
        "paint":{
-          "fill-color":"rgb(220,224,220)",
+          "fill-color": "rgba(211, 230, 211, 1)",
           "fill-opacity":{
              "base":1,
              "stops":[

@@ -6,14 +6,14 @@
       "type": "line",
       "layers": [
         {
-          "stroke": "#76CAF5",
+          "stroke": "#12eded",
           "stroke-width": 4,
-          "stroke-opacity": 0.5
+          "stroke-opacity": 0.7
         },
         {
-          "stroke": "#444",
+          "stroke": "#007a7a",
           "stroke-width": 1.5,
-          "stroke-opacity": 0.5
+          "stroke-opacity": 0.8
         }
       ]
     }
@@ -26,17 +26,17 @@
         "source": "admin-boundaries",
         "source-layer": "nyc-council-districts",
         "paint": {
-          "line-color": "#76CAF5",
-          "line-opacity": 1,
+          "line-color": "#12eded",
+          "line-opacity": 0.7,
           "line-width": {
             "stops": [
               [
                 11,
-                3
+                4
               ],
               [
                 16,
-                6
+                8
               ]
             ]
           }
@@ -50,8 +50,8 @@
         "source": "admin-boundaries",
         "source-layer": "nyc-council-districts",
         "paint": {
-          "line-color": "#444",
-          "line-opacity": 0.3,
+          "line-color": "#007a7a",
+          "line-opacity": 0.8,
           "line-width": {
             "stops": [
               [

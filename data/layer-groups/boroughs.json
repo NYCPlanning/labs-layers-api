@@ -6,14 +6,14 @@
       "type": "line",
       "layers": [
         {
-          "stroke": "#F5B176",
+          "stroke": "#edbd12",
           "stroke-width": 4,
           "stroke-opacity": 0.5
         },
         {
-          "stroke": "#444",
+          "stroke": "#7a6000",
           "stroke-width": 1.5,
-          "stroke-opacity": 0.5
+          "stroke-opacity": 0.8
         }
       ]
     }
@@ -26,17 +26,17 @@
         "source": "admin-boundaries",
         "source-layer": "boroughs",
         "paint": {
-          "line-color": "#F5B176",
-          "line-opacity": 0.2,
+          "line-color": "#edbd12",
+          "line-opacity": 0.5,
           "line-width": {
             "stops": [
               [
                 11,
-                3
+                4
               ],
               [
                 16,
-                6
+                8
               ]
             ]
           }
@@ -50,8 +50,8 @@
         "source": "admin-boundaries",
         "source-layer": "boroughs",
         "paint": {
-          "line-color": "#444",
-          "line-opacity": 0.3,
+          "line-color": "#7a6000",
+          "line-opacity": 0.8,
           "line-width": {
             "stops": [
               [
