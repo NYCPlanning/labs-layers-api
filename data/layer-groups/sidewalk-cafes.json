@@ -3,6 +3,7 @@
   "legend": {
     "label": "Sidewalk Cafes",
     "tooltip": "Areas where different types of sidewalk cafes are permitted on public sidewalks",
+    "link": "https://www1.nyc.gov/site/planning/zoning/districts-tools/sidewalk-cafes.page",
     "items": [
       {
         "label": "All Cafes Permitted",

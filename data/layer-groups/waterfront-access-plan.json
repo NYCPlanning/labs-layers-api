@@ -3,6 +3,7 @@
   "legend": {
     "label": "Waterfront Access Plan",
     "tooltip": "These areas reflect site specific modification of waterfront public access requirements for waterfront parcels with unique conditions and opportunities",
+    "link": "https://www1.nyc.gov/site/planning/zoning/districts-tools/waterfront-zoning.page",
     "icon": {
       "type": "rectangle",
       "layers": [

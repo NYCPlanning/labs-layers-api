@@ -3,6 +3,7 @@
   "legend": {
     "label": "Coastal Zone Boundary",
     "tooltip": "Projects within the coastal zone boundary are subject to additional review under the Waterfront Revitalization Program",
+    "link": "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-wrp.page",
     "icon": {
       "type": "rectangle",
       "layers": [
