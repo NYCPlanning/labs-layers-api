@@ -35,6 +35,10 @@
       "sql": "SELECT the_geom_webmercator FROM lower_density_growth_management_areas_v201709"
     },
     {
+      "id": "upland-waterfront-area",
+      "sql": "SELECT the_geom_webmercator FROM upland_waterfront_areas_v200912"
+    },
+    {
       "id": "coastal-zone-boundary",
       "sql": "SELECT the_geom_webmercator FROM coastal_zone_boundary_v201601"
     },

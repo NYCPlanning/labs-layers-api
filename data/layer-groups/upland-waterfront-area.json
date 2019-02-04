@@ -1,0 +1,61 @@
+{
+  "id": "upland-waterfront-area",
+  "legend": {
+    "label": "Upland Waterfront Area",
+    "tooltip": "",
+    "icon": {
+      "type": "rectangle",
+      "layers": [
+        {
+          "fill": "rgba(184, 255, 255, 0.2)",
+          "stroke": "rgba(184, 255, 255, 0.6)",
+          "stroke-dasharray": "1"
+        }
+      ]
+    }
+  },
+  "layers": [
+    {
+      "style": {
+        "id": "upland-waterfront-area-line",
+        "type": "line",
+        "source": "supporting-zoning",
+        "source-layer": "upland-waterfront-area",
+        "paint": {
+          "line-width": {
+            "stops": [
+              [
+                11,
+                1
+              ],
+              [
+                12,
+                3
+              ]
+            ]
+          },
+          "line-color": "rgba(184, 255, 255, 0.6)",
+          "line-dasharray": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "upland-waterfront-area-fill",
+        "type": "fill",
+        "source": "supporting-zoning",
+        "source-layer": "upland-waterfront-area",
+        "paint": {
+          "fill-color": "rgba(184, 255, 255, 0.2)"
+        },
+        "layout": {}
+      },
+      "highlightable": true,
+      "tooltipable": true,
+      "tooltipTemplate": "Upland Waterfront Area"
+    }
+  ]
+}
