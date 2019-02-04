@@ -3,16 +3,20 @@
   "type": "cartovector",
   "source-layers": [
     {
+      "id": "commercial-overlays",
+      "sql": "SELECT cartodb_id AS id, * FROM commercial_overlays"
+    },
+    {
       "id": "special-purpose-districts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id, sdlbl, sdname FROM special_purpose_districts_v20181206"
+      "sql": "SELECT the_geom_webmercator, cartodb_id, sdlbl, sdname FROM special_purpose_districts"
     },
     {
       "id": "special-purpose-subdistricts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id, splbl, spname, subdist FROM special_purpose_subdistricts_v20181206"
+      "sql": "SELECT the_geom_webmercator, cartodb_id, splbl, spname, subdist FROM special_purpose_subdistricts"
     },
     {
       "id": "mandatory-inclusionary-housing",
-      "sql": "SELECT the_geom_webmercator, projectnam, mih_option FROM mandatory_inclusionary_housing_v20181130"
+      "sql": "SELECT the_geom_webmercator, projectnam, mih_option FROM mandatory_inclusionary_housing"
     },
     {
       "id": "inclusionary-housing",
@@ -28,7 +32,7 @@
     },
     {
       "id": "sidewalk-cafes",
-      "sql": "SELECT the_geom_webmercator, cafetype FROM sidewalk_cafes_v20181206"
+      "sql": "SELECT the_geom_webmercator, cafetype FROM sidewalk_cafes"
     },
     {
       "id": "low-density-growth-mgmt-areas",
@@ -43,12 +47,8 @@
       "sql": "SELECT the_geom_webmercator, name FROM waterfront_access_plan_v201109"
     },
     {
-      "id": "zoning-map-amendments-pending",
-      "sql": "SELECT the_geom_webmercator, ulurpno, status, project_na FROM zoning_map_amendments_v20181206 WHERE status = 'Certified'"
-    },
-    {
       "id": "limited-height-districts",
-      "sql": "SELECT the_geom_webmercator, lhlbl, lhname FROM limited_height_districts_v20181206"
+      "sql": "SELECT the_geom_webmercator, lhlbl, lhname FROM limited_height_districts"
     },
     {
       "id": "business-improvement-districts",
@@ -56,7 +56,7 @@
     },
     {
       "id": "e-designations",
-      "sql": "SELECT the_geom_webmercator, bbl, ceqr_num, enumber, ulurp_num FROM e_designations_v20181130"
+      "sql": "SELECT the_geom_webmercator, bbl, ceqr_num, enumber, ulurp_num FROM e_designations"
     },
     {
       "id": "industrial-business-zones",
@@ -68,11 +68,11 @@
     }
     ],
     "meta": {
-      "description": "Zoning related datasets December 2018, Bytes of the Big Apple",
+      "description": "Zoning related datasets January, 2019, Bytes of the Big Apple",
       "url": [
         "https://www1.nyc.gov/site/planning/data-maps/open-data.page#zoning_related"
       ],
-      "data_date": "December 6, 2018",
-      "updated_at": "December 7, 2018"
+      "data_date": "January, 2019",
+      "updated_at": "February 4, 2019"
     }
   }

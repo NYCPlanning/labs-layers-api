@@ -20,7 +20,7 @@
       "style": {
         "id": "zmacert-line",
         "type": "line",
-        "source": "supporting-zoning",
+        "source": "zoning-map-amendments",
         "source-layer": "zoning-map-amendments-pending",
         "paint": {
           "line-width": {
@@ -47,7 +47,7 @@
       "style": {
         "id": "zmacert-fill",
         "type": "fill",
-        "source": "supporting-zoning",
+        "source": "zoning-map-amendments",
         "source-layer": "zoning-map-amendments-pending",
         "paint": {
           "fill-color": "rgba(176, 31, 31, 0.6)"
