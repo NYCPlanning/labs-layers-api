@@ -3,7 +3,7 @@
   "legend": {
     "label": "Mandatory Inclusionary Housing Areas",
     "tooltip": "Areas where developments, enlargements and conversions over a certain size are required to set aside a percentage of floor area for permanently affordable housing",
-    "link": "https://www1.nyc.gov/site/planning/zoning/districts-tools/inclusionary-housing.page",
+    "infolink": "https://www1.nyc.gov/site/planning/zoning/districts-tools/inclusionary-housing.page",
     "icon": {
       "type": "rectangle",
       "layers": [

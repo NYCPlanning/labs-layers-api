@@ -3,7 +3,7 @@
   "legend": {
     "label": "Lower Density Growth Management Areas",
     "tooltip": "Areas where special zoning controls intend to limit growth and better match available infrastructure and services in lower-density areas experiencing rapid development",
-    "link": "https://www1.nyc.gov/site/planning/zoning/districts-tools/lower-density-growth-mngmt.page",
+    "infolink": "https://www1.nyc.gov/site/planning/zoning/districts-tools/lower-density-growth-mngmt.page",
     "icon": {
       "type": "rectangle",
       "layers": [

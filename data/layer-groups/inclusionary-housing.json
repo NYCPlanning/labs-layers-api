@@ -3,7 +3,7 @@
   "legend": {
     "label": "Inclusionary Housing Designated Areas",
     "tooltip": "Areas where zoning incentives are offered to encourage the creation of permanently affordable housing",
-    "link": "https://www1.nyc.gov/site/planning/zoning/districts-tools/inclusionary-housing.page",
+    "infolink": "https://www1.nyc.gov/site/planning/zoning/districts-tools/inclusionary-housing.page",
     "icon": {
       "type": "rectangle",
       "layers": [
