@@ -3,6 +3,7 @@
   "legend": {
     "label": "FRESH Zones",
     "tooltip": "FRESH promotes the establishment and expansion of neighborhood grocery stores in underserved communities by providing zoning and financial incentives",
+    "infolink": "https://www1.nyc.gov/site/planning/zoning/districts-tools/fresh-food-stores.page",
     "items": [
       {
         "label": "Zoning incentives",

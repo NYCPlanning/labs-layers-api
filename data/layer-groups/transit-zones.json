@@ -3,6 +3,7 @@
   "legend": {
     "label": "Transit Zones",
     "tooltip": "Transit-accessible areas where parking is optional for new affordable housing units and special rules apply to existing affordable units",
+    "infolink": "https://www1.nyc.gov/site/planning/zoning/glossary.page#transit_zone",
     "icon": {
       "type": "rectangle",
       "layers": [
