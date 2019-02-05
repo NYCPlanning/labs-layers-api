@@ -31,6 +31,7 @@ module.exports = Joi.object().keys({
   legend: Joi.object().keys({
     label: Joi.string().required(),
     tooltip: Joi.string(),
+    infolink: Joi.string(),
     icon: legendIconSchema,
     items: Joi.array().items(
       legendItemSchema,
