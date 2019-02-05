@@ -4,15 +4,15 @@
   "source-layers": [
     {
       "id": "zoning-districts",
-      "sql": "SELECT cartodb_id AS id, * FROM (SELECT the_geom_webmercator, zonedist, CASE WHEN SUBSTRING(zonedist, 3, 1) = '-' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[A-Z]' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[0-9]' THEN LEFT(zonedist, 3) ELSE zonedist END as primaryzone, cartodb_id FROM zoning_districts_v20181206) a"
+      "sql": "SELECT cartodb_id AS id, * FROM (SELECT the_geom_webmercator, zonedist, CASE WHEN SUBSTRING(zonedist, 3, 1) = '-' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[A-Z]' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[0-9]' THEN LEFT(zonedist, 3) ELSE zonedist END as primaryzone, cartodb_id FROM zoning_districts) a"
     }
   ],
   "meta": {
-    "description": "NYC GIS Zoning Features December 2018, Bytes of the Big Apple",
+    "description": "NYC GIS Zoning Features January, 2019, Bytes of the Big Apple",
     "url": [
       "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
     ],
-      "data_date": "December 6, 2018",
-      "updated_at": "December 7, 2018"
+      "data_date": "January, 2019",
+      "updated_at": "February 4, 2019"
   }
 }

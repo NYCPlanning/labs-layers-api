@@ -19,7 +19,7 @@
       "style": {
         "id": "co-fill",
         "type": "fill",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "minzoom": 12,
         "source-layer": "commercial-overlays",
         "paint": {
@@ -36,7 +36,7 @@
       "style": {
         "id": "co",
         "type": "line",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "commercial-overlays",
         "paint": {
           "line-width": {
@@ -60,7 +60,7 @@
       "style": {
         "id": "co_labels",
         "type": "symbol",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "commercial-overlays",
         "paint": {
           "text-color": "rgba(200, 0, 0, 1)",
