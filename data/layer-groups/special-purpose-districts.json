@@ -18,7 +18,7 @@
       "style": {
         "id": "zoning-sp-line",
         "type": "line",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "special-purpose-districts",
         "paint": {
           "line-width": {
@@ -45,7 +45,7 @@
       "style": {
         "id": "zoning-sp-fill",
         "type": "fill",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "special-purpose-districts",
         "paint": {
           "fill-color": "#5E6633",

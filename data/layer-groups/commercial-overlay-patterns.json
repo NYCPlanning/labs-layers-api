@@ -9,7 +9,7 @@
       "style": {
         "id": "c1-1",
         "type": "fill",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "commercial-overlays",
         "paint": {"fill-pattern": "black-45"},
         "filter": ["all",["==","overlay","C1-1"]]
@@ -19,7 +19,7 @@
       "style": {
         "id": "c1-2",
         "type": "fill",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "commercial-overlays",
         "paint": {"fill-pattern": "black-45-135"},
         "filter": ["all",["==","overlay","C1-2"]]
@@ -29,7 +29,7 @@
       "style": {
         "id": "c1-3",
         "type": "fill",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "commercial-overlays",
         "paint": {"fill-pattern": "black-45_altbold"},
         "filter": ["all",["==","overlay","C1-3"]]
@@ -39,7 +39,7 @@
       "style": {
         "id": "c1-4",
         "type": "fill",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "commercial-overlays",
         "paint": {"fill-pattern": "black-45_altbold-135_altbold"},
         "filter": ["all",["==","overlay","C1-4"]]
@@ -49,7 +49,7 @@
       "style": {
         "id": "c1-5",
         "type": "fill",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "commercial-overlays",
         "paint": {"fill-pattern": "black-45_dash"},
         "filter": ["all",["==","overlay","C1-5"]]
@@ -59,7 +59,7 @@
       "style": {
         "id": "c2-1",
         "type": "fill",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "commercial-overlays",
         "paint": {"fill-pattern": "black-45-dot"},
         "filter": ["all",["==","overlay","C2-1"]]
@@ -69,7 +69,7 @@
       "style": {
         "id": "c2-2",
         "type": "fill",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "commercial-overlays",
         "paint": {"fill-pattern": "black-45-135-dot"},
         "filter": ["all",["==","overlay","C2-2"]]
@@ -79,7 +79,7 @@
       "style": {
         "id": "c2-3",
         "type": "fill",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "commercial-overlays",
         "paint": {"fill-pattern": "black-45_altbold-dot"},
         "filter": ["all",["==","overlay","C2-3"]]
@@ -89,7 +89,7 @@
       "style": {
         "id": "c2-4",
         "type": "fill",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "commercial-overlays",
         "paint": {"fill-pattern": "black-45_altbold-135_altbold-dot"},
         "filter": ["all",["==","overlay","C2-4"]]
@@ -99,7 +99,7 @@
       "style": {
         "id": "c2-5",
         "type": "fill",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "commercial-overlays",
         "paint": {"fill-pattern": "black-45_dash-dot"},
         "filter": ["all",["==","overlay","C2-5"]]
@@ -109,7 +109,7 @@
       "style": {
         "id": "co_outline",
         "type": "line",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "commercial-overlays",
         "paint": {
           "line-width": 1,
@@ -122,7 +122,7 @@
       "style": {
         "id": "co_labels",
         "type": "symbol",
-        "source": "zoning",
+        "source": "supporting-zoning",
         "source-layer": "commercial-overlays",
         "paint": {
           "text-color": "rgba(33, 35, 38, 1)",
