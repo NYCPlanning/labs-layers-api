@@ -5,7 +5,7 @@ module.exports = async (sourceConfig) => {
 
   if (type === 'cartovector') {
     // instantiate carto vector tiles, get back the tile template
-    const template = await carto.getVectorTileTemplate(sourceConfig['source-layers']);
+    const template = await carto.getVectorTileTemplate(sourceConfig);
 
     // make an object with sourceid as a key, and valid mapboxGL source as value
     const source = {};

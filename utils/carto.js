@@ -35,9 +35,9 @@ const carto = {
       });
   },
 
-  getVectorTileTemplate(sourceLayers) {
+  getVectorTileTemplate(sourceConfig) {
     const CartoCSS = '#layer { polygon-fill: #FFF; }';
-    const layers = sourceLayers.map((sourceLayer) => {
+    const layers = sourceConfig['source-layers'].map((sourceLayer) => {
       const { id, sql } = sourceLayer;
       return {
         id,
@@ -54,6 +54,9 @@ const carto = {
       version: '1.3.0',
       layers,
     };
+
+    // if buffersize is defined in the source json, add it to the carto params
+    if (sourceConfig.buffersize) params.buffersize = sourceConfig.buffersize;
 
     return new Promise((resolve, reject) => {
       fetch(`https://${cartoDomain}/api/v1/map`, {
