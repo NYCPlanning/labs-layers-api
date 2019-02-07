@@ -40,6 +40,9 @@
     }
   ],
   "minzoom": 0,
+  "buffersize": {
+    "mvt": 10
+  },
   "meta": {
     "description": "Administrative and Political Districts v18D, Bytes of the Big Apple",
     "url": [
