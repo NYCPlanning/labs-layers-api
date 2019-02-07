@@ -3,7 +3,6 @@
   "legend": {
     "label": "Preliminary Flood Insurance Rate Maps 2015",
     "tooltip": "Released in 2015 as part of a citywide flood map update, the Preliminary FIRMs establish the 1% annual chance floodplain. For building code and zoning purposes, the more expansive of the either the 2015 or 2007 maps is used.",
-    "infolink": "https://www1.nyc.gov/site/planning/plans/climate-resiliency-faq.page",
     "items": [
       {
         "label": "V Zone",
