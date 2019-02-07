@@ -23,5 +23,8 @@ module.exports = Joi.object().keys({
     is: 'raster',
     then: Joi.required(),
   }),
+  buffersize: Joi.object().keys({
+    mvt: Joi.number(),
+  }),
   meta: Joi.object(),
 });
