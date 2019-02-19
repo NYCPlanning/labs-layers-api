@@ -207,6 +207,24 @@
        }
     },
     {
+      "id": "landuse_cemetery",
+      "type": "fill",
+      "metadata": {},
+      "source": "openmaptiles",
+      "source-layer": "landuse",
+      "filter": [
+        "==",
+        "class",
+        "cemetery"
+      ],
+      "layout": {
+        "visibility": "visible"
+      },
+      "paint": {
+        "fill-color": "rgba(211, 230, 211, 1)"
+      }
+    },
+    {
       "id":"waterway",
       "type":"line",
       "source":"openmaptiles",
