@@ -284,9 +284,9 @@
           "fill-outline-color":"rgb(219, 219, 218)",
           "fill-antialias": true
         },
-        "layout": {
-          "visibility": "visible"
-        }
+        "filter": [
+            "all"
+          ]
     },
     {
        "id":"tunnel_motorway_casing",
