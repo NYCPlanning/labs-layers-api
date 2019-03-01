@@ -1,0 +1,23 @@
+{
+  "id": "planimetrics",
+  "type": "cartovector",
+  "source-layers": [
+    {
+      "id": "sidewalks",
+      "sql": "SELECT the_geom_webmercator, cartodb_id FROM sidewalks_v201809"
+    },
+    {
+      "id": "transportation-structures",
+      "sql": "SELECT the_geom_webmercator, cartodb_id FROM transportation_structures_v201809"
+    }
+  ],
+  "minzoom": 0,
+  "meta": {
+    "description": "NYC Planimetrics Database, Department of Information Technology & Telecommunications (DoITT)",
+    "url": [
+      "https://data.cityofnewyork.us/City-Government/Sidewalk/vfx9-tbb6",
+      "https://data.cityofnewyork.us/City-Government/Transportation-Structures/h9sf-7bej"
+    ],
+    "updated_at": "26 February 2019"
+  }
+}
