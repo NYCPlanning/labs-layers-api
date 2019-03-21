@@ -1,0 +1,9 @@
+{
+  "id": "pierhead-lines",
+  "urls": [
+    "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM citymap_pierheadlines_v1&format=SHP"
+  ],
+  "updated_at": "2018-04-06",
+  "version": "",
+  "description": "Pierhead Lines, NYC Department of City Planning Technical Review Division",
+}

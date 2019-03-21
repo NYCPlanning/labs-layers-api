@@ -1,0 +1,6 @@
+{
+  "id": "bulkhead-lines",
+  "sql": "SELECT the_geom_webmercator, jurisdicti FROM citymap_bulkheadlines_v1",
+  "data_source_id": "bulkhead-lines",
+  "description": "Bulkhead Lines"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "street-centerlines",
+  "sql": "SELECT the_geom_webmercator, official_s AS streetname, COALESCE('   (' || streetwidt || ' ft)') AS streetwidth, roadway_ty, feature_st FROM citymap_streetcenterlines_v1",
+  "data_source_id": "street-centerlines",
+  "description": "Street Centerlines"
+}

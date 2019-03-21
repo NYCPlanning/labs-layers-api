@@ -1,0 +1,9 @@
+{
+  "id": "citymap-arterials",
+  "urls": [
+    "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM citymap_arterials_v0&format=SHP"
+  ],
+  "updated_at": "2018-04-06",
+  "version": "",
+  "description": "Arterial Highways and Major Streets, NYC Department of City Planning Technical Review Division",
+}

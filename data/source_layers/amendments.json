@@ -1,0 +1,6 @@
+{
+  "id": "citymap-amendments",
+  "sql": "SELECT the_geom_webmercator, ST_Area(the_geom) as area, cartodb_id as id, altmappdf, extract(epoch from effective) as effective, status FROM citymap_amendments_v3 WHERE effective IS NOT NULL OR status = '13' ORDER BY area DESC",
+  "data_source_id": "citymap-amendments",
+  "description": "Citymap Amendments"
+}

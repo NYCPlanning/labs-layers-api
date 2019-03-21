@@ -1,0 +1,6 @@
+{
+  "id": "citymap",
+  "sql": "SELECT the_geom_webmercator, type, boro_nm FROM citymap_citymap_v1",
+  "data_source_id": "citymap",
+  "description": "Citymap"
+}

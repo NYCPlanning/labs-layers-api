@@ -1,0 +1,9 @@
+{
+  "id": "name-changes-points",
+  "urls": [
+    "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM citymap_streetnamechanges_points_v0&format=SHP"
+  ],
+  "updated_at": "2018-04-06",
+  "version": "",
+  "description": "Street Name Changes - Points, NYC Department of City Planning Technical Review Division",
+}
