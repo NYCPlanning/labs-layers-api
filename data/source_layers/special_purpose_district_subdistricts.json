@@ -1,0 +1,6 @@
+{
+  "id": "special-purpose-district-subdistricts",
+  "sql": "SELECT the_geom_webmercator, cartodb_id, splbl, spname, subdist FROM special_purpose_subdistricts",
+  "data_source_id": "nyc-gis-zoning-features",
+  "description": "Geometries and labels for Special Purpose Districts"
+}

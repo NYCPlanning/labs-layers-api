@@ -4,19 +4,19 @@
   "source-layers": [
     {
       "id": "wpaas",
-      "sql": "SELECT the_geom_webmercator, cartodb_id, paws_id, name, feature_promenade_esplanade, feature_seating_lawn, feature_pier, feature_wetland_natural_edge, feature_dog_run, feature_educational_or_interpretive, feature_public_restroom, feature_shade_structure, feature_outdoor_art, feature_food_or_beverage_concessions, feature_group_seating, activity_volleyball_court, activity_basketball_court, activity_fishing, activity_boating_access, activity_tot_playground, activity_splash_feature, activity_other_recreational_facilities, activity_swimming, constructi FROM planninglabs.wpaas_v201811"
+      "sql": "SELECT the_geom_webmercator, cartodb_id, paws_id, name, feature_promenade_esplanade, feature_seating_lawn, feature_pier, feature_wetland_natural_edge, feature_dog_run, feature_educational_or_interpretive, feature_public_restroom, feature_shade_structure, feature_outdoor_art, feature_food_or_beverage_concessions, feature_group_seating, activity_volleyball_court, activity_basketball_court, activity_fishing, activity_boating_access, activity_tot_playground, activity_splash_feature, activity_other_recreational_facilities, activity_swimming, constructi FROM planninglabs.wpaas"
     },
     {
       "id": "publiclyownedwaterfront",
-      "sql": "SELECT the_geom_webmercator, cartodb_id, wf_park_id, park_name, link, agency, status FROM publiclyownedwaterfront_v201810"
+      "sql": "SELECT the_geom_webmercator, cartodb_id, wf_park_id, park_name, link, agency, status FROM publiclyownedwaterfront"
     },
     {
       "id": "paws_footprints",
-      "sql": "SELECT a.the_geom_webmercator, a.cartodb_id, a.paws_id, b.feature_promenade_esplanade, b.feature_seating_lawn, b.feature_pier, b.feature_wetland_natural_edge, b.feature_dog_run, b.feature_educational_or_interpretive, b.feature_public_restroom, b.feature_shade_structure, b.feature_outdoor_art, b.feature_food_or_beverage_concessions, b.feature_group_seating, b.activity_volleyball_court, b.activity_basketball_court, b.activity_fishing, b.activity_boating_access, b.activity_tot_playground, b.activity_splash_feature, b.activity_other_recreational_facilities, b.activity_swimming, b.constructi FROM wpaas_footprints_v201810 AS a LEFT JOIN planninglabs.wpaas_v201811 b ON a.paws_id = b.paws_id::text"
+      "sql": "SELECT a.the_geom_webmercator, a.cartodb_id, a.paws_id, b.feature_promenade_esplanade, b.feature_seating_lawn, b.feature_pier, b.feature_wetland_natural_edge, b.feature_dog_run, b.feature_educational_or_interpretive, b.feature_public_restroom, b.feature_shade_structure, b.feature_outdoor_art, b.feature_food_or_beverage_concessions, b.feature_group_seating, b.activity_volleyball_court, b.activity_basketball_court, b.activity_fishing, b.activity_boating_access, b.activity_tot_playground, b.activity_splash_feature, b.activity_other_recreational_facilities, b.activity_swimming, b.constructi FROM wpaas_footprints AS a LEFT JOIN planninglabs.wpaas b ON a.paws_id = b.paws_id::text"
     },
     {
       "id": "paws_entry_points",
-      "sql": "SELECT the_geom_webmercator, cartodb_id FROM wpaas_accesspoints_v201810"
+      "sql": "SELECT the_geom_webmercator, cartodb_id FROM wpaas_accesspoints"
     }
   ],
   "meta": {

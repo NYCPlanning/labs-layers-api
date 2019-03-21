@@ -1,0 +1,6 @@
+{
+  "id": "industrial-business-zones",
+  "sql": "SELECT the_geom_webmercator, name FROM industrial_business_zones",
+  "data_source_id": "industrial-business-zones",
+  "description": "Geometries for Industrial Business Zones (IBZs)"
+}

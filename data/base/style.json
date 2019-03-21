@@ -282,8 +282,11 @@
        "paint":{
           "fill-color":"rgb(234, 234, 229)",
           "fill-outline-color":"rgb(219, 219, 218)",
-          "fill-antialias":true
-       }
+          "fill-antialias": true
+        },
+        "filter": [
+            "all"
+          ]
     },
     {
        "id":"tunnel_motorway_casing",

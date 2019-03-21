@@ -1,6 +1,6 @@
 {
   "id": "zoning-map-amendments",
   "sql": "SELECT * FROM (SELECT the_geom_webmercator, to_char(effective, 'MM/DD/YYYY') as effectiveformatted, extract(epoch from effective) * 1000 as effective_epoch, ulurpno, status, project_na FROM planninglabs.zoning_map_amendments WHERE status = 'Adopted') a",
-  "data_source_id": "nyc-gid-zoning-features",
+  "data_source_id": "nyc-gis-zoning-features",
   "description": "All exisiting, certified zoning map amendments"
 }

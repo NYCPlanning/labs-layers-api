@@ -1,0 +1,7 @@
+{
+  "id": "wrp-coastal-zone-boundary",
+  "urls": [ "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-wrp.page" ],
+  "version": "2016.1",
+  "description": "WRP Coastal Zone Boundary, Bytes of the Big Apple",
+  "updated_at": "2016-05"
+}
