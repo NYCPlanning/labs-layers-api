@@ -1,0 +1,10 @@
+{
+  "id": "transportation-structures",
+  "urls": [ 
+    "https://data.cityofnewyork.us/City-Government/Transportation-Structures/h9sf-7bej",
+    "https://github.com/CityOfNewYork/nyc-planimetrics/blob/master/Capture_Rules.md"
+  ],
+  "version": "",
+  "description": "Transportation Structures - NYC Open Data (NYC Planimetrics Database - DoITT)",
+  "updated_at": "2018-09-10"
+}
