@@ -2,5 +2,5 @@
   "id": "nyc-boroughs",
   "sql": "SELECT the_geom_webmercator, boroname FROM boro_boundaries_V201811",
   "data_source_id": "nyc-boroughs",
-  "description": "All boroughs (polygon)"
+  "description": "All boroughs (polygons)"
 }

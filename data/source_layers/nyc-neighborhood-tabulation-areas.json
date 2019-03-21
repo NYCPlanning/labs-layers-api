@@ -2,5 +2,5 @@
   "id": "nyc-neighborhood-tabulation-areas",
   "sql": "SELECT the_geom_webmercator, ntaname, ntaname AS id, a.ntacode AS geoid FROM nta_boundaries_v201811 a WHERE ntaname NOT ILIKE 'park-cemetery-etc%' AND ntaname != 'Airport'",
   "data_source_id": "nyc-neighborhood-tabulation-areas",
-  "description": "All Neighborhood Tabulation Areas (polygon)"
+  "description": "All Neighborhood Tabulation Areas (polygons)"
 }

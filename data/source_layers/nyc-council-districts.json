@@ -2,5 +2,5 @@
   "id": "nyc-council-districts",
   "sql": "SELECT the_geom_webmercator, coundist FROM nyc_council_districts_v201811",
   "data_source_id": "nyc-council-districts",
-  "description": "All NYC City Council Districts (polygon)"
+  "description": "All NYC City Council Districts (polygons)"
 }
