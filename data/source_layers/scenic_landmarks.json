@@ -1,0 +1,6 @@
+{
+  "id": "scenic_landmarks",
+  "sql": "SELECT the_geom_webmercator, scen_lm_na FROM scenic_landmarks_lpc WHERE last_actio = 'DESIGNATED'",
+  "data_source_id": "scenic_landmarks",
+  "description": "Scenic Landmarks"
+}

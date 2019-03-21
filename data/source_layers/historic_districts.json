@@ -1,0 +1,6 @@
+{
+  "id": "historic_districts",
+  "sql": "SELECT the_geom_webmercator, area_name FROM historic_districts_lpc WHERE status_of = 'DESIGNATED'",
+  "data_source_id": "landmark_historic",
+  "description": "Historic Districts"
+}

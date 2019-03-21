@@ -1,0 +1,6 @@
+{
+  "id": "landmarks",
+  "sql": "SELECT the_geom_webmercator, lm_name, lm_type FROM individual_landmarks_lpc WHERE (lm_type = 'Individual Landmark' OR lm_type = 'Interior Landmark') AND last_actio = 'DESIGNATED'",
+  "data_source_id": "landmarks",
+  "description": "Landmarks"
+}
