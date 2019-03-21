@@ -1,6 +1,6 @@
 {
-  "id": "nys-assembly-districts",
+  "id": "ny-assembly-districts",
   "sql": "SELECT the_geom_webmercator, assemdist FROM ny_assembly_districts_v201811",
-  "data_source_id": "nyc-gis-zoning-features",
+  "data_source_id": "ny-assembly-districts",
   "description": "All State Assembly Districts in NYC (polygon)"
 }

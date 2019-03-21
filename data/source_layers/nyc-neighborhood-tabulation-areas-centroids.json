@@ -1,5 +1,5 @@
 {
-  "id": "neighborhood-tabulation-areas-centroids",
+  "id": "nyc-neighborhood-tabulation-areas-centroids",
   "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, ntaname FROM nta_boundaries_v201811 WHERE ntaname NOT ILIKE 'park-cemetery-etc%'",
   "data_source_id": "nyc-neighborhood-tabulation-areas",
   "description": "Centroids of Neighborhood Tabulations Areas polygons"
