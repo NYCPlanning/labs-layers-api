@@ -1,0 +1,6 @@
+{
+  "id": "transportation-structures",
+  "sql": "SELECT the_geom_webmercator, cartodb_id FROM transportation_structures_v201809",
+  "data_source_id": "transportation-structures",
+  "description": "Geometries for transportation structures"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "sidewalks",
+  "sql": "SELECT the_geom_webmercator, cartodb_id FROM sidewalks_v201809",
+  "data_source_id": "sidewalks",
+  "description": "Geometries for sidewalks"
+}

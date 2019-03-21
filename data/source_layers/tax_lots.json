@@ -1,0 +1,6 @@
+{
+  "id": "tax_lots",
+  "sql": "SELECT bbl AS id, the_geom_webmercator, bbl, lot, landuse, address, numfloors FROM mappluto_18v2",
+  "data_source_id": "pluto",
+  "description": "Geometries for tax lots, with supplementary lot information (bbl, # floors, etc)"
+}
