@@ -1,0 +1,9 @@
+{
+  "id": "ferry_routes",
+  "urls": [
+    "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM nyc_ferry_routes&format=SHP"
+  ],
+  "updated_at": "2018-10",
+  "version": "",
+  "description": "Ferry Routes and Landings, NYC Department of City Planning Waterfront Division",
+}

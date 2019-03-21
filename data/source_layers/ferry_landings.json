@@ -1,0 +1,6 @@
+{
+  "id": "ferry_landings",
+  "sql": "SELECT the_geom_webmercator, name, link FROM nyc_ferry_landings WHERE status <> 'Inactive'",
+  "data_source_id": "ferry_landings",
+  "description": "Ferry Landings"
+}

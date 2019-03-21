@@ -1,0 +1,6 @@
+{
+  "id": "ferry_routes",
+  "sql": "SELECT the_geom_webmercator, cartodb_id, route_name FROM nyc_ferry_routes",
+  "data_source_id": "ferry_routes",
+  "description": "Ferry Routes"
+}
