@@ -1,0 +1,9 @@
+{
+  "id": "effective_flood_insurance_rate_2007",
+  "urls": [
+    "https://msc.fema.gov/portal"
+  ],
+  "updated_at": "2017-09",
+  "version": "",
+  "description": "Effective Flood Insurance Rate Maps (FIRMs) data are available at FEMA Flood Map Service Center",
+}

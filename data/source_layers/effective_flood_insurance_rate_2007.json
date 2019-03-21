@@ -1,0 +1,6 @@
+{
+  "id": "effective_flood_insurance_rate_2007",
+  "sql": "SELECT the_geom_webmercator, CASE WHEN fld_zone IN ('A', 'A0', 'AE') THEN 'A' WHEN fld_zone = 'VE' THEN 'V' END as fld_zone FROM floodplain_firm2007 WHERE fld_zone IN ('A', 'A0', 'AE') OR fld_zone = 'VE'",
+  "data_source_id": "effective_flood_insurance_rate_2007",
+  "description": "Effective Flood Insurance Rate 2007"
+}
