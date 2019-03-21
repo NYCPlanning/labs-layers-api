@@ -1,0 +1,9 @@
+{
+  "id": "nyc-pumas",
+  "urls": [
+    "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
+  ],
+  "updated_at": "2018-11-30",
+  "version": "v18D",
+  "description": "PUMAs, Bytes of the Big Apple",
+}

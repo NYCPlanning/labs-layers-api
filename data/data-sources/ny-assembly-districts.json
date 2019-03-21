@@ -1,0 +1,9 @@
+{
+  "id": "ny-assembly-districts",
+  "urls": [
+    "https://www1.nyc.gov/site/planning/data-maps/open-data/districts-download-metadata.page"
+  ],
+  "updated_at": "2018-11-30",
+  "version": "v18D",
+  "description": "Administrative and Political Districts, Bytes of the Big Apple",
+}

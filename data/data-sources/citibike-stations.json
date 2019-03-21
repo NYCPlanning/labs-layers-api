@@ -1,0 +1,9 @@
+{
+  "id": "citibike-stations",
+  "urls": [
+    "https://layer.bicyclesharing.net/map/v1/nyc/map-inventory"
+  ],
+  "updated_at": "hourly",
+  "version": "",
+  "description": "Citi Bike Stations, Citi Bike",
+}
