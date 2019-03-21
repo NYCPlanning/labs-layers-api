@@ -1,0 +1,6 @@
+{
+  "id": "pending-zoning-map-amendments",
+  "sql": "SELECT the_geom_webmercator, ulurpno, status, project_na FROM zoning_map_amendments WHERE status = 'Certified'",
+  "data_source_id": "nyc-gid-zoning-features",
+  "description": "All exisiting, pending zoning map amendments"
+}
