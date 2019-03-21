@@ -1,0 +1,6 @@
+{
+  "id": "fresh",
+  "sql": "SELECT the_geom_webmercator, name FROM fresh_zones",
+  "data_source_id": "fresh",
+  "description": "Geometries for Fresh zoning boundaries"
+}

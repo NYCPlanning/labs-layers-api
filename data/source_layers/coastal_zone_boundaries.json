@@ -1,0 +1,6 @@
+{
+  "id": "coastal-zones",
+  "sql": "SELECT the_geom_webmercator FROM coastal_zone_boundary",
+  "data_source_id": "wrp-coastal-zone-boundary",
+  "description": "Geometries for areas affected by NYC's Waterfront Revitalization Program(WRP)"
+}

@@ -1,0 +1,7 @@
+{
+  "id": "subway-entrances",
+  "urls": [ "https://data.cityofnewyork.us/Transportation/Subway-Entrances/drex-xx56" ],
+  "version": "",
+  "description": "NYC Open Data - Subway Entrances",
+  "updated_at": "2017-11-21"
+}

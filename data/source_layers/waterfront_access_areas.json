@@ -1,0 +1,6 @@
+{
+  "id": "waterfront-access-areas",
+  "sql": "SELECT the_geom_webmercator, name FROM waterfront_access_plan_v201109",
+  "data_source_id": "waterfront-access-plan",
+  "description": "Geometries for areas affected by NYC's Waterfront Access Plan (WAP)"
+}

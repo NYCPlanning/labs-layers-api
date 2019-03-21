@@ -1,0 +1,7 @@
+{
+  "id": "transit-zones",
+  "urls": [ "https://www1.nyc.gov/site/planning/data-maps/open-data.page#transit_zones" ],
+  "version": "",
+  "description": "Transit Zones, Bytes of the Big Apple",
+  "updated_at": "2016-07"
+}

@@ -1,0 +1,6 @@
+{
+  "id": "designated-areas",
+  "sql": "SELECT the_geom_webmercator, name, subarea FROM appendixj_designated_mdistricts",
+  "data_source_id": "appendixj-designated-mdistricts",
+  "description": "Geometries for Designated Areas in M districts (from Zoning Resolution Appendix J)"
+}

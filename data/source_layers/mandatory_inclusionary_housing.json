@@ -1,0 +1,6 @@
+{
+  "id": "mandatory-inclusionary-housing",
+  "sql": "SELECT the_geom_webmercator, projectnam, mih_option FROM mandatory_inclusionary_housing",
+  "data_source_id": "mandatory-inclusionary-housing",
+  "description": "Geometries for Mandatory Inclusionary House (MIH) Areas"
+}
