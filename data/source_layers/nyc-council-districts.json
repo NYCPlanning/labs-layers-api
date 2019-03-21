@@ -1,0 +1,6 @@
+{
+  "id": "nyc-council-districts",
+  "sql": "SELECT the_geom_webmercator, coundist FROM nyc_council_districts_v201811",
+  "data_source_id": "nyc-admin-boundaries",
+  "description": "All NYC City Council Districts"
+}

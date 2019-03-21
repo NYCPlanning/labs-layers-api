@@ -1,0 +1,6 @@
+{
+  "id": "nyc-pumas",
+  "sql": "SELECT the_geom_webmercator, puma, puma AS id, puma AS geoid FROM nyc_pumas_v201811",
+  "data_source_id": "nyc-pumas",
+  "description": "All Public Use Microdata Areas (PUMAs) (polygon)"
+}
