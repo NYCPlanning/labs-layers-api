@@ -1,0 +1,6 @@
+{
+  "id": "publicly_owned_waterfront",
+  "sql": "SELECT the_geom_webmercator, cartodb_id, wf_park_id, park_name, link, agency, status FROM publiclyownedwaterfront",
+  "data_source_id": "publicly_owned_waterfront",
+  "description": "Publicly Owned Waterfront"
+}

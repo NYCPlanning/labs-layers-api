@@ -1,0 +1,6 @@
+{
+  "id": "paws_footprints",
+  "sql": "SELECT a.the_geom_webmercator, a.cartodb_id, a.paws_id, b.feature_promenade_esplanade, b.feature_seating_lawn, b.feature_pier, b.feature_wetland_natural_edge, b.feature_dog_run, b.feature_educational_or_interpretive, b.feature_public_restroom, b.feature_shade_structure, b.feature_outdoor_art, b.feature_food_or_beverage_concessions, b.feature_group_seating, b.activity_volleyball_court, b.activity_basketball_court, b.activity_fishing, b.activity_boating_access, b.activity_tot_playground, b.activity_splash_feature, b.activity_other_recreational_facilities, b.activity_swimming, b.constructi FROM wpaas_footprints AS a LEFT JOIN planninglabs.wpaas b ON a.paws_id = b.paws_id::text",
+  "data_source_id": "wpaas",
+  "description": "Publicly Accessible Waterfront Space footprints"
+}

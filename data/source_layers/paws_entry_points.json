@@ -1,0 +1,6 @@
+{
+  "id": "paws_entry_points",
+  "sql": "SELECT the_geom_webmercator, cartodb_id FROM wpaas_accesspoints",
+  "data_source_id": "paws_entry_points",
+  "description": "Publicly Accessible Waterfront Space entry points"
+}

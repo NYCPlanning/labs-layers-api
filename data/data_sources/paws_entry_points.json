@@ -1,0 +1,9 @@
+{
+  "id": "paws_entry_points",
+  "urls": [
+    "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-waterfront.page"
+  ],
+  "updated_at": "2018-11",
+  "version": "",
+  "description": "Publicly Accessible Waterfront Space Entry Points, NYC Department of City Planning Waterfront Division",
+}
