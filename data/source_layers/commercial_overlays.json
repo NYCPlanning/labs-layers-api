@@ -1,6 +1,6 @@
 {
-  "id": "commercial-overlays",
+  "id": "commercial_overlays",
   "sql": "SELECT cartodb_id AS id, * FROM commercial_overlays",
-  "data_source_id": "nyc-gis-zoning-features",
+  "data_source_id": "nyc_gis_zoning_features",
   "description": "Geometries and labels for Commercial Overlay zones"
 }

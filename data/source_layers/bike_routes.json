@@ -1,6 +1,6 @@
 {
-  "id": "bike-routes",
+  "id": "bike_routes",
   "sql": "SELECT the_geom_webmercator, cartodb_id FROM bike_routes_v20180913",
-  "data_source_id": "bike-routes",
+  "data_source_id": "bike_routes",
   "description": "Dedicated bike paths and lanes in NYC"
 }

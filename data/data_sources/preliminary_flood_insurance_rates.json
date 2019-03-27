@@ -1,7 +1,7 @@
 {
-  "id": "preliminary-flood-insurance-rates",
+  "id": "preliminary_flood_insurance_rates",
   "urls": [ "http://www.region2coastal.com/view-flood-maps-data/view-preliminary-flood-map-data/" ],
   "version": "",
-  "description": "Flood Insurance Rate Data - Federal Emergency Management Agency (FEMA)",
-  "updated_at": "2015-01-30"
+  "description": "Flood Insurance Rate Data _ Federal Emergency Management Agency (FEMA)",
+  "updated_at": "2015_01_30"
 }

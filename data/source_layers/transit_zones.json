@@ -1,6 +1,6 @@
 {
-  "id": "transit-zones",
+  "id": "transit_zones",
   "sql": "SELECT the_geom_webmercator FROM transitzones_v201607",
-  "data_source_id": "transit-zones",
+  "data_source_id": "transit_zones",
   "description": "Geometries for Transit Zones"
 }

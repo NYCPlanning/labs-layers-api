@@ -1,6 +1,6 @@
 {
-  "id": "subway-stops",
+  "id": "subway_stops",
   "sql": "SELECT the_geom_webmercator, name FROM mta_subway_stops_v0",
-  "data_source_id": "subway-stops",
+  "data_source_id": "subway_stops",
   "description": "Subway line stops"
 }

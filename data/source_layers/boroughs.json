@@ -1,6 +1,6 @@
 {
-  "id": "nyc-boroughs",
+  "id": "nyc_boroughs",
   "sql": "SELECT the_geom_webmercator, boroname FROM boro_boundaries_V201811",
-  "data_source_id": "nyc-boroughs",
+  "data_source_id": "nyc_boroughs",
   "description": "All boroughs (polygons)"
 }

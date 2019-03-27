@@ -1,6 +1,0 @@
-{
-  "id": "pierhead-lines",
-  "sql": "SELECT the_geom_webmercator, jurisdicti FROM citymap_pierheadlines_v1",
-  "data_source_id": "pierhead-lines",
-  "description": "Pierhead Lines"
-}

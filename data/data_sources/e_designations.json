@@ -1,7 +1,7 @@
 {
-  "id": "e-designations",
+  "id": "e_designations",
   "urls": [ "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-edesignations.page" ],
   "version": "",
   "description": "(E) Designations, Bytes of the Big Apple",
-  "updated_at": "2019-01"
+  "updated_at": "2019_01"
 }

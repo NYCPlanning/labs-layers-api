@@ -1,0 +1,6 @@
+{
+  "id": "lower_density",
+  "sql": "SELECT the_geom_webmercator FROM lower_density_growth_management_areas",
+  "data_source_id": "lower_density_growth_mgmt_areas",
+  "description": "Geometries for Lower Density Growth Management Areas"
+}

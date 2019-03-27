@@ -1,0 +1,6 @@
+{
+  "id": "ny_assembly_districts",
+  "sql": "SELECT the_geom_webmercator, assemdist FROM ny_assembly_districts_v201811",
+  "data_source_id": "ny_assembly_districts",
+  "description": "All State Assembly Districts in NYC (polygons)"
+}

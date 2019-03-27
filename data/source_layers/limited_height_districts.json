@@ -1,6 +1,6 @@
 {
-  "id": "limited-height-districts",
+  "id": "limited_height_districts",
   "sql": "SELECT the_geom_webmercator, lhlbl, lhname FROM limited_height_districts",
-  "data_source_id": "nyc-gis-zoning-features",
+  "data_source_id": "nyc_gis_zoning_features",
   "description": "Geometries for limited height districts"
 }

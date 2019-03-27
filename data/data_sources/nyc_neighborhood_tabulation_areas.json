@@ -1,9 +1,9 @@
 {
-  "id": "nyc-neighborhood-tabulation-areas",
+  "id": "nyc_neighborhood_tabulation_areas",
   "urls": [
     "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-nynta.page"
   ],
-  "updated_at": "2018-11-30",
+  "updated_at": "2018_11_30",
   "version": "v18D",
   "description": "Neighborhood Tabulation Areas, Bytes of the Big Apple",
 }

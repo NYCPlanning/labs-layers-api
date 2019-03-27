@@ -1,6 +1,6 @@
 {
-  "id": "citymap-arterials",
+  "id": "citymap_arterials",
   "sql": "SELECT the_geom_webmercator, route_type FROM citymap_arterials_v0",
-  "data_source_id": "citymap-arterials",
+  "data_source_id": "citymap_arterials",
   "description": "Citymap Arterial Highways and Major Streets"
 }

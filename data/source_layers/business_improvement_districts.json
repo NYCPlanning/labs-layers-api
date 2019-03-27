@@ -1,6 +1,6 @@
 {
-  "id": "business-improvement-districts",
+  "id": "business_improvement_districts",
   "sql": "SELECT the_geom_webmercator, bid FROM business_improvement_districts",
-  "data_source_id": "business-improvement-districts",
+  "data_source_id": "business_improvement_districts",
   "description": "Geometries and labels for business improvement districts (BIDs)"
 }

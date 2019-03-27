@@ -1,6 +1,6 @@
 {
-  "id": "pending-zoning-map-amendments",
+  "id": "pending_zoning_map_amendments",
   "sql": "SELECT the_geom_webmercator, ulurpno, status, project_na FROM zoning_map_amendments WHERE status = 'Certified'",
-  "data_source_id": "nyc-gis-zoning-features",
+  "data_source_id": "nyc_gis_zoning_features",
   "description": "All exisiting, pending zoning map amendments"
 }

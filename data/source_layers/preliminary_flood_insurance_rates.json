@@ -1,6 +1,6 @@
 {
-  "id": "preliminary-flood-insurance-rates",
+  "id": "preliminary_flood_insurance_rates",
   "sql": "SELECT the_geom_webmercator, CASE WHEN fld_zone IN ('A', 'A0', 'AE') THEN 'A' WHEN fld_zone = 'VE' THEN 'V' WHEN fld_zone = '0.2 PCT ANNUAL CHANCE FLOOD HAZARD' THEN 'Shaded X' END as fld_zone FROM floodplain_pfirm2015 WHERE fld_zone IN ('A', 'A0', 'AE') OR fld_zone = 'VE'",
-  "data_source_id": "preliminary-flood-insurance-rates",
+  "data_source_id": "preliminary_flood_insurance_rates",
   "description": "Geometries and labels for Flood Insurance Rate Maps (FIRMs)"
 }

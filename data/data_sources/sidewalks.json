@@ -1,10 +1,10 @@
 {
   "id": "sidewalks",
-  "urls": [ 
+  "urls": [
     "https://data.cityofnewyork.us/City-Government/Sidewalk/vfx9-tbb6",
     "https://github.com/CityOfNewYork/nyc-planimetrics/blob/master/Capture_Rules.md"
   ],
   "version": "",
-  "description": "Sidewalks - NYC Open Data (NYC Planimetrics Database - DoITT)",
-  "updated_at": "2018-09-10"
+  "description": "Sidewalks _ NYC Open Data (NYC Planimetrics Database _ DoITT)",
+  "updated_at": "2018_09_10"
 }

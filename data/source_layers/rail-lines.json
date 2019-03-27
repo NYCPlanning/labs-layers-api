@@ -1,6 +1,0 @@
-{
-  "id": "rail-lines",
-  "sql": "SELECT the_geom_webmercator, street FROM citymap_rails_v0",
-  "data_source_id": "rail-lines",
-  "description": "Rail Lines"
-}

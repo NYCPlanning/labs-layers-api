@@ -1,6 +1,6 @@
 {
-  "id": "sidewalk-cafes",
+  "id": "sidewalk_cafes",
   "sql": "SELECT the_geom_webmercator, cafetype FROM sidewalk_cafes",
-  "data_source_id": "sidewalk-cafes",
+  "data_source_id": "sidewalk_cafes",
   "description": "Geometries and labels for areas affected by Sidewalk Cafe zoning regulations"
 }
