@@ -1,7 +1,7 @@
 {
-  "id": "business-improvement-districts",
+  "id": "business_improvement_districts",
   "urls": [ "https://data.cityofnewyork.us/Business/Business-Improvement-Districts/ejxk-d93y" ],
   "version": "",
-  "description": "Business Improvement Districts - NYC Open Data",
-  "updated_at": "2018-09-10"
+  "description": "Business Improvement Districts _ NYC Open Data",
+  "updated_at": "2018_09_10"
 }

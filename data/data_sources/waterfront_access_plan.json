@@ -1,7 +1,7 @@
 {
-  "id": "waterfront-access-plan",
+  "id": "waterfront_access_plan",
   "urls": [ "https://www1.nyc.gov/site/planning/data-maps/open-data.page#wap" ],
   "version": "",
   "description": "Waterfront Access Plan, Bytes of the Big Apple",
-  "updated_at": "2019-01"
+  "updated_at": "2019_01"
 }

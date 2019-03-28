@@ -1,6 +1,6 @@
 {
-  "id": "inclusionary-housing",
+  "id": "inclusionary_housing",
   "sql": "SELECT the_geom_webmercator, projectnam FROM inclusionary_housing_v201804",
-  "data_source": "inclusionary-housing-desginated-areas",
+  "data_source": "inclusionary_housing_desginated_areas",
   "description": "Geometries for Inclusionary Housing Designated Areas"
 }

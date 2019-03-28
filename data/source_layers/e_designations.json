@@ -1,6 +1,6 @@
 {
-  "id": "e-designations",
+  "id": "e_designations",
   "sql": "SELECT the_geom_webmercator, bbl, ceqr_num, enumber, ulurp_num FROM e_designations",
-  "data_source_id": "e-designations",
+  "data_source_id": "e_designations",
   "description": "Geometries for locations of (E) Designations (accuracy of tax lot information not ensured)"
 }

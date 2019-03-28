@@ -1,9 +1,9 @@
 {
-  "id": "boat-launches",
+  "id": "boat_launches",
   "urls": [
     "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM humanboatlaunch_v201810&format=SHP"
   ],
-  "updated_at": "2018-10",
+  "updated_at": "2018_10",
   "version": "",
   "description": "Human Boat Launches, Waterfront and Open Space Division",
 }

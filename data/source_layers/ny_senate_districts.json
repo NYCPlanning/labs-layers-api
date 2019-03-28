@@ -1,0 +1,6 @@
+{
+  "id": "ny_senate_districts",
+  "sql": "SELECT the_geom_webmercator, stsendist FROM ny_senate_districts_v201811",
+  "data_source_id": "ny_senate_districts",
+  "description": "All State Senate Districts in NYC (polygons)"
+}

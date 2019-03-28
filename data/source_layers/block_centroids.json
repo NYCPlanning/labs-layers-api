@@ -1,5 +1,5 @@
 {
-  "id": "block-centroids",
+  "id": "block_centroids",
   "sql": "SELECT the_geom_webmercator, block FROM mappluto_block_centroids",
   "data_source_id": "pluto",
   "description": "Geometries for block centroids"

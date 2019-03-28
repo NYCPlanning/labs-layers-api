@@ -1,9 +1,9 @@
 {
-  "id": "name-changes-areas",
+  "id": "name_changes_areas",
   "urls": [
     "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM citymap_streetnamechanges_areas_v0&format=SHP"
   ],
-  "updated_at": "2018-04-06",
+  "updated_at": "2018_04_06",
   "version": "",
-  "description": "Street Name Changes - Areas, NYC Department of City Planning Technical Review Division",
+  "description": "Street Name Changes _ Areas, NYC Department of City Planning Technical Review Division",
 }

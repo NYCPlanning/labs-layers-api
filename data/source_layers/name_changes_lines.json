@@ -1,0 +1,6 @@
+{
+  "id": "name_changes_lines",
+  "sql": "SELECT the_geom_webmercator, intronumbe, intro_year, ll_effecti, CASE WHEN honoraryna = 'none' THEN officialna ELSE honoraryna END FROM citymap_streetnamechanges_streets_v0",
+  "data_source_id": "name_changes_lines",
+  "description": "Street Name Change _ Lines"
+}

@@ -1,6 +1,6 @@
 {
-  "id": "subway-routes",
+  "id": "subway_routes",
   "sql": "SELECT the_geom_webmercator, rt_symbol FROM mta_subway_routes_v0",
-  "data_source_id": "subway-routes",
+  "data_source_id": "subway_routes",
   "description": "Subway line routes"
 }

@@ -1,6 +1,6 @@
 {
-  "id": "subway-entrances",
+  "id": "subway_entrances",
   "sql": "SELECT the_geom_webmercator, cartodb_id FROM mta_subway_entrances_v0",
-  "data_source_id": "subway-entrances",
+  "data_source_id": "subway_entrances",
   "description": "Subway station entrances"
 }

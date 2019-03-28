@@ -1,5 +1,5 @@
 {
-  "id": "citibike-stations",
+  "id": "citibike_stations",
   "urls": [
     "https://layer.bicyclesharing.net/map/v1/nyc/map-inventory"
   ],

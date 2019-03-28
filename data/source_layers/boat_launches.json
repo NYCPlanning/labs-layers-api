@@ -1,0 +1,6 @@
+{
+  "id": "boat_launches",
+  "sql": "SELECT the_geom_webmercator, cartodb_id, comments, link, name, notes FROM humanboatlaunch_v201810",
+  "data_source_id": "boat_launches",
+  "description": "All human boat launches in NYC (points)"
+}

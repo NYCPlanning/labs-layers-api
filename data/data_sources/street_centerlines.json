@@ -1,9 +1,9 @@
 {
-  "id": "street-centerlines",
+  "id": "street_centerlines",
   "urls": [
     "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM citymap_streetcenterlines_v1&format=SHP"
   ],
-  "updated_at": "2018-04-06",
+  "updated_at": "2018_04_06",
   "version": "",
   "description": "Street Centerlines, NYC Department of City Planning Technical Review Division",
 }

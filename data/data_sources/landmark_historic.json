@@ -3,7 +3,7 @@
   "urls": [
     "https://data.cityofnewyork.us/Housing-Development/Individual-Landmarks/ch5p-r223/data"
   ],
-  "updated_at": "05-17-2018",
+  "updated_at": "05_17_2018",
   "version": "",
   "description": "Individual Landmarks Shapefile, NYC Open Data Portal",
 }
