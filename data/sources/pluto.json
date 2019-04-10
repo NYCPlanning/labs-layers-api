@@ -5,7 +5,7 @@
   "source-layers": [
     {
       "id": "pluto",
-      "sql": "SELECT bbl AS id, the_geom_webmercator, bbl, lot, landuse, address, numfloors FROM mappluto_18v2"
+      "sql": "SELECT bbl AS id, the_geom_webmercator, bbl, lot, landuse, address, numfloors FROM mappluto"
     },
     {
       "id": "block-centroids",
@@ -13,10 +13,10 @@
     }
   ],
   "meta": {
-    "description": "MapPLUTO™ v18.2, Bytes of the Big Apple",
+    "description": "MapPLUTO™ 18v2.1, Bytes of the Big Apple",
     "url": [
       "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page#mappluto"
     ],
-    "updated_at": "January 18, 2018"
+    "updated_at": "March 2019"
   }
 }
