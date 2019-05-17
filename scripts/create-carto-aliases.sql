@@ -250,7 +250,7 @@ GRANT SELECT ON nyc_pumas TO publicuser;
 
 DROP VIEW IF EXISTS publiclyownedwaterfront;
 CREATE VIEW publiclyownedwaterfront AS
-	(SELECT * FROM publiclyownedwaterfront_v201810);
+	(SELECT * FROM publiclyownedwaterfront_v201905);
 GRANT SELECT ON publiclyownedwaterfront TO publicuser;
 
 DROP VIEW IF EXISTS region_censustract;
@@ -455,17 +455,17 @@ GRANT SELECT ON waterfront_access_plan TO publicuser;
 
 DROP VIEW IF EXISTS wpaas;
 CREATE VIEW wpaas AS
-	(SELECT * FROM wpaas_v201811);
+	(SELECT * FROM wpaas_v201905);
 GRANT SELECT ON wpaas TO publicuser;
 
 DROP VIEW IF EXISTS wpaas_accesspoints;
 CREATE VIEW wpaas_accesspoints AS
-	(SELECT * FROM wpaas_accesspoints_v201810);
+	(SELECT * FROM wpaas_accesspoints_v201905);
 GRANT SELECT ON wpaas_accesspoints TO publicuser;
 
 DROP VIEW IF EXISTS wpaas_footprints;
 CREATE VIEW wpaas_footprints AS
-	(SELECT * FROM wpaas_footprints_v201810);
+	(SELECT * FROM wpaas_footprints_v201905);
 GRANT SELECT ON wpaas_footprints TO publicuser;
 
 DROP VIEW IF EXISTS zoning_districts;
