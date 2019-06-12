@@ -4,11 +4,11 @@
   "source-layers": [
     {
       "id": "sidewalks",
-      "sql": "SELECT the_geom_webmercator, cartodb_id FROM sidewalks_v201809"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM sidewalks_v201809"
     },
     {
       "id": "transportation-structures",
-      "sql": "SELECT the_geom_webmercator, cartodb_id FROM transportation_structures_v201809"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM transportation_structures_v201809"
     }
   ],
   "minzoom": 0,

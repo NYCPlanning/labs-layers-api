@@ -4,7 +4,7 @@
   "source-layers": [
     {
       "id": "boat-launches",
-      "sql": "SELECT the_geom_webmercator, cartodb_id, comments, link, name, notes FROM humanboatlaunch"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, comments, link, name, notes FROM humanboatlaunch"
     }
   ],
   "meta": {

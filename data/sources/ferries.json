@@ -4,11 +4,11 @@
   "source-layers": [
     {
       "id": "ferry-routes",
-      "sql": "SELECT the_geom_webmercator, cartodb_id, route_name FROM nyc_ferry_routes"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, route_name FROM nyc_ferry_routes"
     },
     {
       "id": "ferry-landings",
-      "sql": "SELECT the_geom_webmercator, name, link FROM nyc_ferry_landings WHERE status <> 'Inactive'"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name, link FROM nyc_ferry_landings WHERE status <> 'Inactive'"
     }
   ],
   "minzoom": 0,

@@ -9,7 +9,7 @@
     },
     {
       "id": "block-centroids",
-      "sql": "SELECT the_geom_webmercator, block FROM dtm_block_centroids"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, block FROM dtm_block_centroids"
     }
   ],
   "meta": {
