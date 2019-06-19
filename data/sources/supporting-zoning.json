@@ -40,7 +40,7 @@
     },
     {
       "id": "coastal-zone-boundary",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, FROM coastal_zone_boundary"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM coastal_zone_boundary"
     },
     {
       "id": "waterfront-access-plan",
