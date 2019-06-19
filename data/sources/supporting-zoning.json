@@ -20,15 +20,15 @@
     },
     {
       "id": "inclusionary-housing",
-      "sql": "SELECT the_geom_webmercator, projectnam FROM inclusionary_housing"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, projectnam FROM inclusionary_housing"
     },
     {
       "id": "transit-zones",
-      "sql": "SELECT the_geom_webmercator FROM transitzones"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM transitzones"
     },
     {
       "id": "fresh",
-      "sql": "SELECT the_geom_webmercator, name FROM fresh_zones"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name FROM fresh_zones"
     },
     {
       "id": "sidewalk-cafes",
@@ -44,7 +44,7 @@
     },
     {
       "id": "waterfront-access-plan",
-      "sql": "SELECT the_geom_webmercator, name FROM waterfront_access_plan"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name FROM waterfront_access_plan"
     },
     {
       "id": "limited-height-districts",
