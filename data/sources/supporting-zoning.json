@@ -67,6 +67,9 @@
       "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name, subarea FROM appendixj_designated_mdistricts"
     }
     ],
+    "buffersize": {
+      "mvt": 10
+    },
     "meta": {
       "description": "Zoning related datasets May 2019, Bytes of the Big Apple",
       "url": [
