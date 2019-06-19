@@ -484,18 +484,18 @@ describe('POST /layer-groups', () => {
   //     });
   // });
 
-  it('returns a 200 response with json; returns all by default', (done) => {
-    chai.request(server)
-      .get('/v1/layer-groups')
-      .set('content-type', 'application/json')
-      .end((err, res) => {
-        should.not.exist(err);
-        res.status.should.equal(200);
-        res.type.should.equal('application/json');
-
-        done();
-      });
-  });
+  //  it('returns a 200 response with json; returns all by default', (done) => {
+  //    chai.request(server)
+  //      .get('/v1/layer-groups')
+  //      .set('content-type', 'application/json')
+  //      .end((err, res) => {
+  //        should.not.exist(err);
+  //        res.status.should.equal(200);
+  //        res.type.should.equal('application/json');
+  //
+  //        done();
+  //      });
+  //  });
 
   it('accepts query params for specific layer groups', (done) => {
     chai.request(server)
