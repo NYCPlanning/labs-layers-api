@@ -11,6 +11,9 @@
       "sql": "SELECT the_geom_webmercator, cartodb_id AS id, ulurpno, status, project_na FROM zoning_map_amendments WHERE status = 'Certified'"
     }
   ],
+  "buffersize": {
+    "mvt": 10
+  },
   "meta": {
     "description": "NYC GIS Zoning Features April 2019, Bytes of the Big Apple",
     "url": [

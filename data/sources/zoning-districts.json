@@ -7,6 +7,9 @@
       "sql": "SELECT cartodb_id AS id, * FROM (SELECT the_geom_webmercator, zonedist, CASE WHEN SUBSTRING(zonedist, 3, 1) = '-' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[A-Z]' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[0-9]' THEN LEFT(zonedist, 3) ELSE zonedist END as primaryzone, cartodb_id FROM zoning_districts) a"
     }
   ],
+  "buffersize": {
+    "mvt": 10
+  },
   "meta": {
     "description": "NYC GIS Zoning Features April 2019, Bytes of the Big Apple",
     "url": [
