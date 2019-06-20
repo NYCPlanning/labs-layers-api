@@ -8,11 +8,11 @@
     },
     {
       "id": "special-purpose-districts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, sdlbl, sdname FROM special_purpose_districts"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, cartodb_id, sdlbl, sdname FROM special_purpose_districts"
     },
     {
       "id": "special-purpose-subdistricts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, splbl, spname, subdist FROM special_purpose_subdistricts"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, cartodb_id, splbl, spname, subdist FROM special_purpose_subdistricts"
     },
     {
       "id": "mandatory-inclusionary-housing",
