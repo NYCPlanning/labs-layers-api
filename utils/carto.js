@@ -32,7 +32,8 @@ const carto = {
       })
       .then((d) => { // eslint-disable-line
         return type === 'json' ? d.rows : d;
-      });
+      })
+      .catch((d) => { throw d; });
   },
 
   getVectorTileTemplate(sourceConfig) {

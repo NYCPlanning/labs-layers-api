@@ -1,33 +1,49 @@
 const chai = require('chai');
 const chaiHttp = require('chai-http');
+const chaiThings = require('chai-things');
+const nock = require('nock');
+const server = require('../../app');
+const cartoResponse = require('../unit/carto-response.json');
 
-chai.use(require('chai-things'));
+chai.use(chaiThings);
+chai.use(chaiHttp);
 
 const should = chai.should();
 const { expect } = chai;
 
-chai.use(chaiHttp);
-
-const server = require('../../app');
-
 describe('POST /layer-groups', () => {
-  it('returns a 200 response with json', (done) => {
-    chai.request(server)
-      .post('/v1/layer-groups')
-      .set('content-type', 'application/json')
-      .send({
-        'layer-groups': [
-          'tax-lots',
-          'zoning-districts',
-        ],
-      })
-      .end((err, res) => {
-        should.not.exist(err);
-        res.status.should.equal(200);
-        res.type.should.equal('application/json');
+  beforeEach(function setupNock() {
+    this.scope = nock('https://planninglabs.carto.com')
+      .persist()
+      .post('/api/v1/map')
+      .reply(200, cartoResponse);
+  });
 
-        done();
-      });
+  afterEach(function teardownNock() {
+    this.scope.isDone();
+  });
+
+  it('returns a 200 response with json', (done) => {
+    try {
+      chai.request(server)
+        .post('/v1/layer-groups')
+        .set('content-type', 'application/json')
+        .send({
+          'layer-groups': [
+            'tax-lots',
+            'zoning-districts',
+          ],
+        })
+        .end((err, res) => {
+          should.not.exist(err);
+          res.status.should.equal(200);
+          res.type.should.equal('application/json');
+
+          done();
+        });
+    } catch (e) {
+      throw e;
+    }
   });
 
   it('adds the layers for a requested layergroup to the style', (done) => {
