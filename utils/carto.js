@@ -67,11 +67,11 @@ const carto = {
         },
         body: JSON.stringify(params),
       })
-        .catch(err => reject(err))
         .then(response => response.json())
         .then((json) => {
           resolve(buildTemplate(json, 'mvt'));
-        });
+        })
+        .catch(err => reject(err));
     });
   },
 };

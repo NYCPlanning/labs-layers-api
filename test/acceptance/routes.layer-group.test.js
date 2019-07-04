@@ -19,8 +19,12 @@ describe('POST /layer-groups', () => {
       .reply(200, cartoResponse);
   });
 
-  afterEach(function teardownNock() {
+  afterEach(function endNock() {
     this.scope.isDone();
+  });
+
+  after(() => {
+    nock.cleanAll();
   });
 
   it('returns a 200 response with json', (done) => {
