@@ -1,5 +1,4 @@
 const fetch = require('node-fetch');
-const { Promise } = require('rsvp');
 
 const cartoUsername = 'planninglabs';
 const cartoDomain = `${cartoUsername}.carto.com`;
@@ -59,22 +58,25 @@ const carto = {
     // if buffersize is defined in the source json, add it to the carto params
     if (sourceConfig.buffersize) params.buffersize = sourceConfig.buffersize;
 
-    return new Promise((resolve, reject) => {
-      fetch(`https://${cartoDomain}/api/v1/map`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(params),
+    return fetch(`https://${cartoDomain}/api/v1/map`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(params),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw response;
+        }
+
+        return response.json();
       })
-        .then(response => response.json())
-        .then((json) => {
-          resolve(buildTemplate(json, 'mvt'));
-        })
-        .catch(err => reject(err));
-    });
+      .then(json => buildTemplate(json, 'mvt'))
+      .catch(response => response.json().then((resolved) => {
+        throw new Error(resolved.error);
+      }));
   },
 };
-
 
 module.exports = carto;
