@@ -18,6 +18,7 @@ const buildSqlUrl = function(cleanedQuery, type = 'json') { // eslint-disable-li
 };
 
 const carto = {
+  cartoDomain,
   SQL(query, type = 'json') {
     const cleanedQuery = query.replace('\n', '');
     const url = buildSqlUrl(cleanedQuery, type);
@@ -36,15 +37,12 @@ const carto = {
   },
 
   getVectorTileTemplate(sourceConfig) {
-    const CartoCSS = '#layer { polygon-fill: #FFF; }';
     const layers = sourceConfig['source-layers'].map((sourceLayer) => {
       const { id, sql } = sourceLayer;
       return {
         id,
         type: 'mapnik',
         options: {
-          cartocss_version: '2.3.0',
-          cartocss: CartoCSS,
           sql,
         },
       };
@@ -72,7 +70,6 @@ const carto = {
 
         return response.json();
       })
-      .then(json => buildTemplate(json, 'mvt'))
       .catch(response => response.json().then((resolved) => {
         throw new Error(resolved.error);
       }));

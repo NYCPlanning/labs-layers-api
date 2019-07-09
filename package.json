@@ -38,7 +38,7 @@
   "scripts": {
     "postinstall": "npm run create-sprite-svgs",
     "start": "node app.js",
-    "devstart": "nodemon app.js",
+    "devstart": "nodemon --inspect app.js",
     "test": "PORT=3001 NODE_ENV=test node ./node_modules/mocha/bin/mocha ./test/**/*.js --exit",
     "watch-tests": "nodemon --exec 'npm run test || true'",
     "create-sprite-svgs": "node ./assets/sprite/create-sprite-svgs.js",

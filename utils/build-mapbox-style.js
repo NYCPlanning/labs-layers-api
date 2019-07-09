@@ -1,6 +1,7 @@
 const unique = require('array-unique');
 const { where } = require('./local-resources-utilities');
 const structureCartoSource = require('./structure-carto-source');
+const structureRegularSources = require('./structure-regular-source');
 const baseStyle = require('../data/base/style.json');
 
 const HOST = process.env.HOST || 'http://localhost:3000';
@@ -38,6 +39,7 @@ module.exports = async (layerGroups) => {
   // TODO use the order of the layers specified in the config to determine the correct order
   // TODO set visibility for each layer
   // TODO insert before labels
+  // WHAT WAS THIS?!
   // baseStyle.layers = [...baseStyle.layers, ...layers];
 
   // de-dupe source ids, many layers may require the same source
@@ -46,9 +48,14 @@ module.exports = async (layerGroups) => {
 
   // get sources for each id
   const sources = await where('sources', { id: sourceIds });
+
+  // these must happen in the aggregate in order to round up everything
+  // into a single request
+  const sourcesWithCarto = await structureCartoSource(sources);
+
   const structuredSources = await Promise.all(
-    sources.map(
-      source => structureCartoSource(source),
+    sourcesWithCarto.map(
+      source => structureRegularSources(source),
     ),
   );
 
