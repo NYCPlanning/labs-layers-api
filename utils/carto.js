@@ -71,7 +71,7 @@ const carto = {
         return response.json();
       })
       .catch(response => response.json().then((resolved) => {
-        throw new Error(resolved.error);
+        throw new Error(resolved.errors);
       }));
   },
 };
