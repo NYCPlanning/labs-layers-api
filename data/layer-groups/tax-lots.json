@@ -7,7 +7,8 @@
       "type": "fa-icon",
       "layers": [
         {
-          "fa-icon": "square-o",
+          "fa-icon": "square",
+          "prefix": "far",
           "color": "rgba(130, 130, 130, 1)"
         }
       ]
