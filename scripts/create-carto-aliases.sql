@@ -95,7 +95,7 @@ GRANT SELECT ON coastal_zone_boundary TO publicuser;
 
 DROP VIEW IF EXISTS commercial_overlays;
 CREATE VIEW commercial_overlays AS
-	(SELECT * FROM commercial_overlays_v201904);
+	(SELECT * FROM commercial_overlays_v201906);
 GRANT SELECT ON commercial_overlays TO publicuser;
 
 DROP VIEW IF EXISTS community_district_profiles;
@@ -108,9 +108,14 @@ CREATE VIEW community_districts AS
 	(SELECT * FROM community_districts_v201811);
 GRANT SELECT ON community_districts TO publicuser;
 
+DROP VIEW IF EXISTS dtm_block_centroids;
+CREATE VIEW dtm_block_centroids AS
+	(SELECT * FROM dtm_block_centroids_v20190712);
+GRANT SELECT ON dtm_block_centroids TO publicuser;
+
 DROP VIEW IF EXISTS e_designations;
 CREATE VIEW e_designations AS
-	(SELECT * FROM e_designations_v201904);
+	(SELECT * FROM e_designations_v201906);
 GRANT SELECT ON e_designations TO publicuser;
 
 DROP VIEW IF EXISTS facdb;
@@ -160,7 +165,7 @@ GRANT SELECT ON industrial_business_zones TO publicuser;
 
 DROP VIEW IF EXISTS limited_height_districts;
 CREATE VIEW limited_height_districts AS
-	(SELECT * FROM limited_height_districts_v201904);
+	(SELECT * FROM limited_height_districts_v201906);
 GRANT SELECT ON limited_height_districts TO publicuser;
 
 DROP VIEW IF EXISTS lower_density_growth_management_areas;
@@ -170,7 +175,7 @@ GRANT SELECT ON lower_density_growth_management_areas TO publicuser;
 
 DROP VIEW IF EXISTS mandatory_inclusionary_housing;
 CREATE VIEW mandatory_inclusionary_housing AS
-	(SELECT * FROM mandatory_inclusionary_housing_v201904);
+	(SELECT * FROM mandatory_inclusionary_housing_v201906);
 GRANT SELECT ON mandatory_inclusionary_housing TO publicuser;
 
 DROP VIEW IF EXISTS mappluto;
@@ -252,6 +257,66 @@ DROP VIEW IF EXISTS publiclyownedwaterfront;
 CREATE VIEW publiclyownedwaterfront AS
 	(SELECT * FROM publiclyownedwaterfront_v201905);
 GRANT SELECT ON publiclyownedwaterfront TO publicuser;
+
+DROP VIEW IF EXISTS scenic_landmarks_lpc;
+CREATE VIEW scenic_landmarks_lpc AS
+	(SELECT * FROM scenic_landmarks_lpc_v20180501);
+GRANT SELECT ON scenic_landmarks_lpc TO publicuser;
+
+DROP VIEW IF EXISTS sidewalk_cafes;
+CREATE VIEW sidewalk_cafes AS
+	(SELECT * FROM sidewalk_cafes_v201906);
+GRANT SELECT ON sidewalk_cafes TO publicuser;
+
+DROP VIEW IF EXISTS special_purpose_districts;
+CREATE VIEW special_purpose_districts AS
+	(SELECT * FROM special_purpose_districts_v201906);
+GRANT SELECT ON special_purpose_districts TO publicuser;
+
+DROP VIEW IF EXISTS special_purpose_subdistricts;
+CREATE VIEW special_purpose_subdistricts AS
+	(SELECT * FROM special_purpose_subdistricts_v201906);
+GRANT SELECT ON special_purpose_subdistricts TO publicuser;
+
+DROP VIEW IF EXISTS transitzones;
+CREATE VIEW transitzones AS
+	(SELECT * FROM transitzones_v201902);
+GRANT SELECT ON transitzones TO publicuser;
+
+DROP VIEW IF EXISTS upland_waterfront_areas;
+CREATE VIEW upland_waterfront_areas AS
+	(SELECT * FROM upland_waterfront_areas_v200912);
+GRANT SELECT ON upland_waterfront_areas TO publicuser;
+
+DROP VIEW IF EXISTS waterfront_access_plan;
+CREATE VIEW waterfront_access_plan AS
+	(SELECT * FROM waterfront_access_plan_v201902);
+GRANT SELECT ON waterfront_access_plan TO publicuser;
+
+DROP VIEW IF EXISTS wpaas;
+CREATE VIEW wpaas AS
+	(SELECT * FROM wpaas_v201905);
+GRANT SELECT ON wpaas TO publicuser;
+
+DROP VIEW IF EXISTS wpaas_accesspoints;
+CREATE VIEW wpaas_accesspoints AS
+	(SELECT * FROM wpaas_accesspoints_v201905);
+GRANT SELECT ON wpaas_accesspoints TO publicuser;
+
+DROP VIEW IF EXISTS wpaas_footprints;
+CREATE VIEW wpaas_footprints AS
+	(SELECT * FROM wpaas_footprints_v201905);
+GRANT SELECT ON wpaas_footprints TO publicuser;
+
+DROP VIEW IF EXISTS zoning_districts;
+CREATE VIEW zoning_districts AS
+	(SELECT * FROM zoning_districts_v201906);
+GRANT SELECT ON zoning_districts TO publicuser;
+
+DROP VIEW IF EXISTS zoning_map_amendments;
+CREATE VIEW zoning_map_amendments AS
+	(SELECT * FROM zoning_map_amendments_v201906);
+GRANT SELECT ON zoning_map_amendments TO publicuser;
 
 DROP VIEW IF EXISTS region_censustract;
 CREATE VIEW region_censustract AS
@@ -417,63 +482,3 @@ DROP VIEW IF EXISTS region_unittype_dotdensity;
 CREATE VIEW region_unittype_dotdensity AS
 	(SELECT * FROM region_unittype_dotdensity_v2);
 GRANT SELECT ON region_unittype_dotdensity TO publicuser;
-
-DROP VIEW IF EXISTS scenic_landmarks_lpc;
-CREATE VIEW scenic_landmarks_lpc AS
-	(SELECT * FROM scenic_landmarks_lpc_v20180501);
-GRANT SELECT ON scenic_landmarks_lpc TO publicuser;
-
-DROP VIEW IF EXISTS sidewalk_cafes;
-CREATE VIEW sidewalk_cafes AS
-	(SELECT * FROM sidewalk_cafes_v201904);
-GRANT SELECT ON sidewalk_cafes TO publicuser;
-
-DROP VIEW IF EXISTS special_purpose_districts;
-CREATE VIEW special_purpose_districts AS
-	(SELECT * FROM special_purpose_districts_v201904);
-GRANT SELECT ON special_purpose_districts TO publicuser;
-
-DROP VIEW IF EXISTS special_purpose_subdistricts;
-CREATE VIEW special_purpose_subdistricts AS
-	(SELECT * FROM special_purpose_subdistricts_v201904);
-GRANT SELECT ON special_purpose_subdistricts TO publicuser;
-
-DROP VIEW IF EXISTS transitzones;
-CREATE VIEW transitzones AS
-	(SELECT * FROM transitzones_v201902);
-GRANT SELECT ON transitzones TO publicuser;
-
-DROP VIEW IF EXISTS upland_waterfront_areas;
-CREATE VIEW upland_waterfront_areas AS
-	(SELECT * FROM upland_waterfront_areas_v200912);
-GRANT SELECT ON upland_waterfront_areas TO publicuser;
-
-DROP VIEW IF EXISTS waterfront_access_plan;
-CREATE VIEW waterfront_access_plan AS
-	(SELECT * FROM waterfront_access_plan_v201902);
-GRANT SELECT ON waterfront_access_plan TO publicuser;
-
-DROP VIEW IF EXISTS wpaas;
-CREATE VIEW wpaas AS
-	(SELECT * FROM wpaas_v201905);
-GRANT SELECT ON wpaas TO publicuser;
-
-DROP VIEW IF EXISTS wpaas_accesspoints;
-CREATE VIEW wpaas_accesspoints AS
-	(SELECT * FROM wpaas_accesspoints_v201905);
-GRANT SELECT ON wpaas_accesspoints TO publicuser;
-
-DROP VIEW IF EXISTS wpaas_footprints;
-CREATE VIEW wpaas_footprints AS
-	(SELECT * FROM wpaas_footprints_v201905);
-GRANT SELECT ON wpaas_footprints TO publicuser;
-
-DROP VIEW IF EXISTS zoning_districts;
-CREATE VIEW zoning_districts AS
-	(SELECT * FROM zoning_districts_v201904);
-GRANT SELECT ON zoning_districts TO publicuser;
-
-DROP VIEW IF EXISTS zoning_map_amendments;
-CREATE VIEW zoning_map_amendments AS
-	(SELECT * FROM zoning_map_amendments_v201904);
-GRANT SELECT ON zoning_map_amendments TO publicuser;
