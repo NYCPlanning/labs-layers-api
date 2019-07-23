@@ -12,5 +12,7 @@
     "mocha": true
   },
   "rules": {
+    "func-names": 0,
+    "camelcase": 0,
   }
 }

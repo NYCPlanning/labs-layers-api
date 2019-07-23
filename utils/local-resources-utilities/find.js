@@ -1,7 +1,4 @@
 // findOne(type, id)
-const path = require('path');
-const loadJsonFile = require('load-json-file');
+const fileNames = require('./-load-json');
 
-module.exports = (resourceName, identifier) => loadJsonFile(
-  path.resolve(__dirname, `../../data/${resourceName}/${identifier}.json`),
-);
+module.exports = (resourceName, identifier) => fileNames[resourceName][identifier];

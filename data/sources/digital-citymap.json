@@ -16,7 +16,7 @@
     },
     {
       "id": "amendments",
-      "sql": "SELECT the_geom_webmercator, ST_Area(the_geom) as area, cartodb_id as id, altmappdf, extract(epoch from effective) as effective, status FROM citymap_amendments WHERE effective IS NOT NULL OR status = '13' ORDER BY area DESC"
+      "sql": "SELECT the_geom_webmercator, ST_Area(the_geom) as area, cartodb_id AS id, altmappdf, extract(epoch from effective) as effective, status FROM citymap_amendments WHERE effective IS NOT NULL OR status = '13' ORDER BY area DESC"
     },
     {
       "id": "street-centerlines",

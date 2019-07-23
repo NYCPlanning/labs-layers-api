@@ -17,12 +17,12 @@ describe('structure-carto-source util', () => {
 
     try {
       const source = await find('sources', 'pluto');
-      const cartoSource = await getSource(source);
+      const cartoSource = await getSource([source]);
 
-      should.exist(cartoSource.pluto);
-      should.exist(cartoSource.pluto.type);
-      should.exist(cartoSource.pluto.tiles);
-      cartoSource.pluto.type.should.equal('vector');
+      should.exist(cartoSource[0].id);
+      should.exist(cartoSource[0].type);
+      should.exist(cartoSource[0].tiles);
+      cartoSource[0].type.should.equal('vector');
     } catch (e) {
       throw new Error(e);
     }

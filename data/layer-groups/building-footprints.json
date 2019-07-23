@@ -3,7 +3,17 @@
   "visible": true,
   "legend": {
     "label": "Building Footprints",
-    "tooltip": "Building footprints based on OpenStreetMap data"
+    "tooltip": "Building footprints based on OpenStreetMap data",
+    "icon": {
+      "type": "fa-icon",
+      "layers": [
+        {
+          "fa-icon": "square",
+          "prefix": "far",
+          "color": "rgba(175, 175, 175, 1)"
+        }
+      ]
+    }
   },
   "layers": [
     {

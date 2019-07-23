@@ -1,5 +1,4 @@
 const fetch = require('node-fetch');
-const { Promise } = require('rsvp');
 
 const cartoUsername = 'planninglabs';
 const cartoDomain = `${cartoUsername}.carto.com`;
@@ -19,6 +18,7 @@ const buildSqlUrl = function(cleanedQuery, type = 'json') { // eslint-disable-li
 };
 
 const carto = {
+  cartoDomain,
   SQL(query, type = 'json') {
     const cleanedQuery = query.replace('\n', '');
     const url = buildSqlUrl(cleanedQuery, type);
@@ -32,19 +32,17 @@ const carto = {
       })
       .then((d) => { // eslint-disable-line
         return type === 'json' ? d.rows : d;
-      });
+      })
+      .catch((d) => { throw d; });
   },
 
   getVectorTileTemplate(sourceConfig) {
-    const CartoCSS = '#layer { polygon-fill: #FFF; }';
     const layers = sourceConfig['source-layers'].map((sourceLayer) => {
       const { id, sql } = sourceLayer;
       return {
         id,
         type: 'mapnik',
         options: {
-          cartocss_version: '2.3.0',
-          cartocss: CartoCSS,
           sql,
         },
       };
@@ -58,22 +56,24 @@ const carto = {
     // if buffersize is defined in the source json, add it to the carto params
     if (sourceConfig.buffersize) params.buffersize = sourceConfig.buffersize;
 
-    return new Promise((resolve, reject) => {
-      fetch(`https://${cartoDomain}/api/v1/map`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(params),
+    return fetch(`https://${cartoDomain}/api/v1/map`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(params),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw response;
+        }
+
+        return response.json();
       })
-        .catch(err => reject(err))
-        .then(response => response.json())
-        .then((json) => {
-          resolve(buildTemplate(json, 'mvt'));
-        });
-    });
+      .catch(response => response.json().then((resolved) => {
+        throw new Error(resolved.errors);
+      }));
   },
 };
-
 
 module.exports = carto;

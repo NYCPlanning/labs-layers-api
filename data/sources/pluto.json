@@ -12,6 +12,9 @@
       "sql": "SELECT the_geom_webmercator, block FROM dtm_block_centroids"
     }
   ],
+  "buffersize": {
+    "mvt": 10
+  },
   "meta": {
     "description": "MapPLUTO™ 18v2.1, Bytes of the Big Apple",
     "url": [

@@ -10,7 +10,9 @@ const { children: sourceAttrs } = sourceSchema.describe();
 
 module.exports = (data, sources = []) => new JSONAPISerializer('layer-groups', {
   transform(record) {
-    const mutatedRecord = record;
+    // generate a new object
+    const mutatedRecord = Object.assign({}, record);
+
     mutatedRecord.sources = sources
       .filter(
         sourceObject => record.layers
