@@ -135,7 +135,7 @@ GRANT SELECT ON floodplain_pfirm2015 TO publicuser;
 
 DROP VIEW IF EXISTS fresh_zones;
 CREATE VIEW fresh_zones AS
-	(SELECT * FROM fresh_zones_v201611);
+	(SELECT * FROM fresh_zones_v201907);
 GRANT SELECT ON fresh_zones TO publicuser;
 
 DROP VIEW IF EXISTS historic_districts_lpc;
