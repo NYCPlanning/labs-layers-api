@@ -180,7 +180,7 @@ GRANT SELECT ON mandatory_inclusionary_housing TO publicuser;
 
 DROP VIEW IF EXISTS mappluto;
 CREATE VIEW mappluto AS
-	(SELECT * FROM mappluto_18v2_1);
+	(SELECT * FROM mappluto_19v1);
 GRANT SELECT ON mappluto TO publicuser;
 
 DROP VIEW IF EXISTS merged_pfirm_firm_100yr;
