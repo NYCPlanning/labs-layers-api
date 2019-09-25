@@ -178,6 +178,7 @@ CREATE VIEW mandatory_inclusionary_housing AS
 	(SELECT * FROM mandatory_inclusionary_housing_v201906);
 GRANT SELECT ON mandatory_inclusionary_housing TO publicuser;
 
+CREATE INDEX idx_mappluto_19v1_bbl ON planninglabs.mappluto_19v1 (bbl)
 DROP VIEW IF EXISTS mappluto;
 CREATE VIEW mappluto AS
 	(SELECT * FROM mappluto_19v1);
