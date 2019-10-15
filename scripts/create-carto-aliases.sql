@@ -100,7 +100,7 @@ GRANT SELECT ON commercial_overlays TO publicuser;
 
 DROP VIEW IF EXISTS community_district_profiles;
 CREATE VIEW community_district_profiles AS
-	(SELECT * FROM community_district_profiles_v201903);
+	(SELECT * FROM community_district_profiles_v201910);
 GRANT SELECT ON community_district_profiles TO publicuser;
 
 DROP VIEW IF EXISTS community_districts;
