@@ -33,6 +33,11 @@ CREATE VIEW cd_floodplains AS
 	(SELECT * FROM cd_floodplains_v201902);
 GRANT SELECT ON cd_floodplains TO publicuser;
 
+DROP VIEW IF EXISTS cdprofiles_studies_plans;
+CREATE VIEW cdprofiles_studies_plans AS
+	(SELECT * FROM cdprofiles_studies_plans_v201910);
+GRANT SELECT ON cdprofiles_studies_plans TO publicuser;
+
 DROP VIEW IF EXISTS citibike_stations;
 CREATE VIEW citibike_stations AS
 	(SELECT * FROM twg_i75aydysqbrqk9zgvg);
