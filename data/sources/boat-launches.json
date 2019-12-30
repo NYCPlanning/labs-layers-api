@@ -4,14 +4,14 @@
   "source-layers": [
     {
       "id": "boat-launches",
-      "sql": "SELECT the_geom_webmercator, cartodb_id, comments, link, name, notes FROM humanboatlaunch"
+      "sql": "SELECT the_geom_webmercator, cartodb_id, link, name FROM wam_hpb_launches"
     }
   ],
   "meta": {
-    "description": "Boat Launches",
+    "description": "Human Powered Boat Launches",
     "url": [
-      "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM humanboatlaunch&format=SHP"
+      "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-waterfront.page"
     ],
-    "updated_at": "October 2018"
+    "updated_at": "December 2019"
   }
 }

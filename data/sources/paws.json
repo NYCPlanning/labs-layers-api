@@ -4,26 +4,26 @@
   "source-layers": [
     {
       "id": "wpaas",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, paws_id, name, feature_promenade_esplanade, feature_seating_lawn, feature_pier, feature_wetland_natural_edge, feature_dog_run, feature_educational_or_interpretive, feature_public_restroom, feature_shade_structure, feature_outdoor_art, feature_food_or_beverage_concessions, feature_group_seating, activity_volleyball_court, activity_basketball_court, activity_fishing, activity_boating_access, activity_tot_playground, activity_splash_feature, activity_other_recreational_facilities, activity_swimming, constructi FROM planninglabs.wpaas"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, wpaa_id, name, f_promende AS feature_promenade_esplanade, F_SeatLawn AS feature_seating_lawn, F_Pier AS feature_pier, F_Wetland AS feature_wetland_natural_edge, F_DogRun AS feature_dog_run, F_Edu_Intp AS feature_educational_or_interpretive, F_Restroom AS feature_public_restroom, F_Shade AS feature_shade_structure, F_Art AS feature_outdoor_art, F_Food_Bev AS feature_food_or_beverage_concessions, F_GrpSeat AS feature_group_seating, A_VolleyCt AS activity_volleyball_court, A_BasketCt AS activity_basketball_court, A_Fishing AS activity_fishing, A_Boating AS activity_boating_access, A_Playgrnd AS activity_tot_playground, A_Splash AS activity_splash_feature, A_OtherRec AS activity_other_recreational_facilities, A_Swimming AS activity_swimming, status AS constructi FROM wpaas_v201912"
     },
     {
       "id": "publiclyownedwaterfront",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, wf_park_id, park_name, link, agency, status FROM publiclyownedwaterfront"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name AS park_name, link, agency FROM wam_publiclyownedwaterfront"
     },
     {
       "id": "paws_footprints",
-      "sql": "SELECT a.the_geom_webmercator, a.cartodb_id AS id, a.paws_id, b.feature_promenade_esplanade, b.feature_seating_lawn, b.feature_pier, b.feature_wetland_natural_edge, b.feature_dog_run, b.feature_educational_or_interpretive, b.feature_public_restroom, b.feature_shade_structure, b.feature_outdoor_art, b.feature_food_or_beverage_concessions, b.feature_group_seating, b.activity_volleyball_court, b.activity_basketball_court, b.activity_fishing, b.activity_boating_access, b.activity_tot_playground, b.activity_splash_feature, b.activity_other_recreational_facilities, b.activity_swimming, b.constructi FROM wpaas_footprints AS a LEFT JOIN planninglabs.wpaas b ON a.paws_id = b.paws_id::text"
+      "sql": "SELECT a.the_geom_webmercator, a.cartodb_id AS id, a.wpaa_id, b.f_promende AS feature_promenade_esplanade, b.F_SeatLawn AS feature_seating_lawn, b.F_Pier AS feature_pier, b.F_Wetland AS feature_wetland_natural_edge, b.F_DogRun AS feature_dog_run, b.F_Edu_Intp AS feature_educational_or_interpretive, b.F_Restroom AS feature_public_restroom, b.F_Shade AS feature_shade_structure, b.F_Art AS feature_outdoor_art, b.F_Food_Bev AS feature_food_or_beverage_concessions, b.F_GrpSeat AS feature_group_seating, b.A_VolleyCt AS activity_volleyball_court, b.A_BasketCt AS activity_basketball_court, b.A_Fishing AS activity_fishing, b.A_Boating AS activity_boating_access, b.A_Playgrnd AS activity_tot_playground, b.A_Splash AS activity_splash_feature, b.A_OtherRec AS activity_other_recreational_facilities, b.A_Swimming AS activity_swimming, b.status AS constructi FROM wam_wpaas_footprints AS a LEFT JOIN wpaas_v201912 b ON a.wpaa_id = b.wpaa_id"
     },
     {
       "id": "paws_entry_points",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM wpaas_accesspoints"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM wam_wpaas_accesspoints"
     }
   ],
   "meta": {
-    "description": "Publicly Accessible Waterfront Spaces, NYC Department of City Planning Waterfront Division",
+    "description": "NYC Waterfront Access Map (WAM), NYC Department of City Planning Waterfront Division",
     "url": [
       "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-waterfront.page"
      ],
-    "updated_at": "Sept 2019"
+    "updated_at": "December 2019"
   }
 }
