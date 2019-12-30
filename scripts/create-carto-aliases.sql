@@ -301,18 +301,18 @@ GRANT SELECT ON waterfront_access_plan TO publicuser;
 
 DROP VIEW IF EXISTS wpaas;
 CREATE VIEW wpaas AS
-	(SELECT * FROM wpaas_v201905);
+	(SELECT * FROM wpaas_v201912);
 GRANT SELECT ON wpaas TO publicuser;
 
-DROP VIEW IF EXISTS wpaas_accesspoints;
-CREATE VIEW wpaas_accesspoints AS
-	(SELECT * FROM wpaas_accesspoints_v201905);
-GRANT SELECT ON wpaas_accesspoints TO publicuser;
-
-DROP VIEW IF EXISTS wpaas_footprints;
-CREATE VIEW wpaas_footprints AS
-	(SELECT * FROM wpaas_footprints_v201905);
-GRANT SELECT ON wpaas_footprints TO publicuser;
+-- DROP VIEW IF EXISTS wpaas_accesspoints;
+-- CREATE VIEW wpaas_accesspoints AS
+-- 	(SELECT * FROM wpaas_accesspoints_v201905);
+-- GRANT SELECT ON wpaas_accesspoints TO publicuser;
+--
+-- DROP VIEW IF EXISTS wpaas_footprints;
+-- CREATE VIEW wpaas_footprints AS
+-- 	(SELECT * FROM wpaas_footprints_v201905);
+-- GRANT SELECT ON wpaas_footprints TO publicuser;
 
 DROP VIEW IF EXISTS zoning_districts;
 CREATE VIEW zoning_districts AS
