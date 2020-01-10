@@ -148,10 +148,10 @@ CREATE VIEW historic_districts_lpc AS
 	(SELECT * FROM historic_districts_lpc_v20190628);
 GRANT SELECT ON historic_districts_lpc TO publicuser;
 
-DROP VIEW IF EXISTS humanboatlaunch;
-CREATE VIEW humanboatlaunch AS
-	(SELECT * FROM humanboatlaunch_v201810);
-GRANT SELECT ON humanboatlaunch TO publicuser;
+DROP VIEW IF EXISTS wam_hpb_launches;
+CREATE VIEW wam_hpb_launches AS
+	(SELECT * FROM wam_hpb_launches_v201912);
+GRANT SELECT ON wam_hpb_launches TO publicuser;
 
 DROP VIEW IF EXISTS inclusionary_housing;
 CREATE VIEW inclusionary_housing AS
@@ -259,10 +259,10 @@ CREATE VIEW nyc_pumas AS
 	(SELECT * FROM nyc_pumas_v201811);
 GRANT SELECT ON nyc_pumas TO publicuser;
 
-DROP VIEW IF EXISTS publiclyownedwaterfront;
-CREATE VIEW publiclyownedwaterfront AS
-	(SELECT * FROM publiclyownedwaterfront_v201905);
-GRANT SELECT ON publiclyownedwaterfront TO publicuser;
+DROP VIEW IF EXISTS wam_publiclyownedwaterfront;
+CREATE VIEW wam_publiclyownedwaterfront AS
+	(SELECT * FROM wam_publiclyownedwaterfront_v201912);
+GRANT SELECT ON wam_publiclyownedwaterfront TO publicuser;
 
 DROP VIEW IF EXISTS scenic_landmarks_lpc;
 CREATE VIEW scenic_landmarks_lpc AS
@@ -304,15 +304,15 @@ CREATE VIEW wpaas AS
 	(SELECT * FROM wpaas_v201912);
 GRANT SELECT ON wpaas TO publicuser;
 
--- DROP VIEW IF EXISTS wpaas_accesspoints;
--- CREATE VIEW wpaas_accesspoints AS
--- 	(SELECT * FROM wpaas_accesspoints_v201905);
--- GRANT SELECT ON wpaas_accesspoints TO publicuser;
---
--- DROP VIEW IF EXISTS wpaas_footprints;
--- CREATE VIEW wpaas_footprints AS
--- 	(SELECT * FROM wpaas_footprints_v201905);
--- GRANT SELECT ON wpaas_footprints TO publicuser;
+DROP VIEW IF EXISTS wam_wpaas_accesspoints;
+CREATE VIEW wam_wpaas_accesspoints AS
+	(SELECT * FROM wam_wpaas_accesspoints_v201912);
+GRANT SELECT ON wam_wpaas_accesspoints TO publicuser;
+
+DROP VIEW IF EXISTS wam_wpaas_footprints;
+CREATE VIEW wam_wpaas_footprints AS
+	(SELECT * FROM wam_wpaas_footprints_v201912);
+GRANT SELECT ON wam_wpaas_footprints TO publicuser;
 
 DROP VIEW IF EXISTS zoning_districts;
 CREATE VIEW zoning_districts AS
