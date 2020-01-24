@@ -100,7 +100,7 @@ GRANT SELECT ON coastal_zone_boundary TO publicuser;
 
 DROP VIEW IF EXISTS commercial_overlays;
 CREATE VIEW commercial_overlays AS
-	(SELECT * FROM commercial_overlays_v201911);
+	(SELECT * FROM commercial_overlays_v201912);
 GRANT SELECT ON commercial_overlays TO publicuser;
 
 DROP VIEW IF EXISTS community_district_profiles;
@@ -115,12 +115,12 @@ GRANT SELECT ON community_districts TO publicuser;
 
 DROP VIEW IF EXISTS dtm_block_centroids;
 CREATE VIEW dtm_block_centroids AS
-	(SELECT * FROM dtm_block_centroids_v20191206);
+	(SELECT * FROM dtm_block_centroids_v20200110);
 GRANT SELECT ON dtm_block_centroids TO publicuser;
 
 DROP VIEW IF EXISTS e_designations;
 CREATE VIEW e_designations AS
-	(SELECT * FROM e_designations_v201911);
+	(SELECT * FROM e_designations_v201912);
 GRANT SELECT ON e_designations TO publicuser;
 
 DROP VIEW IF EXISTS facdb;
@@ -170,7 +170,7 @@ GRANT SELECT ON industrial_business_zones TO publicuser;
 
 DROP VIEW IF EXISTS limited_height_districts;
 CREATE VIEW limited_height_districts AS
-	(SELECT * FROM limited_height_districts_v201911);
+	(SELECT * FROM limited_height_districts_v201912);
 GRANT SELECT ON limited_height_districts TO publicuser;
 
 DROP VIEW IF EXISTS lower_density_growth_management_areas;
@@ -180,7 +180,7 @@ GRANT SELECT ON lower_density_growth_management_areas TO publicuser;
 
 DROP VIEW IF EXISTS mandatory_inclusionary_housing;
 CREATE VIEW mandatory_inclusionary_housing AS
-	(SELECT * FROM mandatory_inclusionary_housing_v201911);
+	(SELECT * FROM mandatory_inclusionary_housing_v201912);
 GRANT SELECT ON mandatory_inclusionary_housing TO publicuser;
 
 CREATE INDEX idx_mappluto_19v2_bbl ON planninglabs.mappluto_19v2 (bbl);
@@ -271,17 +271,17 @@ GRANT SELECT ON scenic_landmarks_lpc TO publicuser;
 
 DROP VIEW IF EXISTS sidewalk_cafes;
 CREATE VIEW sidewalk_cafes AS
-	(SELECT * FROM sidewalk_cafes_v201911);
+	(SELECT * FROM sidewalk_cafes_v201912);
 GRANT SELECT ON sidewalk_cafes TO publicuser;
 
 DROP VIEW IF EXISTS special_purpose_districts;
 CREATE VIEW special_purpose_districts AS
-	(SELECT * FROM special_purpose_districts_v201911);
+	(SELECT * FROM special_purpose_districts_v201912);
 GRANT SELECT ON special_purpose_districts TO publicuser;
 
 DROP VIEW IF EXISTS special_purpose_subdistricts;
 CREATE VIEW special_purpose_subdistricts AS
-	(SELECT * FROM special_purpose_subdistricts_v201911);
+	(SELECT * FROM special_purpose_subdistricts_v201912);
 GRANT SELECT ON special_purpose_subdistricts TO publicuser;
 
 DROP VIEW IF EXISTS transitzones;
@@ -316,12 +316,12 @@ GRANT SELECT ON wam_wpaas_footprints TO publicuser;
 
 DROP VIEW IF EXISTS zoning_districts;
 CREATE VIEW zoning_districts AS
-	(SELECT * FROM zoning_districts_v201911);
+	(SELECT * FROM zoning_districts_v201912);
 GRANT SELECT ON zoning_districts TO publicuser;
 
 DROP VIEW IF EXISTS zoning_map_amendments;
 CREATE VIEW zoning_map_amendments AS
-	(SELECT * FROM zoning_map_amendments_v201911);
+	(SELECT * FROM zoning_map_amendments_v201912);
 GRANT SELECT ON zoning_map_amendments TO publicuser;
 
 DROP VIEW IF EXISTS region_censustract;
