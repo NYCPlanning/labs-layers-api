@@ -30,10 +30,10 @@ for index, row in df.iterrows():
     # it plugs in the table_name and index_column values based on the order in the list after the string template
     if(index_column != 'none'):
         # %s = variable that get plugged into string template
-        sql_index = 'DROP INDEX IF EXISTS idx_%s_%s; CREATE INDEX idx_%s_%s ON %s (%s);' % (table_name, index_column, table_name, index_column, table_name, index_column)
+        sql_index = 'BEGIN; DROP INDEX IF EXISTS idx_%s_%s; CREATE INDEX idx_%s_%s ON %s (%s); COMMIT;' % (table_name, index_column, table_name, index_column, table_name, index_column)
         run_carto_query(sql_index)
 
     # this generates the SQL to create the view in PSQL
     # it plugs in the table_name and view_name values based on the order in the list after the string template
-    sql_view = 'DROP VIEW IF EXISTS %s; CREATE VIEW %s AS (SELECT * FROM %s); GRANT SELECT ON %s TO publicuser;' % (view_name, view_name, table_name, view_name)
+    sql_view = 'BEGIN; DROP VIEW IF EXISTS %s; CREATE VIEW %s AS (SELECT * FROM %s); GRANT SELECT ON %s TO publicuser; COMMIT;' % (view_name, view_name, table_name, view_name)
     run_carto_query(sql_view)
