@@ -6,6 +6,8 @@ import requests
 # `python update_carto_views.py {APIKEY}`
 api_key = sys.argv[1]
 
+# opens the csv file and saves it as a pandas dataframe called df
+# pandas is a library for manipulating tabular data
 df = pd.read_csv('view_lookup.csv')
 
 def run_carto_query(sql):
@@ -18,6 +20,7 @@ def run_carto_query(sql):
     else:
         return print(requests.get(query_url), query_url)
 
+# iterating through each row in table
 for index, row in df.iterrows():
     table_name = row.table_name
     view_name = row.view_name
@@ -26,6 +29,7 @@ for index, row in df.iterrows():
     # if an index column is provided, this generates the SQL to create the index in PSQL
     # it plugs in the table_name and index_column values based on the order in the list after the string template
     if(index_column != 'none'):
+        # %s = variable that get plugged into string template
         sql_index = 'DROP INDEX IF EXISTS idx_%s_%s; CREATE INDEX idx_%s_%s ON %s (%s);' % (table_name, index_column, table_name, index_column, table_name, index_column)
         run_carto_query(sql_index)
 
