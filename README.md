@@ -17,7 +17,7 @@ You will need the following things properly installed on your computer.
 - Clone this repo: `git clone git@github.com:NYCPlanning/labs-layers-api.git`
 - Navigate to the repo: `cd labs-layers-api`
 - Install the dependencies: `yarn`
-- Start the server: `npm run devstart`
+- Start the server: `NEW_RELIC_LICENSE_KEY=<your-key> yarn run devstart`
 
 
 ## Schemas
