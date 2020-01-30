@@ -1,50 +1,56 @@
+// 20200130172228
+// https://raw.githubusercontent.com/NYCPlanning/labs-layers-api/171-citymap-dec-2019/data/sources/digital-citymap.json
+
 {
   "id": "digital-citymap",
   "type": "cartovector",
   "source-layers": [
     {
       "id": "bulkhead-lines",
-      "sql": "SELECT the_geom_webmercator, jurisdicti FROM citymap_bulkheadlines"
+      "sql": "SELECT the_geom_webmercator, jurisdicti FROM dcm WHERE feature_ty = 'Bulkhead_line'"
     },
     {
       "id": "arterials",
-      "sql": "SELECT the_geom_webmercator, route_type FROM citymap_arterials"
+      "sql": "SELECT the_geom_webmercator, route_type FROM dcm_arterials_mjr_sts"
     },
     {
       "id": "pierhead-lines",
-      "sql": "SELECT the_geom_webmercator, jurisdicti FROM citymap_pierheadlines"
+      "sql": "SELECT the_geom_webmercator, jurisdicti FROM dcm WHERE feature_ty = 'Pierhead_line'"
     },
     {
       "id": "amendments",
-      "sql": "SELECT the_geom_webmercator, ST_Area(the_geom) as area, cartodb_id AS id, altmappdf, extract(epoch from effective) as effective, status FROM citymap_amendments WHERE effective IS NOT NULL OR status = '13' ORDER BY area DESC"
+      "sql": "SELECT the_geom_webmercator, ST_Area(the_geom) as area, cartodb_id AS id, altmappdf, extract(epoch from effective) as effective, status FROM dcm_citymapchanges ORDER BY area DESC"
     },
     {
       "id": "street-centerlines",
-      "sql": "SELECT the_geom_webmercator, official_s AS streetname, COALESCE('   (' || streetwidt || ' ft)') AS streetwidth, roadway_ty, feature_st FROM citymap_streetcenterlines"
+      "sql": "SELECT the_geom_webmercator, row_name AS streetname, COALESCE('   (' || streetwidt || ' ft)') AS streetwidth, roadway_ty, feature_st FROM dcm_scl WHERE route_type <> 'Former_ROW'"
     },
     {
       "id": "citymap",
-      "sql": "SELECT the_geom_webmercator, type, boro_nm FROM citymap_citymap"
+      "sql": "SELECT the_geom_webmercator, type, boro_nm FROM dcm WHERE type <> 'Former_ROW' AND feature_ty NOT IN ('Pierhead_line', 'Bulkhead_line', 'Rail')"
     },
     {
       "id": "name-changes-points",
-      "sql": "SELECT the_geom_webmercator, intronumbe, intro_year, ll_effecti, CASE WHEN honoraryna = 'none' THEN officialna ELSE honoraryna END FROM citymap_streetnamechanges_points"
+      "sql": "SELECT the_geom_webmercator, intronumbe, intro_year, ll_effecti, CASE WHEN honoraryna = 'none' THEN officialna ELSE honoraryna END FROM dcm_streetnamechanges_points"
     },
     {
       "id": "name-changes-lines",
-      "sql": "SELECT the_geom_webmercator, intronumbe, intro_year, ll_effecti, CASE WHEN honoraryna = 'none' THEN officialna ELSE honoraryna END FROM citymap_streetnamechanges_streets"
+      "sql": "SELECT the_geom_webmercator, intnum AS intronumbe, int_yr AS intro_year, ll_effect AS ll_effecti, CASE WHEN hon_nm = 'none' THEN officialna ELSE hon_nm END AS honoraryna FROM planninglabs.dcm_streetnamechanges_lines"
     },
     {
       "id": "name-changes-areas",
-      "sql": "SELECT the_geom_webmercator, intronumbe, intro_year, ll_effecti, CASE WHEN honoraryna = 'none' THEN officialna ELSE honoraryna END FROM citymap_streetnamechanges_areas"
+      "sql": "SELECT the_geom_webmercator, intronumbe, intro_year, ll_effecti, CASE WHEN honoraryna = 'none' THEN officialna ELSE honoraryna END FROM dcm_streetnamechanges_areas"
     },
     {
       "id": "rail-lines",
-      "sql": "SELECT the_geom_webmercator, street FROM citymap_rails"
+      "sql": "SELECT the_geom_webmercator, '' AS street FROM dcm WHERE feature_ty = 'Rail'"
     }
   ],
   "meta": {
     "description": "NYC Department of City Planning Technical Review Division",
-    "updated_at": "6 April 2018"
+    "url": [
+      "WAITING ON REAL URL"
+    ],
+    "updated_at": "December 2019"
   }
 }
