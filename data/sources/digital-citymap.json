@@ -24,19 +24,19 @@
     },
     {
       "id": "citymap",
-      "sql": "SELECT the_geom_webmercator, feat_type, borough FROM planninglabs.dcm_v202005 WHERE feat_type NOT IN ('Pierhead_line', 'Bulkhead_line', 'Rail')"
+      "sql": "SELECT the_geom_webmercator, feat_type, borough FROM dcm_v202005 WHERE feat_type NOT IN ('Pierhead_line', 'Bulkhead_line', 'Rail')"
     },
     {
       "id": "name-changes-points",
-      "sql": "SELECT the_geom_webmercator, intro_num, intro_year, lleffectdt, CASE WHEN honor_name = 'none' THEN officialnm ELSE honor_name END FROM planninglabs.dcm_streetnamechanges_points_v202005"
+      "sql": "SELECT the_geom_webmercator, intro_num, intro_year, lleffectdt, CASE WHEN honor_name = 'none' THEN officialnm ELSE honor_name END FROM dcm_streetnamechanges_points_v202005"
     },
     {
       "id": "name-changes-lines",
-      "sql": "SELECT the_geom_webmercator, intro_num, intro_year, lleffectdt, CASE WHEN honor_name = 'none' THEN officialnm ELSE honor_name END FROM planninglabs.dcm_streetnamechanges_lines_v202005"
+      "sql": "SELECT the_geom_webmercator, intro_num, intro_year, lleffectdt, CASE WHEN honor_name = 'none' THEN officialnm ELSE honor_name END FROM dcm_streetnamechanges_lines_v202005"
     },
     {
       "id": "name-changes-areas",
-      "sql": "SELECT the_geom_webmercator, intro_num, intro_year, lleffectdt, CASE WHEN honor_name = 'none' THEN officialnm ELSE honor_name END FROM planninglabs.dcm_streetnamechanges_areas_v202005"
+      "sql": "SELECT the_geom_webmercator, intro_num, intro_year, lleffectdt, CASE WHEN honor_name = 'none' THEN officialnm ELSE honor_name END FROM dcm_streetnamechanges_areas_v202005"
     },
     {
       "id": "rail-lines",
