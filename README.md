@@ -1,6 +1,6 @@
 [![CircleCI](https://circleci.com/gh/NYCPlanning/labs-layers-api.svg?style=svg)](https://circleci.com/gh/NYCPlanning/labs-layers-api)
 
-A web API for serving layer groups, which are a custom data model for named groups of Mapbox GL layers and their associate legend and source data.
+This is a web API for serving layer groups, which are a custom data model for named groups of Mapbox GL layers and their associate legend and source data.
 
 
 ## Requirements
