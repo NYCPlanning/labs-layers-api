@@ -445,8 +445,7 @@
       }
     },
     {
-      "tooltipable": true,
-      "tooltipTemplate": "{{{street}}}",
+      "tooltipable": false,
       "style": {
         "id": "railway-lines",
         "type": "line",
