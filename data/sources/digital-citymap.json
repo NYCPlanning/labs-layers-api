@@ -24,7 +24,7 @@
     },
     {
       "id": "citymap",
-      "sql": "SELECT the_geom_webmercator, feat_type, borough FROM dcm_v202005 WHERE feat_type NOT IN ('Pierhead_line', 'Bulkhead_line', 'Rail')"
+      "sql": "SELECT the_geom_webmercator, (CASE WHEN record_st = 'Yes' THEN 'Record_St' ELSE feat_type END) as feat_type, record_st, borough FROM dcm_v202005 WHERE feat_type NOT IN ('Pierhead_line', 'Bulkhead_line', 'Rail')"
     },
     {
       "id": "name-changes-points",

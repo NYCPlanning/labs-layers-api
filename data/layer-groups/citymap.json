@@ -137,15 +137,15 @@
           "all",
           [
             "==",
-            "type",
-            "Mapped Street"
+            "feat_type",
+            "Mapped_St"
           ]
         ]
       }
     },
     {
       "tooltipable": true,
-      "tooltipTemplate": "{{{type}}}",
+      "tooltipTemplate": "{{{feat_type}}}",
       "style": {
         "id": "citymap-streets-tooltip-line",
         "type": "line",
@@ -174,18 +174,18 @@
           "any",
           [
             "==",
-            "type",
-            "Mapped Street"
+            "feat_type",
+            "Mapped_St"
           ],
           [
             "==",
-            "type",
-            "Street not mapped"
+            "feat_type",
+            "Unmapped_St"
           ],
           [
             "==",
-            "type",
-            "Record Street"
+            "feat_type",
+            "Record_St"
           ]
         ]
       }
@@ -200,8 +200,8 @@
           "all",
           [
             "==",
-            "type",
-            "street_treatment"
+            "feat_type",
+            "Street_treatment"
           ]
         ],
         "paint": {
@@ -246,8 +246,8 @@
           "all",
           [
             "==",
-            "type",
-            "Underpass or Tunnel"
+            "feat_type",
+            "Underpass_or_tunnel"
           ]
         ],
         "paint": {
@@ -310,8 +310,8 @@
           "all",
           [
             "==",
-            "type",
-            "Street not mapped"
+            "feat_type",
+            "Unmapped_St"
           ]
         ],
         "paint": {
@@ -363,8 +363,8 @@
           "all",
           [
             "==",
-            "type",
-            "Record Street"
+            "feat_type",
+            "Record_St"
           ]
         ],
         "paint": {
@@ -453,8 +453,8 @@
           "all",
           [
             "==",
-            "type",
-            "Underpass or Tunnel"
+            "feat_type",
+            "Underpass_or_tunnel"
           ]
         ],
         "paint": {
