@@ -47,6 +47,21 @@
         }
       },
       {
+        "label": "Record Street",
+        "tooltip": "A type of unmapped street that was recorded at local Borough President's topographic offices and is displayed on the City Map and Zoning Map. New unapped streets are not recoded and displayed on the City Map or Zoning Map.",
+        "icon": {
+          "type": "line",
+          "layers": [
+            {
+              "fill": "none",
+              "stroke": "rgba(50, 50, 50, 1)",
+              "stroke-width": "1",
+              "stroke-dasharray": "1"
+            }
+          ]
+        }
+      },
+      {
         "label": "Rail",
         "tooltip": "Railroad right-of-way",
         "icon": {
@@ -292,16 +307,11 @@
         "source": "digital-citymap",
         "source-layer": "citymap",
         "filter": [
-          "any",
+          "all",
           [
             "==",
             "type",
             "Street not mapped"
-          ],
-          [
-            "==",
-            "type",
-            "Record Street"
           ]
         ],
         "paint": {
@@ -330,6 +340,59 @@
               [
                 15,
                 2
+              ]
+            ]
+          },
+          "line-dasharray": [
+            0,
+            2
+          ]
+        },
+        "layout": {
+          "line-cap": "round"
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "citymap-record-street-line",
+        "type": "line",
+        "source": "digital-citymap",
+        "source-layer": "citymap",
+        "filter": [
+          "all",
+          [
+            "==",
+            "type",
+            "Record Street"
+          ]
+        ],
+        "paint": {
+          "line-color": {
+            "stops": [
+              [
+                10,
+                "rgba(50, 50, 50, 0.3)"
+              ],
+              [
+                13,
+                "rgba(50, 50, 50, 1)"
+              ]
+            ]
+          },
+          "line-width": {
+            "stops": [
+              [
+                10,
+                0.1
+              ],
+              [
+                13,
+                1
+              ],
+              [
+                15,
+                3
               ]
             ]
           },
