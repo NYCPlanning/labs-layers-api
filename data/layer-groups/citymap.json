@@ -48,7 +48,7 @@
       },
       {
         "label": "Record Street",
-        "tooltip": "An unmapped street that is not officially shown on the City Map and over which the public may or may not have a right of way.",
+        "tooltip": "A type of unmapped street that was recorded at local Borough President's topographic offices and is displayed on the City Map and Zoning Map. New unapped streets are not recoded and displayed on the City Map or Zoning Map.",
         "icon": {
           "type": "line",
           "layers": [
