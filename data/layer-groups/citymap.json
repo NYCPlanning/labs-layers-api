@@ -185,7 +185,7 @@
           [
             "==",
             "feat_type",
-            "Record"
+            "Record_St"
           ]
         ]
       }
@@ -364,7 +364,7 @@
           [
             "==",
             "feat_type",
-            "Record"
+            "Record_St"
           ]
         ],
         "paint": {
