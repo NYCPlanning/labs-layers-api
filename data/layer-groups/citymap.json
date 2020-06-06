@@ -47,6 +47,21 @@
         }
       },
       {
+        "label": "Record Street",
+        "tooltip": "A type of unmapped street that was recorded at local Borough President's topographic offices and is displayed on the City Map and Zoning Map. New unapped streets are not recoded and displayed on the City Map or Zoning Map.",
+        "icon": {
+          "type": "line",
+          "layers": [
+            {
+              "fill": "none",
+              "stroke": "rgba(50, 50, 50, 1)",
+              "stroke-width": "1",
+              "stroke-dasharray": "1"
+            }
+          ]
+        }
+      },
+      {
         "label": "Rail",
         "tooltip": "Railroad right-of-way",
         "icon": {
@@ -122,15 +137,15 @@
           "all",
           [
             "==",
-            "type",
-            "Mapped Street"
+            "feat_type",
+            "Mapped_St"
           ]
         ]
       }
     },
     {
       "tooltipable": true,
-      "tooltipTemplate": "{{{type}}}",
+      "tooltipTemplate": "{{{feat_type}}}",
       "style": {
         "id": "citymap-streets-tooltip-line",
         "type": "line",
@@ -159,18 +174,18 @@
           "any",
           [
             "==",
-            "type",
-            "Mapped Street"
+            "feat_type",
+            "Mapped_St"
           ],
           [
             "==",
-            "type",
-            "Street not mapped"
+            "feat_type",
+            "Unmapped_St"
           ],
           [
             "==",
-            "type",
-            "Record Street"
+            "feat_type",
+            "Record_St"
           ]
         ]
       }
@@ -185,8 +200,8 @@
           "all",
           [
             "==",
-            "type",
-            "street_treatment"
+            "feat_type",
+            "Street_treatment"
           ]
         ],
         "paint": {
@@ -231,8 +246,8 @@
           "all",
           [
             "==",
-            "type",
-            "Underpass or Tunnel"
+            "feat_type",
+            "Underpass_or_tunnel"
           ]
         ],
         "paint": {
@@ -292,16 +307,11 @@
         "source": "digital-citymap",
         "source-layer": "citymap",
         "filter": [
-          "any",
+          "all",
           [
             "==",
-            "type",
-            "Street not mapped"
-          ],
-          [
-            "==",
-            "type",
-            "Record Street"
+            "feat_type",
+            "Unmapped_St"
           ]
         ],
         "paint": {
@@ -330,6 +340,59 @@
               [
                 15,
                 2
+              ]
+            ]
+          },
+          "line-dasharray": [
+            0,
+            2
+          ]
+        },
+        "layout": {
+          "line-cap": "round"
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "citymap-record-street-line",
+        "type": "line",
+        "source": "digital-citymap",
+        "source-layer": "citymap",
+        "filter": [
+          "all",
+          [
+            "==",
+            "feat_type",
+            "Record_St"
+          ]
+        ],
+        "paint": {
+          "line-color": {
+            "stops": [
+              [
+                10,
+                "rgba(50, 50, 50, 0.3)"
+              ],
+              [
+                13,
+                "rgba(50, 50, 50, 1)"
+              ]
+            ]
+          },
+          "line-width": {
+            "stops": [
+              [
+                10,
+                0.1
+              ],
+              [
+                13,
+                1
+              ],
+              [
+                15,
+                3
               ]
             ]
           },
@@ -390,8 +453,8 @@
           "all",
           [
             "==",
-            "type",
-            "Underpass or Tunnel"
+            "feat_type",
+            "Underpass_or_tunnel"
           ]
         ],
         "paint": {
@@ -445,8 +508,7 @@
       }
     },
     {
-      "tooltipable": true,
-      "tooltipTemplate": "{{{street}}}",
+      "tooltipable": false,
       "style": {
         "id": "railway-lines",
         "type": "line",
