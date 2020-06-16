@@ -15,11 +15,11 @@
     "mvt": 10
   },
   "meta": {
-    "description": "NYC GIS Zoning Features March 2020, Bytes of the Big Apple",
+    "description": "NYC GIS Zoning Features May 2020, Bytes of the Big Apple",
     "url": [
       "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-gis-zoning.page"
     ],
-      "data_date": "March 2020",
-      "updated_at": "March 2020"
+      "data_date": "May 2020",
+      "updated_at": "May 2020"
   }
 }
