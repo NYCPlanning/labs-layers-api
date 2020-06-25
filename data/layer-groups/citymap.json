@@ -48,7 +48,7 @@
       },
       {
         "label": "Record Street",
-        "tooltip": "A type of unmapped street that was recorded at local Borough President's topographic offices and is displayed on the City Map and Zoning Map. New unapped streets are not recoded and displayed on the City Map or Zoning Map.",
+        "tooltip": "A type of unmapped street that was recorded at local Borough President's topographic offices and is displayed on the City Map and Zoning Map. New unmapped streets are not recorded and displayed on the City Map or Zoning Map.",
         "icon": {
           "type": "line",
           "layers": [
