@@ -2,7 +2,7 @@ Step 1.
 Update the `view_lookup.csv` file with new table version name(s). The CSV file includes three columns: (1) the alias name (2) the name of the actual table (you will be editing this) (3) the column on which to create indices.
 
 Step 2.
-Run `python update_carto_views.py {APIKEY}`. You can find the API key on our carto account under the API Keys tab. This script intakes the Carto API key as a system argument and then GETs all the Carto SQL API calls, recreating indices and views for each table in the CSV file.
+Make sure you're inside of scripts/aliased-views in the terminal. Then run `python update_carto_views.py {APIKEY}`. You can find the API key on our carto account under the API Keys tab. This script intakes the Carto API key as a system argument and then GETs all the Carto SQL API calls, recreating indices and views for each table in the CSV file.
 
 Note: You can query on Carto to see all views and their definitions using this SQL snippet
 
