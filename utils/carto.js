@@ -1,5 +1,7 @@
 const fetch = require('node-fetch');
 
+const ENV = process.env.NODE_ENV;
+
 const cartoUsername = 'planninglabs';
 const cartoDomain = `${cartoUsername}.carto.com`;
 
@@ -38,12 +40,27 @@ const carto = {
 
   getVectorTileTemplate(sourceConfig) {
     const layers = sourceConfig['source-layers'].map((sourceLayer) => {
-      const { id, sql } = sourceLayer;
+      let { id, sql: {
+        select,
+        where,
+        table,
+      } } = sourceLayer;
+
+      if (ENV === 'production') {
+        table = `${table}_production`;
+      } else {
+        table = `${table}_staging`;
+      }
+
+      let finalSql = `SELECT ${select} FROM ${table}`;
+
+      if (where) finalSql = `${finalSql} WHERE ${where}`;
+
       return {
         id,
         type: 'mapnik',
         options: {
-          sql,
+          sql: finalSql,
         },
       };
     });
