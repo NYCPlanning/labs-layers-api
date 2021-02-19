@@ -4,19 +4,19 @@
   "source-layers": [
     {
       "id": "commercial-overlays",
-      "sql": "SELECT cartodb_id AS id, * FROM commercial_overlays"
+      "sql": "SELECT cartodb_id AS id, * FROM commercial_overlays_{{ENV}}"
     },
     {
       "id": "special-purpose-districts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, cartodb_id, sdlbl, sdname FROM special_purpose_districts"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, cartodb_id, sdlbl, sdname FROM special_purpose_districts_{{ENV}}"
     },
     {
       "id": "special-purpose-subdistricts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, cartodb_id, splbl, spname, subdist FROM special_purpose_subdistricts"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, cartodb_id, splbl, spname, subdist FROM special_purpose_subdistricts_{{ENV}}"
     },
     {
       "id": "mandatory-inclusionary-housing",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, projectnam, mih_option FROM mandatory_inclusionary_housing"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, projectnam, mih_option FROM mandatory_inclusionary_housing_{{ENV}}"
     },
     {
       "id": "inclusionary-housing",
@@ -24,15 +24,15 @@
     },
     {
       "id": "transit-zones",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM transitzones"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM transitzones_{{ENV}}"
     },
     {
       "id": "fresh",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name FROM fresh_zones"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name FROM fresh_zones_{{ENV}}"
     },
     {
       "id": "sidewalk-cafes",
-      "sql": "SELECT the_geom_webmercator, cafetype FROM sidewalk_cafes"
+      "sql": "SELECT the_geom_webmercator, cafetype FROM sidewalk_cafes_{{ENV}}"
     },
     {
       "id": "low-density-growth-mgmt-areas",
@@ -40,15 +40,15 @@
     },
     {
       "id": "coastal-zone-boundary",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM coastal_zone_boundary"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM coastal_zone_boundary_{{ENV}}"
     },
     {
       "id": "waterfront-access-plan",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name FROM waterfront_access_plan"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name FROM waterfront_access_plan_{{ENV}}"
     },
     {
       "id": "limited-height-districts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, lhlbl, lhname FROM limited_height_districts"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, lhlbl, lhname FROM limited_height_districts_{{ENV}}"
     },
     {
       "id": "business-improvement-districts",
@@ -64,7 +64,7 @@
     },
     {
       "id": "appendixj-designated-mdistricts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name, subarea FROM appendixj_designated_mdistricts"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name, subarea FROM appendixj_designated_mdistricts_{{ENV}}"
     }
     ],
     "buffersize": {

@@ -1,5 +1,7 @@
 const fetch = require('node-fetch');
 
+const ENV = process.env.NODE_ENV;
+
 const cartoUsername = 'planninglabs';
 const cartoDomain = `${cartoUsername}.carto.com`;
 
@@ -39,11 +41,15 @@ const carto = {
   getVectorTileTemplate(sourceConfig) {
     const layers = sourceConfig['source-layers'].map((sourceLayer) => {
       const { id, sql } = sourceLayer;
+
+      // Switch between staging and production Carto tables
+      const envSpecificSql = sql.replace('{{ENV}}', ENV === 'production' ? 'production' : 'staging');
+
       return {
         id,
         type: 'mapnik',
         options: {
-          sql,
+          sql: envSpecificSql,
         },
       };
     });
