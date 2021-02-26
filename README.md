@@ -19,6 +19,17 @@ You will need the following things properly installed on your computer.
 - Install the dependencies: `yarn`
 - Start the server: `NEW_RELIC_LICENSE_KEY=<your-key> yarn run devstart`
 
+By default Layers API will be served at `localhost:3000`. 
+
+## Changing PORT/HOST
+
+When running locally, you have to pass in overrides for both PORT and HOST at the same time: 
+```
+PORT=3120 HOST=http://localhost:3120 yarn run devstart
+ ```
+
+In Production/staging, Heroku automatically sets both PORT and HOST variables.
+
 ## Running without New Relic
 For development purposes, you can run the API without providing a New Relic license key by disabling New Relic.
 Comment out the New Relic import at the top of `app.js`:
