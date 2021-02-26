@@ -19,6 +19,12 @@ You will need the following things properly installed on your computer.
 - Install the dependencies: `yarn`
 - Start the server: `NEW_RELIC_LICENSE_KEY=<your-key> yarn run devstart`
 
+## Running without New Relic
+For development purposes, you can run the API without providing a New Relic license key by disabling New Relic.
+Comment out the New Relic import at the top of `app.js`:
+```
+// require('newrelic');
+```
 
 ## Schemas
 
