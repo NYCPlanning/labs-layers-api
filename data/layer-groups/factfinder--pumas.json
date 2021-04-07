@@ -6,7 +6,7 @@
         "id": "factfinder--pumas-selection-fill",
         "type": "fill",
         "source": "admin-boundaries",
-        "source-layer": "nyc-pumas",
+        "source-layer": "dcp_puma",
         "paint": {
           "fill-opacity": 0.01
         }
@@ -19,7 +19,7 @@
         "id": "factfinder--pumas-line",
         "type": "line",
         "source": "admin-boundaries",
-        "source-layer": "nyc-pumas",
+        "source-layer": "dcp_puma",
         "paint": {
           "line-color": "#444",
           "line-opacity": 0.3,
@@ -47,7 +47,7 @@
         "id": "factfinder--pumas-label",
         "type": "symbol",
         "source": "admin-boundaries",
-        "source-layer": "nyc-pumas",
+        "source-layer": "dcp_puma",
         "minzoom": 9,
         "paint": {
           "text-color": "#626262",

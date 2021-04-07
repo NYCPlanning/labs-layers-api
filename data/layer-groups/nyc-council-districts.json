@@ -1,5 +1,5 @@
 {
-  "id": "nyc-council-districts",
+  "id": "dcp_city_council_districts",
   "legend": {
     "label": "NYC Council Districts",
     "icon": {
@@ -21,10 +21,10 @@
   "layers": [
     {
       "style": {
-        "id": "nyc-council-districts-line-glow",
+        "id": "dcp_city_council_districts-line-glow",
         "type": "line",
         "source": "admin-boundaries",
-        "source-layer": "nyc-council-districts",
+        "source-layer": "dcp_city_council_districts",
         "paint": {
           "line-color": "#12eded",
           "line-opacity": 0.7,
@@ -45,10 +45,10 @@
     },
     {
       "style": {
-        "id": "nyc-council-districts-line",
+        "id": "dcp_city_council_districts-line",
         "type": "line",
         "source": "admin-boundaries",
-        "source-layer": "nyc-council-districts",
+        "source-layer": "dcp_city_council_districts",
         "paint": {
           "line-color": "#007a7a",
           "line-opacity": 0.8,
@@ -73,10 +73,10 @@
     },
     {
       "style": {
-        "id": "nyc-council-districts-label",
+        "id": "dcp_city_council_districts-label",
         "type": "symbol",
         "source": "admin-boundaries",
-        "source-layer": "nyc-council-districts",
+        "source-layer": "dcp_city_council_districts",
         "paint": {
           "text-color": "#626262",
           "text-halo-color": "#FFFFFF",

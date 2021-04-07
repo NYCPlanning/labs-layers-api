@@ -1,5 +1,5 @@
 {
-  "id": "ny-senate-districts",
+  "id": "dcp_state_senate_districts",
   "legend": {
     "label": "NY State Senate Districts",
     "icon": {
@@ -24,7 +24,7 @@
         "id": "nysenatedistricts-line-glow",
         "type": "line",
         "source": "admin-boundaries",
-        "source-layer": "ny-senate-districts",
+        "source-layer": "dcp_state_senate_districts",
         "paint": {
           "line-color": "#9912ed",
           "line-opacity": 0.4,
@@ -48,7 +48,7 @@
         "id": "nysenatedistricts-line",
         "type": "line",
         "source": "admin-boundaries",
-        "source-layer": "ny-senate-districts",
+        "source-layer": "dcp_state_senate_districts",
         "paint": {
           "line-color": "#4b007a",
           "line-opacity": 0.6,
@@ -76,7 +76,7 @@
         "id": "nysenatedistricts-label",
         "type": "symbol",
         "source": "admin-boundaries",
-        "source-layer": "ny-senate-districts",
+        "source-layer": "dcp_state_senate_districts",
         "minzoom": 10,
         "paint": {
           "text-color": "#626262",

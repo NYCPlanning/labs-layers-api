@@ -24,6 +24,32 @@ You will need the following things properly installed on your computer.
 
 By default Layers API will be served at `localhost:3000`. 
 
+## Changing Carto instance
+
+By default, the API will serve layers from the `planninglabs` carto account, which
+holds production layers.
+
+To switch to the `dcpadmin` account, which holds staging layers, specify the `CARTO_USERNAME`
+environment variable on startup:
+
+```
+CARTO_USERNAME='dcpadmin' yarn run devstart
+```
+or
+```
+NEW_RELIC_LICENSE_KEY=<your-key> CARTO_USERNAME='dcpadmin' yarn run devstart
+```
+
+## Not all layers are yet in "Data Pipeline"/Have staging equivalents
+
+About a half dozen source layers are not yet in the `dcpadmin` account.
+They will be excluded from the generated anonymous map when `dcpadmin` is the
+specified carto instance. They are filtered out by checking for
+the `dataPipeline` boolean property attached to sources.
+
+These layers currently include subways, flood insurance rates, and industrial
+business zones.
+
 ## Changing PORT/HOST
 
 When running locally, you have to pass in overrides for both PORT and HOST at the same time: 

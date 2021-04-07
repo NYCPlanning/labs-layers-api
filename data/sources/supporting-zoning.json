@@ -4,59 +4,73 @@
   "source-layers": [
     {
       "id": "commercial-overlays",
-      "sql": "SELECT cartodb_id AS id, * FROM commercial_overlays_{{ENV}}"
+      "sql": "SELECT cartodb_id AS id, * FROM dcp_commercial_overlays",
+      "dataPipeline": true
     },
     {
       "id": "special-purpose-districts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, cartodb_id, sdlbl, sdname FROM special_purpose_districts_{{ENV}}"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, cartodb_id, sdlbl, sdname FROM dcp_special_purpose_districts",
+      "dataPipeline": true
     },
     {
       "id": "special-purpose-subdistricts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, cartodb_id, splbl, spname, subdist FROM special_purpose_subdistricts_{{ENV}}"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, cartodb_id, splbl, spname, subdist FROM dcp_special_purpose_subdistricts",
+      "dataPipeline": true
     },
     {
       "id": "mandatory-inclusionary-housing",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, projectnam, mih_option FROM mandatory_inclusionary_housing_{{ENV}}"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, projectnam, mih_option FROM dcp_mandatory_inclusionary_housing",
+      "dataPipeline": true
     },
     {
       "id": "inclusionary-housing",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, projectnam FROM inclusionary_housing"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, projectnam FROM dcp_inclusionary_housing",
+      "dataPipeline": true
     },
     {
       "id": "transit-zones",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM transitzones_{{ENV}}"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM dcp_transitzones",
+      "dataPipeline": true
     },
     {
       "id": "fresh",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name FROM fresh_zones_{{ENV}}"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name FROM dcp_fresh_zones",
+      "dataPipeline": true
     },
     {
       "id": "sidewalk-cafes",
-      "sql": "SELECT the_geom_webmercator, cafetype FROM sidewalk_cafes_{{ENV}}"
+      "sql": "SELECT the_geom_webmercator, cafetype FROM dcp_sidewalk_cafes",
+      "dataPipeline": true
     },
     {
       "id": "low-density-growth-mgmt-areas",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM lower_density_growth_management_areas"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM dcp_lower_density_growth_management_areas",
+      "dataPipeline": true
     },
     {
       "id": "coastal-zone-boundary",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM coastal_zone_boundary_{{ENV}}"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM dcp_coastal_zone_boundary",
+      "dataPipeline": true
     },
     {
       "id": "waterfront-access-plan",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name FROM waterfront_access_plan_{{ENV}}"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name FROM dcp_waterfront_access_plan",
+      "dataPipeline": true
     },
     {
       "id": "limited-height-districts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, lhlbl, lhname FROM limited_height_districts_{{ENV}}"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, lhlbl, lhname FROM dcp_limited_height_districts",
+      "dataPipeline": true
     },
     {
       "id": "business-improvement-districts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, bid FROM business_improvement_districts"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, bid FROM dcp_business_improvement_districts",
+      "dataPipeline": true
     },
     {
       "id": "e-designations",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, bbl, ceqr_num, enumber, ulurp_num FROM e_designations"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, bbl, ceqr_num, enumber, ulurp_num FROM dcp_e_designations",
+      "dataPipeline": true
     },
     {
       "id": "industrial-business-zones",
@@ -64,7 +78,8 @@
     },
     {
       "id": "appendixj-designated-mdistricts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name, subarea FROM appendixj_designated_mdistricts_{{ENV}}"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name, subarea FROM dcp_appendixj_designated_mdistricts",
+      "dataPipeline": true
     }
     ],
     "buffersize": {
