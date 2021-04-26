@@ -1,62 +1,36 @@
 const fetch = require('node-fetch');
 
-const ENV = process.env.NODE_ENV;
+const ENV = process.env;
 
-const cartoUsername = 'planninglabs';
+// 'dcpadmin' is the staging carto account
+// 'planninglabs' is the production carto account
+const cartoUsername = ENV.CARTO_USERNAME || 'planninglabs';
 const cartoDomain = `${cartoUsername}.carto.com`;
 
-const buildTemplate = function(cartoResponse, type) { // eslint-disable-line
-  const { layergroupid, cdn_url } = cartoResponse; // eslint-disable-line
-  const { subdomains } = cdn_url.templates.https;
-
-  // choose a subdomain at random
-  const subdomain = subdomains[Math.floor(Math.random() * subdomains.length)];
-
-  return `${cdn_url.templates.https.url.replace('{s}', subdomain)}/${cartoUsername}/api/v1/map/${layergroupid}/{z}/{x}/{y}.${type}`;
-};
-
-const buildSqlUrl = function(cleanedQuery, type = 'json') { // eslint-disable-line
-  return `https://${cartoDomain}/api/v2/sql?q=${cleanedQuery}&format=${type}`;
-};
 
 const carto = {
   cartoDomain,
-  SQL(query, type = 'json') {
-    const cleanedQuery = query.replace('\n', '');
-    const url = buildSqlUrl(cleanedQuery, type);
-
-    return fetch(url)
-      .then((response) => {
-        if (response.ok) {
-          return response.json();
-        }
-        throw new Error('Not found');
-      })
-      .then((d) => { // eslint-disable-line
-        return type === 'json' ? d.rows : d;
-      })
-      .catch((d) => { throw d; });
-  },
 
   getVectorTileTemplate(sourceConfig) {
     const layers = sourceConfig['source-layers'].map((sourceLayer) => {
-      const { id, sql } = sourceLayer;
-
-      // Switch between staging and production Carto tables
-      const envSpecificSql = sql.replace('{{ENV}}', ENV === 'production' ? 'production' : 'staging');
+      const { id, sql, dataPipeline } = sourceLayer;
 
       return {
         id,
         type: 'mapnik',
+        dataPipeline,
         options: {
-          sql: envSpecificSql,
+          sql,
         },
       };
     });
 
+    // const layersNotInPipeline = layers.filter(layer => !layer.dataPipeline);
+    const layersInPipeline = layers.filter(layer => layer.dataPipeline); // these layers are also in staging (dcpadmin)
+
     const params = {
       version: '1.3.0',
-      layers,
+      layers: cartoUsername === 'planninglabs' ? layers : layersInPipeline,
     };
 
     // if buffersize is defined in the source json, add it to the carto params

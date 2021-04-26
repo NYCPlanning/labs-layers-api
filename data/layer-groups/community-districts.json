@@ -1,5 +1,5 @@
 {
-  "id": "community-districts",
+  "id": "dcp_community_districts",
   "legend": {
     "label": "Community Districts",
     "icon": {
@@ -21,10 +21,10 @@
   "layers": [
     {
       "style": {
-        "id": "community-districts-line-glow",
+        "id": "dcp_community_districts-line-glow",
         "type": "line",
         "source": "admin-boundaries",
-        "source-layer": "community-districts",
+        "source-layer": "dcp_community_districts",
         "paint": {
           "line-color": "#a5ed12",
           "line-opacity": 0.5,
@@ -45,10 +45,10 @@
     },
     {
       "style": {
-        "id": "community-districts-line",
+        "id": "dcp_community_districts-line",
         "type": "line",
         "source": "admin-boundaries",
-        "source-layer": "community-districts",
+        "source-layer": "dcp_community_districts",
         "paint": {
           "line-color": "#527a00",
           "line-opacity": 0.8,
@@ -73,10 +73,10 @@
     },
     {
       "style": {
-        "id": "community-districts-label",
+        "id": "dcp_community_districts-label",
         "type": "symbol",
         "source": "admin-boundaries",
-        "source-layer": "community-districts",
+        "source-layer": "dcp_community_districts",
         "minzoom": 11,
         "paint": {
           "text-color": "#626262",

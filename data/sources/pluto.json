@@ -5,11 +5,13 @@
   "source-layers": [
     {
       "id": "pluto",
-      "sql": "SELECT bbl AS id, the_geom_webmercator, bbl, lot, landuse, address, numfloors, notes FROM mappluto_{{ENV}}"
+      "sql": "SELECT bbl AS id, the_geom_webmercator, bbl, lot, landuse, address, numfloors, notes FROM dcp_mappluto",
+      "dataPipeline": true
     },
     {
       "id": "block-centroids",
-      "sql": "SELECT the_geom_webmercator, block FROM dtm_block_centroids_{{ENV}}"
+      "sql": "SELECT the_geom_webmercator, block FROM dof_dtm_block_centroids",
+      "dataPipeline": true
     }
   ],
   "buffersize": {
