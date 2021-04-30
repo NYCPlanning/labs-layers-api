@@ -4,7 +4,8 @@
   "source-layers": [
     {
       "id": "zoning-districts",
-      "sql": "SELECT cartodb_id AS id, * FROM (SELECT the_geom_webmercator, zonedist, CASE WHEN SUBSTRING(zonedist, 3, 1) = '-' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[A-Z]' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[0-9]' THEN LEFT(zonedist, 3) ELSE zonedist END as primaryzone, cartodb_id FROM zoning_districts) a"
+      "sql": "SELECT cartodb_id AS id, * FROM (SELECT the_geom_webmercator, zonedist, CASE WHEN SUBSTRING(zonedist, 3, 1) = '-' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[A-Z]' THEN LEFT(zonedist, 2) WHEN SUBSTRING(zonedist, 3, 1) ~ E'[0-9]' THEN LEFT(zonedist, 3) ELSE zonedist END as primaryzone, cartodb_id FROM dcp_zoning_districts) a",
+      "dataPipeline": true
     }
   ],
   "buffersize": {
@@ -15,7 +16,7 @@
     "url": [
       "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
     ],
-      "data_date": "December 2020",
-      "updated_at": "December 2020"
+      "data_date": "March 2021",
+      "updated_at": "March 2021"
   }
 }

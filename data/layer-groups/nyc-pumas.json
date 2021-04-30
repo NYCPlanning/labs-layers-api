@@ -1,5 +1,5 @@
 {
-  "id": "nyc-pumas",
+  "id": "dcp_puma",
   "legend": {
     "label": "PUMAs",
     "icon": {
@@ -21,10 +21,10 @@
   "layers": [
     {
       "style": {
-        "id": "nyc-pumas-line-glow",
+        "id": "dcp_puma-line-glow",
         "type": "line",
         "source": "admin-boundaries",
-        "source-layer": "nyc-pumas",
+        "source-layer": "dcp_puma",
         "paint": {
           "line-color": "#ed1212",
           "line-opacity": 0.3,
@@ -45,10 +45,10 @@
     },
     {
       "style": {
-        "id": "nyc-pumas-line",
+        "id": "dcp_puma-line",
         "type": "line",
         "source": "admin-boundaries",
-        "source-layer": "nyc-pumas",
+        "source-layer": "dcp_puma",
         "paint": {
           "line-color": "#7a0000",
           "line-opacity": 0.7,
@@ -73,10 +73,10 @@
     },
     {
       "style": {
-        "id": "nyc-pumas-label",
+        "id": "dcp_puma-label",
         "type": "symbol",
         "source": "admin-boundaries",
-        "source-layer": "nyc-pumas",
+        "source-layer": "dcp_puma",
         "minzoom": 12,
         "paint": {
           "text-color": "#626262",
@@ -107,10 +107,10 @@
     },
     {
       "style": {
-        "id": "nyc-pumas-selection-fill",
+        "id": "dcp_puma-selection-fill",
         "type": "fill",
         "source": "admin-boundaries",
-        "source-layer": "nyc-pumas",
+        "source-layer": "dcp_puma",
         "paint": {
           "fill-opacity": 0.01
         }

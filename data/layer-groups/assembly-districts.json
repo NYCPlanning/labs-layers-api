@@ -24,7 +24,7 @@
         "id": "assemblydistricts-line-glow",
         "type": "line",
         "source": "admin-boundaries",
-        "source-layer": "ny-assembly-districts",
+        "source-layer": "dcp_state_assembly_districts",
         "paint": {
           "line-color": "#ed1294",
           "line-opacity": 0.4,
@@ -48,7 +48,7 @@
         "id": "assemblydistricts-line",
         "type": "line",
         "source": "admin-boundaries",
-        "source-layer": "ny-assembly-districts",
+        "source-layer": "dcp_state_assembly_districts",
         "paint": {
           "line-color": "#7a0048",
           "line-opacity": 0.8,
@@ -76,7 +76,7 @@
         "id": "assemblydistricts-label",
         "type": "symbol",
         "source": "admin-boundaries",
-        "source-layer": "ny-assembly-districts",
+        "source-layer": "dcp_state_assembly_districts",
         "minzoom": 10,
         "paint": {
           "text-color": "#626262",

@@ -5,11 +5,13 @@
   "source-layers": [
     {
       "id": "pluto",
-      "sql": "SELECT bbl AS id, the_geom_webmercator, bbl, lot, landuse, address, numfloors, notes FROM mappluto"
+      "sql": "SELECT bbl AS id, the_geom_webmercator, bbl, lot, landuse, address, numfloors, notes FROM dcp_mappluto",
+      "dataPipeline": true
     },
     {
       "id": "block-centroids",
-      "sql": "SELECT the_geom_webmercator, block FROM dtm_block_centroids"
+      "sql": "SELECT the_geom_webmercator, block FROM dof_dtm_block_centroids",
+      "dataPipeline": true
     }
   ],
   "buffersize": {
@@ -20,6 +22,6 @@
     "url": [
       "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-pluto-mappluto.page#mappluto"
     ],
-    "updated_at": "January 2020"
+    "updated_at": "February 2021"
   }
 }

@@ -4,15 +4,18 @@
   "source-layers": [
     {
       "id": "historic-districts",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, area_name FROM historic_districts_lpc WHERE status_of_ = 'DESIGNATED'"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, area_name FROM lpc_historic_districts WHERE status_of_ = 'DESIGNATED'",
+      "dataPipeline": true
     },
     {
       "id": "landmarks",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, lm_name, lm_type FROM individual_landmarks_lpc WHERE (lm_type = 'Individual Landmark' OR lm_type = 'Interior Landmark') AND last_actio = 'DESIGNATED'"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, lm_name, lm_type FROM lpc_individual_and_interior_landmarks WHERE (lm_type = 'Individual Landmark' OR lm_type = 'Interior Landmark') AND last_actio = 'DESIGNATED'",
+      "dataPipeline": true
     },
     {
       "id": "scenic-landmarks",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, scen_lm_na FROM scenic_landmarks_lpc WHERE last_actio = 'DESIGNATED'"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, scen_lm_na FROM lpc_scenic_landmarks WHERE last_actio = 'DESIGNATED'",
+      "dataPipeline": true
     }
   ],
   "minzoom": 0,
