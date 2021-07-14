@@ -26,7 +26,8 @@ const carto = {
     });
 
     // const layersNotInPipeline = layers.filter(layer => !layer.dataPipeline);
-    const layersInPipeline = layers.filter(layer => layer.dataPipeline); // these layers are also in staging (dcpadmin)
+    const layersInPipeline = layers.filter(layer => layer.dataPipeline);
+    // these layers are also in staging (dcpadmin)
 
     const params = {
       version: '1.3.0',
