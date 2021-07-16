@@ -28,6 +28,8 @@ module.exports = Joi.object().keys({
   id: Joi.string().required(),
   visible: Joi.boolean(),
   filter: Joi.array(),
+  title: Joi.string(),
+  titleTooltip: Joi.string(),
   legend: Joi.object().keys({
     label: Joi.string().required(),
     tooltip: Joi.string(),
