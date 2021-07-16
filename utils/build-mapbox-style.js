@@ -68,5 +68,15 @@ module.exports = async (layerGroups) => {
       };
     });
 
+  // Delete invalid id key from geojson sources in
+  // meta.mapboxStyle.sources entries
+  Object.entries(baseStyle.sources).forEach(([key, _source]) => {
+    const source = Object.assign({}, _source);
+    if (source.type === 'geojson') {
+      delete source.id;
+      baseStyle.sources[key] = source;
+    }
+  });
+
   return baseStyle;
 };

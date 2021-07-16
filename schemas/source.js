@@ -8,6 +8,10 @@ module.exports = Joi.object().keys({
     'geojson',
     'cartovector',
   ),
+  data: Joi.object().when('type', {
+    is: 'geojson',
+    then: Joi.required()
+  }),
   minzoom: Joi.number(),
   maxzoom: Joi.number(),
   'source-layers': Joi.array().items(Joi.object())
