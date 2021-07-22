@@ -1,0 +1,92 @@
+{
+  "id": "factfinder--census-tracts-2020",
+  "layers": [
+    {
+      "style": {
+        "id": "factfinder--census-tracts-fill",
+        "type": "fill",
+        "source": "census-geoms-2020",
+        "source-layer": "census-geoms-tracts",
+        "paint": {
+          "fill-opacity": 0.01
+        }
+      },
+      "highlightable": true,
+      "clickable": true
+    },
+    {
+      "style": {
+        "id": "census-tracts-line",
+        "type": "line",
+        "source": "census-geoms-2020",
+        "source-layer": "census-geoms-tracts",
+        "paint": {
+          "line-color": "#444",
+          "line-opacity": 0.5,
+          "line-width": {
+            "stops": [
+              [
+                11,
+                1
+              ],
+              [
+                16,
+                3
+              ]
+            ]
+          }
+        },
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "census-tracts-label",
+        "type": "symbol",
+        "source": "census-geoms-2020",
+        "source-layer": "census-geoms-tracts",
+        "minzoom": 11,
+        "paint": {
+          "text-color": "#626262",
+          "text-halo-color": "#FFFFFF",
+          "text-halo-width": 2,
+          "text-halo-blur": 2,
+          "text-opacity": {
+            "stops": [
+              [
+                12,
+                0
+              ],
+              [
+                13,
+                1
+              ]
+            ]
+          }
+        },
+        "layout": {
+          "text-field": "{geolabel}",
+          "text-font": [
+            "Open Sans Semibold",
+            "Arial Unicode MS Bold"
+          ],
+          "text-size": {
+            "stops": [
+              [
+                11,
+                8
+              ],
+              [
+                14,
+                16
+              ]
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
