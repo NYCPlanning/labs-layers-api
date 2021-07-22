@@ -4,7 +4,7 @@
   "source-layers": [
     {
       "id": "census-geoms-tracts",
-      "sql": "SELECT the_geom_webmercator, ct2020, ctlabel as geolabel, boroct2020, ntacode, boroct2020 AS geoid, boroct2020 AS id, 7 as pop, 9 as hh FROM nyct2020",
+      "sql": "SELECT the_geom_webmercator, ct2020, ctlabel as geolabel, boroct2020, nta2020, boroct2020 AS geoid, boroct2020 AS id, 7 as pop, 9 as hh FROM nyct2020",
       "dataPipeline": true
     },
     {
