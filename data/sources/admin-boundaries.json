@@ -43,6 +43,11 @@
       "dataPipeline": true
     },
     {
+      "id": "cdtas",
+      "sql": "SELECT the_geom_webmercator, cdtaname FROM nycdta2020",
+      "dataPipeline": true
+    },
+    {
       "id": "bk-qn-mh-boundary",
       "sql": "SELECT the_geom_webmercator, label1 || '/' || label2 AS boro_boundary FROM bk_qn_mh_boundary"
     }

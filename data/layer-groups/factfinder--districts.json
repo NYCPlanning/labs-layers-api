@@ -1,0 +1,92 @@
+{
+  "id": "factfinder--districts",
+  "layers": [
+    {
+      "style": {
+        "id": "factfinder--districts-fill",
+        "type": "fill",
+        "source": "admin-boundaries",
+        "source-layer": "dcp_community_districts",
+        "paint": {
+          "fill-opacity": 0.01
+        }
+      },
+      "highlightable": true,
+      "clickable": true
+    },
+    {
+      "style": {
+        "id": "districts-line",
+        "type": "line",
+        "source": "admin-boundaries",
+        "source-layer": "dcp_community_districts",
+        "paint": {
+          "line-color": "#444",
+          "line-opacity": 0.5,
+          "line-width": {
+            "stops": [
+              [
+                11,
+                1
+              ],
+              [
+                16,
+                3
+              ]
+            ]
+          }
+        },
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "districts-label",
+        "type": "symbol",
+        "source": "admin-boundaries",
+        "source-layer": "dcp_community_districts",
+        "minzoom": 11,
+        "paint": {
+          "text-color": "#626262",
+          "text-halo-color": "#FFFFFF",
+          "text-halo-width": 2,
+          "text-halo-blur": 2,
+          "text-opacity": {
+            "stops": [
+              [
+                12,
+                0
+              ],
+              [
+                13,
+                1
+              ]
+            ]
+          }
+        },
+        "layout": {
+          "text-field": "{boro_district}",
+          "text-font": [
+            "Open Sans Semibold",
+            "Arial Unicode MS Bold"
+          ],
+          "text-size": {
+            "stops": [
+              [
+                11,
+                8
+              ],
+              [
+                14,
+                16
+              ]
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
