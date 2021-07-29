@@ -20,7 +20,7 @@
     {
       "id": "boroughs",
       "sql": "SELECT the_geom_webmercator, boroname FROM dcp_borough_boundary",
-      "dataPipeline": true
+      "dataPipeline": false
     },
     {
       "id": "dcp_city_council_districts",
@@ -41,6 +41,16 @@
       "id": "dcp_puma",
       "sql": "SELECT the_geom_webmercator, puma, puma AS id, puma AS geoid FROM dcp_puma",
       "dataPipeline": true
+    },
+    {
+      "id": "cdtas",
+      "sql": "SELECT the_geom_webmercator, cdtaname FROM nycdta2020",
+      "dataPipeline": false
+    },
+    {
+      "id": "cities",
+      "sql": "SELECT the_geom_webmercator, id FROM nyc2020_sw_unofficial",
+      "dataPipeline": false
     },
     {
       "id": "bk-qn-mh-boundary",
