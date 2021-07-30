@@ -48,6 +48,11 @@
       "dataPipeline": false
     },
     {
+      "id": "factfinder_dcp_community_districts",
+      "sql": "SELECT the_geom_webmercator, borocd, cd_short_title, borocd as geoid FROM cd_boundaries_v0_dh",
+      "dataPipeline": true
+    },
+    {
       "id": "cities",
       "sql": "SELECT the_geom_webmercator, id FROM nyc2020_sw_unofficial",
       "dataPipeline": false

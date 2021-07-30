@@ -6,7 +6,7 @@
         "id": "factfinder--districts-fill",
         "type": "fill",
         "source": "admin-boundaries",
-        "source-layer": "dcp_community_districts",
+        "source-layer": "factfinder_dcp_community_districts",
         "paint": {
           "fill-opacity": 0.01
         }
@@ -19,7 +19,7 @@
         "id": "districts-line",
         "type": "line",
         "source": "admin-boundaries",
-        "source-layer": "dcp_community_districts",
+        "source-layer": "factfinder_dcp_community_districts",
         "paint": {
           "line-color": "#444",
           "line-opacity": 0.5,
@@ -47,7 +47,7 @@
         "id": "districts-label",
         "type": "symbol",
         "source": "admin-boundaries",
-        "source-layer": "dcp_community_districts",
+        "source-layer": "factfinder_dcp_community_districts",
         "minzoom": 11,
         "paint": {
           "text-color": "#626262",
@@ -68,7 +68,7 @@
           }
         },
         "layout": {
-          "text-field": "{boro_district}",
+          "text-field": "{geoid}",
           "text-font": [
             "Open Sans Semibold",
             "Arial Unicode MS Bold"
