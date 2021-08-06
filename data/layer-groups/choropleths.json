@@ -4,7 +4,7 @@
   "titleTooltip": "Neighborhood Tabulation Area maps for selected variables",
   "visible": false,
   "legend": {
-    "label": "Thematic Maps (NTAs)",
+    "label": "Thematic Map",
     "icon": {
       "type": "line",
       "layers": [
