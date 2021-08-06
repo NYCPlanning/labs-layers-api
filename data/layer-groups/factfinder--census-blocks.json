@@ -5,7 +5,7 @@
       "style": {
         "id": "factfinder--census-blocks-fill",
         "type": "fill",
-        "source": "census-geoms",
+        "source": "census-geoms-2020",
         "source-layer": "census-geoms-blocks",
         "paint": {
           "fill-opacity": 0.01
@@ -18,7 +18,7 @@
       "style": {
         "id": "census-blocks-line",
         "type": "line",
-        "source": "census-geoms",
+        "source": "census-geoms-2020",
         "source-layer": "census-geoms-blocks",
         "paint": {
           "line-color": "#444",
@@ -44,10 +44,10 @@
     },
     {
       "style": {
-        "id": "census-prominent-tracts-line",
+        "id": "census-prominent-blocks-line",
         "type": "line",
-        "source": "census-geoms",
-        "source-layer": "census-geoms-tracts",
+        "source": "census-geoms-2020",
+        "source-layer": "census-geoms-blocks",
         "paint": {
           "line-color": "#444",
           "line-opacity": 0.3,
@@ -74,7 +74,7 @@
       "style": {
         "id": "census-blocks-label",
         "type": "symbol",
-        "source": "census-geoms",
+        "source": "census-geoms-2020",
         "source-layer": "census-geoms-blocks",
         "minzoom": 11,
         "paint": {
@@ -96,7 +96,7 @@
           }
         },
         "layout": {
-          "text-field": "{cb2010}",
+          "text-field": "{cb2020}",
           "text-font": [
             "Open Sans Semibold",
             "Arial Unicode MS Bold"
@@ -118,10 +118,10 @@
     },
     {
       "style": {
-        "id": "census-tracts-label-for-blocks",
+        "id": "census-blocks-label-for-blocks",
         "type": "symbol",
-        "source": "census-geoms",
-        "source-layer": "census-geoms-tracts",
+        "source": "census-geoms-2020",
+        "source-layer": "census-geoms-blocks",
         "minzoom": 11,
         "paint": {
           "text-color": "#626262",
