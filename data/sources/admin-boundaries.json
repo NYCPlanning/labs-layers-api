@@ -25,7 +25,7 @@
     {
       "id": "zip-codes",
       "sql": "SELECT the_geom_webmercator, zipcode FROM nyc_zip_codes",
-      "dataPipeline": true
+      "dataPipeline": false
     },
     {
       "id": "dcp_city_council_districts",
@@ -60,7 +60,7 @@
     {
       "id": "cdta-centroids",
       "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, cdtaname FROM nycdta2020",
-      "dataPipeline": true
+      "dataPipeline": false
     },
     {
       "id": "bk-qn-mh-boundary",
