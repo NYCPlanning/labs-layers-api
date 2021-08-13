@@ -23,6 +23,11 @@
       "dataPipeline": false
     },
     {
+      "id": "zip-codes",
+      "sql": "SELECT the_geom_webmercator, zipcode FROM nyc_zip_codes",
+      "dataPipeline": false
+    },
+    {
       "id": "dcp_city_council_districts",
       "sql": "SELECT the_geom_webmercator, coundist FROM dcp_city_council_districts",
       "dataPipeline": true
@@ -55,6 +60,11 @@
     {
       "id": "cities",
       "sql": "SELECT the_geom_webmercator, city AS geolabel, city AS geoid FROM nycity2020",
+      "dataPipeline": false
+    },
+    {
+      "id": "cdta-centroids",
+      "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, cdtaname FROM nycdta2020",
       "dataPipeline": false
     },
     {

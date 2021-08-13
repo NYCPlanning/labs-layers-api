@@ -1,0 +1,120 @@
+{
+  "id": "cdta",
+  "legend": {
+    "label": "Community District Tabulation Areas (CDTAs)",
+    "icon": {
+      "type": "line",
+      "layers": [
+        {
+          "stroke": "#ed1212",
+          "stroke-width": 4,
+          "stroke-opacity": 0.3
+        },
+        {
+          "stroke": "#ed1212",
+          "stroke-width": 1.5,
+          "stroke-opacity": 0.6
+        }
+      ]
+    }
+  },
+  "layers": [
+    {
+      "style": {
+        "id": "cdta-line-glow",
+        "type": "line",
+        "source": "admin-boundaries",
+        "source-layer": "cdtas",
+        "paint": {
+          "line-color": "#ed1212",
+          "line-opacity": 0.3,
+          "line-width": {
+            "stops": [
+              [
+                11,
+                4
+              ],
+              [
+                16,
+                8
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "cdta-line",
+        "type": "line",
+        "source": "admin-boundaries",
+        "source-layer": "cdtas",
+        "paint": {
+          "line-color": "#ed1212",
+          "line-opacity": 0.6,
+          "line-width": {
+            "stops": [
+              [
+                11,
+                1
+              ],
+              [
+                16,
+                3
+              ]
+            ]
+          }
+        },
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "cdta-label",
+        "type": "symbol",
+        "source": "admin-boundaries",
+        "source-layer": "cdta-centroids",
+        "minzoom": 12,
+        "paint": {
+          "text-color": "#626262",
+          "text-halo-color": "#FFFFFF",
+          "text-halo-width": 2,
+          "text-halo-blur": 2
+        },
+        "layout": {
+          "text-field": "{cdta}",
+          "text-font": [
+            "Open Sans Semibold",
+            "Arial Unicode MS Bold"
+          ],
+          "text-size": {
+            "stops": [
+              [
+                11,
+                12
+              ],
+              [
+                14,
+                16
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "neighborhood-tabulation-areas-fill",
+        "type": "fill",
+        "source": "admin-boundaries",
+        "source-layer": "cdtas",
+        "paint": {
+          "fill-opacity": 0.01
+        }
+      }
+    }
+  ]
+}
