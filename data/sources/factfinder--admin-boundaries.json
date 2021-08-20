@@ -1,0 +1,86 @@
+{
+  "id": "factfinder--admin-boundaries",
+  "type": "cartovector",
+  "source-layers": [
+    {
+      "id": "dcp_community_districts",
+      "sql": "SELECT the_geom_webmercator, borocd, CASE WHEN LEFT(borocd::text, 1) = '1' THEN 'Manhattan ' || borocd % 100 WHEN LEFT(borocd::text, 1) = '2' THEN 'Bronx ' || borocd % 100 WHEN LEFT(borocd::text, 1) = '3' THEN 'Brooklyn ' || borocd % 100 WHEN LEFT(borocd::text, 1) = '4' THEN 'Queens ' || borocd % 100 WHEN LEFT(borocd::text, 1) = '5' THEN 'Staten Island ' || borocd % 100 END as boro_district FROM dcp_community_districts WHERE borocd % 100 < 20",
+      "dataPipeline": true
+    },
+    {
+      "id": "neighborhood-tabulation-areas",
+      "sql": "SELECT the_geom_webmercator, ntaname, ntaname AS id, a.nta2020 AS geoid FROM nynta2020 a WHERE ntaname NOT ILIKE 'park-cemetery-etc%' AND ntaname != 'Airport'",
+      "dataPipeline": false
+    },
+    {
+      "id": "neighborhood-tabulation-areas-centroids",
+      "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, ntaname FROM nynta2020 WHERE ntaname NOT ILIKE 'park-cemetery-etc%'",
+      "dataPipeline": false
+    },
+    {
+      "id": "boroughs",
+      "sql": "SELECT the_geom_webmercator, boroname FROM nybb2020",
+      "dataPipeline": false
+    },
+    {
+      "id": "zip-codes",
+      "sql": "SELECT the_geom_webmercator, zipcode FROM nyc_zip_codes",
+      "dataPipeline": false
+    },
+    {
+      "id": "dcp_city_council_districts",
+      "sql": "SELECT the_geom_webmercator, coundist FROM dcp_city_council_districts",
+      "dataPipeline": true
+    },
+    {
+      "id": "dcp_state_senate_districts",
+      "sql": "SELECT the_geom_webmercator, stsendist FROM dcp_state_senate_districts",
+      "dataPipeline": true
+    },
+    {
+      "id": "dcp_state_assembly_districts",
+      "sql": "SELECT the_geom_webmercator, assemdist FROM dcp_state_assembly_districts",
+      "dataPipeline": true
+    },
+    {
+      "id": "dcp_puma",
+      "sql": "SELECT the_geom_webmercator, puma, puma AS id, puma AS geoid FROM dcp_puma",
+      "dataPipeline": true
+    },
+    {
+      "id": "cdtas",
+      "sql": "SELECT the_geom_webmercator, cdtaname FROM nycdta2020",
+      "dataPipeline": false
+    },
+    {
+      "id": "factfinder_dcp_community_districts",
+      "sql": "SELECT the_geom_webmercator, borocd, borocd AS geolabel, borocd as geoid FROM nycd2020",
+      "dataPipeline": false
+    },
+    {
+      "id": "cities",
+      "sql": "SELECT the_geom_webmercator, city AS geolabel, city AS geoid FROM nycity2020",
+      "dataPipeline": false
+    },
+    {
+      "id": "cdta-centroids",
+      "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, cdtaname FROM nycdta2020",
+      "dataPipeline": false
+    },
+    {
+      "id": "bk-qn-mh-boundary",
+      "sql": "SELECT the_geom_webmercator, label1 || '/' || label2 AS boro_boundary FROM bk_qn_mh_boundary"
+    }
+  ],
+  "minzoom": 0,
+  "buffersize": {
+    "mvt": 10
+  },
+  "meta": {
+    "description": "Administrative and Political Districts v18D, Bytes of the Big Apple",
+    "url": [
+      "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
+    ],
+    "updated_at": "February 2021"
+  }
+}
