@@ -19,13 +19,8 @@
     },
     {
       "id": "boroughs",
-      "sql": "SELECT the_geom_webmercator, boroname FROM nybb2020",
-      "dataPipeline": false
-    },
-    {
-      "id": "zip-codes",
-      "sql": "SELECT the_geom_webmercator, zipcode FROM nyc_zip_codes",
-      "dataPipeline": false
+      "sql": "SELECT the_geom_webmercator, boroname FROM dcp_borough_boundary",
+      "dataPipeline": true
     },
     {
       "id": "dcp_city_council_districts",
@@ -46,26 +41,6 @@
       "id": "dcp_puma",
       "sql": "SELECT the_geom_webmercator, puma, puma AS id, puma AS geoid FROM dcp_puma",
       "dataPipeline": true
-    },
-    {
-      "id": "cdtas",
-      "sql": "SELECT the_geom_webmercator, cdtaname FROM nycdta2020",
-      "dataPipeline": false
-    },
-    {
-      "id": "factfinder_dcp_community_districts",
-      "sql": "SELECT the_geom_webmercator, borocd, borocd AS geolabel, borocd as geoid FROM nycd2020",
-      "dataPipeline": false
-    },
-    {
-      "id": "cities",
-      "sql": "SELECT the_geom_webmercator, city AS geolabel, city AS geoid FROM nycity2020",
-      "dataPipeline": false
-    },
-    {
-      "id": "cdta-centroids",
-      "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, cdtaname FROM nycdta2020",
-      "dataPipeline": false
     },
     {
       "id": "bk-qn-mh-boundary",
