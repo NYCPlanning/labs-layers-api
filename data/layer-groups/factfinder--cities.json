@@ -5,7 +5,7 @@
       "style": {
         "id": "factfinder--cities-fill",
         "type": "fill",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "cities",
         "paint": {
           "fill-opacity": 0.01
@@ -18,7 +18,7 @@
       "style": {
         "id": "cities-line",
         "type": "line",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "cities",
         "paint": {
           "line-color": "#444",
@@ -46,7 +46,7 @@
       "style": {
         "id": "cities-label",
         "type": "symbol",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "cities",
         "minzoom": 11,
         "paint": {

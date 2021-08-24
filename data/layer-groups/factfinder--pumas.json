@@ -5,7 +5,7 @@
       "style": {
         "id": "factfinder--pumas-selection-fill",
         "type": "fill",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "dcp_puma",
         "paint": {
           "fill-opacity": 0.01
@@ -18,7 +18,7 @@
       "style": {
         "id": "factfinder--pumas-line",
         "type": "line",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "dcp_puma",
         "paint": {
           "line-color": "#444",
@@ -46,7 +46,7 @@
       "style": {
         "id": "factfinder--pumas-label",
         "type": "symbol",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "dcp_puma",
         "minzoom": 9,
         "paint": {

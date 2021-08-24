@@ -5,7 +5,7 @@
       "style": {
         "id": "factfinder--districts-fill",
         "type": "fill",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "factfinder_dcp_community_districts",
         "paint": {
           "fill-opacity": 0.01
@@ -18,7 +18,7 @@
       "style": {
         "id": "districts-line",
         "type": "line",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "factfinder_dcp_community_districts",
         "paint": {
           "line-color": "#444",
@@ -46,7 +46,7 @@
       "style": {
         "id": "districts-label",
         "type": "symbol",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "factfinder_dcp_community_districts",
         "minzoom": 11,
         "paint": {

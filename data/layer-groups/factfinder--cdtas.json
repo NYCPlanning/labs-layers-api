@@ -5,7 +5,7 @@
       "style": {
         "id": "factfinder--cdtas-fill",
         "type": "fill",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "cdtas",
         "paint": {
           "fill-opacity": 0.01
@@ -18,7 +18,7 @@
       "style": {
         "id": "cdtas-line",
         "type": "line",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "cdtas",
         "paint": {
           "line-color": "#444",
@@ -46,7 +46,7 @@
       "style": {
         "id": "cdtas-label",
         "type": "symbol",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "cdtas",
         "minzoom": 11,
         "paint": {

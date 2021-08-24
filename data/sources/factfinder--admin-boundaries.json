@@ -1,5 +1,5 @@
 {
-  "id": "admin-boundaries",
+  "id": "factfinder--admin-boundaries",
   "type": "cartovector",
   "source-layers": [
     {
@@ -9,18 +9,23 @@
     },
     {
       "id": "neighborhood-tabulation-areas",
-      "sql": "SELECT the_geom_webmercator, ntaname, ntaname AS id, a.ntacode AS geoid FROM dcp_nta a WHERE ntaname NOT ILIKE 'park-cemetery-etc%' AND ntaname != 'Airport'",
-      "dataPipeline": true
+      "sql": "SELECT the_geom_webmercator, ntaname, ntaname AS id, a.nta2020 AS geoid FROM nynta2020 a WHERE ntaname NOT ILIKE 'park-cemetery-etc%' AND ntaname != 'Airport'",
+      "dataPipeline": false
     },
     {
       "id": "neighborhood-tabulation-areas-centroids",
-      "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, ntaname FROM dcp_nta WHERE ntaname NOT ILIKE 'park-cemetery-etc%'",
-      "dataPipeline": true
+      "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, ntaname FROM nynta2020 WHERE ntaname NOT ILIKE 'park-cemetery-etc%'",
+      "dataPipeline": false
     },
     {
       "id": "boroughs",
-      "sql": "SELECT the_geom_webmercator, boroname FROM dcp_borough_boundary",
-      "dataPipeline": true
+      "sql": "SELECT the_geom_webmercator, boroname FROM nybb2020",
+      "dataPipeline": false
+    },
+    {
+      "id": "zip-codes",
+      "sql": "SELECT the_geom_webmercator, zipcode FROM nyc_zip_codes",
+      "dataPipeline": false
     },
     {
       "id": "dcp_city_council_districts",
@@ -41,6 +46,26 @@
       "id": "dcp_puma",
       "sql": "SELECT the_geom_webmercator, puma, puma AS id, puma AS geoid FROM dcp_puma",
       "dataPipeline": true
+    },
+    {
+      "id": "cdtas",
+      "sql": "SELECT the_geom_webmercator, cdtaname FROM nycdta2020",
+      "dataPipeline": false
+    },
+    {
+      "id": "factfinder_dcp_community_districts",
+      "sql": "SELECT the_geom_webmercator, borocd, borocd AS geolabel, borocd as geoid FROM nycd2020",
+      "dataPipeline": false
+    },
+    {
+      "id": "cities",
+      "sql": "SELECT the_geom_webmercator, city AS geolabel, city AS geoid FROM nycity2020",
+      "dataPipeline": false
+    },
+    {
+      "id": "cdta-centroids",
+      "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, cdtaname FROM nycdta2020",
+      "dataPipeline": false
     },
     {
       "id": "bk-qn-mh-boundary",
