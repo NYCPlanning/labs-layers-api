@@ -4,12 +4,12 @@
   "source-layers": [
     {
       "id": "census-geoms-tracts",
-      "sql": "SELECT the_geom_webmercator, ct2020, ctlabel as geolabel, boroct2020, nta2020, boroct2020 AS geoid, boroct2020 AS id, 7 as pop, 9 as hh FROM nyct2020",
+      "sql": "SELECT the_geom_webmercator, ct2020, ctlabel as geolabel, boroct2020, nta2020, boroct2020 AS geoid, boroct2020 AS id, 7 as pop, 9 as hh FROM pff_2020_census_tracts_21c",
       "dataPipeline": false
     },
     {
       "id": "census-geoms-blocks",
-      "sql": "SELECT the_geom_webmercator, ct2020, borocode || ct2020 AS boroct2020, cb2020, boroname, borocode, bctcb2020, geoid AS geoid, geoid AS id, bctcb2020 as geolabel FROM nycb2020_fixed",
+      "sql": "SELECT the_geom_webmercator, ct2020, borocode || ct2020 AS boroct2020, cb2020, boroname, borocode, bctcb2020, geoid AS geoid, geoid AS id, bctcb2020 as geolabel FROM pff_2020_census_blocks_21c",
       "dataPipeline": false
     }
   ]

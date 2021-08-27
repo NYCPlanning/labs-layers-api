@@ -9,17 +9,17 @@
     },
     {
       "id": "neighborhood-tabulation-areas",
-      "sql": "SELECT the_geom_webmercator, ntaname, ntaname AS id, a.nta2020 AS geoid FROM nynta2020 a WHERE ntaname NOT ILIKE 'park-cemetery-etc%' AND ntaname != 'Airport'",
+      "sql": "SELECT the_geom_webmercator, ntaname, ntaname AS id, a.nta2020 AS geoid FROM pff_2020_ntas_21c a WHERE ntaname NOT ILIKE 'park-cemetery-etc%' AND ntaname != 'Airport'",
       "dataPipeline": false
     },
     {
       "id": "neighborhood-tabulation-areas-centroids",
-      "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, ntaname FROM nynta2020 WHERE ntaname NOT ILIKE 'park-cemetery-etc%'",
+      "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, ntaname FROM pff_2020_ntas_21c WHERE ntaname NOT ILIKE 'park-cemetery-etc%'",
       "dataPipeline": false
     },
     {
       "id": "boroughs",
-      "sql": "SELECT the_geom_webmercator, boroname FROM nybb2020",
+      "sql": "SELECT the_geom_webmercator, boroname FROM pff_2020_boroughs_21c",
       "dataPipeline": false
     },
     {
@@ -49,22 +49,22 @@
     },
     {
       "id": "cdtas",
-      "sql": "SELECT the_geom_webmercator, cdtaname FROM nycdta2020",
+      "sql": "SELECT the_geom_webmercator, cdtaname FROM pff_2020_cdtas_21c",
       "dataPipeline": false
     },
     {
       "id": "factfinder_dcp_community_districts",
-      "sql": "SELECT the_geom_webmercator, borocd, borocd AS geolabel, borocd as geoid FROM nycd2020",
+      "sql": "SELECT the_geom_webmercator, borocd, borocd AS geolabel, borocd as geoid FROM pff_2020_community_districts_21c",
       "dataPipeline": false
     },
     {
       "id": "cities",
-      "sql": "SELECT the_geom_webmercator, city AS geolabel, city AS geoid FROM nycity2020",
+      "sql": "SELECT the_geom_webmercator, city AS geolabel, city AS geoid FROM pff_2020_city_21c",
       "dataPipeline": false
     },
     {
       "id": "cdta-centroids",
-      "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, cdtaname FROM nycdta2020",
+      "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, cdtaname FROM pff_2020_cdtas_21c",
       "dataPipeline": false
     },
     {
