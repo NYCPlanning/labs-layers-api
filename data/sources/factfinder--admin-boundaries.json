@@ -19,7 +19,7 @@
     },
     {
       "id": "boroughs",
-      "sql": "SELECT the_geom_webmercator, boroname FROM pff_2020_boroughs_21c",
+      "sql": "SELECT the_geom_webmercator, boroname, borocode AS geoid FROM pff_2020_boroughs_21c",
       "dataPipeline": false
     },
     {
@@ -49,7 +49,7 @@
     },
     {
       "id": "cdtas",
-      "sql": "SELECT the_geom_webmercator, cdtaname FROM pff_2020_cdtas_21c",
+      "sql": "SELECT the_geom_webmercator, cdtaname, cdtaname AS geolabel, cdta2020, cdtatype, boroname, borocode::text, cdta2020 AS geoid FROM pff_2020_cdtas_21c",
       "dataPipeline": false
     },
     {
