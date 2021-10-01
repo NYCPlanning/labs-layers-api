@@ -78,6 +78,10 @@ Anonymous maps from the Carto Maps API are generated on each request to the `/la
 
 See the `getVectorTileTemplate` funtion within `utils/carto.js`. 
 
+### One-Off Sources
+[Population Factfinder](https://github.com/NYCPlanning/labs-factfinder/) relies on a one-off layers that uses geojson of NTAs along with various data from the ACS and Decennial census. This geojson is kept directly in `./data/sources`. The code and
+documentation on how to generate or update this data is found in the jupyter notebook `./data/etl/build_choropleths.ipynb`.
+
 ## Schemas
 
 - [Layer Group](https://github.com/NYCPlanning/labs-layers-api/blob/develop/schemas/layer-group.js)
