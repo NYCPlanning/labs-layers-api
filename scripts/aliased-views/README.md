@@ -1,3 +1,5 @@
+## NOTE: Since we adopted the EDM Data Pipeline for most layers, any (the majority) of these aliased views which have a formalized Data Pipeline equivalent is no longer necessary for the Layers API. 
+
 Step 1.
 Update the `view_lookup.csv` file with new table version name(s). The CSV file includes three columns: (1) the alias name (2) the name of the actual table (you will be editing this) (3) the column on which to create indices.
 
