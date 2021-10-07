@@ -23,7 +23,7 @@
       "style": {
         "id": "cdta-line-glow",
         "type": "line",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "cdtas",
         "paint": {
           "line-color": "#ed1212",
@@ -47,7 +47,7 @@
       "style": {
         "id": "cdta-line",
         "type": "line",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "cdtas",
         "paint": {
           "line-color": "#ed1212",
@@ -75,7 +75,7 @@
       "style": {
         "id": "cdta-label",
         "type": "symbol",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "cdta-centroids",
         "minzoom": 12,
         "paint": {
@@ -109,7 +109,7 @@
       "style": {
         "id": "neighborhood-tabulation-areas-fill",
         "type": "fill",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "cdtas",
         "paint": {
           "fill-opacity": 0.01

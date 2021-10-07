@@ -23,7 +23,7 @@
       "style": {
         "id": "zip-code-line-glow",
         "type": "line",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "zip-codes",
         "paint": {
           "line-color": "#ff6699",
@@ -47,7 +47,7 @@
       "style": {
         "id": "zip-code-line",
         "type": "line",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "codes",
         "paint": {
           "line-color": "#ff6699",
