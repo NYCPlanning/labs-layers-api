@@ -1,0 +1,75 @@
+{
+  "id": "factfinder--zip-codes",
+  "legend": {
+    "label": "ZIP Codes",
+    "icon": {
+      "type": "line",
+      "layers": [
+        {
+          "stroke": "#ff6699",
+          "stroke-width": 4,
+          "stroke-opacity": 0.3
+        },
+        {
+          "stroke": "#ff6699",
+          "stroke-width": 1.5,
+          "stroke-opacity": 0.6
+        }
+      ]
+    }
+  },
+  "layers": [
+    {
+      "style": {
+        "id": "zip-code-line-glow",
+        "type": "line",
+        "source": "factfinder--admin-boundaries",
+        "source-layer": "zip-codes",
+        "paint": {
+          "line-color": "#ff6699",
+          "line-opacity": 0.3,
+          "line-width": {
+            "stops": [
+              [
+                11,
+                4
+              ],
+              [
+                16,
+                8
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "zip-code-line",
+        "type": "line",
+        "source": "factfinder--admin-boundaries",
+        "source-layer": "codes",
+        "paint": {
+          "line-color": "#ff6699",
+          "line-opacity": 0.6,
+          "line-width": {
+            "stops": [
+              [
+                11,
+                1
+              ],
+              [
+                16,
+                3
+              ]
+            ]
+          }
+        },
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        }
+      }
+    }
+  ]
+}
