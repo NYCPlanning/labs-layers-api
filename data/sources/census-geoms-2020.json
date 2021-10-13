@@ -9,7 +9,7 @@
     },
     {
       "id": "census-geoms-blocks",
-      "sql": "SELECT the_geom_webmercator, ct2020, borocode || ct2020 AS boroct2020, cb2020, boroname, borocode, bctcb2020, geoid AS geoid, geoid AS id, bctcb2020 as geolabel FROM pff_2020_census_blocks_21c",
+      "sql": "SELECT the_geom_webmercator, ct2020, borocode || ct2020 AS boroct2020, cb2020, boroname, borocode, bctcb2020, bctcb2020 AS geoid, geoid AS id, bctcb2020 as geolabel FROM pff_2020_census_blocks_21c",
       "dataPipeline": false
     }
   ]
