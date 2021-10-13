@@ -1,0 +1,109 @@
+{
+  "id": "factfinder--community_districts",
+  "legend": {
+    "label": "Community Districts (CDs)",
+    "icon": {
+      "type": "line",
+      "layers": [
+        {
+          "stroke": "#a5ed12",
+          "stroke-width": 4,
+          "stroke-opacity": 0.5
+        },
+        {
+          "stroke": "#527a00",
+          "stroke-width": 1.5,
+          "stroke-opacity": 0.8
+        }
+      ]
+    }
+  },
+  "layers": [
+    {
+      "style": {
+        "id": "dcp_community_districts-line-glow",
+        "type": "line",
+        "source": "admin-boundaries",
+        "source-layer": "dcp_community_districts",
+        "paint": {
+          "line-color": "#a5ed12",
+          "line-opacity": 0.5,
+          "line-width": {
+            "stops": [
+              [
+                11,
+                4
+              ],
+              [
+                16,
+                8
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "dcp_community_districts-line",
+        "type": "line",
+        "source": "admin-boundaries",
+        "source-layer": "dcp_community_districts",
+        "paint": {
+          "line-color": "#527a00",
+          "line-opacity": 0.8,
+          "line-width": {
+            "stops": [
+              [
+                11,
+                1
+              ],
+              [
+                16,
+                3
+              ]
+            ]
+          }
+        },
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "dcp_community_districts-label",
+        "type": "symbol",
+        "source": "admin-boundaries",
+        "source-layer": "dcp_community_districts",
+        "minzoom": 11,
+        "paint": {
+          "text-color": "#626262",
+          "text-halo-color": "#FFFFFF",
+          "text-halo-width": 2,
+          "text-halo-blur": 2
+        },
+        "layout": {
+          "text-field": "{boro_district}",
+          "text-font": [
+            "Open Sans Semibold",
+            "Arial Unicode MS Bold"
+          ],
+          "text-size": {
+            "stops": [
+              [
+                11,
+                12
+              ],
+              [
+                14,
+                16
+              ]
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
