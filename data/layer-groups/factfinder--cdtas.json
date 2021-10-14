@@ -47,7 +47,7 @@
         "id": "cdtas-label",
         "type": "symbol",
         "source": "factfinder--admin-boundaries",
-        "source-layer": "cdtas",
+        "source-layer": "cdta-centroids",
         "minzoom": 11,
         "paint": {
           "text-color": "#626262",
