@@ -55,28 +55,31 @@
             ["linear"],
             ["zoom"],
             12,
-            "#d3d3d3",
+            "hsl(0, 0%, 62%)",
             13,
-            "#626262"
+            "hsl(0, 0%, 0%)"
           ],
-          "text-halo-color": "#FFFFFF",
-          "text-halo-width": 2,
-          "text-halo-blur": 2
+          "text-halo-color": "hsl(0, 0%, 100%)",
+          "text-halo-width": 1,
+          "text-halo-blur": 0
         },
         "layout": {
           "text-field": "{cdtaname}",
+          "text-transform": "uppercase",
           "text-font": [
-            "Open Sans Semibold",
-            "Arial Unicode MS Bold"
+            "Arial Unicode MS Regular"
           ],
+          "text-max-width": 7,
+          "text-padding": 3,
           "text-size": {
+            "base": 1,
             "stops": [
               [
-                11,
-                12
+                12,
+                11
               ],
               [
-                14,
+                16,
                 16
               ]
             ]
