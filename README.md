@@ -78,6 +78,14 @@ Anonymous maps from the Carto Maps API are generated on each request to the `/la
 
 See the `getVectorTileTemplate` funtion within `utils/carto.js`. 
 
+### Population Factfinder Layer Groups and Sources
+[Population Factfinder](https://github.com/NYCPlanning/labs-factfinder/) relies on a "one-off", factfinder-specific Layer Groups and Sources in the Layers API. These are necessary for Factfinder-specific adjustments to these layers (legend title, slight styling changes) that should not affect other apps.
+
+These Layer Groups and Sources have the prefix `factfinder--`. For example, `layer-groups/factfinder--neighborhood-tabulation-areas.json`
+
+Some of thse PFF layers/sources use geojson of NTAs along with various data from the ACS and Decennial census. This geojson is kept directly in `./data/sources`. The code and
+documentation on how to generate or update this data is found in the jupyter notebook `./data/etl/build_choropleths.ipynb`.
+
 ## Schemas
 
 - [Layer Group](https://github.com/NYCPlanning/labs-layers-api/blob/develop/schemas/layer-group.js)

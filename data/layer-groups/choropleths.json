@@ -1,0 +1,52 @@
+{
+  "id": "choropleths",
+  "title": "Thematic Maps (NTAs)",
+  "titleTooltip": "Neighborhood Tabulation Area maps for selected variables",
+  "visible": false,
+  "legend": {
+    "label": "Thematic Maps (NTAs)",
+    "icon": {
+      "type": "line",
+      "layers": [
+        {
+          "stroke": "#2929ed",
+          "stroke-width": 4,
+          "stroke-opacity": 0.3
+        },
+        {
+          "stroke": "#00007a",
+          "stroke-width": 1.5,
+          "stroke-opacity": 0.6
+        }
+      ]
+    }
+  },
+  "layers": [
+    {
+      "style": {
+        "id": "choropleth-nta-fill",
+        "type": "fill",
+        "source": "choropleths",
+        "paint": { "fill-opacity": 0.6, "fill-color": "#994d4d" }
+      }
+    },
+    {
+      "style": {
+        "id": "choropleth-nta-line",
+        "type": "line",
+        "source": "choropleths",
+        "paint": {
+          "line-width": {
+            "stops": [
+              [10, 2],
+              [14, 5]
+            ]
+          },
+          "line-opacity": 0.6,
+          "line-color": "#994d4d",
+          "line-translate-anchor": "map"
+        }
+      }
+    }
+  ]
+}

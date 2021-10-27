@@ -5,7 +5,7 @@
       "style": {
         "id": "factfinder--neighborhood-tabulation-areas-fill",
         "type": "fill",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "neighborhood-tabulation-areas",
         "paint": {
           "fill-opacity": 0.01
@@ -18,7 +18,7 @@
       "style": {
         "id": "factfinder--nta-line",
         "type": "line",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "neighborhood-tabulation-areas",
         "paint": {
           "line-color": "#444",
@@ -46,29 +46,39 @@
       "style": {
         "id": "factfinder--nta-label",
         "type": "symbol",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "neighborhood-tabulation-areas-centroids",
-        "minzoom": 12,
         "paint": {
-          "text-color": "#626262",
-          "text-halo-color": "#FFFFFF",
-          "text-halo-width": 2,
-          "text-halo-blur": 2
+          "text-color": [
+            "interpolate",
+            ["linear"],
+            ["zoom"],
+            12,
+            "hsl(0, 0%, 62%)",
+            13,
+            "hsl(0, 0%, 0%)"
+          ],
+          "text-halo-color": "hsl(0, 0%, 100%)",
+          "text-halo-width": 1,
+          "text-halo-blur": 0
         },
         "layout": {
           "text-field": "{ntaname}",
+          "text-transform": "uppercase",
           "text-font": [
-            "Open Sans Semibold",
-            "Arial Unicode MS Bold"
+            "Arial Unicode MS Regular"
           ],
+          "text-max-width": 7,
+          "text-padding": 3,
           "text-size": {
+            "base": 1,
             "stops": [
               [
-                11,
-                12
+                12,
+                11
               ],
               [
-                14,
+                16,
                 16
               ]
             ]
