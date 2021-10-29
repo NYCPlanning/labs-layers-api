@@ -3,7 +3,7 @@
   "layers": [
     {
       "style": {
-        "id": "factfinder--census-blocks-fill",
+        "id": "factfinder--census-blocks-fill-2020",
         "type": "fill",
         "source": "census-geoms-2020",
         "source-layer": "census-geoms-blocks-2020",
@@ -16,7 +16,7 @@
     },
     {
       "style": {
-        "id": "census-blocks-line",
+        "id": "census-blocks-line-2020",
         "type": "line",
         "source": "census-geoms-2020",
         "source-layer": "census-geoms-blocks-2020",
@@ -44,7 +44,7 @@
     },
     {
       "style": {
-        "id": "census-prominent-blocks-line",
+        "id": "census-prominent-blocks-line-2020",
         "type": "line",
         "source": "census-geoms-2020",
         "source-layer": "census-geoms-blocks-2020",
@@ -72,7 +72,7 @@
     },
     {
       "style": {
-        "id": "census-blocks-label",
+        "id": "census-blocks-label-2020",
         "type": "symbol",
         "source": "census-geoms-2020",
         "source-layer": "census-geoms-blocks-2020",
@@ -118,7 +118,7 @@
     },
     {
       "style": {
-        "id": "census-blocks-label-for-blocks",
+        "id": "census-blocks-label-for-blocks-2020",
         "type": "symbol",
         "source": "census-geoms-2020",
         "source-layer": "census-geoms-blocks-2020",
