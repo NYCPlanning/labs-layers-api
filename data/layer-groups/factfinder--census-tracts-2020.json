@@ -3,7 +3,7 @@
   "layers": [
     {
       "style": {
-        "id": "factfinder--census-tracts-fill",
+        "id": "factfinder--census-tracts-fill-2020",
         "type": "fill",
         "source": "census-geoms-2020",
         "source-layer": "census-geoms-tracts-2020",
@@ -16,7 +16,7 @@
     },
     {
       "style": {
-        "id": "census-tracts-line",
+        "id": "census-tracts-line-2020",
         "type": "line",
         "source": "census-geoms-2020",
         "source-layer": "census-geoms-tracts-2020",
@@ -44,7 +44,7 @@
     },
     {
       "style": {
-        "id": "census-tracts-label",
+        "id": "census-tracts-label-2020",
         "type": "symbol",
         "source": "census-geoms-2020",
         "source-layer": "census-geoms-tracts-2020",
