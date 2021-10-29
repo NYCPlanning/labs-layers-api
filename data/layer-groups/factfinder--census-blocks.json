@@ -3,10 +3,10 @@
   "layers": [
     {
       "style": {
-        "id": "factfinder--census-blocks-fill",
+        "id": "factfinder--census-blocks-fill-2020",
         "type": "fill",
         "source": "census-geoms-2020",
-        "source-layer": "census-geoms-blocks",
+        "source-layer": "census-geoms-blocks-2020",
         "paint": {
           "fill-opacity": 0.01
         }
@@ -16,10 +16,10 @@
     },
     {
       "style": {
-        "id": "census-blocks-line",
+        "id": "census-blocks-line-2020",
         "type": "line",
         "source": "census-geoms-2020",
-        "source-layer": "census-geoms-blocks",
+        "source-layer": "census-geoms-blocks-2020",
         "paint": {
           "line-color": "#444",
           "line-opacity": 0.5,
@@ -44,10 +44,10 @@
     },
     {
       "style": {
-        "id": "census-prominent-blocks-line",
+        "id": "census-prominent-blocks-line-2020",
         "type": "line",
         "source": "census-geoms-2020",
-        "source-layer": "census-geoms-blocks",
+        "source-layer": "census-geoms-blocks-2020",
         "paint": {
           "line-color": "#444",
           "line-opacity": 0.3,
@@ -72,10 +72,10 @@
     },
     {
       "style": {
-        "id": "census-blocks-label",
+        "id": "census-blocks-label-2020",
         "type": "symbol",
         "source": "census-geoms-2020",
-        "source-layer": "census-geoms-blocks",
+        "source-layer": "census-geoms-blocks-2020",
         "minzoom": 11,
         "paint": {
           "text-color": "#626262",
@@ -118,10 +118,10 @@
     },
     {
       "style": {
-        "id": "census-blocks-label-for-blocks",
+        "id": "census-blocks-label-for-blocks-2020",
         "type": "symbol",
         "source": "census-geoms-2020",
-        "source-layer": "census-geoms-blocks",
+        "source-layer": "census-geoms-blocks-2020",
         "minzoom": 11,
         "paint": {
           "text-color": "#626262",
