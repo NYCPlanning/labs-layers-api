@@ -7,7 +7,7 @@
     "items": [
       {
         "label": "V Zone",
-        "tooltip": "Portion of the 1% annual chance floodplain subject to high velocity wave action (a breaking wave 3 feet high or larger). V Zones are subject to more stringent building requirements than other zones because of the damaging force of waves.",
+        "tooltip": "A portion of the area subject to flooding from the 1% annual chance flood and referred to in the Zoning Resolution as the 'high-risk flood zone'. These areas are subject to high velocity wave action (a breaking wave 3 feet high or larger).",
         "icon": {
           "type": "fa-icon",
           "layers": [
@@ -20,13 +20,26 @@
       },
       {
         "label": "A Zone",
-        "tooltip": "A portion of the area subject to flooding from the 1% annual chance flood. These areas are not subject to high velocity wave action but are still considered high risk flooding areas.",
+        "tooltip": "A portion of the area subject to flooding from the 1% annual chance flood and referred to in the Zoning Resolution as the 'high-risk flood zone'. These areas are not subject to high velocity wave action but are still considered high risk flooding areas.",
         "icon": {
           "type": "fa-icon",
           "layers": [
             {
               "fa-icon": "square",
               "color": "#00a9e6"
+            }
+          ]
+        }
+      },
+      {
+        "label": "Shaded X Zone",
+        "tooltip": "The area subject to flooding from the 0.2% annual chance flood and referred to in the Zoning Resolution as the 'moderate-risk flood zone'.",
+        "icon": {
+          "type": "fa-icon",
+          "layers": [
+            {
+              "fa-icon": "square",
+              "color": "rgb(0, 255, 197)"
             }
           ]
         }
@@ -52,6 +65,10 @@
               [
                 "A",
                 "#00a9e6"
+              ],
+              [
+                "Shaded X",
+                "#00ffc3"
               ]
             ]
           },
