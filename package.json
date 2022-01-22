@@ -19,7 +19,7 @@
     "load-json-file": "^5.0.0",
     "newrelic": "^5.10.0",
     "nock": "^9.4.4",
-    "node-fetch": "^2.2.0",
+    "node-fetch": "^3.1.1",
     "nodemon": "^1.18.4",
     "request-promise": "^4.2.2",
     "rsvp": "^4.8.3"
