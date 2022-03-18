@@ -17,7 +17,10 @@ const {
 // Configure Sentry
 const Sentry = require('@sentry/node');
 
-Sentry.init({ dsn: process.env.SENTRY_DSN });
+Sentry.init({
+  dsn: process.env.SENTRY_DSN,
+  environment: process.env.NODE_ENV
+});
 
 // not mandatory, but adding domains does help a lot with breadcrumbs
 const requestHandler = (ctx, next) => {
@@ -91,7 +94,7 @@ app.on("error", (err, ctx) => {
     });
     Sentry.captureException(err, {
       tags: {
-        app_build: process.env.NODE_ENV,
+        environment: process.env.NODE_ENV,
       },
     });
   });
