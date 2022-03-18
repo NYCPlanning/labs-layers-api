@@ -89,7 +89,11 @@ app.on("error", (err, ctx) => {
     scope.addEventProcessor((event) => {
       return Sentry.Handlers.parseRequest(event, ctx.request);
     });
-    Sentry.captureException(err);
+    Sentry.captureException(err, {
+      tags: {
+        app_build: process.env.NODE_ENV,
+      },
+    });
   });
 });
 
