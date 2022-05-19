@@ -4,19 +4,19 @@
   "source-layers": [
     {
       "id": "wpaas",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, wpaa_id, name, F_Promenad AS feature_promenade_esplanade, F_SeatLawn AS feature_seating_lawn, F_Pier AS feature_pier, F_Wetland AS feature_wetland_natural_edge, F_DogRun AS feature_dog_run, F_Edu_Intp AS feature_educational_or_interpretive, F_Restroom AS feature_public_restroom, F_Shade AS feature_shade_structure, F_Art AS feature_outdoor_art, F_Food_Bev AS feature_food_or_beverage_concessions, F_GrpSeat AS feature_group_seating, A_VolleyCt AS activity_volleyball_court, A_BasketCt AS activity_basketball_court, A_Fishing AS activity_fishing, A_Boating AS activity_boating_access, A_Playgrnd AS activity_tot_playground, A_Splash AS activity_splash_feature, A_OtherRec AS activity_other_recreational_facilities, A_Swimming AS activity_swimming, status AS constructi FROM wam_wpaas"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, wpaa_id, name, F_Promenad AS feature_promenade_esplanade, F_SeatLawn AS feature_seating_lawn, F_Pier AS feature_pier, F_Wetland AS feature_wetland_natural_edge, F_DogRun AS feature_dog_run, F_Edu_Intp AS feature_educational_or_interpretive, F_Restroom AS feature_public_restroom, F_Shade AS feature_shade_structure, F_Art AS feature_outdoor_art, F_Food_Bev AS feature_food_or_beverage_concessions, F_GrpSeat AS feature_group_seating, A_VolleyCt AS activity_volleyball_court, A_BasketCt AS activity_basketball_court, A_Fishing AS activity_fishing, A_Boating AS activity_boating_access, A_Playgrnd AS activity_tot_playground, A_Splash AS activity_splash_feature, A_OtherRec AS activity_other_recreational_facilities, A_Swimming AS activity_swimming, status AS constructi FROM wpaas_v202205"
     },
     {
       "id": "publiclyownedwaterfront",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name AS park_name, link, agency FROM wam_publiclyownedwaterfront"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name AS park_name, link, agency FROM wam_publiclyownedwaterfront_v202205"
     },
     {
       "id": "paws_footprints",
-      "sql": "SELECT a.the_geom_webmercator, a.cartodb_id AS id, a.wpaa_id, b.f_promenad AS feature_promenade_esplanade, b.F_SeatLawn AS feature_seating_lawn, b.F_Pier AS feature_pier, b.F_Wetland AS feature_wetland_natural_edge, b.F_DogRun AS feature_dog_run, b.F_Edu_Intp AS feature_educational_or_interpretive, b.F_Restroom AS feature_public_restroom, b.F_Shade AS feature_shade_structure, b.F_Art AS feature_outdoor_art, b.F_Food_Bev AS feature_food_or_beverage_concessions, b.F_GrpSeat AS feature_group_seating, b.A_VolleyCt AS activity_volleyball_court, b.A_BasketCt AS activity_basketball_court, b.A_Fishing AS activity_fishing, b.A_Boating AS activity_boating_access, b.A_Playgrnd AS activity_tot_playground, b.A_Splash AS activity_splash_feature, b.A_OtherRec AS activity_other_recreational_facilities, b.A_Swimming AS activity_swimming, b.status AS constructi FROM wam_wpaas_footprints AS a LEFT JOIN wam_wpaas b ON a.wpaa_id = b.wpaa_id"
+      "sql": "SELECT a.the_geom_webmercator, a.cartodb_id AS id, a.wpaa_id, b.f_promenad AS feature_promenade_esplanade, b.F_SeatLawn AS feature_seating_lawn, b.F_Pier AS feature_pier, b.F_Wetland AS feature_wetland_natural_edge, b.F_DogRun AS feature_dog_run, b.F_Edu_Intp AS feature_educational_or_interpretive, b.F_Restroom AS feature_public_restroom, b.F_Shade AS feature_shade_structure, b.F_Art AS feature_outdoor_art, b.F_Food_Bev AS feature_food_or_beverage_concessions, b.F_GrpSeat AS feature_group_seating, b.A_VolleyCt AS activity_volleyball_court, b.A_BasketCt AS activity_basketball_court, b.A_Fishing AS activity_fishing, b.A_Boating AS activity_boating_access, b.A_Playgrnd AS activity_tot_playground, b.A_Splash AS activity_splash_feature, b.A_OtherRec AS activity_other_recreational_facilities, b.A_Swimming AS activity_swimming, b.status AS constructi FROM wam_wpaas_footprints_v202205 AS a LEFT JOIN wpaas_v202205 b ON a.wpaa_id = b.wpaa_id"
     },
     {
       "id": "paws_entry_points",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM wam_wpaas_accesspoints"
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM wam_wpaas_accesspoints_v202205"
     }
   ],
   "meta": {
@@ -24,6 +24,6 @@
     "url": [
       "https://www1.nyc.gov/site/planning/data-maps/open-data/dwn-waterfront.page"
      ],
-    "updated_at": "December 2019"
+    "updated_at": "May 2022"
   }
 }
