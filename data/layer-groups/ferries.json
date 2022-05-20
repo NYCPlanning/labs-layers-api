@@ -44,15 +44,19 @@
               ],
               [
                 "South Brooklyn",
-                "#fb7098"
+                "#fdd102"
               ],
               [
                 "Governor's Island",
-                "#00829e"
+                "#cccccc"
               ],
               [
-                "Lower East Side",
-                "#f7d400"
+                "St George",
+                "#d7006e"
+              ],
+              [
+                "Staten Island Ferry",
+                "#000000"
               ]
             ]
           },
