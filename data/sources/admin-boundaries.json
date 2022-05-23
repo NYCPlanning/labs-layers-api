@@ -9,12 +9,12 @@
     },
     {
       "id": "neighborhood-tabulation-areas",
-      "sql": "SELECT the_geom_webmercator, ntaname, ntaname AS id, a.ntacode AS geoid FROM dcp_nta a WHERE ntaname NOT ILIKE 'park-cemetery-etc%' AND ntaname != 'Airport'",
+      "sql": "SELECT the_geom_webmercator, ntaname, ntaname AS id, a.nta2020 AS geoid FROM dcp_nta_2020 a WHERE ntaname NOT ILIKE 'park-cemetery-etc%' AND ntaname != 'Airport'",
       "dataPipeline": true
     },
     {
       "id": "neighborhood-tabulation-areas-centroids",
-      "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, ntaname FROM dcp_nta WHERE ntaname NOT ILIKE 'park-cemetery-etc%'",
+      "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, ntaname FROM dcp_nta_2020 WHERE ntaname NOT ILIKE 'park-cemetery-etc%'",
       "dataPipeline": true
     },
     {
