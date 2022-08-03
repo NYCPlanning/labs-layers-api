@@ -1,7 +1,6 @@
 {
   "id": "factfinder--admin-boundaries",
   "type": "cartovector",
-  "promoteId": "id",
   "source-layers": [
     {
       "id": "dcp_community_districts",
