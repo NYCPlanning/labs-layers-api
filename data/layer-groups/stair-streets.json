@@ -25,7 +25,7 @@
           "all",
           [
             "==",
-            "roadway_ty",
+            "roadwaytyp",
             "Step_Stair_ST"
           ]
         ],
@@ -85,7 +85,7 @@
           "all",
           [
             "==",
-            "roadway_ty",
+            "roadwaytyp",
             "Step_Stair_ST"
           ]
         ],
