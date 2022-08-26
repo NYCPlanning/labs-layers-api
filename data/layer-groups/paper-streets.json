@@ -68,7 +68,7 @@
           "all",
           [
             "==",
-            "feature_st",
+            "feat_statu",
             "Paper_St"
           ]
         ],
