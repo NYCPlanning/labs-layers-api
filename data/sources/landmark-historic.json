@@ -20,10 +20,10 @@
   ],
   "minzoom": 0,
   "meta": {
-    "description": "Individual Landmarks Shapefile, NYC Open Data Portal",
+    "description": "Designated and Calendared Buildings and Sites, NYC Open Data Portal",
     "url": [
-      "https://data.cityofnewyork.us/Housing-Development/Individual-Landmarks/ch5p-r223/data"
+      "https://data.cityofnewyork.us/Housing-Development/Designated-and-Calendared-Buildings-and-Sites/ncre-qhxs"
     ],
-    "updated_at": "17 May 2018"
+    "updated_at": "July 2021"
   }
 }

@@ -86,11 +86,11 @@
       "mvt": 10
     },
     "meta": {
-      "description": "Zoning related datasets May 2021, Bytes of the Big Apple",
+      "description": "Zoning related datasets December 2022, Bytes of the Big Apple",
       "url": [
         "https://www1.nyc.gov/site/planning/data-maps/open-data.page#zoning_related"
       ],
-      "data_date": "May 2021",
-      "updated_at": "May 2021"
+      "data_date": "December 2022",
+      "updated_at": "December 2022"
     }
   }
