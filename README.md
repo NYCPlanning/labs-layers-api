@@ -5,6 +5,7 @@ This is a web API for serving layer groups, which are a custom data model for na
 This API is consumed by these apps:
 - [Labs ZoLa](https://github.com/NYCPlanning/labs-zola)
 - [Streets](https://github.com/NYCPlanning/labs-streets)
+- [Population FactFinder](https://github.com/NYCPlanning/labs-factfinder)
 
 ## Requirements
 
@@ -35,10 +36,6 @@ environment variable on startup:
 ```
 CARTO_USERNAME='dcpadmin' yarn run devstart
 ```
-or
-```
-NEW_RELIC_LICENSE_KEY=<your-key> CARTO_USERNAME='dcpadmin' yarn run devstart
-```
 
 ## Not all layers are yet in "Data Pipeline"/Have staging equivalents
 
@@ -51,20 +48,13 @@ These layers currently include subways, flood insurance rates, and industrial
 business zones.
 
 ## Changing PORT/HOST
-
+<!-- TODO: specify when/why local instances need to run on 3120 -->
 When running locally, you have to pass in overrides for both PORT and HOST at the same time: 
 ```
 PORT=3120 HOST=http://localhost:3120 yarn run devstart
  ```
 
 In Production/staging, Heroku automatically sets both PORT and HOST variables.
-
-## Running without New Relic
-For development purposes, you can run the API without providing a New Relic license key by disabling New Relic.
-Comment out the New Relic import at the top of `app.js`:
-```
-// require('newrelic');
-```
 
 # Architecture
 
@@ -84,7 +74,7 @@ See the `getVectorTileTemplate` funtion within `utils/carto.js`.
 These Layer Groups and Sources have the prefix `factfinder--`. For example, `layer-groups/factfinder--neighborhood-tabulation-areas.json`
 
 Some of thse PFF layers/sources use geojson of NTAs along with various data from the ACS and Decennial census. This geojson is kept directly in `./data/sources`. The code and
-documentation on how to generate or update this data is found in the jupyter notebook `./data/etl/build_choropleths.ipynb`.
+documentation on how to generate or update this data is found in the jupyter notebook `./process-data/etl/build_choropleths.ipynb`.
 
 ## Schemas
 
