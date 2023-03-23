@@ -12,7 +12,7 @@ This API is consumed by these apps:
 You will need the following things properly installed on your computer.
 
 - [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/) (with NPM)
+- [Node.js](https://nodejs.org/) (with NPM) **version listed in .nvmrc**
 - [Yarn](https://yarnpkg.com/en/)
 
 
