@@ -12,11 +12,11 @@
     "mvt": 10
   },
   "meta": {
-    "description": "NYC GIS Zoning Features May 2021, Bytes of the Big Apple",
+    "description": "NYC GIS Zoning Features March 2023, Bytes of the Big Apple",
     "url": [
       "https://www1.nyc.gov/site/planning/data-maps/open-data.page"
     ],
-      "data_date": "May 2021",
-      "updated_at": "May 2021"
+      "data_date": "March 2023",
+      "updated_at": "March 2023"
   }
 }
