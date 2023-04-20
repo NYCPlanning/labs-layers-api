@@ -5,7 +5,6 @@ This is a web API for serving layer groups, which are a custom data model for na
 This API is consumed by these apps:
 - [Labs ZoLa](https://github.com/NYCPlanning/labs-zola)
 - [Streets](https://github.com/NYCPlanning/labs-streets)
-- [Population FactFinder](https://github.com/NYCPlanning/labs-factfinder)
 
 ## Requirements
 
@@ -22,6 +21,8 @@ You will need the following things properly installed on your computer.
 - Navigate to the repo: `cd labs-layers-api`
 - Install the dependencies: `yarn`
 - Start the server: `NEW_RELIC_LICENSE_KEY=<your-key> yarn run devstart`
+
+By default Layers API will be served at `localhost:3000`. 
 
 ## Changing Carto instance
 
@@ -51,7 +52,7 @@ business zones.
 
 ## Changing PORT/HOST
 
-When running locally, the application will default to port `3000`. Under most circumstances, the default port should be adequate. If there is a reason to override the default, both the PORT and HOST variables must be changed at the same time: 
+When running locally, you have to pass in overrides for both PORT and HOST at the same time: 
 ```
 PORT=3120 HOST=http://localhost:3120 yarn run devstart
  ```
@@ -83,7 +84,7 @@ See the `getVectorTileTemplate` funtion within `utils/carto.js`.
 These Layer Groups and Sources have the prefix `factfinder--`. For example, `layer-groups/factfinder--neighborhood-tabulation-areas.json`
 
 Some of thse PFF layers/sources use geojson of NTAs along with various data from the ACS and Decennial census. This geojson is kept directly in `./data/sources`. The code and
-documentation on how to generate or update this data is found in the jupyter notebook `./process-data/etl/build_choropleths.ipynb`.
+documentation on how to generate or update this data is found in the jupyter notebook `./data/etl/build_choropleths.ipynb`.
 
 ## Schemas
 
