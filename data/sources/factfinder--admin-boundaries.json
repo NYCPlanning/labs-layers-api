@@ -28,6 +28,11 @@
       "dataPipeline": false
     },
     {
+      "id": "dcp_city_council_districts_2013",
+      "sql": "SELECT the_geom_webmercator, coundist FROM dcp_city_council_districts_2013",
+      "dataPipeline": true
+    },
+    {
       "id": "dcp_city_council_districts",
       "sql": "SELECT the_geom_webmercator, coundist FROM dcp_city_council_districts",
       "dataPipeline": true

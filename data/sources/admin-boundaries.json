@@ -22,6 +22,11 @@
       "sql": "SELECT the_geom_webmercator, boroname FROM dcp_borough_boundary",
       "dataPipeline": true
     },
+     {
+      "id": "dcp_city_council_districts_2013",
+      "sql": "SELECT the_geom_webmercator, coundist FROM dcp_city_council_districts_2013",
+      "dataPipeline": true
+    },
     {
       "id": "dcp_city_council_districts",
       "sql": "SELECT the_geom_webmercator, coundist FROM dcp_city_council_districts",
