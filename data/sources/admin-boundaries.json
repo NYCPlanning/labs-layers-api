@@ -22,14 +22,14 @@
       "sql": "SELECT the_geom_webmercator, boroname FROM dcp_borough_boundary",
       "dataPipeline": true
     },
-     {
-      "id": "dcp_city_council_districts_2013",
-      "sql": "SELECT the_geom_webmercator, coundist FROM dcp_city_council_districts_2013",
-      "dataPipeline": true
-    },
     {
       "id": "dcp_city_council_districts",
       "sql": "SELECT the_geom_webmercator, coundist FROM dcp_city_council_districts",
+      "dataPipeline": true
+    },
+    {
+      "id": "dcp_city_council_districts_combined",
+      "sql": "SELECT the_geom_webmercator, coundist, '2024' as year FROM dcp_city_council_districts union select the_geom_webmercator, coundist, '2013' as year from dcp_city_council_districts_2013",
       "dataPipeline": true
     },
     {
