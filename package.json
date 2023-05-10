@@ -46,6 +46,6 @@
     "migrate-meta": "node ./tasks/migrate-meta-from-layer-group-to-source.js"
   },
   "engines": {
-    "node": "^12.18.4"
+    "node": "^16"
   }
 }
