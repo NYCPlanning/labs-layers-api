@@ -29,14 +29,10 @@
             "source": "digital-citymap",
             "source-layer": "street-sections",
             "paint": {
-              "fill-color": "rgba(43, 124, 59, 1)"
+              "fill-color": "rgba(0, 0, 0, 0)",
+              "fill-outline-color": "rgba(43, 124, 59, 0.4)"
             },
-            "layout": {},
-            "filter": [
-              "==",
-              "status",
-              "13"
-            ]
+            "layout": {}
           }
         }
       ]
