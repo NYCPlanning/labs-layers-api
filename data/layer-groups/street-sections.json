@@ -1,0 +1,43 @@
+{
+    "id": "street-sections",
+    "visible": true,
+    "legend": {
+        "label": "Street Section Map",
+        "tooltip": "An index of New York City Final Section maps that include the boundaries of each borough's Final Section maps (except for Staten Island), maintained by each borough. Both Final Section maps and Alteration maps comprise the City Map of New York City.",
+        "icon": {
+            "type": "fa-icon",
+            "layers": [
+                {
+                    "fa-icon": "square",
+                    "color": "rgba(43, 124, 59, 1)",
+                    "transform": "left-2 down-2"
+                  },
+                  {
+                    "fa-icon": "square",
+                    "color": "rgba(43, 124, 59, 1)",
+                    "transform": "right-2 up-2"
+                  }
+            ]
+        }
+    },
+    "layers": [
+        {
+          "before": "place_other",
+          "style": {
+            "id": "street-sections",
+            "type": "fill",
+            "source": "digital-citymap",
+            "source-layer": "street-sections",
+            "paint": {
+              "fill-color": "rgba(43, 124, 59, 1)"
+            },
+            "layout": {},
+            "filter": [
+              "==",
+              "status",
+              "13"
+            ]
+          }
+        }
+      ]
+}
