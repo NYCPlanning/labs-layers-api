@@ -9,12 +9,12 @@
             "layers": [
                 {
                     "fa-icon": "square",
-                    "color": "rgba(43, 124, 59, 1)",
+                    "color": "rgba(43, 124, 59, 0.4)",
                     "transform": "left-2 down-2"
                   },
                   {
                     "fa-icon": "square",
-                    "color": "rgba(43, 124, 59, 1)",
+                    "color": "rgba(43, 124, 59, 0.4)",
                     "transform": "right-2 up-2"
                   }
             ]
