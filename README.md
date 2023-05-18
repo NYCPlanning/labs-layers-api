@@ -21,7 +21,7 @@ You will need the following things properly installed on your computer.
 - Clone this repo: `git clone git@github.com:NYCPlanning/labs-layers-api.git`
 - Navigate to the repo: `cd labs-layers-api`
 - Install the dependencies: `yarn`
-- Start the server: `NEW_RELIC_LICENSE_KEY=<your-key> yarn run devstart`
+- Start the server: `NEW_RELIC_LICENSE_KEY=<your-key> yarn run dev`
 
 ## Changing Carto instance
 
@@ -32,11 +32,11 @@ To switch to the `dcpadmin` account, which holds staging layers, specify the `CA
 environment variable on startup:
 
 ```
-CARTO_USERNAME='dcpadmin' yarn run devstart
+CARTO_USERNAME='dcpadmin' yarn run dev
 ```
 or
 ```
-NEW_RELIC_LICENSE_KEY=<your-key> CARTO_USERNAME='dcpadmin' yarn run devstart
+NEW_RELIC_LICENSE_KEY=<your-key> CARTO_USERNAME='dcpadmin' yarn run dev
 ```
 
 ## Not all layers are yet in "Data Pipeline"/Have staging equivalents
@@ -53,7 +53,7 @@ business zones.
 
 When running locally, the application will default to port `3000`. Under most circumstances, the default port should be adequate. If there is a reason to override the default, both the PORT and HOST variables must be changed at the same time: 
 ```
-PORT=3120 HOST=http://localhost:3120 yarn run devstart
+PORT=3120 HOST=http://localhost:3120 yarn run dev
  ```
 
 In Production/staging, Heroku automatically sets both PORT and HOST variables.
