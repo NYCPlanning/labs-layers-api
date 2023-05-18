@@ -1,0 +1,6 @@
+services:
+  api:
+    build: .
+    command: yarn run dev
+    ports:
+      - 3000:3000
