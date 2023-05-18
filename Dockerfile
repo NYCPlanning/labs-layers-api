@@ -1,4 +1,4 @@
-FROM node:lts-gallium
+FROM node:lts-hydrogen
 
 WORKDIR /usr/app
 COPY package.json .
