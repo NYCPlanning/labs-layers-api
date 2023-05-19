@@ -29,7 +29,7 @@
     },
     {
       "id": "dcp_city_council_districts_combined",
-      "sql": "SELECT the_geom_webmercator, coundist, '2024' as year FROM dcp_city_council_districts union select the_geom_webmercator, coundist, '2013' as year from dcp_city_council_districts_2013",
+      "sql": "SELECT the_geom_webmercator, coundist, '2024' AS year FROM dcp_city_council_districts UNION SELECT the_geom_webmercator, coundist, '2013' AS year FROM dcp_city_council_districts_2013",
       "dataPipeline": true
     },
     {
