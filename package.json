@@ -19,14 +19,14 @@
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "load-json-file": "^5.0.0",
-    "nock": "^9.4.4",
+    "nock": "^13.3.1",
     "node-fetch": "^2.2.0",
     "nodemon": "^1.18.4",
     "rsvp": "^4.8.3"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "chai-http": "^4.0.0",
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
     "chai-things": "^0.2.0",
     "eslint": "^6.0.1",
     "eslint-config-airbnb-base": "^13.2.0",
