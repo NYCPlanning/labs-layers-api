@@ -1,7 +1,7 @@
 /node_modules
 /assets/sprite/svg/*
 
-.DS_Store
+**/.DS_Store
 newrelic_agent.log
 
 .env

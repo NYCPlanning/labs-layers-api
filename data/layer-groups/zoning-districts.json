@@ -2,7 +2,7 @@
   "id": "zoning-districts",
   "legend": {
     "label": "Zoning Districts",
-    "tooltip": "A zoning district is a residential, commercial or manufac­turing area of the city within which zoning regulations govern land use and building bulk."
+    "tooltip": "A zoning district is a residential, commercial or manufacturing area of the city within which zoning regulations govern land use and building bulk."
   },
   "visible": true,
   "layers": [

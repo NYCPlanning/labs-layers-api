@@ -1,0 +1,107 @@
+{
+  "id": "nyc_council_districts_combined",
+  "legend": {
+    "label": "NYC Council Districts",
+    "tooltip": "2013-2023 NYC Council District boundaries remain in effect until the end of the year. 2024-2033 boundaries are used in the November 7th, 2023 City Council election."
+  },
+    "layers": [
+      {
+        "style": {
+          "id": "dcp_city_council_districts_combined-line-glow",
+          "type": "line",
+          "source": "admin-boundaries",
+          "source-layer": "dcp_city_council_districts_combined",
+          "paint": {
+            "line-color": {
+              "property": "year",
+              "type": "categorical",
+              "stops": [
+                [
+                  "2013",
+                  "#33D8DC"
+                ],
+                [
+                  "2024",
+                  "#DC333D"
+                ]
+              ]
+            },
+            "line-opacity": 0.7,
+            "line-width": {
+              "stops": [
+                [
+                  11,
+                  4
+                ],
+                [
+                  16,
+                  8
+                ]
+              ]
+            }
+          }
+        }
+      },
+      {
+        "style": {
+          "id": "dcp_city_council_districts_combined-line",
+          "type": "line",
+          "source": "admin-boundaries",
+          "source-layer": "dcp_city_council_districts_combined",
+          "paint": {
+            "line-color": "#007a7a",
+            "line-opacity": 0.8,
+            "line-width": {
+              "stops": [
+                [
+                  11,
+                  1
+                ],
+                [
+                  16,
+                  3
+                ]
+              ]
+            }
+          },
+          "layout": {
+            "line-join": "round",
+            "line-cap": "round"
+          }
+        }
+      },
+      {
+        "style": {
+          "id": "dcp_city_council_districts_combined-label",
+          "type": "symbol",
+          "source": "admin-boundaries",
+          "source-layer": "dcp_city_council_districts_combined",
+          "paint": {
+            "text-color": "#626262",
+            "text-halo-color": "#FFFFFF",
+            "text-halo-width": 2,
+            "text-halo-blur": 2
+          },
+          "layout": {
+            "text-field": "{coundist}",
+            "text-font": [
+              "Open Sans Semibold",
+              "Arial Unicode MS Bold"
+            ],
+            "text-size": {
+              "stops": [
+                [
+                  11,
+                  12
+                ],
+                [
+                  14,
+                  16
+                ]
+              ]
+            }
+          }
+        }
+      }
+    ]
+}
