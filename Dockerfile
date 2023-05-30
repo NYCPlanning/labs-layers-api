@@ -6,3 +6,5 @@ COPY yarn.lock .
 COPY . .
 
 RUN yarn
+
+CMD [ "yarn", "run", "dev" ]
