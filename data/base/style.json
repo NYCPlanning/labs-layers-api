@@ -18,7 +18,7 @@
     }
  },
  "sprite":"{{HOSTNAME}}/static/sprite",
- "glyphs":"https://tiles.planninglabs.nyc/fonts/{fontstack}/{range}.pbf",
+ "glyphs":"http://localhost:8000/fonts/{fontstack}/{range}.pbf",
  "layers":[
     {
        "id":"background",
