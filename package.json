@@ -19,15 +19,14 @@
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "load-json-file": "^5.0.0",
-    "nock": "^9.4.4",
+    "nock": "^13.3.1",
     "node-fetch": "^2.2.0",
     "nodemon": "^1.18.4",
-    "request-promise": "^4.2.2",
     "rsvp": "^4.8.3"
   },
   "devDependencies": {
-    "chai": "^4.1.2",
-    "chai-http": "^4.0.0",
+    "chai": "^4.3.7",
+    "chai-http": "^4.3.0",
     "chai-things": "^0.2.0",
     "eslint": "^6.0.1",
     "eslint-config-airbnb-base": "^13.2.0",
@@ -39,13 +38,13 @@
   "scripts": {
     "postinstall": "npm run create-sprite-svgs",
     "start": "node app.js",
-    "devstart": "nodemon --inspect app.js",
+    "dev": "nodemon --inspect app.js",
     "test": "PORT=3001 NODE_ENV=test node ./node_modules/mocha/bin/mocha ./test/**/*.js --exit",
     "watch-tests": "nodemon --exec 'npm run test || true'",
     "create-sprite-svgs": "node ./assets/sprite/create-sprite-svgs.js",
     "migrate-meta": "node ./tasks/migrate-meta-from-layer-group-to-source.js"
   },
   "engines": {
-    "node": "^16"
+    "node": "^18"
   }
 }
