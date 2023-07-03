@@ -1,0 +1,17 @@
+{
+  "id": "nyc-council-districts-combined",
+  "type": "cartovector",
+  "source-layers": [
+    {
+      "id": "nyc-council-districts-combined",
+      "sql": "SELECT *, '2024' AS year FROM dcp_city_council_districts UNION SELECT *, '2013' AS year FROM dcp_city_council_districts_2013"
+    }
+  ],
+  "meta": {
+    "description": "Data layer for displaying the current NYC Council Districts 2013-2023 and the upcoming NYC Council Districts 2024-2033",
+    "url": [
+      "https://council.nyc.gov/districts/"
+    ],
+    "updated_at": "May 2023"
+  }
+}

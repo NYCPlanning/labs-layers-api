@@ -51,6 +51,11 @@
       "id": "rail-lines",
       "sql": "SELECT the_geom_webmercator, '' AS street FROM dcp_dcm WHERE feat_type = 'Rail'",
       "dataPipeline": true
+    },
+    {
+      "id": "street-sections",
+      "sql": "SELECT the_geom_webmercator, do_path, last_date FROM dcp_final_section_map_index",
+      "dataPipeline": true
     }
   ],
   "meta": {
