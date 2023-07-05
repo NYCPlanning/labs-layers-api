@@ -1,6 +1,6 @@
 {
    "tiles":[
-      "https://tiles.planninglabs.nyc/data/v3/{z}/{x}/{y}.pbf"
+      "https://tiles-staging.planninglabs.nyc/data/v3/{z}/{x}/{y}.pbf"
    ],
    "name":"OpenMapTiles",
    "format":"pbf",
