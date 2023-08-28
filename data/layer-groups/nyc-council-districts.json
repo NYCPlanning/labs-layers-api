@@ -1,7 +1,7 @@
 {
   "id": "dcp_city_council_districts",
   "legend": {
-    "label": "NYC Council Districts",
+    "label": "City Council Districts (CCDs)",
     "icon": {
       "type": "line",
       "layers": [

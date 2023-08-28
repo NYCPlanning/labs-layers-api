@@ -1,7 +1,7 @@
 {
   "id": "nyc_council_districts_combined",
   "legend": {
-    "label": "NYC Council Districts",
+    "label": "City Council Districts (CCDs)",
     "tooltip": "2013-2023 NYC Council District boundaries remain in effect until the end of the year. 2024-2033 boundaries are used in the November 7th, 2023 City Council election."
   },
     "layers": [

@@ -8,7 +8,7 @@
     }
   ],
   "meta": {
-    "description": "Data layer for displaying the current NYC Council Districts 2013-2023 and the upcoming NYC Council Districts 2024-2033",
+    "description": "Data layer for displaying the current City Council Districts (CCDs) 2013-2023 and the upcoming City Council Districts (CCDs) 2024-2033",
     "url": [
       "https://council.nyc.gov/districts/"
     ],
