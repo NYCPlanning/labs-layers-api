@@ -1,0 +1,138 @@
+{
+  "id": "factfinder--ccds",
+  "layers": [
+    {
+      "style": {
+        "id": "factfinder--ccds-fill",
+        "type": "fill",
+        "source": "factfinder--admin-boundaries",
+        "source-layer": "dcp_city_council_districts",
+        "paint": {
+          "fill-opacity": 0.01
+        }
+      },
+      "highlightable": true,
+      "clickable": true
+    },
+    {
+      "style": {
+        "id": "ccds-line",
+        "type": "line",
+        "source": "factfinder--admin-boundaries",
+        "source-layer": "dcp_city_council_districts",
+        "paint": {
+          "line-color": "#444",
+          "line-opacity": 0.5,
+          "line-width": {
+            "stops": [
+              [
+                11,
+                1
+              ],
+              [
+                16,
+                3
+              ]
+            ]
+          }
+        },
+        "layout": {
+          "line-join": "round",
+          "line-cap": "round"
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "ccds-label",
+        "type": "symbol",
+        "source": "factfinder--admin-boundaries",
+        "source-layer": "dcp_city_council_districts",
+        "minzoom": 11,
+        "paint": {
+          "text-color": "#EE4B2B",
+          "text-halo-color": "#FFFFFF",
+          "text-halo-width": 2,
+          "text-halo-blur": 2,
+          "text-opacity": {
+            "stops": [
+              [
+                13,
+                0
+              ],
+              [
+                14,
+                1
+              ]
+            ]
+          }
+        },
+        "layout": {
+          "text-field": "{coundist}",
+          "text-font": [
+            "Open Sans Semibold",
+            "Arial Unicode MS Bold"
+          ],
+          "text-size": {
+            "stops": [
+              [
+                13,
+                6
+              ],
+              [
+                17,
+                16
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "ccds-label-for-ccds",
+        "type": "symbol",
+        "source": "factfinder--admin-boundaries",
+        "source-layer": "dcp_city_council_districts",
+        "minzoom": 11,
+        "paint": {
+          "text-color": "#EE4B2B",
+          "text-halo-color": "#FFFFFF",
+          "text-halo-width": 2,
+          "text-halo-blur": 2,
+          "text-opacity": {
+            "stops": [
+              [
+                12,
+                0
+              ],
+              [
+                13,
+                0.6
+              ]
+            ]
+          }
+        },
+        "layout": {
+          "text-field": "City Council District {coundist}",
+          "text-font": [
+            "Open Sans Semibold",
+            "Arial Unicode MS Bold"
+          ],
+          "text-size": {
+            "stops": [
+              [
+                11,
+                8
+              ],
+              [
+                14,
+                16
+              ]
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
