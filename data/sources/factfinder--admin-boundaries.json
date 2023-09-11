@@ -29,7 +29,7 @@
     },
     {
       "id": "dcp_city_council_districts",
-      "sql": "SELECT the_geom_webmercator, coundist, CONCAT('CCD', coundist) AS geoid, coundist as geolabel FROM dcp_city_council_districts",
+      "sql": "SELECT the_geom_webmercator, coundist, coundist AS id, CONCAT('CCD', coundist) AS geoid, coundist as geolabel FROM dcp_city_council_districts",
       "dataPipeline": true
     },
     {
