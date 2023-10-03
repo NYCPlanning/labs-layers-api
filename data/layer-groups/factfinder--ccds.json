@@ -1,57 +1,28 @@
 {
-  "id": "dcp_city_council_districts",
-  "legend": {
-    "label": "City Council Districts (CCDs)",
-    "icon": {
-      "type": "line",
-      "layers": [
-        {
-          "stroke": "#12eded",
-          "stroke-width": 4,
-          "stroke-opacity": 0.7
-        },
-        {
-          "stroke": "#007a7a",
-          "stroke-width": 1.5,
-          "stroke-opacity": 0.8
-        }
-      ]
-    }
-  },
+  "id": "factfinder--ccds",
   "layers": [
     {
       "style": {
-        "id": "dcp_city_council_districts-line-glow",
-        "type": "line",
-        "source": "admin-boundaries",
+        "id": "factfinder--ccds-fill",
+        "type": "fill",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "dcp_city_council_districts",
         "paint": {
-          "line-color": "#12eded",
-          "line-opacity": 0.7,
-          "line-width": {
-            "stops": [
-              [
-                11,
-                4
-              ],
-              [
-                16,
-                8
-              ]
-            ]
-          }
+          "fill-opacity": 0.01
         }
-      }
+      },
+      "highlightable": true,
+      "clickable": true
     },
     {
       "style": {
-        "id": "dcp_city_council_districts-line",
+        "id": "ccds-line",
         "type": "line",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "dcp_city_council_districts",
         "paint": {
-          "line-color": "#007a7a",
-          "line-opacity": 0.8,
+          "line-color": "#444",
+          "line-opacity": 0.5,
           "line-width": {
             "stops": [
               [
@@ -73,15 +44,28 @@
     },
     {
       "style": {
-        "id": "dcp_city_council_districts-label",
+        "id": "ccds-label",
         "type": "symbol",
-        "source": "admin-boundaries",
+        "source": "factfinder--admin-boundaries",
         "source-layer": "dcp_city_council_districts",
+        "minzoom": 11,
         "paint": {
           "text-color": "#626262",
           "text-halo-color": "#FFFFFF",
           "text-halo-width": 2,
-          "text-halo-blur": 2
+          "text-halo-blur": 2,
+          "text-opacity": {
+            "stops": [
+              [
+                12,
+                0
+              ],
+              [
+                13,
+                1
+              ]
+            ]
+          }
         },
         "layout": {
           "text-field": "{coundist}",
@@ -93,7 +77,7 @@
             "stops": [
               [
                 11,
-                12
+                8
               ],
               [
                 14,
