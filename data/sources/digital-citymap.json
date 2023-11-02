@@ -24,7 +24,7 @@
     },
     {
       "id": "street-centerlines",
-      "sql": "SELECT the_geom_webmercator, street_nm AS streetname, COALESCE('   (' || streetwidt || ' ft)') AS streetwidth, roadwaytyp, feat_statu FROM dcp_dcm_street_centerline",
+      "sql": "SELECT the_geom_webmercator, street_nm AS streetname, COALESCE('   (' || streetwidt || ' ft)') AS streetwidth, roadwaytyp, feat_statu, stair_st FROM dcp_dcm_street_centerline",
       "dataPipeline": true
     },
     {
