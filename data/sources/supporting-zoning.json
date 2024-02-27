@@ -38,11 +38,6 @@
       "dataPipeline": true
     },
     {
-      "id": "sidewalk-cafes",
-      "sql": "SELECT the_geom_webmercator, cafetype FROM dcp_sidewalk_cafes",
-      "dataPipeline": true
-    },
-    {
       "id": "low-density-growth-mgmt-areas",
       "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM dcp_lower_density_growth_management_areas",
       "dataPipeline": true
