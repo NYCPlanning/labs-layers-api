@@ -8,6 +8,42 @@
   "layers": [
     {
       "before": "boundary_state",
+      "displayName": "2022",
+      "style": {
+        "id": "aerials-2022",
+        "layout": {
+          "visibility": "visible"
+        },
+        "source": "aerials-2022",
+        "type": "raster"
+      }
+    },
+    {
+      "before": "boundary_state",
+      "displayName": "2020",
+      "style": {
+        "id": "aerials-2020",
+        "layout": {
+          "visibility": "visible"
+        },
+        "source": "aerials-2020",
+        "type": "raster"
+      }
+    },
+    {
+      "before": "boundary_state",
+      "displayName": "2018",
+      "style": {
+        "id": "aerials-2018",
+        "layout": {
+          "visibility": "visible"
+        },
+        "source": "aerials-2018",
+        "type": "raster"
+      }
+    },
+    {
+      "before": "boundary_state",
       "displayName": "2016",
       "style": {
         "id": "aerials-2016",

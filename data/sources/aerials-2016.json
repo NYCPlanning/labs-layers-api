@@ -2,13 +2,13 @@
   "id": "aerials-2016",
   "type": "raster",
   "tiles": [
-    "https://maps.nyc.gov/xyz/1.0.0/photo/2016/{z}/{x}/{y}.png8"
+    "https://tiles.arcgis.com/tiles/yG5s3afENB5iO9fj/arcgis/rest/services/NYC_Orthos_2016/MapServer/tile/{z}/{y}/{x}"
   ],
   "tileSize": 256,
   "meta": {
-    "description": "NYC DoITT GIS Aerial Photography Tile Layers (TMS)",
+    "description": "NYC OTI GIS Aerial Photography Tile Layers (TMS)",
     "url": [
-      "https://maps.nyc.gov/tiles/"
+      "https://tiles.arcgis.com/tiles/"
     ],
     "updated_at": "n/a"
   }
