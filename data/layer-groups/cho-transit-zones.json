@@ -1,0 +1,236 @@
+{
+  "id": "cho-transit-zones",
+  "legend": {
+    "label": "Lorem Ipsum",
+    "tooltip": "Lorem Ipsum",
+    "infolink": "https://example.com",
+    "items": [
+      {
+        "label": "Manhattan Core and LIC Parking Areas",
+        "icon": {
+          "type": "fa-icon",
+          "layers": [
+            {
+              "fa-icon": "square",
+              "color": "rgba(115, 0, 76, 0.2)"
+            }
+          ]
+        }
+      },
+      {
+        "label": "Inner Transit Zone",
+        "icon": {
+          "type": "fa-icon",
+          "layers": [
+            {
+              "fa-icon": "square",
+              "color": "rgba(0, 132, 168, 0.2)"
+            }
+          ]
+        }
+      },
+      {
+        "label": "Outer Transit Zone",
+        "icon": {
+          "type": "fa-icon",
+          "layers": [
+            {
+              "fa-icon": "square",
+              "color": "rgba(0, 197, 255, 0.2)"
+            }
+          ]
+        }
+      },
+      {
+        "label": "Special 25-241 Parking Provisions",
+        "icon": {
+          "type": "fa-icon",
+          "layers": [
+            {
+              "fa-icon": "square",
+              "color": "rgba(0, 197, 255, 0.2)"
+            }
+          ]
+        }
+      },
+      {
+        "label": "Beyond the Greater Transit Zone",
+        "icon": {
+          "type": "fa-icon",
+          "layers": [
+            {
+              "fa-icon": "square",
+              "color": "rgba(56, 168, 0, 0.2)"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "layers": [
+    {
+      "style": {
+        "id": "cho-transit-zones-line",
+        "type": "line",
+        "source": "supporting-zoning",
+        "source-layer": "cho-transit-zones",
+        "paint": {
+          "line-width": {
+            "stops": [
+              [
+                11,
+                1
+              ],
+              [
+                12,
+                3
+              ]
+            ]
+          },
+          "line-color": "rgba(48, 191, 78, 0.6)",
+          "line-dasharray": [
+            1,
+            1
+          ]
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "cho-transit-zones-fill-core",
+        "type": "fill",
+        "source": "supporting-zoning",
+        "source-layer": "cho-transit-zones",
+        "paint": {
+          "fill-color": "rgba(115, 0, 76, 0.2)"
+        },
+        "filter": [
+          "all",
+          [
+            "==",
+            "name",
+            "Manhattan Core and Long Island City Parking Areas"
+          ]
+        ],
+        "layout": {}
+      },
+      "highlightable": true,
+      "tooltipable": true,
+      "tooltipTemplate":  "FRESH - {{{name}}}"
+    },
+    {
+      "style": {
+        "id": "cho-transit-zones-fill-inner",
+        "type": "fill",
+        "source": "supporting-zoning",
+        "source-layer": "cho-transit-zones",
+        "paint": {
+          "fill-color": "rgba(0, 132, 168, 0.2)"
+        },
+        "filter": [
+          "all",
+          [
+            "==",
+            "name",
+            "Inner Transit Zone"
+          ]
+        ],
+        "layout": {}
+      },
+      "highlightable": true,
+      "tooltipable": true,
+      "tooltipTemplate":  "FRESH - {{{name}}}"
+    },
+    {
+      "style": {
+        "id": "cho-transit-zones-fill-outer",
+        "type": "fill",
+        "source": "supporting-zoning",
+        "source-layer": "cho-transit-zones",
+        "paint": {
+          "fill-color": "rgba(0, 197, 255, 0.2)"
+        },
+        "filter": [
+          "all",
+          [
+            "==",
+            "name",
+            "Outer Transit Zone"
+          ]
+        ],
+        "layout": {}
+      },
+      "highlightable": true,
+      "tooltipable": true,
+      "tooltipTemplate": "Lorem Ipsum - {{{name}}}"
+    },
+    {
+          "style": {
+            "id": "cho-transit-zones-fill-special-base",
+            "type": "fill",
+            "source": "supporting-zoning",
+            "source-layer": "cho-transit-zones",
+            "paint": {
+              "fill-color": "rgba(0, 197, 255, 0.2)"
+            },
+            "filter": [
+              "all",
+              [
+                "==",
+                "name",
+                "Special 25-241 Parking Provisions"
+              ]
+            ],
+            "layout": {}
+          },
+          "highlightable": true,
+          "tooltipable": true,
+          "tooltipTemplate": "Lorem Ipsum - {{{name}}}"
+        },
+    {
+      "style": {
+        "id": "cho-transit-zones-fill-special-hatch",
+        "type": "fill",
+        "source": "supporting-zoning",
+        "source-layer": "cho-transit-zones",
+        "paint": {
+          "fill-pattern": "black-diagonal-1px"
+        },
+        "filter": [
+          "all",
+          [
+            "==",
+            "name",
+            "Special 25-241 Parking Provisions"
+          ]
+        ],
+        "layout": {}
+      },
+      "highlightable": false,
+      "tooltipable": false
+    },
+    {
+      "style": {
+        "id": "cho-transit-zones-fill-beyond",
+        "type": "fill",
+        "source": "supporting-zoning",
+        "source-layer": "cho-transit-zones",
+        "paint": {
+          "fill-color": "rgba(56, 168, 0, 0.2)"
+        },
+        "filter": [
+          "all",
+          [
+            "==",
+            "name",
+            "Beyond the Greater Transit Zone"
+          ]
+        ],
+        "layout": {}
+      },
+      "highlightable": true,
+      "tooltipable": true,
+      "tooltipTemplate": "Lorem Ipsum - {{{name}}}"
+    }
+  ]
+}

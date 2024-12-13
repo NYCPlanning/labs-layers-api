@@ -28,6 +28,16 @@
       "dataPipeline": true
     },
     {
+      "id": "cho-transit-zones",
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, transtzone AS name FROM planninglabs.dcp_cho_transit_zones",
+      "dataPipeline": true
+    },
+    {
+      "id": "cho-greater-transit-zone",
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM dcp_cho_greater_transit_zone",
+      "dataPipeline": true
+    },
+    {
       "id": "transit-zones",
       "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM dcp_transitzones",
       "dataPipeline": true

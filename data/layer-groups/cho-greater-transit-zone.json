@@ -1,9 +1,9 @@
 {
-  "id": "transit-zones",
+  "id": "cho-greater-transit-zone",
   "legend": {
-    "label": "Appendix I Historical Transit Zones",
-    "tooltip": "Transit-accessible areas where parking is optional for new affordable housing units and special rules apply to existing affordable units",
-    "infolink": "https://www1.nyc.gov/site/planning/zoning/glossary.page#transit_zone",
+    "label": "Lorem Ipsum II",
+    "tooltip": "Lorem Ipsum",
+    "infolink": "https://example.com",
     "icon": {
       "type": "rectangle",
       "layers": [
@@ -18,10 +18,10 @@
   "layers": [
     {
       "style": {
-        "id": "transit-zones-line",
+        "id": "cho-greater-transit-zone-line",
         "type": "line",
         "source": "supporting-zoning",
-        "source-layer": "transit-zones",
+        "source-layer": "cho-greater-transit-zone",
         "paint": {
           "line-width": {
             "stops": [
@@ -45,10 +45,10 @@
     },
     {
       "style": {
-        "id": "transit-zones-fill",
+        "id": "cho-greater-transit-zone-fill",
         "type": "fill",
         "source": "supporting-zoning",
-        "source-layer": "transit-zones",
+        "source-layer": "cho-greater-transit-zone",
         "paint": {
           "fill-color": "rgba(230, 214, 46, 0.2)"
         },
@@ -56,7 +56,7 @@
       },
       "highlightable": true,
       "tooltipable": true,
-      "tooltipTemplate": "Transit Zone"
+      "tooltipTemplate": "Greater Transit Zone"
     }
   ]
 }
