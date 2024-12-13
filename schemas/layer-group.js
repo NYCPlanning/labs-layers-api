@@ -6,6 +6,7 @@ const legendIconSchema = Joi.object().keys({
     'line',
     'rectangle',
     'fa-icon',
+    'square-hatch',
   ).required(),
   layers: Joi.when('type', {
     is: 'fa-icon',
