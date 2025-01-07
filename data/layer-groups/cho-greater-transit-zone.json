@@ -1,15 +1,15 @@
 {
-  "id": "transit-zones",
+  "id": "cho-greater-transit-zone",
   "legend": {
-    "label": "Appendix I",
-    "tooltip": "Transit-accessible areas where special streetscape and special parking requirements apply.",
-    "infolink": "https://www1.nyc.gov/site/planning/zoning/glossary.page#transit_zone",
+    "label": "Greater Transit Zone",
+    "tooltip": "The rules for Qualifying Residential Sites are modified by a lot’s relationship to the Greater Transit Zone. Being located within the Greater Transit Zone may allow for more or different development opportunities.",
+    "infolink": "https://zr.planning.nyc.gov",
     "icon": {
       "type": "rectangle",
       "layers": [
         {
-          "fill": "rgba(49, 151, 149, 0.2)",
-          "stroke": "rgba(49, 151, 149, 0.6)",
+          "fill": "rgba(254, 113, 37, 0.3)",
+          "stroke": "rgba(254, 113, 37, 0.6)",
           "stroke-dasharray": "1"
         }
       ]
@@ -18,10 +18,10 @@
   "layers": [
     {
       "style": {
-        "id": "transit-zones-line",
+        "id": "cho-greater-transit-zone-line",
         "type": "line",
         "source": "supporting-zoning",
-        "source-layer": "transit-zones",
+        "source-layer": "cho-greater-transit-zone",
         "paint": {
           "line-width": {
             "stops": [
@@ -35,7 +35,7 @@
               ]
             ]
           },
-          "line-color": "rgba(49, 151, 149, 0.6)",
+          "line-color": "rgba(254, 113, 37, 0.6)",
           "line-dasharray": [
             1,
             1
@@ -45,18 +45,18 @@
     },
     {
       "style": {
-        "id": "transit-zones-fill",
+        "id": "cho-greater-transit-zone-fill",
         "type": "fill",
         "source": "supporting-zoning",
-        "source-layer": "transit-zones",
+        "source-layer": "cho-greater-transit-zone",
         "paint": {
-          "fill-color": "rgba(49, 151, 149, 0.2)"
+          "fill-color": "rgba(254, 113, 37, 0.3)"
         },
         "layout": {}
       },
       "highlightable": true,
       "tooltipable": true,
-      "tooltipTemplate": "Appendix I"
+      "tooltipTemplate": "Greater Transit Zone"
     }
   ]
 }
