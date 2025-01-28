@@ -2,11 +2,12 @@
   "id": "cho-transit-zones",
   "legend": {
     "label": "Transit Zones Parking Geographies",
+    "tooltip": "These layers illustrate rules governing residential parking.",
     "infolink": "https://zr.planning.nyc.gov",
     "items": [
       {
         "label": "MN Core and LIC Parking Areas",
-        "tooltip": "Geography defined in ZR#12-10 Definitions under Manhattan Core and ZR#16-02 Definitions and parking requirements defined in ZR#13-041 Applicability of parking regulations within the Manhattan Core and ZR#16-051 Applicability of parking regulations within the Long Island City area",
+        "tooltip": "No parking required.",
         "icon": {
           "type": "fa-icon",
           "layers": [
@@ -19,7 +20,7 @@
       },
       {
         "label": "Inner Transit Zone",
-        "tooltip": "Geography defined in ZR#12-10 Definitions under Transit Zone, Inner and parking requirements defined in ZR#25-21 Required Parking in the Inner Transit Zone",
+        "tooltip": "No parking required.",
         "icon": {
           "type": "fa-icon",
           "layers": [
@@ -32,7 +33,7 @@
       },
       {
         "label": "Outer Transit Zone",
-        "tooltip": "Geography defined in ZR#12-10 Definitions under Transit Zone, Outer and parking requirements defined in ZR#25-22 Required Parking in the Outer Transit Zone",
+        "tooltip": "Some parking required. Certain housing types don’t require parking.",
         "icon": {
           "type": "fa-icon",
           "layers": [
@@ -45,7 +46,7 @@
       },
       {
         "label": "Special 25-241 Parking Provisions",
-        "tooltip": "Geography defined in ZR#25-241 Special Provisions for Certain Community Districts",
+        "tooltip": "Parking required. Affordable housing has significantly less required parking than market rate housing and certain housing types have no requirement.",
         "icon": {
           "type": "square-hatch",
           "layers": [
@@ -57,7 +58,7 @@
       },
       {
         "label": "Beyond the Greater Transit Zone",
-        "tooltip": "Parking requirements defined in ZR#25-23 Required Parking beyond the Greater Transit Zone",
+        "tooltip": "Parking required. Affordable housing has significantly less required parking than market rate housing and certain housing types have no requirement.",
         "icon": {
           "type": "fa-icon",
           "layers": [
