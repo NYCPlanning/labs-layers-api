@@ -29,17 +29,17 @@
     },
     {
       "id": "cho-transit-zones",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, transtzone AS name FROM planninglabs.dcp_cho_transit_zones",
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, transtzone AS name FROM planninglabs.dcp_transit_zones",
       "dataPipeline": true
     },
     {
       "id": "cho-greater-transit-zone",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM dcp_cho_greater_transit_zone",
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM dcp_greater_transit_zone",
       "dataPipeline": true
     },
     {
       "id": "transit-zones",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM dcp_transitzones",
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id FROM dcp_appendixi_transit_zones",
       "dataPipeline": true
     },
     {
@@ -86,16 +86,16 @@
       "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name, subarea FROM dcp_appendixj_designated_mdistricts",
       "dataPipeline": true
     }
+  ],
+  "buffersize": {
+    "mvt": 10
+  },
+  "meta": {
+    "description": "Zoning related datasets, Bytes of the Big Apple",
+    "url": [
+      "https://www1.nyc.gov/site/planning/data-maps/open-data.page#zoning_related"
     ],
-    "buffersize": {
-      "mvt": 10
-    },
-    "meta": {
-      "description": "Zoning related datasets, Bytes of the Big Apple",
-      "url": [
-        "https://www1.nyc.gov/site/planning/data-maps/open-data.page#zoning_related"
-      ],
-      "data_date": "December 2022",
-      "updated_at": "December 2022"
-    }
+    "data_date": "December 2022",
+    "updated_at": "December 2022"
   }
+}
