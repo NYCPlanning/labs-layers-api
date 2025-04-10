@@ -10,7 +10,7 @@
         "id": "three-d-buildings",
         "type": "fill-extrusion",
         "source": "openmaptiles",
-        "source-layer": "building",
+        "source-layer": "buildings",
         "minzoom": 0,
         "paint": {
           "fill-extrusion-color": "rgba(203, 203, 203, 1)",
@@ -20,11 +20,11 @@
             0
           ],
           "fill-extrusion-height": {
-            "property": "render_height",
+            "property": "height",
             "type": "identity"
           },
           "fill-extrusion-base": {
-            "property": "render_min_height",
+            "property": "min_height",
             "type": "identity"
           }
         }

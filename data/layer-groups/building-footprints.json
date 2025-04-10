@@ -21,7 +21,7 @@
         "id": "building-footprints",
         "type": "fill",
         "source": "openmaptiles",
-        "source-layer": "building",
+        "source-layer": "buildings",
         "minzoom": 15,
         "paint": {
           "fill-opacity": {
