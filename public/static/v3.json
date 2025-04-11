@@ -1,6 +1,6 @@
 {
   "tiles": [
-    "https://pmtiles.planninglabs.nyc/northeast/{z}/{x}/{y}.mvt"
+    "https://pmtiles.planninglabs.nyc/us_northeast/{z}/{x}/{y}.mvt"
   ],
   "name": "OpenMapTiles",
   "format": "pbf",
