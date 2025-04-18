@@ -7,6 +7,7 @@ module.exports = Joi.object().keys({
     'raster',
     'geojson',
     'cartovector',
+    'pmtile',
   ),
   data: Joi.object().when('type', {
     is: 'geojson',
