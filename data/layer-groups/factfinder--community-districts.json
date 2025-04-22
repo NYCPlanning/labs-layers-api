@@ -23,8 +23,8 @@
       "style": {
         "id": "dcp_community_districts-line-glow",
         "type": "line",
-        "source": "admin-boundaries",
-        "source-layer": "dcp_community_districts",
+        "source": "community-districts",
+        "source-layer": "community-district-fill",
         "paint": {
           "line-color": "#a5ed12",
           "line-opacity": 0.5,
@@ -47,8 +47,8 @@
       "style": {
         "id": "dcp_community_districts-line",
         "type": "line",
-        "source": "admin-boundaries",
-        "source-layer": "dcp_community_districts",
+        "source": "community-districts",
+        "source-layer": "community-district-fill",
         "paint": {
           "line-color": "#527a00",
           "line-opacity": 0.8,
@@ -75,8 +75,8 @@
       "style": {
         "id": "dcp_community_districts-label",
         "type": "symbol",
-        "source": "admin-boundaries",
-        "source-layer": "dcp_community_districts",
+        "source": "community-districts",
+        "source-layer": "community-district-fill",
         "minzoom": 11,
         "paint": {
           "text-color": "#626262",

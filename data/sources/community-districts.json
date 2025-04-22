@@ -1,0 +1,9 @@
+{
+  "id": "community-districts",
+  "type": "vector",
+  "tiles": [
+    "https://pmtiles.planninglabs.nyc/community-districts/{z}/{x}/{y}.mvt"
+  ],
+  "minzoom": 6,
+  "maxzoom": 14
+}
