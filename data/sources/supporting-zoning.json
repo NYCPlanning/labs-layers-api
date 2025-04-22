@@ -8,6 +8,16 @@
       "dataPipeline": true
     },
     {
+      "id": "zoning-map-index",
+      "sql": "SELECT cartodb_id AS id, * FROM dcp_zoning_map_index",
+      "dataPipeline": true
+    },
+    {
+      "id": "zoning-map-index-centroids",
+      "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, CASE WHEN sectionalm ILIKE '%Subplan' THEN sectionalm ELSE dzm_sect_n END AS zmi_label FROM dcp_zoning_map_index",
+      "dataPipeline": true
+    },
+    {
       "id": "special-purpose-districts",
       "sql": "SELECT the_geom_webmercator, cartodb_id AS id, cartodb_id, sdlbl, sdname FROM dcp_special_purpose_districts",
       "dataPipeline": true
@@ -29,7 +39,7 @@
     },
     {
       "id": "cho-transit-zones",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, transtzone AS name FROM planninglabs.dcp_transit_zones",
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, transtzone AS name FROM dcp_transit_zones",
       "dataPipeline": true
     },
     {
