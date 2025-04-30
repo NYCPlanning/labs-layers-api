@@ -30,7 +30,7 @@
       }
     },
     {
-      "before": "place_city",
+      "before": "place_state",
       "style": {
         "id": "zmi-label",
         "type": "symbol",
@@ -72,6 +72,10 @@
       }
     },
     {
+      "highlightable": true,
+      "clickable": true,
+      "tooltipable": true,
+      "tooltipTemplate": "Zoning Map Index {{{zmi_label}}}",
       "style": {
         "id": "zmi-fill",
         "type": "fill",
@@ -92,11 +96,7 @@
               ]
             },
             "fill-antialias": true
-        },
-        "highlightable": true,
-        "clickable": true,
-        "tooltipable": true,
-        "tooltipTemplate": "{{{zmi_label}}}"
+        }
       }
     }
   ]

@@ -9,7 +9,7 @@
     },
     {
       "id": "zoning-map-index",
-      "sql": "SELECT cartodb_id AS id, * FROM dcp_zoning_map_index",
+      "sql": "SELECT cartodb_id AS id, CASE WHEN sectionalm ILIKE '%Subplan' THEN sectionalm ELSE dzm_sect_n END AS zmi_label , * FROM dcp_zoning_map_index",
       "dataPipeline": true
     },
     {
