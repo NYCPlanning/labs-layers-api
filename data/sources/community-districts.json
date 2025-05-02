@@ -1,0 +1,9 @@
+{
+  "id": "community-districts",
+  "type": "vector",
+  "tiles": [
+    "http://localhost/data/community-districts/{z}/{x}/{y}.pbf"
+  ],
+  "minzoom": 6,
+  "maxzoom": 20
+}
