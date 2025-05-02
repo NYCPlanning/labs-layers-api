@@ -3,11 +3,6 @@
   "type": "cartovector",
   "source-layers": [
     {
-      "id": "dcp_community_districts",
-      "sql": "SELECT the_geom_webmercator, borocd, CASE WHEN LEFT(borocd::text, 1) = '1' THEN 'Manhattan ' || borocd % 100 WHEN LEFT(borocd::text, 1) = '2' THEN 'Bronx ' || borocd % 100 WHEN LEFT(borocd::text, 1) = '3' THEN 'Brooklyn ' || borocd % 100 WHEN LEFT(borocd::text, 1) = '4' THEN 'Queens ' || borocd % 100 WHEN LEFT(borocd::text, 1) = '5' THEN 'Staten Island ' || borocd % 100 END as boro_district FROM pff_2020_community_districts_21c WHERE borocd % 100 < 20",
-      "dataPipeline": true
-    },
-    {
       "id": "neighborhood-tabulation-areas",
       "sql": "SELECT the_geom_webmercator, ntaname, a.nta2020 AS geoid, a.nta2020 AS id FROM pff_2020_ntas_21c a WHERE ntaname NOT ILIKE 'park-cemetery-etc%' AND ntaname != 'Airport'",
       "dataPipeline": false
