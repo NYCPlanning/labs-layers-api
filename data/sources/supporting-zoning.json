@@ -9,12 +9,12 @@
     },
     {
       "id": "zoning-map-index",
-      "sql": "SELECT cartodb_id AS id, CASE WHEN sectionalm ILIKE '%Subplan' THEN sectionalm ELSE dzm_sect_n END AS zmi_label , * FROM dcp_zoning_map_index",
+      "sql": "SELECT cartodb_id AS id, CASE WHEN sectionalm ILIKE '%Subplan' THEN INITCAP(REGEXP_REPLACE(sectionalm, '^0?([0-9]+[A-Za-z])-(Subplan)$', '\\1 \\2', 'i')) ELSE dzm_sect_n END AS zmi_label , * FROM dcp_zoning_map_index",
       "dataPipeline": true
     },
     {
       "id": "zoning-map-index-centroids",
-      "sql": "SELECT ST_Centroid(the_geom_webmercator) as the_geom_webmercator, CASE WHEN sectionalm ILIKE '%Subplan' THEN sectionalm ELSE dzm_sect_n END AS zmi_label FROM dcp_zoning_map_index",
+      "sql": "SELECT ST_Centroid(the_geom_webmercator) AS the_geom_webmercator, CASE WHEN sectionalm ILIKE '%Subplan' THEN INITCAP(REGEXP_REPLACE(sectionalm, '^0?([0-9]+[A-Za-z])-(Subplan)$', '\\1 \\2', 'i')) ELSE dzm_sect_n END AS zmi_label FROM dcp_zoning_map_index",
       "dataPipeline": true
     },
     {
