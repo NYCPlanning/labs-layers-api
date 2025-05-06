@@ -9,7 +9,7 @@
     },
     {
       "id": "zoning-map-index",
-      "sql": "SELECT cartodb_id AS id, CASE WHEN sectionalm ILIKE '%Subplan' THEN INITCAP(REGEXP_REPLACE(sectionalm, '^0?([0-9]+[A-Za-z])-(Subplan)$', '\\1 \\2', 'i')) ELSE dzm_sect_n END AS zmi_label , * FROM dcp_zoning_map_index",
+      "sql": "SELECT cartodb_id AS id, sectionalm AS zmi_id, CASE WHEN sectionalm ILIKE '%Subplan' THEN INITCAP(REGEXP_REPLACE(sectionalm, '^0?([0-9]+[A-Za-z])-(Subplan)$', '\\1 \\2', 'i')) ELSE dzm_sect_n END AS zmi_label, * FROM dcp_zoning_map_index",
       "dataPipeline": true
     },
     {
