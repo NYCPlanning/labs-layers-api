@@ -4,9 +4,12 @@ const structureCartoSource = require('./structure-carto-source');
 const structureRegularSources = require('./structure-regular-source');
 const baseStyle = require('../data/base/style.json');
 
+const BASEMAP_URL = process.env.BASEMAP_URL || 'https://staging.tiles.planninglabs.nyc';
 const HOST = process.env.HOST || 'http://localhost:3000';
+baseStyle.sources.openmaptiles.url = baseStyle.sources.openmaptiles.url.replace('{{BASEMAP_URL}}', BASEMAP_URL);
 baseStyle.sources.openmaptiles.url = baseStyle.sources.openmaptiles.url.replace('{{HOSTNAME}}', HOST);
 baseStyle.sprite = baseStyle.sprite.replace('{{HOSTNAME}}', HOST);
+baseStyle.glyphs = baseStyle.glyphs.replace('{{BASEMAP_URL}}', BASEMAP_URL);
 
 module.exports = async (layerGroups) => {
   // import the base style and replace the HOSTNAME with the current environment
