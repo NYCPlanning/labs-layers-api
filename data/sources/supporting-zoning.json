@@ -95,6 +95,11 @@
       "id": "appendixj-designated-mdistricts",
       "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name, subarea FROM dcp_appendixj_designated_mdistricts",
       "dataPipeline": true
+    },
+    {
+      "id": "zoning-for-accessibility",
+      "sql": "SELECT cartodb_id AS zfa_id, the_geom, station_na AS station_name, * FROM mta_rail_station_50ft_buffers",
+      "dataPipeline": true
     }
   ],
   "buffersize": {
