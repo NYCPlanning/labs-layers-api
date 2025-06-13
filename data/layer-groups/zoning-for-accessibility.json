@@ -41,20 +41,8 @@
         "source": "supporting-zoning",
         "source-layer": "zoning-for-accessibility",
         "paint": {
-          "fill-color": "rgba(0, 57, 16, 0.5)",
-          "fill-opacity": {
-              "stops": [
-                [
-                  15,
-                  0.1
-                ],
-                [
-                  16,
-                  0.1
-                ]
-              ]
-            },
-            "fill-antialias": true
+          "fill-color": "rgba(0, 57, 165, 0.2)",
+          "fill-antialias": true
         }
       }
     }
