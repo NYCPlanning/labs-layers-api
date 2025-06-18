@@ -1,0 +1,50 @@
+{
+  "id": "zoning-for-accessibility",
+  "legend": {
+    "label": "Zoning For Accessibility",
+    "tooltip": "Transit-adjacent areas where applicable developments and enlargements require additional consultation with the MTA or relevant transit agencies.",
+    "infolink": "https://zr.planning.nyc.gov/article-vi/chapter-6"
+  },
+  "layers": [
+    {
+      "before": "place_state",
+      "style": {
+        "id": "zfa-line",
+        "type": "line",
+        "source": "supporting-zoning",
+        "source-layer": "zoning-for-accessibility",
+        "paint": {
+          "line-width": {
+            "stops": [
+              [
+                11,
+                1
+              ],
+              [
+                12,
+                3
+              ]
+            ]
+          },
+          "line-color": "#0039A6"
+        }
+      }
+    },
+    {
+      "highlightable": true,
+      "clickable": true,
+      "tooltipable": true,
+      "tooltipTemplate": "Transit-adjacent area - {{{station_na}}} Station",
+      "style": {
+        "id": "zfa-fill",
+        "type": "fill",
+        "source": "supporting-zoning",
+        "source-layer": "zoning-for-accessibility",
+        "paint": {
+          "fill-color": "rgba(0, 57, 165, 0.2)",
+          "fill-antialias": true
+        }
+      }
+    }
+  ]
+}

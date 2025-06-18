@@ -8,6 +8,16 @@
       "dataPipeline": true
     },
     {
+      "id": "zoning-map-index",
+      "sql": "SELECT cartodb_id AS id, sectionalm AS zmi_id, CASE WHEN sectionalm ILIKE '%Subplan' THEN INITCAP(REGEXP_REPLACE(sectionalm, '^0?([0-9]+[A-Za-z])-(Subplan)$', '\\1 \\2', 'i')) ELSE dzm_sect_n END AS zmi_label, * FROM dcp_zoning_map_index",
+      "dataPipeline": true
+    },
+    {
+      "id": "zoning-map-index-centroids",
+      "sql": "SELECT ST_Centroid(the_geom_webmercator) AS the_geom_webmercator, CASE WHEN sectionalm ILIKE '%Subplan' THEN INITCAP(REGEXP_REPLACE(sectionalm, '^0?([0-9]+[A-Za-z])-(Subplan)$', '\\1 \\2', 'i')) ELSE dzm_sect_n END AS zmi_label FROM dcp_zoning_map_index",
+      "dataPipeline": true
+    },
+    {
       "id": "special-purpose-districts",
       "sql": "SELECT the_geom_webmercator, cartodb_id AS id, cartodb_id, sdlbl, sdname FROM dcp_special_purpose_districts",
       "dataPipeline": true
@@ -29,7 +39,7 @@
     },
     {
       "id": "cho-transit-zones",
-      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, transtzone AS name FROM planninglabs.dcp_transit_zones",
+      "sql": "SELECT the_geom_webmercator, cartodb_id AS id, transtzone AS name FROM dcp_transit_zones",
       "dataPipeline": true
     },
     {
@@ -84,6 +94,11 @@
     {
       "id": "appendixj-designated-mdistricts",
       "sql": "SELECT the_geom_webmercator, cartodb_id AS id, name, subarea FROM dcp_appendixj_designated_mdistricts",
+      "dataPipeline": true
+    },
+    {
+      "id": "zoning-for-accessibility",
+      "sql": "SELECT cartodb_id AS zfa_id, the_geom, station_na AS station_name, * FROM mta_rail_station_50ft_buffers",
       "dataPipeline": true
     }
   ],
