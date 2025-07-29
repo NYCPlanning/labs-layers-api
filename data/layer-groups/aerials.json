@@ -8,6 +8,18 @@
   "layers": [
     {
       "before": "boundary_state",
+      "displayName": "2024",
+      "style": {
+        "id": "aerials-2024",
+        "layout": {
+          "visibility": "visible"
+        },
+        "source": "aerials-2024",
+        "type": "raster"
+      }
+    },
+    {
+      "before": "boundary_state",
       "displayName": "2022",
       "style": {
         "id": "aerials-2022",
