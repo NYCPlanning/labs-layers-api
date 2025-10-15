@@ -26,7 +26,11 @@
               ]
             ]
           },
-          "line-color": "#0039A6"
+          "line-color": "#DA02C8",
+          "line-dasharray": [
+            1,
+            1
+          ]
         }
       }
     },
@@ -41,7 +45,7 @@
         "source": "supporting-zoning",
         "source-layer": "zoning-for-accessibility",
         "paint": {
-          "fill-color": "rgba(0, 57, 165, 0.2)",
+          "fill-color": "rgba(218, 2, 200, 0.20)",
           "fill-antialias": true
         }
       }
