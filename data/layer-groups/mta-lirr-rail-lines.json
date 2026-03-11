@@ -1,0 +1,40 @@
+{
+  "id": "lirr-rail-lines",
+  "legend": {
+    "label": "LIRR",
+    "icon": {
+      "type": "line",
+      "layers": [
+        {
+          "stroke": "rgba(69, 76, 82, 1)",
+          "stroke-width": 2
+        }
+      ]
+    }
+  },
+  "layers": [
+    {
+      "style": {
+        "id": "lirr_black",
+        "source": "transportation",
+        "source-layer": "lirr-routes",
+        "type": "line",
+        "paint": {
+          "line-color": "rgba(69, 76, 82, 1)",
+          "line-width": {
+            "stops": [
+              [
+                10,
+                1
+              ],
+              [
+                15,
+                4
+              ]
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
