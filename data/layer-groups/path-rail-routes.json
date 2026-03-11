@@ -1,0 +1,128 @@
+{
+  "id": "path-rail-routes",
+  "legend": {
+    "label": "PATH",
+    "icon": {
+      "type": "line",
+      "layers": [
+        {
+          "stroke": "rgba(69, 76, 82, 1)",
+          "stroke-width": 2
+        }
+      ]
+    }
+  },
+  "layers": [
+    {
+      "style": {
+        "id": "path_rail_gray",
+        "source": "transportation",
+        "source-layer": "path-rail-routes",
+        "type": "line",
+        "paint": {
+          "line-color": "rgba(69, 76, 82, 1)",
+          "line-width": {
+            "stops": [
+              [
+                10,
+                1
+              ],
+              [
+                15,
+                4
+              ]
+            ]
+          }
+        }
+      }
+    },
+    {
+      "style": {
+        "id": "subway_stations",
+        "minzoom": 11,
+        "source": "transportation",
+        "source-layer": "path-rail-stops",
+        "type": "circle",
+        "paint": {
+          "circle-color": "rgba(255, 255, 255, 1)",
+          "circle-opacity": {
+            "stops": [
+              [
+                11,
+                0
+              ],
+              [
+                12,
+                1
+              ]
+            ]
+          },
+          "circle-stroke-opacity": {
+            "stops": [
+              [
+                11,
+                0
+              ],
+              [
+                12,
+                1
+              ]
+            ]
+          },
+          "circle-radius": {
+            "stops": [
+              [
+                10,
+                2
+              ],
+              [
+                14,
+                5
+              ]
+            ]
+          },
+          "circle-stroke-width": 1,
+          "circle-pitch-scale": "map"
+        }
+      }
+    },
+    {
+      "before": "place_other",
+      "style": {
+        "id": "station",
+        "minzoom": 13,
+        "source": "transportation",
+        "source-layer": "path-rail-stops",
+        "type": "symbol",
+        "layout": {
+          "text-field": "{station}",
+          "symbol-placement": "point",
+          "symbol-spacing": 250,
+          "symbol-avoid-edges": false,
+          "text-size": 14,
+          "text-anchor": "center"
+        },
+        "paint": {
+          "text-halo-color": "rgba(255, 255, 255, 1)",
+          "text-halo-width": 1,
+          "text-translate": [
+            1,
+            20
+          ],
+          "text-opacity": {
+            "stops": [
+              [
+                13,
+                0
+              ],
+              [
+                14,
+                1
+              ]
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
