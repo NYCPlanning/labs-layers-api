@@ -98,7 +98,7 @@
     },
     {
       "id": "zoning-for-accessibility",
-      "sql": "SELECT cartodb_id AS zfa_id, the_geom, station_na AS station_name, * FROM mta_rail_station_50ft_buffers",
+      "sql": "SELECT cartodb_id AS zfa_id, the_geom, * FROM mta_nyc_rail_station_buffer_dissolve",
       "dataPipeline": true
     }
   ],
