@@ -29,7 +29,7 @@
     },
     {
       "id": "path-rail-routes",
-      "sql": "SELECT the_geom_webmercator, route_shor FROM path_rail_routes",
+      "sql": "SELECT the_geom_webmercator, route_shor FROM path_rail_routes_v0",
       "dataPipeline": true
     },
     {
