@@ -38,7 +38,7 @@
       "highlightable": true,
       "clickable": true,
       "tooltipable": true,
-      "tooltipTemplate": "Transit-adjacent area - {{{station_na}}} Station",
+      "tooltipTemplate": "Transit-adjacent area - {{{zfa_id}}} Station",
       "style": {
         "id": "zfa-fill",
         "type": "fill",
