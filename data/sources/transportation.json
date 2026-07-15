@@ -4,24 +4,48 @@
   "source-layers": [
     {
       "id": "bike-routes",
-      "sql": "SELECT the_geom_webmercator, cartodb_id FROM bike_routes"
+      "sql": "SELECT the_geom_webmercator, cartodb_id FROM bike_routes",
+      "dataPipeline": true
+    },
+    {
+      "id": "subway-lines",
+      "sql": "SELECT the_geom_webmercator, oem_route FROM mta_nycta_subway_lines",
+      "dataPipeline": true
     },
     {
       "id": "subway-routes",
-      "sql": "SELECT the_geom_webmercator, rt_symbol FROM mta_subway_routes"
+      "sql": "SELECT the_geom_webmercator, rt_symbol FROM mta_subway_routes",
+      "dataPipeline": true
     },
     {
-      "id": "subway-stops",
-      "sql": "SELECT the_geom_webmercator, name FROM mta_subway_stops"
+      "id": "mta-lirr-rail-lines",
+      "sql": "SELECT the_geom_webmercator, cartodb_id, route FROM mta_lirr_rail_lines",
+      "dataPipeline": true
     },
     {
-      "id": "subway-entrances",
-      "sql": "SELECT the_geom_webmercator, cartodb_id FROM mta_subway_entrances"
+      "id": "mta-metronorth-rail-lines",
+      "sql": "SELECT the_geom_webmercator, cartodb_id, route_name FROM mta_metronorth_rail_lines",
+      "dataPipeline": true
+    },
+    {
+      "id": "path-rail-routes",
+      "sql": "SELECT the_geom_webmercator, route_shor FROM path_rail_routes_v0",
+      "dataPipeline": true
+    },
+    {
+      "id": "station-envelope",
+      "sql": "SELECT cartodb_id as station_envelope_id, the_geom_webmercator, stat_name as station_name FROM mta_nyc_rail_station_envelope_dissolve",
+      "dataPipeline": true
+    },
+    {
+      "id": "station-envelope-point-on-surfaces",
+      "sql": "SELECT ST_PointOnSurface(the_geom_webmercator) as the_geom_webmercator, stat_name as station_name FROM mta_nyc_rail_station_envelope_dissolve",
+      "dataPipeline": true
     }
   ],
   "minzoom": 0,
   "meta": {
-    "description": "NYC Subway Lines and Stops - Originally Sourced from NYC DoITT GIS, combined with SI Railway data from Baruch College NYC Mass Transit Spatial Layers | Subway entrances from NYC Open Data",
+    "description": "NYC and Regional Transit Lines and Stops - Originally Sourced from NYC DoITT GIS, combined with SI Railway data from Baruch College NYC Mass Transit Spatial Layers | Subway entrances from NYC Open Data",
     "url": [
       "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM mta_subway_stops&format=SHP",
       "https://planninglabs.carto.com/api/v2/sql?q=SELECT * FROM mta_subway_routes&format=SHP",

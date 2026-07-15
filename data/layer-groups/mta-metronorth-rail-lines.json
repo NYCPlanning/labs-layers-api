@@ -1,0 +1,40 @@
+{
+  "id": "metronorth-rail-lines",
+  "legend": {
+    "label": "metronorth",
+    "icon": {
+      "type": "line",
+      "layers": [
+        {
+          "stroke": "rgba(238, 53, 46, 1)",
+          "stroke-width": 2
+        }
+      ]
+    }
+  },
+  "layers": [
+    {
+      "style": {
+        "id": "metronorth_black",
+        "source": "transportation",
+        "source-layer": "metronorth-routes",
+        "type": "line",
+        "paint": {
+          "line-color": "rgba(69, 76, 82, 1)",
+          "line-width": {
+            "stops": [
+              [
+                10,
+                1
+              ],
+              [
+                15,
+                4
+              ]
+            ]
+          }
+        }
+      }
+    }
+  ]
+}
