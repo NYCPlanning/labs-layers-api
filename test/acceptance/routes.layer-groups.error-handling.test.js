@@ -13,7 +13,7 @@ describe('POST /layer-groups', () => {
   });
 
   it('handles an error response from Carto', (done) => {
-    const tempNock = nock('https://planninglabs.carto.com')
+    const tempNock = nock('https://carto.nycplanningdigital.com')
       .post('/api/v1/map')
       .reply(500, { error: ['timeout'] });
 
