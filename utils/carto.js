@@ -5,7 +5,7 @@ const ENV = process.env;
 // 'dcpadmin' is the staging carto account
 // 'planninglabs' is the production carto account
 const cartoUsername = ENV.CARTO_USERNAME || 'planninglabs';
-const cartoDomain = `${cartoUsername}.carto.com`;
+const cartoDomain = `carto.nycplanningdigital.com`;
 
 
 const carto = {

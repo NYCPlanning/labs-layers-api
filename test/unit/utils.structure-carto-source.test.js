@@ -11,7 +11,7 @@ const cartoResponse = require('./carto-response.json');
 
 describe('structure-carto-source util', () => {
   it('should return a source with the correct id', async () => {
-    const scope = nock('https://planninglabs.carto.com')
+    const scope = nock('https://carto.nycplanningdigital.com')
       .post('/api/v1/map')
       .reply(200, cartoResponse);
 
