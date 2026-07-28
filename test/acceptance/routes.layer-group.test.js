@@ -13,7 +13,7 @@ const { expect } = chai;
 
 describe('POST /layer-groups', () => {
   beforeEach(function setupNock() {
-    this.scope = nock('https://planninglabs.carto.com')
+    this.scope = nock('https://carto.nycplanningdigital.com')
       .persist()
       .post('/api/v1/map')
       .reply(200, cartoResponse);

@@ -12,7 +12,7 @@ df = pd.read_csv('view_lookup.csv')
 
 def run_carto_query(sql):
     # function that runs the API call to Carto using the SQL snippets generated in the for loop below
-    carto_base_url = 'https://planninglabs.carto.com/api/v2/sql?q='
+    carto_base_url = 'https://carto.nycplanningdigital.com/api/v2/sql?q='
     query_url = carto_base_url + sql + '&api_key=' + api_key
     response = requests.get(query_url)
     if(response.status_code == 200):
