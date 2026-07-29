@@ -5,3 +5,5 @@
 newrelic_agent.log
 
 .env
+.vscode
+**/venv
