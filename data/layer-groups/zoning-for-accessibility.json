@@ -40,7 +40,6 @@
       "tooltipable": true,
       "tooltipTemplate": "Transit-adjacent area",
       "style": {
-
         "id": "zfa-fill",
         "type": "fill",
         "source": "supporting-zoning",

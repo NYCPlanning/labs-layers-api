@@ -37,7 +37,9 @@
           "circle-color": "#E07E30",
           "circle-opacity": 1
         }
-      }
+      },
+      "tooltipable": true,
+      "tooltipTemplate": "{{{street_number}}} {{{street_address}}}, {{{borough}}}"
     }
   ]
 }
