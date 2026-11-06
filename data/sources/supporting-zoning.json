@@ -103,7 +103,7 @@
     },
     {
       "id": "board-of-standards-and-appeals",
-      "sql": "SELECT cartodb_id, the_geom_webmercator, number AS street_number, street AS street_address, borough FROM board_of_standards_and_appeals_10302026_v1",
+      "sql": "SELECT cartodb_id, the_geom_webmercator, number AS street_number, street AS street_address, borough, calendar_number, filed, date AS decision_date, decisions_url AS decision_url, project_description, status FROM board_of_standards_and_appeals_10302026_v1",
       "dataPipeline": true
     }
   ],
