@@ -1,0 +1,45 @@
+{
+  "id": "bsa",
+  "legend": {
+    "label": "Board of Standards and Appeals",
+    "tooltip": "Applications filed at the Board of Standards and Appeals since 1998.",
+    "icon": {
+      "type": "rectangle",
+      "layers": [
+        {
+          "fill": "rgba(224, 126, 48, 0.2)",
+          "stroke": "rgba(224, 126, 48, 0.6)",
+          "stroke-dasharray": "1"
+        }
+      ]
+    }
+  },
+  "layers": [
+    {
+      "style": {
+        "id": "bsa-circle",
+        "type": "circle",
+        "source": "supporting-zoning",
+        "source-layer": "board-of-standards-and-appeals",
+        "paint": {
+          "circle-radius": {
+            "stops": [
+              [
+                10,
+                3
+              ],
+              [
+                15,
+                7
+              ]
+            ]
+          },
+          "circle-color": "#E07E30",
+          "circle-opacity": 1
+        }
+      },
+      "tooltipable": true,
+      "tooltipTemplate": "{{{street_number}}} {{{street_address}}}, {{{borough}}}"
+    }
+  ]
+}

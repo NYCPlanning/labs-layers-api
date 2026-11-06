@@ -47,7 +47,8 @@
         "paint": {
           "fill-color": "rgba(218, 2, 200, 0.15)",
           "fill-antialias": true
-        }
+        },
+        "minzoom": 14
       }
     }
   ]
