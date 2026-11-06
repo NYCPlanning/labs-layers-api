@@ -100,6 +100,11 @@
       "id": "zoning-for-accessibility",
       "sql": "SELECT cartodb_id AS zfa_id, the_geom, * FROM mta_nyc_rail_station_buffer_dissolve",
       "dataPipeline": true
+    },
+    {
+      "id": "board-of-standards-and-appeals",
+      "sql": "SELECT cartodb_id, the_geom_webmercator, number AS street_number, street AS street_address, borough FROM board_of_standards_and_appeals_10302026_v1",
+      "dataPipeline": true
     }
   ],
   "buffersize": {
